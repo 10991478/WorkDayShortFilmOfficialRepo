@@ -1,18 +1,15 @@
 //Maya ASCII 2023 scene
 //Name: DragonGateCaveSet.ma
-//Last modified: Tue, Oct 28, 2025 12:22:24 PM
+//Last modified: Sat, Nov 01, 2025 12:37:35 PM
 //Codeset: 1252
 file -rdi 1 -ns "DragonGate" -rfn "DragonGateRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/dragonGate/DragonGate.ma";
-file -rdi 1 -ns "Dragon_Rig" -rfn "Dragon_RigRN" -op "v=0;" -typ "mayaAscii"
-		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/characters/dragon/Dragon_Rig.ma";
 file -rdi 1 -ns "Stalagmite_1" -rfn "Stalagmite_1RN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
 file -rdi 1 -ns "Stalagmite_2" -rfn "Stalagmite_2RN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_2.ma";
 file -rdi 1 -ns "Emergency_Button" -rfn "Emergency_ButtonRN" -op "v=0;" -typ
 		 "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/emergencyButton/Emergency Button.ma";
-file -rdi 1 -ns "Skeleton" -rfn "SkeletonRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/characters/skeleton/Skeleton.ma";
 file -rdi 1 -ns "DragonGateTorch" -rfn "DragonGateTorchRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/dragonGate/DragonGateTorch.ma";
 file -rdi 1 -ns "Large_Boulder" -rfn "Large_BoulderRN" -op "v=0;" -typ "mayaAscii"
@@ -21,14 +18,12 @@ file -rdi 1 -ns "roundedRocks" -rfn "roundedRocksRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/rocks/roundedRocks.ma";
 file -rdi 1 -ns "Bones" -rfn "BonesRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/bones/Bones.ma";
 file -r -ns "DragonGate" -dr 1 -rfn "DragonGateRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/dragonGate/DragonGate.ma";
-file -r -ns "Dragon_Rig" -dr 1 -rfn "Dragon_RigRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/characters/dragon/Dragon_Rig.ma";
 file -r -ns "Stalagmite_1" -dr 1 -rfn "Stalagmite_1RN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
 file -r -ns "Stalagmite_2" -dr 1 -rfn "Stalagmite_2RN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_2.ma";
 file -r -ns "Emergency_Button" -dr 1 -rfn "Emergency_ButtonRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/emergencyButton/Emergency Button.ma";
-file -r -ns "Skeleton" -dr 1 -rfn "SkeletonRN" -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/characters/skeleton/Skeleton.ma";
 file -r -ns "DragonGateTorch" -dr 1 -rfn "DragonGateTorchRN" -op "v=0;" -typ "mayaAscii"
 		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/dragonGate/DragonGateTorch.ma";
 file -r -ns "Large_Boulder" -dr 1 -rfn "Large_BoulderRN" -op "v=0;" -typ "mayaAscii"
@@ -46,24 +41,24 @@ currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
-fileInfo "cutIdentifier" "202211021031-847a9f9623";
-fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
-fileInfo "UUID" "4AF6819A-49BF-5E3A-C9BD-A3BA4F966727";
+fileInfo "cutIdentifier" "202405151550-05a853e76d";
+fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
+fileInfo "UUID" "2E244D18-46EE-4439-00D8-B0986B46303A";
 createNode transform -s -n "persp";
 	rename -uid "E27BC156-4915-FCDD-C8E6-B982662FF12E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1877.8490073504254 43.943854268367822 2449.8671391373859 ;
-	setAttr ".r" -type "double3" -359.39999999615276 -299.20000000002085 -1.0186570249642846e-16 ;
+	setAttr ".t" -type "double3" 1715.9739964464954 207.89152647392947 2851.1675799258892 ;
+	setAttr ".r" -type "double3" -361.19999999610837 -1015.2000000002178 -2.334362796969e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "10EACE2B-45B0-0CE8-5537-AF8125225963";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".fcp" 100000;
-	setAttr ".coi" 2797.431532285666;
+	setAttr ".coi" 4239.8466212872663;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1845.5662240846623 742.14181699510959 2486.8062370354664 ;
+	setAttr ".tp" -type "double3" -2122.1246480941772 516.92840456962585 1355.9346199035645 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "F0F00426-49B6-805A-B21B-5F873E37F64A";
@@ -115,7 +110,9 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "CaveWall_03";
+createNode transform -n "CaveSet";
+	rename -uid "5C3B11A3-4CC6-C5C2-8EC1-5A9C5A175E71";
+createNode transform -n "CaveWall_03" -p "CaveSet";
 	rename -uid "832EED9A-4ADD-9ECE-107D-73B092F24D67";
 	setAttr ".s" -type "double3" 2000 2000 2000 ;
 createNode transform -n "Walls_03" -p "CaveWall_03";
@@ -126,7 +123,7 @@ createNode mesh -n "Walls_03Shape" -p "Walls_03";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.30911432206630707 0.42409875988960266 ;
+	setAttr ".pv" -type "double2" 0.18789148330688477 0.50001013354631141 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -10937,16 +10934,16 @@ createNode mesh -n "polySurfaceShape4" -p "Ground03";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_01_01";
+createNode transform -n "Stalagmite_01_01" -p "CaveSet";
 	rename -uid "6D8C9585-4354-5198-A34A-329E7F0ED38D";
 	setAttr ".t" -type "double3" -407.66151603555727 -444.15347450788659 -746.0243292807429 ;
 	setAttr ".s" -type "double3" 70 70 70 ;
-createNode transform -n "Stalagmite_02_01";
+createNode transform -n "Stalagmite_02_01" -p "CaveSet";
 	rename -uid "1C9EC327-47A7-4CA1-C01E-FCA82CBCF7B6";
 	setAttr ".t" -type "double3" -987.3706396966902 -444.15347450788943 165.27885002874797 ;
 	setAttr ".r" -type "double3" 0 104.98837554665124 0 ;
 	setAttr ".s" -type "double3" 10 10 10 ;
-createNode transform -n "Stalagmite_01_02";
+createNode transform -n "Stalagmite_01_02" -p "CaveSet";
 	rename -uid "1AAAB61F-4117-0691-3D85-699851852413";
 	setAttr ".t" -type "double3" 153.74189497353279 -444.15347450795025 2556.2409596834718 ;
 	setAttr ".r" -type "double3" 0 73.977223769053907 0 ;
@@ -10957,7 +10954,7 @@ createNode transform -n "pCube1" -p "Stalagmite_01_02";
 	setAttr ".s" -type "double3" 10 5 10 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_02|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_01_02|pCube1";
 	rename -uid "B6CEA604-4E14-5C27-1FB5-71970621ABEE";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -12752,7 +12749,7 @@ createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_02|pCube1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape5" -p "|Stalagmite_01_02|pCube1";
+createNode mesh -n "polySurfaceShape5" -p "|CaveSet|Stalagmite_01_02|pCube1";
 	rename -uid "DEDBCE4E-42BE-93BD-215F-399157E9A4F3";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -14770,7 +14767,7 @@ createNode transform -n "pCube2" -p "Stalagmite_01_02";
 	setAttr ".s" -type "double3" 7.5 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_02|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_01_02|pCube2";
 	rename -uid "AEEB9132-46A7-CCBD-57FD-34954CDA6ABD";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -15846,7 +15843,7 @@ createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_02|pCube2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape4" -p "|Stalagmite_01_02|pCube2";
+createNode mesh -n "polySurfaceShape4" -p "|CaveSet|Stalagmite_01_02|pCube2";
 	rename -uid "F05C8F17-4B0C-FA02-4868-8680E639238F";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -17218,7 +17215,7 @@ createNode transform -n "pCube3" -p "Stalagmite_01_02";
 	setAttr ".s" -type "double3" 5 10 5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_02|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_01_02|pCube3";
 	rename -uid "56294A98-48F2-FC54-7E5C-B1B1A41B06E5";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -18141,7 +18138,7 @@ createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_02|pCube3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape6" -p "|Stalagmite_01_02|pCube3";
+createNode mesh -n "polySurfaceShape6" -p "|CaveSet|Stalagmite_01_02|pCube3";
 	rename -uid "BAD7C59E-4EDD-4A05-0F77-0E941B086E99";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -19384,7 +19381,7 @@ createNode transform -n "pCube4" -p "Stalagmite_01_02";
 	setAttr ".s" -type "double3" 2 16.388388363686964 2 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_02|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_01_02|pCube4";
 	rename -uid "0675C052-470D-D0A6-CD98-7BA5967F7659";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -19904,7 +19901,7 @@ createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_02|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_02|pCube4";
+createNode mesh -n "polySurfaceShape3" -p "|CaveSet|Stalagmite_01_02|pCube4";
 	rename -uid "8729A048-4912-E094-7CC8-0FA1E5416D16";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -19952,12 +19949,12 @@ createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_02|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Emergency_Button1";
+createNode transform -n "Emergency_Button1" -p "CaveSet";
 	rename -uid "2BF77960-4606-F6D7-C7E8-209E488F9BBE";
 	setAttr ".t" -type "double3" -2116.863976962848 -304.94635130775811 166.60199176861846 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 	setAttr ".s" -type "double3" 20 20 20 ;
-createNode transform -n "DragonGateTorch1";
+createNode transform -n "DragonGateTorch1" -p "CaveSet";
 	rename -uid "E06F13C4-4AE7-B666-49D7-F6A52ADE7F07";
 	setAttr ".t" -type "double3" -2149.8899477390628 -97.533475509475636 1848.6295581924153 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
@@ -19975,7 +19972,7 @@ createNode transform -n "TorchBase" -p "WallBase";
 	setAttr ".rpt" -type "double3" 0 -0.14674731002792335 -0.04849402202621482 ;
 	setAttr ".sp" -type "double3" 0 0.28108471632003784 0.097620666027069092 ;
 	setAttr ".spt" -type "double3" 0 -0.23195807231918358 0 ;
-createNode mesh -n "TorchBaseShape" -p "|DragonGateTorch1|WallBase|TorchBase";
+createNode mesh -n "TorchBaseShape" -p "|CaveSet|DragonGateTorch1|WallBase|TorchBase";
 	rename -uid "03E7FDC0-4D37-4F26-AAD8-018B04E9027C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -22904,7 +22901,7 @@ createNode transform -n "Chain02" -p "TopChain";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape2" -p "|DragonGateTorch1|WallBase|TopChain|Chain02";
+createNode mesh -n "ChainShape2" -p "|CaveSet|DragonGateTorch1|WallBase|TopChain|Chain02";
 	rename -uid "49F30DA4-4620-99DA-1149-B9BB006A663C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -23217,7 +23214,7 @@ createNode transform -n "Chain03" -p "TopChain";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape3" -p "|DragonGateTorch1|WallBase|TopChain|Chain03";
+createNode mesh -n "ChainShape3" -p "|CaveSet|DragonGateTorch1|WallBase|TopChain|Chain03";
 	rename -uid "DF1A12D4-403A-2499-6E4C-A7972DF6BC12";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -25110,7 +25107,7 @@ createNode transform -n "Chain02" -p "MIddleChains";
 	setAttr ".rp" -type "double3" -4.4791073047895049e-08 1.5074405497268391 0.78909262628741961 ;
 	setAttr ".rpt" -type "double3" 0.092107650818742837 -0.022992052104871874 -0.096825605617545274 ;
 	setAttr ".sp" -type "double3" -4.4791073047895049e-08 1.5074405497268391 0.78909262628741961 ;
-createNode transform -n "Chain04" -p "|DragonGateTorch1|MIddleChains|Chain02";
+createNode transform -n "Chain04" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02";
 	rename -uid "53E859C0-484B-3E5F-F0B9-57829CC787FC";
 	setAttr ".t" -type "double3" -7.3385422608027126e-16 1.4816913942144068 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -25119,7 +25116,7 @@ createNode transform -n "Chain04" -p "|DragonGateTorch1|MIddleChains|Chain02";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape4" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain04";
+createNode mesh -n "ChainShape4" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain04";
 	rename -uid "7959A9C2-4075-783E-CDE4-579EABC55F67";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -25425,7 +25422,7 @@ createNode mesh -n "ChainShape4" -p "|DragonGateTorch1|MIddleChains|Chain02|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain05" -p "|DragonGateTorch1|MIddleChains|Chain02";
+createNode transform -n "Chain05" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02";
 	rename -uid "D3FB4E07-400F-6D13-5129-7C9549EB8C11";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 1.3306296071593526 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -25434,7 +25431,7 @@ createNode transform -n "Chain05" -p "|DragonGateTorch1|MIddleChains|Chain02";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape5" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain05";
+createNode mesh -n "ChainShape5" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain05";
 	rename -uid "2AFD24CD-472D-3201-771D-8D808265895C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -25736,7 +25733,7 @@ createNode mesh -n "ChainShape5" -p "|DragonGateTorch1|MIddleChains|Chain02|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain05";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain05";
 	rename -uid "17D84AA3-45EB-7E1D-03CC-D5AA5D468C44";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -26039,7 +26036,7 @@ createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain06" -p "|DragonGateTorch1|MIddleChains|Chain02";
+createNode transform -n "Chain06" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02";
 	rename -uid "29CF0C19-4236-9D7D-442E-CE83AD81978A";
 	setAttr ".t" -type "double3" -1.4625662105607242e-15 1.1833434831447178 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -26048,7 +26045,7 @@ createNode transform -n "Chain06" -p "|DragonGateTorch1|MIddleChains|Chain02";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape6" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain06";
+createNode mesh -n "ChainShape6" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain06";
 	rename -uid "847B84E9-4CDC-582F-5AC0-F5B7939938BC";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -26350,7 +26347,7 @@ createNode mesh -n "ChainShape6" -p "|DragonGateTorch1|MIddleChains|Chain02|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain06";
+createNode mesh -n "polySurfaceShape2" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain06";
 	rename -uid "F0B37FBC-4AFF-0071-4809-36A11A33C5B8";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -26653,7 +26650,7 @@ createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain07" -p "|DragonGateTorch1|MIddleChains|Chain02";
+createNode transform -n "Chain07" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02";
 	rename -uid "0B43DC97-4AB5-69EB-3778-7DAB1F5271AE";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 1.026883057188795 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -26662,7 +26659,7 @@ createNode transform -n "Chain07" -p "|DragonGateTorch1|MIddleChains|Chain02";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape7" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain07";
+createNode mesh -n "ChainShape7" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain07";
 	rename -uid "7FE3EE2E-41B8-C60D-A0CA-37963AA13794";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -26964,7 +26961,7 @@ createNode mesh -n "ChainShape7" -p "|DragonGateTorch1|MIddleChains|Chain02|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain07";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain07";
 	rename -uid "5FB277E2-476D-C3B1-64C2-C0BD4B8D371B";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -27267,7 +27264,7 @@ createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain08" -p "|DragonGateTorch1|MIddleChains|Chain02";
+createNode transform -n "Chain08" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02";
 	rename -uid "586D4795-4F17-C7EA-5A2B-55A6F67E7398";
 	setAttr ".t" -type "double3" -2.2044643201018135e-15 0.87959693317416121 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -27276,7 +27273,7 @@ createNode transform -n "Chain08" -p "|DragonGateTorch1|MIddleChains|Chain02";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape8" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain08";
+createNode mesh -n "ChainShape8" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain08";
 	rename -uid "BEB5F763-4C01-6D21-5597-178BBBD7BD5B";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -27578,7 +27575,7 @@ createNode mesh -n "ChainShape8" -p "|DragonGateTorch1|MIddleChains|Chain02|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain08";
+createNode mesh -n "polySurfaceShape2" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain08";
 	rename -uid "E8B57FA0-4CC7-5E28-08DF-5CA45BD8D8F4";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -27881,7 +27878,7 @@ createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain09" -p "|DragonGateTorch1|MIddleChains|Chain02";
+createNode transform -n "Chain09" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02";
 	rename -uid "628A3086-449E-5E7B-F4FF-FFA9512FE1A5";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 0.73344969174363461 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -27890,7 +27887,7 @@ createNode transform -n "Chain09" -p "|DragonGateTorch1|MIddleChains|Chain02";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape9" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain09";
+createNode mesh -n "ChainShape9" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain09";
 	rename -uid "13B79570-4E08-1E75-C4F4-90B09ABB2838";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -28192,7 +28189,7 @@ createNode mesh -n "ChainShape9" -p "|DragonGateTorch1|MIddleChains|Chain02|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain02|Chain09";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain09";
 	rename -uid "34F316F7-476F-80B7-0C12-59A8AA3E12CE";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -28504,7 +28501,7 @@ createNode transform -n "Chain03" -p "MIddleChains";
 	setAttr ".rpt" -type "double3" 0.20614626448363871 0.17628253777992164 0.9210437011162782 ;
 	setAttr ".sp" -type "double3" -4.4791072996837279e-08 1.5080458234518739 0.7890926262874205 ;
 	setAttr ".spt" -type "double3" 8.4703294725430025e-22 0 -1.578185252574841 ;
-createNode transform -n "Chain04" -p "|DragonGateTorch1|MIddleChains|Chain03";
+createNode transform -n "Chain04" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03";
 	rename -uid "B4E76700-44A3-5CFA-B088-ABB81AB8E833";
 	setAttr ".t" -type "double3" -7.3385422608027126e-16 1.4816913942144068 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -28513,7 +28510,7 @@ createNode transform -n "Chain04" -p "|DragonGateTorch1|MIddleChains|Chain03";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape4" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain04";
+createNode mesh -n "ChainShape4" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain04";
 	rename -uid "F1074A8E-4AF0-13BB-831A-2EBC26D84E93";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -28816,7 +28813,7 @@ createNode mesh -n "ChainShape4" -p "|DragonGateTorch1|MIddleChains|Chain03|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain05" -p "|DragonGateTorch1|MIddleChains|Chain03";
+createNode transform -n "Chain05" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03";
 	rename -uid "1B3A167B-42DF-0DF7-6D3F-E0820659F772";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 1.3306296071593526 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -28825,7 +28822,7 @@ createNode transform -n "Chain05" -p "|DragonGateTorch1|MIddleChains|Chain03";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape5" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain05";
+createNode mesh -n "ChainShape5" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain05";
 	rename -uid "3DC78E5E-4401-805F-76DA-4F8F5865704A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -29127,7 +29124,7 @@ createNode mesh -n "ChainShape5" -p "|DragonGateTorch1|MIddleChains|Chain03|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain05";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain05";
 	rename -uid "D4A15316-4F8E-EF81-3964-71B40FCBFAB9";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -29430,7 +29427,7 @@ createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain06" -p "|DragonGateTorch1|MIddleChains|Chain03";
+createNode transform -n "Chain06" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03";
 	rename -uid "7A329B2D-44D9-A564-9E5A-FA817FE437AD";
 	setAttr ".t" -type "double3" -1.4625662105607242e-15 1.1833434831447178 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -29439,7 +29436,7 @@ createNode transform -n "Chain06" -p "|DragonGateTorch1|MIddleChains|Chain03";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape6" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain06";
+createNode mesh -n "ChainShape6" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain06";
 	rename -uid "2DC13616-40BF-27A7-4D65-DE8E3B608FC4";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -29741,7 +29738,7 @@ createNode mesh -n "ChainShape6" -p "|DragonGateTorch1|MIddleChains|Chain03|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain06";
+createNode mesh -n "polySurfaceShape2" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain06";
 	rename -uid "9AF5157A-4FF6-1B15-6D4A-A5810DCF2ED4";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -30044,7 +30041,7 @@ createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain07" -p "|DragonGateTorch1|MIddleChains|Chain03";
+createNode transform -n "Chain07" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03";
 	rename -uid "73CB5687-40A3-C7FA-A755-9E92693BB462";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 1.026883057188795 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -30053,7 +30050,7 @@ createNode transform -n "Chain07" -p "|DragonGateTorch1|MIddleChains|Chain03";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape7" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain07";
+createNode mesh -n "ChainShape7" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain07";
 	rename -uid "3DE96E60-40DC-C9C1-68E5-A080A3C83B8F";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -30355,7 +30352,7 @@ createNode mesh -n "ChainShape7" -p "|DragonGateTorch1|MIddleChains|Chain03|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain07";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain07";
 	rename -uid "63FE5C59-421A-A3C4-0CDE-CD983FF9D6F2";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -30658,7 +30655,7 @@ createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain08" -p "|DragonGateTorch1|MIddleChains|Chain03";
+createNode transform -n "Chain08" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03";
 	rename -uid "87B4906A-4D55-B670-E70A-7D80E12FDC0F";
 	setAttr ".t" -type "double3" -2.2044643201018135e-15 0.87959693317416121 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -30667,7 +30664,7 @@ createNode transform -n "Chain08" -p "|DragonGateTorch1|MIddleChains|Chain03";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape8" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain08";
+createNode mesh -n "ChainShape8" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain08";
 	rename -uid "AAA8C292-4851-F2E8-24F1-07BA7300315E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -30969,7 +30966,7 @@ createNode mesh -n "ChainShape8" -p "|DragonGateTorch1|MIddleChains|Chain03|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain08";
+createNode mesh -n "polySurfaceShape2" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain08";
 	rename -uid "B271759A-4DA3-122C-644E-FF9BAD229EE0";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -31272,7 +31269,7 @@ createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain09" -p "|DragonGateTorch1|MIddleChains|Chain03";
+createNode transform -n "Chain09" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03";
 	rename -uid "11659FF4-41FB-D01D-7F82-09927CFD33F0";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 0.73344969174363461 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -31281,7 +31278,7 @@ createNode transform -n "Chain09" -p "|DragonGateTorch1|MIddleChains|Chain03";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape9" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain09";
+createNode mesh -n "ChainShape9" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain09";
 	rename -uid "8E46DE68-4725-270F-9D6E-E2AD1EE2B4FE";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -31583,7 +31580,7 @@ createNode mesh -n "ChainShape9" -p "|DragonGateTorch1|MIddleChains|Chain03|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain03|Chain09";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain09";
 	rename -uid "96C50692-481E-B342-1223-18B0D66D2A20";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -31895,7 +31892,7 @@ createNode transform -n "Chain04" -p "MIddleChains";
 	setAttr ".rpt" -type "double3" 0.29839333655785533 0.99668951658581206 1.1715356753544333 ;
 	setAttr ".sp" -type "double3" -4.4791073116451884e-08 0.69410214525911595 0.78909262628742038 ;
 	setAttr ".spt" -type "double3" 7.0144915944496737e-22 0 -1.5781852525748408 ;
-createNode transform -n "Chain04" -p "|DragonGateTorch1|MIddleChains|Chain04";
+createNode transform -n "Chain04" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04";
 	rename -uid "5DD30031-4B77-BF41-1A37-AC95762348EB";
 	setAttr ".t" -type "double3" -7.3385422608027126e-16 1.4816913942144068 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -31904,7 +31901,7 @@ createNode transform -n "Chain04" -p "|DragonGateTorch1|MIddleChains|Chain04";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape4" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain04";
+createNode mesh -n "ChainShape4" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain04";
 	rename -uid "4DA09C14-4F63-FAA7-AC31-88A0E2F153F3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -32206,7 +32203,7 @@ createNode mesh -n "ChainShape4" -p "|DragonGateTorch1|MIddleChains|Chain04|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain05" -p "|DragonGateTorch1|MIddleChains|Chain04";
+createNode transform -n "Chain05" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04";
 	rename -uid "CFF33281-4410-0141-3995-05A82E838D68";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 1.3306296071593526 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -32215,7 +32212,7 @@ createNode transform -n "Chain05" -p "|DragonGateTorch1|MIddleChains|Chain04";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape5" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain05";
+createNode mesh -n "ChainShape5" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain05";
 	rename -uid "A380B569-4B9C-F459-4988-9F866301B78F";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -32517,7 +32514,7 @@ createNode mesh -n "ChainShape5" -p "|DragonGateTorch1|MIddleChains|Chain04|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain05";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain05";
 	rename -uid "68C5B767-49F9-9DF8-5BBF-9B8D3D25B288";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -32820,7 +32817,7 @@ createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain06" -p "|DragonGateTorch1|MIddleChains|Chain04";
+createNode transform -n "Chain06" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04";
 	rename -uid "23574BAB-419E-CA75-0396-29BB08432FF3";
 	setAttr ".t" -type "double3" -1.4625662105607242e-15 1.1833434831447178 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -32829,7 +32826,7 @@ createNode transform -n "Chain06" -p "|DragonGateTorch1|MIddleChains|Chain04";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape6" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain06";
+createNode mesh -n "ChainShape6" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain06";
 	rename -uid "35E62119-434B-CE31-3381-DEB4825ACFC6";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -33131,7 +33128,7 @@ createNode mesh -n "ChainShape6" -p "|DragonGateTorch1|MIddleChains|Chain04|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain06";
+createNode mesh -n "polySurfaceShape2" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain06";
 	rename -uid "9A8A10C9-4D27-F812-93A0-9C8661A2E15F";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -33434,7 +33431,7 @@ createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain07" -p "|DragonGateTorch1|MIddleChains|Chain04";
+createNode transform -n "Chain07" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04";
 	rename -uid "1B2E8128-4C74-3C0D-58CA-54B8F85CEA34";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 1.026883057188795 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -33443,7 +33440,7 @@ createNode transform -n "Chain07" -p "|DragonGateTorch1|MIddleChains|Chain04";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape7" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain07";
+createNode mesh -n "ChainShape7" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain07";
 	rename -uid "18DA1B2A-47F7-2A7C-306B-B6B577DD2DC9";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -33745,7 +33742,7 @@ createNode mesh -n "ChainShape7" -p "|DragonGateTorch1|MIddleChains|Chain04|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain07";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain07";
 	rename -uid "CC32B4CC-44EE-F366-2D2F-7391B7309803";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -34048,7 +34045,7 @@ createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain08" -p "|DragonGateTorch1|MIddleChains|Chain04";
+createNode transform -n "Chain08" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04";
 	rename -uid "0E00FE7A-4C2B-4B90-6D80-70B910068A31";
 	setAttr ".t" -type "double3" -2.2044643201018135e-15 0.87959693317416121 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 90 0 ;
@@ -34057,7 +34054,7 @@ createNode transform -n "Chain08" -p "|DragonGateTorch1|MIddleChains|Chain04";
 	setAttr ".rpt" -type "double3" 4.3391352346417418e-08 2.7014616138253e-07 3.1353751372894673e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape8" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain08";
+createNode mesh -n "ChainShape8" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain08";
 	rename -uid "82558C13-4682-7A99-288F-E58347720229";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -34359,7 +34356,7 @@ createNode mesh -n "ChainShape8" -p "|DragonGateTorch1|MIddleChains|Chain04|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain08";
+createNode mesh -n "polySurfaceShape2" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain08";
 	rename -uid "825B9868-458C-685B-73D4-468D15A86399";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -34662,7 +34659,7 @@ createNode mesh -n "polySurfaceShape2" -p "|DragonGateTorch1|MIddleChains|Chain0
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Chain09" -p "|DragonGateTorch1|MIddleChains|Chain04";
+createNode transform -n "Chain09" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04";
 	rename -uid "10803915-4074-5855-7049-C19CD903F31E";
 	setAttr ".t" -type "double3" 3.3543884878559798e-16 0.73344969174363461 0.78909258149634698 ;
 	setAttr ".r" -type "double3" 90.000000000000142 0 0 ;
@@ -34671,7 +34668,7 @@ createNode transform -n "Chain09" -p "|DragonGateTorch1|MIddleChains|Chain04";
 	setAttr ".rpt" -type "double3" 0 2.7014616138253e-07 2.6734671929566493e-07 ;
 	setAttr ".sp" -type "double3" -4.76837158203125e-07 -1.4901161193847656e-08 -2.86102294921875e-06 ;
 	setAttr ".spt" -type "double3" 4.3204608481327545e-07 1.3501440150414858e-08 2.5922765088796527e-06 ;
-createNode mesh -n "ChainShape9" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain09";
+createNode mesh -n "ChainShape9" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain09";
 	rename -uid "0158A6F5-42A4-4021-AD04-618892BBBC84";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -34973,7 +34970,7 @@ createNode mesh -n "ChainShape9" -p "|DragonGateTorch1|MIddleChains|Chain04|Chai
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape1" -p "|DragonGateTorch1|MIddleChains|Chain04|Chain09";
+createNode mesh -n "polySurfaceShape1" -p "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain09";
 	rename -uid "73991B6E-46DF-B297-835A-A38BF325A1D0";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -37166,7 +37163,7 @@ createNode transform -n "TorchBase" -p "TorchHolder";
 	setAttr ".rp" -type "double3" 0 -9.7149374715275098e-09 -1.7579920566400728e-08 ;
 	setAttr ".sp" -type "double3" 0 5.9604644775390625e-08 -5.9604644775390625e-08 ;
 	setAttr ".spt" -type "double3" 0 -6.9319582246918132e-08 4.2024724208989894e-08 ;
-createNode mesh -n "TorchBaseShape" -p "|DragonGateTorch1|TorchHolder|TorchBase";
+createNode mesh -n "TorchBaseShape" -p "|CaveSet|DragonGateTorch1|TorchHolder|TorchBase";
 	rename -uid "1B774A5E-47B1-93AB-CB89-7B91043DDB4D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -38104,7 +38101,7 @@ createNode transform -n "SquareDetail" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 0 9.7316354692682947e-08 3.2590949847893616e-08 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.6531088039229437e-06 ;
-createNode mesh -n "SquareDetailShape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail";
+createNode mesh -n "SquareDetailShape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail";
 	rename -uid "5A40F7AA-4248-516A-398F-88B020C2EAEB";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -38178,7 +38175,7 @@ createNode transform -n "SphereDetail" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 0 -0.027933758523510585 0.014357051584891468 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetailShape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail";
+createNode mesh -n "SphereDetailShape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail";
 	rename -uid "BA1DD3C0-4155-F30D-675C-93B67E0BE09D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -38346,7 +38343,7 @@ createNode transform -n "SquareDetail1" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -5.4367235747304172e-10 9.7316354692682894e-08 2.9058482787154411e-07 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.6531088039229437e-06 ;
-createNode mesh -n "SquareDetail1Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail1";
+createNode mesh -n "SquareDetail1Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail1";
 	rename -uid "45689684-495B-9070-5929-12A622AE0991";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -38420,7 +38417,7 @@ createNode transform -n "SphereDetail1" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 6.0513377327403895e-05 -0.027933758523510623 -0.014356924064615565 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail1Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail1";
+createNode mesh -n "SphereDetail1Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail1";
 	rename -uid "48C35194-4823-FCF2-F873-F795FD7C3894";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -38588,7 +38585,7 @@ createNode transform -n "SquareDetail2" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 1.2899098623537417e-07 9.7316354692683397e-08 1.6029095078099531e-07 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.6531088039229437e-06 ;
-createNode mesh -n "SquareDetail2Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail2";
+createNode mesh -n "SquareDetail2Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail2";
 	rename -uid "F27056B1-49D5-5C1A-C079-33BC3FACC5AD";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -38662,7 +38659,7 @@ createNode transform -n "SphereDetail2" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -0.014356323218675447 -0.027933758523510821 0.00014440712426621951 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail2Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail2";
+createNode mesh -n "SphereDetail2Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail2";
 	rename -uid "E6196812-4077-1A52-077A-FD95590D1AA9";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -38829,7 +38826,7 @@ createNode transform -n "SquareDetail3" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 6.6462099076994479e-08 9.7316354692682921e-08 2.7214680580527022e-07 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.6531088039229437e-06 ;
-createNode mesh -n "SquareDetail3Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail3";
+createNode mesh -n "SquareDetail3Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail3";
 	rename -uid "F8672DFB-46DB-A515-B5B0-0AA5CCDC3B32";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -38903,7 +38900,7 @@ createNode transform -n "SphereDetail3" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -0.0073970363222837371 -0.027933758523510599 -0.012304826399399772 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail3Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail3";
+createNode mesh -n "SphereDetail3Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail3";
 	rename -uid "2294974B-4AA1-9F92-5D5B-3AA57A8EBCD2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39071,7 +39068,7 @@ createNode transform -n "SquareDetail4" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 1.1251543432893992e-07 9.7316354692682947e-08 2.2468073620801199e-07 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.6531088039229437e-06 ;
-createNode mesh -n "SquareDetail4Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail4";
+createNode mesh -n "SquareDetail4Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail4";
 	rename -uid "D08ABB85-44E6-C6B6-5C4F-0881F56FFDD4";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39146,7 +39143,7 @@ createNode transform -n "SphereDetail4" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -0.012522640686831125 -0.027933758523510609 -0.0070219902965074571 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail4Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail4";
+createNode mesh -n "SphereDetail4Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail4";
 	rename -uid "1B140E89-4ABB-6374-D9E7-CEA483DF4276";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39314,7 +39311,7 @@ createNode transform -n "SquareDetail5" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 1.1109372167793792e-07 9.7316354692682921e-08 9.6025186400179274e-08 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.6531088039229437e-06 ;
-createNode mesh -n "SquareDetail5Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail5";
+createNode mesh -n "SquareDetail5Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail5";
 	rename -uid "200845DA-41CD-5A0E-907B-DC8C12610F28";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39385,7 +39382,7 @@ createNode transform -n "SphereDetail5" -p "HolderDetailsTop";
 	setAttr ".t" -type "double3" -0.68092478109918964 0.56024561800651718 1.1600339766946808 ;
 	setAttr ".r" -type "double3" 125.5965935720713 -59.452517214119602 6.257827088958085e-15 ;
 	setAttr ".s" -type "double3" 0.035312820314917871 0.035312820314917878 0.035312820314917885 ;
-createNode mesh -n "SphereDetail5Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail5";
+createNode mesh -n "SphereDetail5Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail5";
 	rename -uid "9B41C05E-40BB-F67F-2B79-38BF74681FB2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39552,7 +39549,7 @@ createNode transform -n "SquareDetail6" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 6.284197971318773e-08 9.7316354692682881e-08 4.8933041724621753e-08 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.6531088039229437e-06 ;
-createNode mesh -n "SquareDetail6Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail6";
+createNode mesh -n "SquareDetail6Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail6";
 	rename -uid "C145DBA3-4C41-A43F-AE6A-29A52969CDD1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39622,7 +39619,7 @@ createNode transform -n "SphereDetail6" -p "HolderDetailsTop";
 	setAttr ".t" -type "double3" -0.38517623348772784 0.56024561800651707 1.4486750251749509 ;
 	setAttr ".r" -type "double3" 125.59659357207134 -29.153858982877068 1.8209671594455229e-15 ;
 	setAttr ".s" -type "double3" 0.035312820314917885 0.035312820314917885 0.035312820314917899 ;
-createNode mesh -n "SphereDetail6Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail6";
+createNode mesh -n "SphereDetail6Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail6";
 	rename -uid "FA61D74E-42DC-D184-F2D6-179537A26F1C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39789,7 +39786,7 @@ createNode transform -n "SquareDetail7" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -1.2899098623537409e-07 9.7316354692683384e-08 -1.628859726231173e-07 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.9762857273270563e-06 ;
-createNode mesh -n "SquareDetail7Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail7";
+createNode mesh -n "SquareDetail7Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail7";
 	rename -uid "336BDF67-4275-71C8-ED57-6388CF473694";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -39863,7 +39860,7 @@ createNode transform -n "SphereDetail7" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 0.014356327428291916 -0.027933758523510512 0.00014440712426623751 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail7Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail7";
+createNode mesh -n "SphereDetail7Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail7";
 	rename -uid "04573AD1-4C7F-5012-F8C1-06A5DC2F1F17";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -40030,7 +40027,7 @@ createNode transform -n "SquareDetail8" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -6.6462099076994453e-08 9.731635469268296e-08 -5.1030117598842634e-08 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.9762857273270563e-06 ;
-createNode mesh -n "SquareDetail8Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail8";
+createNode mesh -n "SquareDetail8Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail8";
 	rename -uid "04168D80-4BDB-4398-031E-FFA2B3778F52";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -40104,7 +40101,7 @@ createNode transform -n "SphereDetail8" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 0.0073970405318999673 -0.027933758523510602 -0.012304826399399778 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail8Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail8";
+createNode mesh -n "SphereDetail8Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail8";
 	rename -uid "4A2D59CA-4780-CD43-8CF0-22BE7D604841";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -40272,7 +40269,7 @@ createNode transform -n "SquareDetail9" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -1.1251543432893991e-07 9.7316354692683027e-08 -9.849618719610082e-08 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.9762857273270563e-06 ;
-createNode mesh -n "SquareDetail9Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail9";
+createNode mesh -n "SquareDetail9Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail9";
 	rename -uid "38194739-4F88-5DAE-7806-0F97E041E6D6";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -40346,7 +40343,7 @@ createNode transform -n "SphereDetail9" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 0.012522644896447353 -0.02793375852351062 -0.0070219902965074563 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail9Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail9";
+createNode mesh -n "SphereDetail9Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail9";
 	rename -uid "BA2F8F60-47C6-D9EA-2C82-B4B3723BE875";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -40514,7 +40511,7 @@ createNode transform -n "SquareDetail10" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -1.1109372167793784e-07 9.7316354692683066e-08 -2.2715173700393332e-07 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.9762857273270563e-06 ;
-createNode mesh -n "SquareDetail10Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail10";
+createNode mesh -n "SquareDetail10Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail10";
 	rename -uid "D35338E7-44DC-5B1D-1091-319205CAD751";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -40588,7 +40585,7 @@ createNode transform -n "SphereDetail10" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 0.01236441447183916 -0.027933758523510606 0.0072970019206006105 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail10Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail10";
+createNode mesh -n "SphereDetail10Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail10";
 	rename -uid "C0DF9534-40B1-2225-D0FD-0B9DD31FA1C3";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -40756,7 +40753,7 @@ createNode transform -n "SquareDetail11" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" -6.2841979713187664e-08 9.7316354692682894e-08 -2.7424388167949078e-07 ;
 	setAttr ".sp" -type "double3" 0 0 -3.814697265625e-06 ;
 	setAttr ".spt" -type "double3" 0 0 3.9762857273270563e-06 ;
-createNode mesh -n "SquareDetail11Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail11";
+createNode mesh -n "SquareDetail11Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail11";
 	rename -uid "70CCC4AC-40ED-5875-D3D5-29867710D717";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -40830,7 +40827,7 @@ createNode transform -n "SphereDetail11" -p "HolderDetailsTop";
 	setAttr ".rpt" -type "double3" 0.0069941353139585782 -0.02793375852351055 0.012538222795272752 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail11Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail11";
+createNode mesh -n "SphereDetail11Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail11";
 	rename -uid "FBEFE6BC-4EAB-8A33-CE41-E8BDAAF54041";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41003,7 +41000,7 @@ createNode transform -n "SquareDetail" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0 -0.006163113617318066 -0.0014796326693154861 ;
 	setAttr ".sp" -type "double3" 0 0 0.3204816299064086 ;
 	setAttr ".spt" -type "double3" 0 0 -0.30690620570512284 ;
-createNode mesh -n "SquareDetailShape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail";
+createNode mesh -n "SquareDetailShape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail";
 	rename -uid "FE07FBEE-4998-F330-9B9E-E8B82DCA6E66";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41077,7 +41074,7 @@ createNode transform -n "SquareDetail1" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 5.0978870857007457e-05 -0.0061631136173179836 -0.025671108305113953 ;
 	setAttr ".sp" -type "double3" 0 0 0.3204816299064055 ;
 	setAttr ".spt" -type "double3" 0 0 -0.30690620570511989 ;
-createNode mesh -n "SquareDetail1Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail1";
+createNode mesh -n "SquareDetail1Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail1";
 	rename -uid "80794341-4002-CE90-775B-6C823F00BA58";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41151,7 +41148,7 @@ createNode transform -n "SquareDetail2" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.012095179640133128 -0.0061631136173179168 -0.013453759671590093 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990640072 ;
 	setAttr ".spt" -type "double3" 0 0 -0.30690620570511529 ;
-createNode mesh -n "SquareDetail2Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail2";
+createNode mesh -n "SquareDetail2Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail2";
 	rename -uid "51AD9ABB-492A-4083-617F-978333EA0F7A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41225,7 +41222,7 @@ createNode transform -n "SquareDetail3" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.0062319938086971092 -0.0061631136173180235 -0.023942218592670261 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990640605 ;
 	setAttr ".spt" -type "double3" 0 0 -0.30690620570512039 ;
-createNode mesh -n "SquareDetail3Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail3";
+createNode mesh -n "SquareDetail3Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail3";
 	rename -uid "77205750-4A1C-F9A7-A4F3-468EEA9C5233";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41299,7 +41296,7 @@ createNode transform -n "SquareDetail4" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.010550306112187356 -0.0061631136173179897 -0.019491437531563238 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990640461 ;
 	setAttr ".spt" -type "double3" 0 0 -0.30690620570511901 ;
-createNode mesh -n "SquareDetail4Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail4";
+createNode mesh -n "SquareDetail4Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail4";
 	rename -uid "4AFAA2D8-4A17-0ADB-A834-A4A146150FEA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41373,7 +41370,7 @@ createNode transform -n "SquareDetail5" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.010416995480085272 -0.0061631136173180417 -0.0074277109717372069 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990640716 ;
 	setAttr ".spt" -type "double3" 0 0 -0.30690620570512145 ;
-createNode mesh -n "SquareDetail5Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail5";
+createNode mesh -n "SquareDetail5Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail5";
 	rename -uid "E7FEFE50-4233-8499-FEA7-A18BE9BF2B6C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41447,7 +41444,7 @@ createNode transform -n "SquareDetail6" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.0058925437796534079 -0.0061631136173179758 -0.003011991965986872 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990640128 ;
 	setAttr ".spt" -type "double3" 0 0 -0.30690620570511573 ;
-createNode mesh -n "SquareDetail6Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail6";
+createNode mesh -n "SquareDetail6Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail6";
 	rename -uid "266BE3DB-4766-9A14-2126-3E8DC661D29C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41521,7 +41518,7 @@ createNode transform -n "SquareDetail7" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.011985781763136118 -0.0063732756152591148 0.013695988305716817 ;
 	setAttr ".sp" -type "double3" 0 0 0.3204816299064126 ;
 	setAttr ".spt" -type "double3" 0 0 -0.33405705410769854 ;
-createNode mesh -n "SquareDetail7Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail7";
+createNode mesh -n "SquareDetail7Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail7";
 	rename -uid "0BD53E12-4695-FDA2-1ECA-BCBEA2CBD761";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41595,7 +41592,7 @@ createNode transform -n "SquareDetail8" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.0062319938086971048 -0.0061631136173180149 0.003208629809901083 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990640594 ;
 	setAttr ".spt" -type "double3" 0 0 -0.3340570541076916 ;
-createNode mesh -n "SquareDetail8Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail8";
+createNode mesh -n "SquareDetail8Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail8";
 	rename -uid "D7F11A72-4DED-8109-C947-F0A3BD568C80";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41669,7 +41666,7 @@ createNode transform -n "SquareDetail9" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.010550306112187392 -0.0061631136173180097 0.0076594108710080011 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990640561 ;
 	setAttr ".spt" -type "double3" 0 0 -0.33405705410769126 ;
-createNode mesh -n "SquareDetail9Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail9";
+createNode mesh -n "SquareDetail9Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail9";
 	rename -uid "4A0BBDF5-47C7-7AE7-12E4-B785B9F59776";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41743,7 +41740,7 @@ createNode transform -n "SquareDetail10" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.010322776359400975 -0.0063732756152590801 0.019667532901119986 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990641083 ;
 	setAttr ".spt" -type "double3" 0 0 -0.3340570541076967 ;
-createNode mesh -n "SquareDetail10Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail10";
+createNode mesh -n "SquareDetail10Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail10";
 	rename -uid "7A013C59-4D8A-6EF5-9A04-2EAD9E6C1B01";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41818,7 +41815,7 @@ createNode transform -n "SquareDetail11" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.0058392471938408701 -0.0063732756152589639 0.024043312832046755 ;
 	setAttr ".sp" -type "double3" 0 0 0.32048162990640461 ;
 	setAttr ".spt" -type "double3" 0 0 -0.33405705410769021 ;
-createNode mesh -n "SquareDetail11Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail11";
+createNode mesh -n "SquareDetail11Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail11";
 	rename -uid "E3CC379C-4420-7505-BE35-89B08B8744EA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -41892,7 +41889,7 @@ createNode transform -n "SphereDetail11" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.0076933306913665464 -0.025552724023085518 0.013791654804379985 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502733e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail11Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail11";
+createNode mesh -n "SphereDetail11Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail11";
 	rename -uid "D50E55E0-4F8B-8317-C632-ECA7B7CD6C19";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -42059,7 +42056,7 @@ createNode transform -n "SphereDetail10" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.013600470640196363 -0.025552724023085564 0.0080264751044185206 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail10Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail10";
+createNode mesh -n "SphereDetail10Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail10";
 	rename -uid "6365DD83-4128-E662-4A86-91A7FD51ED68";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -42226,7 +42223,7 @@ createNode transform -n "SphereDetail9" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.013892623131174847 -0.025275907568038176 -0.0077901963952362588 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail9Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail9";
+createNode mesh -n "SphereDetail9Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail9";
 	rename -uid "C7253F27-4B5C-1387-F2D0-47B8AF035EF8";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -42395,7 +42392,7 @@ createNode transform -n "SphereDetail8" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.0082062773242816481 -0.025275907568038138 -0.013650975272150085 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail8Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail8";
+createNode mesh -n "SphereDetail8Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail8";
 	rename -uid "DC435B7F-4436-5427-A433-C9BCFAA9B0BC";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -42562,7 +42559,7 @@ createNode transform -n "SphereDetail7" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0.015791512979649654 -0.025552724023085047 0.00015884355103515618 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail7Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail7";
+createNode mesh -n "SphereDetail7Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail7";
 	rename -uid "D92ADDDC-47FA-0481-FD3A-C292E51453A4";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -42730,7 +42727,7 @@ createNode transform -n "SphereDetail6" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.0077592896352383341 -0.025275907568038179 0.013909905483195994 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail6Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail6";
+createNode mesh -n "SphereDetail6Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail6";
 	rename -uid "5BBDB379-4F72-90BB-DB58-059970F679AC";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -42897,7 +42894,7 @@ createNode transform -n "SphereDetail5" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.013717077846198153 -0.025275907568038179 0.0080952947121337784 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail5Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail5";
+createNode mesh -n "SphereDetail5Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail5";
 	rename -uid "D8194AD5-438D-3E52-9D5C-72979E24687E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -43064,7 +43061,7 @@ createNode transform -n "SphereDetail4" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.013892618921558625 -0.025275907568038186 -0.007790196395236257 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail4Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail4";
+createNode mesh -n "SphereDetail4Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail4";
 	rename -uid "8D88087F-41CC-CC6F-8C9F-938B713E9F9E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -43231,7 +43228,7 @@ createNode transform -n "SphereDetail3" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.0082062731146654438 -0.025275907568038224 -0.013650975272150119 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail3Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail3";
+createNode mesh -n "SphereDetail3Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail3";
 	rename -uid "9134C9EA-4DE9-1F4C-3DE0-E29E0D9EF8EE";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -43399,7 +43396,7 @@ createNode transform -n "SphereDetail2" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" -0.015926906353979954 -0.025275907568038533 0.00016020550545522925 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail2Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail2";
+createNode mesh -n "SphereDetail2Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail2";
 	rename -uid "24999BC3-4FA4-F962-FA59-F49F8687356D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -43566,7 +43563,7 @@ createNode transform -n "SphereDetail1" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 6.7133085112413518e-05 -0.025275907568038193 -0.015927572705534347 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetail1Shape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail1";
+createNode mesh -n "SphereDetail1Shape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail1";
 	rename -uid "77D5B7D3-40FA-8938-08FD-2F835684A225";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -43733,7 +43730,7 @@ createNode transform -n "SphereDetail" -p "HolderDetailsBottom";
 	setAttr ".rpt" -type "double3" 0 -0.025275907568038179 0.015927714175568153 ;
 	setAttr ".sp" -type "double3" -5.9604644775390625e-08 0.5 0 ;
 	setAttr ".spt" -type "double3" 5.7499836664502746e-08 -0.48234358984254105 0 ;
-createNode mesh -n "SphereDetailShape" -p "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail";
+createNode mesh -n "SphereDetailShape" -p "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail";
 	rename -uid "872E45E3-420E-A27E-0CDB-66BFCCF171E7";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -45161,7 +45158,7 @@ createNode mesh -n "LoopShape6" -p "Loop06";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_02_02";
+createNode transform -n "Stalagmite_02_02" -p "CaveSet";
 	rename -uid "4B48128F-4E6C-6452-66A4-F08888DA67DF";
 	setAttr ".t" -type "double3" 1045.256658920531 -444.15347450788943 1764.4628688533453 ;
 	setAttr ".r" -type "double3" 0 -21.206640320203796 0 ;
@@ -45169,7 +45166,7 @@ createNode transform -n "Stalagmite_02_02";
 createNode transform -n "pCube1" -p "Stalagmite_02_02";
 	rename -uid "78EA908E-48E1-E758-6C84-B884A410F447";
 	setAttr ".s" -type "double3" 25 10 10 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_02_02|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_02_02|pCube1";
 	rename -uid "12C527DC-41D1-B41B-2671-428512ACCB9A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -47281,7 +47278,7 @@ createNode transform -n "pCube2" -p "Stalagmite_02_02";
 	setAttr ".s" -type "double3" 10 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.49999972180517638 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999972180517638 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_02_02|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_02_02|pCube2";
 	rename -uid "7617F87C-4323-C822-8010-138FB80642FB";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -48157,7 +48154,7 @@ createNode transform -n "pCube3" -p "Stalagmite_02_02";
 	setAttr ".s" -type "double3" 8.3345583940016112 9 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.49999998992023542 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999998992023542 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_02_02|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_02_02|pCube3";
 	rename -uid "C79DB217-4C81-61EC-3180-38A0BD72DA74";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -49028,7 +49025,7 @@ createNode transform -n "pCube4" -p "Stalagmite_02_02";
 	setAttr -av ".sy";
 	setAttr ".rp" -type "double3" 9.2088980833404346 14.312326636832324 -0.4554342755741001 ;
 	setAttr ".sp" -type "double3" 9.2088980833404346 14.312326636832324 -0.4554342755741001 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_02_02|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_02_02|pCube4";
 	rename -uid "2B12342B-4E6A-6A95-8DB1-368B5B21E60F";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -49510,7 +49507,7 @@ createNode transform -n "pCube5" -p "Stalagmite_02_02";
 	setAttr ".s" -type "double3" 2.4042042585328129 15.746486627889475 3.1369533537469696 ;
 	setAttr ".rp" -type "double3" 0 -0.49999976817178293 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999976817178293 0 ;
-createNode mesh -n "pCubeShape5" -p "|Stalagmite_02_02|pCube5";
+createNode mesh -n "pCubeShape5" -p "|CaveSet|Stalagmite_02_02|pCube5";
 	rename -uid "C25095E7-488C-5672-AAAC-958F2C4ADAF2";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -50355,7 +50352,7 @@ createNode mesh -n "pCubeShape5" -p "|Stalagmite_02_02|pCube5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_02_03";
+createNode transform -n "Stalagmite_02_03" -p "CaveSet";
 	rename -uid "0F8F2B2C-4A41-7BAC-9601-12A8E0741315";
 	setAttr ".t" -type "double3" -413.32965278912781 2449.5455363775691 2010.8129029333218 ;
 	setAttr ".r" -type "double3" 0 -21.206640320203796 180 ;
@@ -50363,7 +50360,7 @@ createNode transform -n "Stalagmite_02_03";
 createNode transform -n "pCube1" -p "Stalagmite_02_03";
 	rename -uid "5033616C-40DD-24F7-41BF-49BCD9CFE005";
 	setAttr ".s" -type "double3" 25 10 10 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_02_03|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_02_03|pCube1";
 	rename -uid "7BC54495-4ABE-E907-9FEA-F482A1BF4F34";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -52475,7 +52472,7 @@ createNode transform -n "pCube2" -p "Stalagmite_02_03";
 	setAttr ".s" -type "double3" 10 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.49999972180517638 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999972180517638 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_02_03|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_02_03|pCube2";
 	rename -uid "2B72A8F5-4DBF-EE2A-2F14-5BA1C4E7A75A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -53351,7 +53348,7 @@ createNode transform -n "pCube3" -p "Stalagmite_02_03";
 	setAttr ".s" -type "double3" 8.3345583940016112 9 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.49999998992023542 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999998992023542 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_02_03|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_02_03|pCube3";
 	rename -uid "6AA71F3F-4862-106C-0DF3-45B1E4BCCFA0";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -54222,7 +54219,7 @@ createNode transform -n "pCube4" -p "Stalagmite_02_03";
 	setAttr -av ".sy";
 	setAttr ".rp" -type "double3" 9.2088980833404346 14.312326636832324 -0.4554342755741001 ;
 	setAttr ".sp" -type "double3" 9.2088980833404346 14.312326636832324 -0.4554342755741001 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_02_03|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_02_03|pCube4";
 	rename -uid "D6FC8833-4EEB-F1B3-9E7A-4E9B1C91CB60";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -54704,7 +54701,7 @@ createNode transform -n "pCube5" -p "Stalagmite_02_03";
 	setAttr ".s" -type "double3" 2.4042042585328129 15.746486627889475 3.1369533537469696 ;
 	setAttr ".rp" -type "double3" 0 -0.49999976817178293 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999976817178293 0 ;
-createNode mesh -n "pCubeShape5" -p "|Stalagmite_02_03|pCube5";
+createNode mesh -n "pCubeShape5" -p "|CaveSet|Stalagmite_02_03|pCube5";
 	rename -uid "29715CE1-4B92-FE03-C809-60A9C7C36016";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -55549,7 +55546,7 @@ createNode mesh -n "pCubeShape5" -p "|Stalagmite_02_03|pCube5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_02_04";
+createNode transform -n "Stalagmite_02_04" -p "CaveSet";
 	rename -uid "780961BD-4C95-C8F0-E3BF-9093588823BC";
 	setAttr ".t" -type "double3" 181.44209967632557 2449.5455363775259 -772.99688307493136 ;
 	setAttr ".r" -type "double3" -5.1046421008526344e-31 46.231376400858366 180 ;
@@ -55557,7 +55554,7 @@ createNode transform -n "Stalagmite_02_04";
 createNode transform -n "pCube1" -p "Stalagmite_02_04";
 	rename -uid "44BA7579-4E03-D903-D7C3-43959020C582";
 	setAttr ".s" -type "double3" 25 10 10 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_02_04|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_02_04|pCube1";
 	rename -uid "B4852F86-48EE-7493-0C85-E797DC5A3F42";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -57669,7 +57666,7 @@ createNode transform -n "pCube2" -p "Stalagmite_02_04";
 	setAttr ".s" -type "double3" 10 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.49999972180517638 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999972180517638 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_02_04|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_02_04|pCube2";
 	rename -uid "04808395-470F-EBE4-96CD-9EB3D91A3548";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -58545,7 +58542,7 @@ createNode transform -n "pCube3" -p "Stalagmite_02_04";
 	setAttr ".s" -type "double3" 8.3345583940016112 9 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.49999998992023542 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999998992023542 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_02_04|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_02_04|pCube3";
 	rename -uid "CCA379CE-48DB-3031-9498-D294F56AF684";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -59416,7 +59413,7 @@ createNode transform -n "pCube4" -p "Stalagmite_02_04";
 	setAttr -av ".sy";
 	setAttr ".rp" -type "double3" 9.2088980833404346 14.312326636832324 -0.4554342755741001 ;
 	setAttr ".sp" -type "double3" 9.2088980833404346 14.312326636832324 -0.4554342755741001 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_02_04|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_02_04|pCube4";
 	rename -uid "185D2545-41F6-DA04-579E-7F90D6A149AE";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -59898,7 +59895,7 @@ createNode transform -n "pCube5" -p "Stalagmite_02_04";
 	setAttr ".s" -type "double3" 2.4042042585328129 15.746486627889475 3.1369533537469696 ;
 	setAttr ".rp" -type "double3" 0 -0.49999976817178293 0 ;
 	setAttr ".sp" -type "double3" 0 -0.49999976817178293 0 ;
-createNode mesh -n "pCubeShape5" -p "|Stalagmite_02_04|pCube5";
+createNode mesh -n "pCubeShape5" -p "|CaveSet|Stalagmite_02_04|pCube5";
 	rename -uid "66B9B7D7-474E-540B-A138-D8A22DFACC0A";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -60743,7 +60740,7 @@ createNode mesh -n "pCubeShape5" -p "|Stalagmite_02_04|pCube5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_01_03";
+createNode transform -n "Stalagmite_01_03" -p "CaveSet";
 	rename -uid "C18A1DAD-46D1-49CB-1A0F-A1B68C072430";
 	setAttr ".t" -type "double3" 566.32238530711425 2837.6419581514647 2875.5471773531954 ;
 	setAttr ".r" -type "double3" 180 73.977223769053907 0 ;
@@ -60754,7 +60751,7 @@ createNode transform -n "pCube1" -p "Stalagmite_01_03";
 	setAttr ".s" -type "double3" 10 5 10 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_03|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_01_03|pCube1";
 	rename -uid "DB1226DB-4440-02A8-9E62-C1A078CFC6F8";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -62549,7 +62546,7 @@ createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_03|pCube1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape5" -p "|Stalagmite_01_03|pCube1";
+createNode mesh -n "polySurfaceShape5" -p "|CaveSet|Stalagmite_01_03|pCube1";
 	rename -uid "EFE3B021-47DA-6E2F-F18C-19A1A11C2CE0";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -64567,7 +64564,7 @@ createNode transform -n "pCube2" -p "Stalagmite_01_03";
 	setAttr ".s" -type "double3" 7.5 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_03|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_01_03|pCube2";
 	rename -uid "2E9BD81C-4AFF-EF9D-37B4-52818C615A4D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -65643,7 +65640,7 @@ createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_03|pCube2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape4" -p "|Stalagmite_01_03|pCube2";
+createNode mesh -n "polySurfaceShape4" -p "|CaveSet|Stalagmite_01_03|pCube2";
 	rename -uid "B98C8F61-4D18-4492-8FCC-E0B59A089761";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -67015,7 +67012,7 @@ createNode transform -n "pCube3" -p "Stalagmite_01_03";
 	setAttr ".s" -type "double3" 5 10 5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_03|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_01_03|pCube3";
 	rename -uid "D9A74387-4FEB-73D7-10C1-258723C83AA1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -67938,7 +67935,7 @@ createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_03|pCube3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape6" -p "|Stalagmite_01_03|pCube3";
+createNode mesh -n "polySurfaceShape6" -p "|CaveSet|Stalagmite_01_03|pCube3";
 	rename -uid "4137E346-4A6E-79D1-26F6-DD9C397706B4";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -69181,7 +69178,7 @@ createNode transform -n "pCube4" -p "Stalagmite_01_03";
 	setAttr ".s" -type "double3" 2 16.388388363686964 2 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_03|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_01_03|pCube4";
 	rename -uid "9526A72B-4663-19A8-D1E2-CD9217BC5DAA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -69701,7 +69698,7 @@ createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_03|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_03|pCube4";
+createNode mesh -n "polySurfaceShape3" -p "|CaveSet|Stalagmite_01_03|pCube4";
 	rename -uid "DE121F88-4682-708B-5FAA-A6B1B4D5AA4C";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -69749,7 +69746,7 @@ createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_03|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_01_04";
+createNode transform -n "Stalagmite_01_04" -p "CaveSet";
 	rename -uid "9FD4400C-437B-CBF3-3471-7AAD273D5984";
 	setAttr ".t" -type "double3" 176.85553688946857 2837.6419581515024 -102.75924884934091 ;
 	setAttr ".r" -type "double3" 180 73.977223769053907 0 ;
@@ -69760,7 +69757,7 @@ createNode transform -n "pCube1" -p "Stalagmite_01_04";
 	setAttr ".s" -type "double3" 10 5 10 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_04|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_01_04|pCube1";
 	rename -uid "F9A04CEF-4D14-A33C-D87E-C8A92902AFF1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -71555,7 +71552,7 @@ createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_04|pCube1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape5" -p "|Stalagmite_01_04|pCube1";
+createNode mesh -n "polySurfaceShape5" -p "|CaveSet|Stalagmite_01_04|pCube1";
 	rename -uid "249169B6-4828-9D97-FDFB-19A0EB640297";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -73573,7 +73570,7 @@ createNode transform -n "pCube2" -p "Stalagmite_01_04";
 	setAttr ".s" -type "double3" 7.5 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_04|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_01_04|pCube2";
 	rename -uid "58263AF0-4281-A796-7266-E69CE045F36C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -74649,7 +74646,7 @@ createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_04|pCube2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape4" -p "|Stalagmite_01_04|pCube2";
+createNode mesh -n "polySurfaceShape4" -p "|CaveSet|Stalagmite_01_04|pCube2";
 	rename -uid "35C7FD8D-4234-2588-F32A-9D8C2C1F05EB";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -76021,7 +76018,7 @@ createNode transform -n "pCube3" -p "Stalagmite_01_04";
 	setAttr ".s" -type "double3" 5 10 5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_04|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_01_04|pCube3";
 	rename -uid "5152F868-4CCF-CA16-53FF-40B825A17137";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -76944,7 +76941,7 @@ createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_04|pCube3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape6" -p "|Stalagmite_01_04|pCube3";
+createNode mesh -n "polySurfaceShape6" -p "|CaveSet|Stalagmite_01_04|pCube3";
 	rename -uid "774949B3-4750-6CDD-8D20-D596D4E1AD90";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -78187,7 +78184,7 @@ createNode transform -n "pCube4" -p "Stalagmite_01_04";
 	setAttr ".s" -type "double3" 2 16.388388363686964 2 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_04|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_01_04|pCube4";
 	rename -uid "A13E6EEB-4E28-93AA-47EB-8FBCF1D343AA";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -78707,7 +78704,7 @@ createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_04|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_04|pCube4";
+createNode mesh -n "polySurfaceShape3" -p "|CaveSet|Stalagmite_01_04|pCube4";
 	rename -uid "15C70FD5-4616-3F91-D364-FEB51F45A2DE";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -78755,7 +78752,7 @@ createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_04|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_01_05";
+createNode transform -n "Stalagmite_01_05" -p "CaveSet";
 	rename -uid "4BF2EE6B-4DBD-3F85-9C9A-72BB1E4E3A58";
 	setAttr ".t" -type "double3" -746.37059768657241 2610.009974845771 2913.6794527635589 ;
 	setAttr ".r" -type "double3" 180 73.977223769053907 0 ;
@@ -78766,7 +78763,7 @@ createNode transform -n "pCube1" -p "Stalagmite_01_05";
 	setAttr ".s" -type "double3" 10 5 10 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_05|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_01_05|pCube1";
 	rename -uid "C6EADE7F-4856-C15E-8D6D-DD8163D181B1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -80561,7 +80558,7 @@ createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_05|pCube1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape5" -p "|Stalagmite_01_05|pCube1";
+createNode mesh -n "polySurfaceShape5" -p "|CaveSet|Stalagmite_01_05|pCube1";
 	rename -uid "ECD6349A-4372-A3AC-68AB-7DBE72F429FC";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -82579,7 +82576,7 @@ createNode transform -n "pCube2" -p "Stalagmite_01_05";
 	setAttr ".s" -type "double3" 7.5 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_05|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_01_05|pCube2";
 	rename -uid "85D7310F-49EC-3781-F03B-8BAFAE8C32FC";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -83655,7 +83652,7 @@ createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_05|pCube2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape4" -p "|Stalagmite_01_05|pCube2";
+createNode mesh -n "polySurfaceShape4" -p "|CaveSet|Stalagmite_01_05|pCube2";
 	rename -uid "C04031E6-47DA-63AF-2E0E-BA99759D3C8D";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -85027,7 +85024,7 @@ createNode transform -n "pCube3" -p "Stalagmite_01_05";
 	setAttr ".s" -type "double3" 5 10 5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_05|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_01_05|pCube3";
 	rename -uid "BC1E2C98-4737-F388-F4FF-70A6B8F37393";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -85950,7 +85947,7 @@ createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_05|pCube3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape6" -p "|Stalagmite_01_05|pCube3";
+createNode mesh -n "polySurfaceShape6" -p "|CaveSet|Stalagmite_01_05|pCube3";
 	rename -uid "567066BC-4152-8335-0220-9DA89CFD4F4C";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -87193,7 +87190,7 @@ createNode transform -n "pCube4" -p "Stalagmite_01_05";
 	setAttr ".s" -type "double3" 2 16.388388363686964 2 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_05|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_01_05|pCube4";
 	rename -uid "5CD61E53-4F89-F430-B4C4-098582E5BF6F";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -87713,7 +87710,7 @@ createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_05|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_05|pCube4";
+createNode mesh -n "polySurfaceShape3" -p "|CaveSet|Stalagmite_01_05|pCube4";
 	rename -uid "22812AD3-4573-A0E4-A11E-0C905BF9DE54";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -87761,7 +87758,7 @@ createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_05|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_01_06";
+createNode transform -n "Stalagmite_01_06" -p "CaveSet";
 	rename -uid "4F90A376-4C8E-1416-B22A-71A86088F65D";
 	setAttr ".t" -type "double3" -1591.2106475972007 -444.15347450787294 2594.4003834858795 ;
 	setAttr ".r" -type "double3" 0 70.772270625435112 0 ;
@@ -87772,7 +87769,7 @@ createNode transform -n "pCube1" -p "Stalagmite_01_06";
 	setAttr ".s" -type "double3" 10 5 10 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_06|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_01_06|pCube1";
 	rename -uid "39F864FA-49FF-F0C9-E87F-83807572BA8E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -89567,7 +89564,7 @@ createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_06|pCube1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape5" -p "|Stalagmite_01_06|pCube1";
+createNode mesh -n "polySurfaceShape5" -p "|CaveSet|Stalagmite_01_06|pCube1";
 	rename -uid "EAD0D64C-49FF-2CA7-C21B-F184A030C5CB";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -91585,7 +91582,7 @@ createNode transform -n "pCube2" -p "Stalagmite_01_06";
 	setAttr ".s" -type "double3" 7.5 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_06|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_01_06|pCube2";
 	rename -uid "6AA08B21-4B7D-2575-CB1A-DB91573CB78D";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -92661,7 +92658,7 @@ createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_06|pCube2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape4" -p "|Stalagmite_01_06|pCube2";
+createNode mesh -n "polySurfaceShape4" -p "|CaveSet|Stalagmite_01_06|pCube2";
 	rename -uid "6749C61D-4A69-C6F8-35ED-DDA2F2D81FC7";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -94033,7 +94030,7 @@ createNode transform -n "pCube3" -p "Stalagmite_01_06";
 	setAttr ".s" -type "double3" 5 10 5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_06|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_01_06|pCube3";
 	rename -uid "09482921-4A36-CE60-78C3-5B9779169C7C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -94956,7 +94953,7 @@ createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_06|pCube3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape6" -p "|Stalagmite_01_06|pCube3";
+createNode mesh -n "polySurfaceShape6" -p "|CaveSet|Stalagmite_01_06|pCube3";
 	rename -uid "65B7CDBB-488D-2195-BD00-BD949187CC2D";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -96199,7 +96196,7 @@ createNode transform -n "pCube4" -p "Stalagmite_01_06";
 	setAttr ".s" -type "double3" 2 16.388388363686964 2 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_06|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_01_06|pCube4";
 	rename -uid "4A127F98-471E-3AEA-592C-B09288F00B0C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -96719,7 +96716,7 @@ createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_06|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_06|pCube4";
+createNode mesh -n "polySurfaceShape3" -p "|CaveSet|Stalagmite_01_06|pCube4";
 	rename -uid "3811D34C-4EAB-01EA-C443-348C50E47FE6";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -96767,7 +96764,7 @@ createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_06|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Stalagmite_01_07";
+createNode transform -n "Stalagmite_01_07" -p "CaveSet";
 	rename -uid "40BB092D-4811-F127-7F8A-E1BEB1948BC4";
 	setAttr ".t" -type "double3" -765.19038178547646 -573.90294464896078 -1399.9777466725366 ;
 	setAttr ".r" -type "double3" 0 122.3974763998966 0 ;
@@ -96778,7 +96775,7 @@ createNode transform -n "pCube1" -p "Stalagmite_01_07";
 	setAttr ".s" -type "double3" 10 5 10 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_07|pCube1";
+createNode mesh -n "pCubeShape1" -p "|CaveSet|Stalagmite_01_07|pCube1";
 	rename -uid "5597AF80-4F85-D4F9-F4CE-E9837A2841C9";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -98573,7 +98570,7 @@ createNode mesh -n "pCubeShape1" -p "|Stalagmite_01_07|pCube1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape5" -p "|Stalagmite_01_07|pCube1";
+createNode mesh -n "polySurfaceShape5" -p "|CaveSet|Stalagmite_01_07|pCube1";
 	rename -uid "202E4D0D-4686-EA78-D141-8684E42592A7";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -100591,7 +100588,7 @@ createNode transform -n "pCube2" -p "Stalagmite_01_07";
 	setAttr ".s" -type "double3" 7.5 7.5 7.5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_07|pCube2";
+createNode mesh -n "pCubeShape2" -p "|CaveSet|Stalagmite_01_07|pCube2";
 	rename -uid "EFE56177-44F7-3C7D-0CBD-058BAE136C0B";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -101667,7 +101664,7 @@ createNode mesh -n "pCubeShape2" -p "|Stalagmite_01_07|pCube2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape4" -p "|Stalagmite_01_07|pCube2";
+createNode mesh -n "polySurfaceShape4" -p "|CaveSet|Stalagmite_01_07|pCube2";
 	rename -uid "81F02123-4AE7-E8AE-75CB-4C88302CA976";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -103039,7 +103036,7 @@ createNode transform -n "pCube3" -p "Stalagmite_01_07";
 	setAttr ".s" -type "double3" 5 10 5 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_07|pCube3";
+createNode mesh -n "pCubeShape3" -p "|CaveSet|Stalagmite_01_07|pCube3";
 	rename -uid "82041383-45D0-1747-8883-3DBD48C64ECC";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -103962,7 +103959,7 @@ createNode mesh -n "pCubeShape3" -p "|Stalagmite_01_07|pCube3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape6" -p "|Stalagmite_01_07|pCube3";
+createNode mesh -n "polySurfaceShape6" -p "|CaveSet|Stalagmite_01_07|pCube3";
 	rename -uid "5672D098-417F-63B6-0547-299EDBB1E9F8";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -105205,7 +105202,7 @@ createNode transform -n "pCube4" -p "Stalagmite_01_07";
 	setAttr ".s" -type "double3" 2 16.388388363686964 2 ;
 	setAttr ".rp" -type "double3" 0 -0.5 0 ;
 	setAttr ".sp" -type "double3" 0 -0.5 0 ;
-createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_07|pCube4";
+createNode mesh -n "pCubeShape4" -p "|CaveSet|Stalagmite_01_07|pCube4";
 	rename -uid "F9CF811C-4410-F7FF-62FB-B984D5FC1AB6";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -105725,7 +105722,7 @@ createNode mesh -n "pCubeShape4" -p "|Stalagmite_01_07|pCube4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_07|pCube4";
+createNode mesh -n "polySurfaceShape3" -p "|CaveSet|Stalagmite_01_07|pCube4";
 	rename -uid "9AB673E4-4471-A5A8-348F-99A0EE2310A5";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
@@ -105774,20 +105771,20 @@ createNode mesh -n "polySurfaceShape3" -p "|Stalagmite_01_07|pCube4";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "294BBFB3-4BB6-D64F-1C5D-A389FE3AF258";
+	rename -uid "C8448502-4318-08A0-8862-5CA621209FA2";
 	setAttr -s 131 ".lnk";
 	setAttr -s 131 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DFD95F9B-4D4A-993C-003C-768B9AC42963";
+	rename -uid "3F0F5AFF-4FE3-3036-F5B1-1DBBB984333A";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "BE63A7DF-4A45-5E9E-9020-759BB1926A79";
+	rename -uid "A2840588-426A-31BA-600C-539672C24DD9";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "F6018011-4E39-5CD4-F21F-468299FC7339";
+	rename -uid "DAC09224-4B58-DDF8-E99B-96BFA6BC48B0";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "BDF567D6-44B6-150E-0247-B18420EF87F0";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "8DAA2C10-4347-F930-DC18-1AB1FA5FAC99";
+	rename -uid "3284079D-44C8-1D79-C568-8DBE99B72764";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "2DC61098-487B-D616-65ED-A288A155BAB4";
 	setAttr ".g" yes;
@@ -105807,7 +105804,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
 		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
-		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1650\n            -height 1066\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1740\n            -height 1084\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n"
 		+ "            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
 		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n"
@@ -105834,8 +105831,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n"
 		+ "                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n"
 		+ "        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1650\\n    -height 1066\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1650\\n    -height 1066\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1740\\n    -height 1084\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1740\\n    -height 1084\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 0.05 -size 0.12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -109942,12 +109939,17 @@ createNode reference -n "DragonGateRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"DragonGateRN"
 		"DragonGateRN" 0
-		"DragonGateRN" 4
-		2 "|DragonGate:DragonGate" "translate" " -type \"double3\" -2180.85878953361498134 -415.76852047587476591 1057.19712774626009377"
+		"DragonGateRN" 7
+		0 "|DragonGate:DragonGate" "|CaveSet" "-s -r "
+		2 "|CaveSet|DragonGate:DragonGate" "visibility" " 1"
+		2 "|CaveSet|DragonGate:DragonGate" "translate" " -type \"double3\" -2134.32791055737970964 -400 1057.19712774626009377"
 		
-		2 "|DragonGate:DragonGate" "rotate" " -type \"double3\" 0 90 0"
-		2 "|DragonGate:DragonGate" "scale" " -type \"double3\" 55 55 55"
-		2 "|DragonGate:DragonGate|DragonGate:Gate" "translate" " -type \"double3\" 0 0 0";
+		2 "|CaveSet|DragonGate:DragonGate" "rotate" " -type \"double3\" 0 90 0"
+		2 "|CaveSet|DragonGate:DragonGate" "scale" " -type \"double3\" 50 50 50"
+		2 "|CaveSet|DragonGate:DragonGate|DragonGate:Gate" "translate" " -type \"double3\" 0 0 0"
+		
+		2 "|CaveSet|DragonGate:DragonGate|DragonGate:Gate|DragonGate:Horizontal|DragonGate:Gate_H_01" 
+		"translate" " -type \"double3\" 0 2.15773923094308273 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode ikSpringSolver -s -n "ikSpringSolver";
@@ -109955,30 +109957,17 @@ createNode ikSpringSolver -s -n "ikSpringSolver";
 createNode deleteComponent -n "deleteComponent1";
 	rename -uid "E028C9F1-46FE-A05F-7A09-41BDAB7BC51C";
 	setAttr ".dc" -type "componentList" 3 "f[877:881]" "f[911:915]" "f[945:949]";
-createNode reference -n "Dragon_RigRN";
-	rename -uid "501649E9-4923-D8A1-9785-739D05243565";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"Dragon_RigRN"
-		"Dragon_RigRN" 0
-		"Dragon_RigRN" 3
-		2 "|Dragon_Rig:Dragon" "translate" " -type \"double3\" 0 0 0"
-		2 "|Dragon_Rig:Dragon|Dragon_Rig:Controls|Dragon_Rig:Transform_Ctrl_Grp|Dragon_Rig:Transform_Ctrl" 
-		"translate" " -type \"double3\" -1304.81226512623584313 -419.13000574078057525 972.17126465898115839"
-		
-		2 "Dragon_Rig:Ctrl" "visibility" " 0";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
 createNode reference -n "Stalagmite_1RN";
 	rename -uid "FF1341DF-4E62-C933-98D8-5B9D21D04142";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Stalagmite_1RN"
 		"Stalagmite_1RN" 0
 		"Stalagmite_1RN" 5
-		0 "|Stalagmite_1:pCube1" "|Stalagmite_01_01" "-s -r "
-		0 "|Stalagmite_1:pCube2" "|Stalagmite_01_01" "-s -r "
-		0 "|Stalagmite_1:pCube3" "|Stalagmite_01_01" "-s -r "
-		0 "|Stalagmite_1:pCube4" "|Stalagmite_01_01" "-s -r "
-		2 "|Stalagmite_01_01|Stalagmite_1:pCube1" "translate" " -type \"double3\" 0 0.5 0";
+		0 "|Stalagmite_1:pCube1" "|CaveSet|Stalagmite_01_01" "-s -r "
+		0 "|Stalagmite_1:pCube2" "|CaveSet|Stalagmite_01_01" "-s -r "
+		0 "|Stalagmite_1:pCube3" "|CaveSet|Stalagmite_01_01" "-s -r "
+		0 "|Stalagmite_1:pCube4" "|CaveSet|Stalagmite_01_01" "-s -r "
+		2 "|CaveSet|Stalagmite_01_01|Stalagmite_1:pCube1" "translate" " -type \"double3\" 0 0.5 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Stalagmite_2RN";
@@ -109987,11 +109976,11 @@ createNode reference -n "Stalagmite_2RN";
 		"Stalagmite_2RN"
 		"Stalagmite_2RN" 0
 		"Stalagmite_2RN" 5
-		0 "|Stalagmite_2:pCube1" "|Stalagmite_02_01" "-s -r "
-		0 "|Stalagmite_2:pCube2" "|Stalagmite_02_01" "-s -r "
-		0 "|Stalagmite_2:pCube3" "|Stalagmite_02_01" "-s -r "
-		0 "|Stalagmite_2:pCube4" "|Stalagmite_02_01" "-s -r "
-		0 "|Stalagmite_2:pCube5" "|Stalagmite_02_01" "-s -r ";
+		0 "|Stalagmite_2:pCube1" "|CaveSet|Stalagmite_02_01" "-s -r "
+		0 "|Stalagmite_2:pCube2" "|CaveSet|Stalagmite_02_01" "-s -r "
+		0 "|Stalagmite_2:pCube3" "|CaveSet|Stalagmite_02_01" "-s -r "
+		0 "|Stalagmite_2:pCube4" "|CaveSet|Stalagmite_02_01" "-s -r "
+		0 "|Stalagmite_2:pCube5" "|CaveSet|Stalagmite_02_01" "-s -r ";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Emergency_ButtonRN";
@@ -110000,23 +109989,11 @@ createNode reference -n "Emergency_ButtonRN";
 		"Emergency_ButtonRN"
 		"Emergency_ButtonRN" 0
 		"Emergency_ButtonRN" 4
-		0 "|Emergency_Button:box1" "|Emergency_Button1" "-s -r "
-		0 "|Emergency_Button:polySurface1" "|Emergency_Button1" "-s -r "
-		0 "|Emergency_Button:button1" "|Emergency_Button1" "-s -r "
-		2 "|Emergency_Button1|Emergency_Button:polySurface1" "translate" " -type \"double3\" 2.00505810337567203 0 -2.07734273756177767";
-	setAttr ".ptag" -type "string" "";
-lockNode -l 1 ;
-createNode reference -n "SkeletonRN";
-	rename -uid "3BE235AF-4AE7-888F-5CED-6DBCB8D4629E";
-	setAttr ".ed" -type "dataReferenceEdits" 
-		"SkeletonRN"
-		"SkeletonRN" 0
-		"SkeletonRN" 2
-		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl" 
-		"translate" " -type \"double3\" -2021.63125434299945482 -405.91351289569843175 76.80560962799575009"
-		
-		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl" 
-		"rotate" " -type \"double3\" 0 90 0";
+		0 "|Emergency_Button:box1" "|CaveSet|Emergency_Button1" "-s -r "
+		0 "|Emergency_Button:polySurface1" "|CaveSet|Emergency_Button1" "-s -r "
+		0 "|Emergency_Button:button1" "|CaveSet|Emergency_Button1" "-s -r "
+		2 "|CaveSet|Emergency_Button1|Emergency_Button:polySurface1" "translate" 
+		" -type \"double3\" 2.00505810337567203 0 -2.07734273756177767";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "DragonGateTorchRN";
@@ -110118,12 +110095,13 @@ createNode reference -n "DragonGateTorchRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"DragonGateTorchRN"
 		"DragonGateTorchRN" 0
-		"DragonGateTorchRN" 96
-		2 "|DragonGateTorch:DragonGateTorch" "translate" " -type \"double3\" -2158.44384636917993703 -104.64716024271149308 257.86134642456596566"
+		"DragonGateTorchRN" 97
+		0 "|DragonGateTorch:DragonGateTorch" "|CaveSet" "-s -r "
+		2 "|CaveSet|DragonGateTorch:DragonGateTorch" "translate" " -type \"double3\" -2158.44384636917993703 -104.64716024271149308 257.86134642456596566"
 		
-		2 "|DragonGateTorch:DragonGateTorch" "rotate" " -type \"double3\" 0 90 0"
+		2 "|CaveSet|DragonGateTorch:DragonGateTorch" "rotate" " -type \"double3\" 0 90 0"
 		
-		2 "|DragonGateTorch:DragonGateTorch" "scale" " -type \"double3\" 120 120 120"
+		2 "|CaveSet|DragonGateTorch:DragonGateTorch" "scale" " -type \"double3\" 120 120 120"
 		
 		5 4 "DragonGateTorchRN" "DragonGateTorch:aiStandardSurface1SG.dagSetMembers" 
 		"DragonGateTorchRN.placeHolderList[1]" ""
@@ -110318,10 +110296,11 @@ createNode reference -n "Large_BoulderRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Large_BoulderRN"
 		"Large_BoulderRN" 0
-		"Large_BoulderRN" 2
-		2 "|Large_Boulder:polySurface3" "translate" " -type \"double3\" -145.2910010121141795 -396.482068267557338 3260.04112039253595867"
+		"Large_BoulderRN" 3
+		0 "|Large_Boulder:polySurface3" "|CaveSet" "-s -r "
+		2 "|CaveSet|Large_Boulder:polySurface3" "translate" " -type \"double3\" -145.2910010121141795 -396.482068267557338 3260.04112039253595867"
 		
-		2 "|Large_Boulder:polySurface3" "scale" " -type \"double3\" 5 5 5";
+		2 "|CaveSet|Large_Boulder:polySurface3" "scale" " -type \"double3\" 5 5 5";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "roundedRocksRN";
@@ -110329,47 +110308,48 @@ createNode reference -n "roundedRocksRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"roundedRocksRN"
 		"roundedRocksRN" 0
-		"roundedRocksRN" 21
-		2 "|roundedRocks:Rocks" "translate" " -type \"double3\" 0 -417.54856650145114827 4486.67903257409125217"
+		"roundedRocksRN" 22
+		0 "|roundedRocks:Rocks" "|CaveSet" "-s -r "
+		2 "|CaveSet|roundedRocks:Rocks" "translate" " -type \"double3\" 0 -417.54856650145114827 4486.67903257409125217"
 		
-		2 "|roundedRocks:Rocks" "scale" " -type \"double3\" 7 7 7"
-		2 "|roundedRocks:Rocks|roundedRocks:rock6" "translate" " -type \"double3\" -84.20655013816649159 3.61732036118796074 -626.5685444741708352"
+		2 "|CaveSet|roundedRocks:Rocks" "scale" " -type \"double3\" 7 7 7"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock6" "translate" " -type \"double3\" -84.20655013816649159 3.61732036118796074 -626.5685444741708352"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock3" "translate" " -type \"double3\" -222.07920677641217821 1.59131079625574112 -354.52347525429314601"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock3" "translate" " -type \"double3\" -222.07920677641217821 1.59131079625574112 -354.52347525429314601"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock4" "translate" " -type \"double3\" 24.59018837729772855 4.06743742584186219 -712.91077347892644411"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock4" "translate" " -type \"double3\" 24.59018837729772855 4.06743742584186219 -712.91077347892644411"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock10" "translate" " -type \"double3\" 3.36629106213781837 7.09013958018931145 -684.1663172039446863"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock10" "translate" " -type \"double3\" 3.36629106213781837 7.09013958018931145 -684.1663172039446863"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock13" "translate" " -type \"double3\" -298.73792606450666653 2.54008559492697028 -673.5986023063732091"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock13" "translate" " -type \"double3\" -298.73792606450666653 2.54008559492697028 -673.5986023063732091"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock9" "translate" " -type \"double3\" 31.99106757719231453 1.52742483180144717 -356.70554564646255358"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock9" "translate" " -type \"double3\" 31.99106757719231453 1.52742483180144717 -356.70554564646255358"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock9" "scale" " -type \"double3\" 6.36496413651348014 6.36496413651348014 6.36496413651348014"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock9" "scale" " -type \"double3\" 6.36496413651348014 6.36496413651348014 6.36496413651348014"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock15" "translate" " -type \"double3\" 47.35474835786335746 3.13689823669146639 -367.98268391144767975"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock15" "translate" " -type \"double3\" 47.35474835786335746 3.13689823669146639 -367.98268391144767975"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock5" "translate" " -type \"double3\" -200.56602132082264234 2.35963628202446563 -362.07228652111240308"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock5" "translate" " -type \"double3\" -200.56602132082264234 2.35963628202446563 -362.07228652111240308"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock5" "scale" " -type \"double3\" 5.90860051297102906 5.90860051297102906 5.90860051297102906"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock5" "scale" " -type \"double3\" 5.90860051297102906 5.90860051297102906 5.90860051297102906"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock8" "translate" " -type \"double3\" -283.43295024670317162 2.54008246832226892 -694.61411047722151579"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock8" "translate" " -type \"double3\" -283.43295024670317162 2.54008246832226892 -694.61411047722151579"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock11" "translate" " -type \"double3\" 79.51516921645368541 3.13690190057182772 -350.57642086417354221"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock11" "translate" " -type \"double3\" 79.51516921645368541 3.13690190057182772 -350.57642086417354221"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock14" "translate" " -type \"double3\" -117.3622437528029252 2.11870373270629031 -582.70980362237651207"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock14" "translate" " -type \"double3\" -117.3622437528029252 2.11870373270629031 -582.70980362237651207"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock14" "scale" " -type \"double3\" 7.54162230918876642 7.54162230918876642 7.54162230918876642"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock14" "scale" " -type \"double3\" 7.54162230918876642 7.54162230918876642 7.54162230918876642"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock2" "translate" " -type \"double3\" -230.15051329439577898 6.16229873049615051 -369.22292344247489382"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock2" "translate" " -type \"double3\" -230.15051329439577898 6.16229873049615051 -369.22292344247489382"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock1" "translate" " -type \"double3\" 168.5981360108366971 1.45165417887259673 -405.4642314559365559"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock1" "translate" " -type \"double3\" 168.5981360108366971 1.45165417887259673 -405.4642314559365559"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock12" "translate" " -type \"double3\" -36.80985387754645188 0.76840864643379692 -668.89295793992801009"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock12" "translate" " -type \"double3\" -36.80985387754645188 0.76840864643379692 -668.89295793992801009"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock12" "rotate" " -type \"double3\" 0 0 0"
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock12" "rotate" " -type \"double3\" 0 0 0"
 		
-		2 "|roundedRocks:Rocks|roundedRocks:rock7" "translate" " -type \"double3\" -143.83610148878361201 0.48161170029485967 -587.47025507236946851";
+		2 "|CaveSet|roundedRocks:Rocks|roundedRocks:rock7" "translate" " -type \"double3\" -143.83610148878361201 0.48161170029485967 -587.47025507236946851";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "BonesRN";
@@ -110377,100 +110357,167 @@ createNode reference -n "BonesRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"BonesRN"
 		"BonesRN" 0
-		"BonesRN" 39
-		2 "|Bones:Forearm_Bones" "translate" " -type \"double3\" 0 -501.94428039937719177 62.62790563883484651"
+		"BonesRN" 44
+		0 "|Bones:Forearm_Bones" "|CaveSet" "-s -r "
+		0 "|Bones:Femur_Bones" "|CaveSet" "-s -r "
+		0 "|Bones:Ribs" "|CaveSet" "-s -r "
+		0 "|Bones:bottom" "|CaveSet" "-s -r "
+		2 "|CaveSet|Bones:Forearm_Bones" "translate" " -type \"double3\" 0 -501.94428039937719177 62.62790563883484651"
 		
-		2 "|Bones:Forearm_Bones" "rotate" " -type \"double3\" -90 0 0"
-		2 "|Bones:Forearm_Bones" "scale" " -type \"double3\" 150 150 150"
-		2 "|Bones:Forearm_Bones" "rotatePivot" " -type \"double3\" 83.10875296592712402 2.36649513244628906 103.20528745651246538"
+		2 "|CaveSet|Bones:Forearm_Bones" "rotate" " -type \"double3\" -90 0 0"
+		2 "|CaveSet|Bones:Forearm_Bones" "scale" " -type \"double3\" 150 150 150"
 		
-		2 "|Bones:Forearm_Bones" "rotatePivotTranslate" " -type \"double3\" 0 100.83879232406617632 -105.57178258895875445"
+		2 "|CaveSet|Bones:Forearm_Bones" "rotatePivot" " -type \"double3\" 83.10875296592712402 2.36649513244628906 103.20528745651246538"
 		
-		2 "|Bones:Forearm_Bones" "scalePivot" " -type \"double3\" 0.83108752965927124 0.023664951324462891 1.03205287456512451"
+		2 "|CaveSet|Bones:Forearm_Bones" "rotatePivotTranslate" " -type \"double3\" 0 100.83879232406617632 -105.57178258895875445"
 		
-		2 "|Bones:Forearm_Bones" "scalePivotTranslate" " -type \"double3\" 82.27766543626785278 2.34283018112182617 102.17323458194734087"
+		2 "|CaveSet|Bones:Forearm_Bones" "scalePivot" " -type \"double3\" 0.83108752965927124 0.023664951324462891 1.03205287456512451"
 		
-		2 "|Bones:Forearm_Bones|Bones:Forearm_bones" "translate" " -type \"double3\" -10.27943007924076468 -11.44173692159963984 0"
+		2 "|CaveSet|Bones:Forearm_Bones" "scalePivotTranslate" " -type \"double3\" 82.27766543626785278 2.34283018112182617 102.17323458194734087"
 		
-		2 "|Bones:Forearm_Bones|Bones:Forearm_bones" "rotate" " -type \"double3\" 0 0 -30.69199960152989348"
+		2 "|CaveSet|Bones:Forearm_Bones|Bones:Forearm_bones" "translate" " -type \"double3\" -10.27943007924076468 -11.44173692159963984 0"
 		
-		2 "|Bones:Forearm_Bones|Bones:Forearm_bones1" "translate" " -type \"double3\" -11.03080948742521805 -11.47275176506339456 -0.0094047033227808927"
+		2 "|CaveSet|Bones:Forearm_Bones|Bones:Forearm_bones" "rotate" " -type \"double3\" 0 0 -30.69199960152989348"
 		
-		2 "|Bones:Forearm_Bones|Bones:Forearm_bones1" "rotate" " -type \"double3\" 0 0 83.34816096145898712"
+		2 "|CaveSet|Bones:Forearm_Bones|Bones:Forearm_bones1" "translate" " -type \"double3\" -11.03080948742521805 -11.47275176506339456 -0.0094047033227808927"
 		
-		2 "|Bones:Forearm_Bones|Bones:Forearm_bones2" "translate" " -type \"double3\" -0.86248296676264546 1.13422936296932764 0"
+		2 "|CaveSet|Bones:Forearm_Bones|Bones:Forearm_bones1" "rotate" " -type \"double3\" 0 0 83.34816096145898712"
 		
-		2 "|Bones:Forearm_Bones|Bones:Forearm_bones2" "rotate" " -type \"double3\" 0 0 33.55230571259144767"
+		2 "|CaveSet|Bones:Forearm_Bones|Bones:Forearm_bones2" "translate" " -type \"double3\" -0.86248296676264546 1.13422936296932764 0"
 		
-		2 "|Bones:Femur_Bones" "translate" " -type \"double3\" 0 -501.94428039937719177 0"
+		2 "|CaveSet|Bones:Forearm_Bones|Bones:Forearm_bones2" "rotate" " -type \"double3\" 0 0 33.55230571259144767"
 		
-		2 "|Bones:Femur_Bones" "rotate" " -type \"double3\" -90 0 0"
-		2 "|Bones:Femur_Bones" "scale" " -type \"double3\" 200 200 200"
-		2 "|Bones:Femur_Bones" "rotatePivot" " -type \"double3\" 106.59618973731994629 2.01678276062011719 106.43513202667236328"
+		2 "|CaveSet|Bones:Femur_Bones" "translate" " -type \"double3\" 0 -501.94428039937719177 0"
 		
-		2 "|Bones:Femur_Bones" "rotatePivotTranslate" " -type \"double3\" 0 104.41834926605224609 -108.45191478729248047"
+		2 "|CaveSet|Bones:Femur_Bones" "rotate" " -type \"double3\" -90 0 0"
+		2 "|CaveSet|Bones:Femur_Bones" "scale" " -type \"double3\" 200 200 200"
+		2 "|CaveSet|Bones:Femur_Bones" "rotatePivot" " -type \"double3\" 106.59618973731994629 2.01678276062011719 106.43513202667236328"
 		
-		2 "|Bones:Femur_Bones" "scalePivot" " -type \"double3\" 1.06596189737319946 0.020167827606201172 1.06435132026672363"
+		2 "|CaveSet|Bones:Femur_Bones" "rotatePivotTranslate" " -type \"double3\" 0 104.41834926605224609 -108.45191478729248047"
 		
-		2 "|Bones:Femur_Bones" "scalePivotTranslate" " -type \"double3\" 105.53022783994674683 1.99661493301391624 105.37078070640563965"
+		2 "|CaveSet|Bones:Femur_Bones" "scalePivot" " -type \"double3\" 1.06596189737319946 0.020167827606201172 1.06435132026672363"
 		
-		2 "|Bones:Femur_Bones|Bones:Femur" "translate" " -type \"double3\" -7.86918060087322058 -9.26309058049316114 0"
+		2 "|CaveSet|Bones:Femur_Bones" "scalePivotTranslate" " -type \"double3\" 105.53022783994674683 1.99661493301391624 105.37078070640563965"
 		
-		2 "|Bones:Femur_Bones|Bones:Femur" "rotate" " -type \"double3\" 0 0 29.81384141314563152"
+		2 "|CaveSet|Bones:Femur_Bones|Bones:Femur" "translate" " -type \"double3\" -7.86918060087322058 -9.26309058049316114 0"
 		
-		2 "|Bones:Femur_Bones|Bones:Femur1" "translate" " -type \"double3\" -0.90703766455285695 -0.047368988534532572 0.0015228635365748275"
+		2 "|CaveSet|Bones:Femur_Bones|Bones:Femur" "rotate" " -type \"double3\" 0 0 29.81384141314563152"
 		
-		2 "|Bones:Femur_Bones|Bones:Femur1" "rotate" " -type \"double3\" 22.08746047028435555 0 0"
+		2 "|CaveSet|Bones:Femur_Bones|Bones:Femur1" "translate" " -type \"double3\" -0.90703766455285695 -0.047368988534532572 0.0015228635365748275"
 		
-		2 "|Bones:Femur_Bones|Bones:Femur2" "translate" " -type \"double3\" -1.06911021508791193 1.72799532987113147 -0.065179901294926318"
+		2 "|CaveSet|Bones:Femur_Bones|Bones:Femur1" "rotate" " -type \"double3\" 22.08746047028435555 0 0"
 		
-		2 "|Bones:Femur_Bones|Bones:Femur2" "rotate" " -type \"double3\" 5.23525583192206057 0 0"
+		2 "|CaveSet|Bones:Femur_Bones|Bones:Femur2" "translate" " -type \"double3\" -1.06911021508791193 1.72799532987113147 -0.065179901294926318"
 		
-		2 "|Bones:Ribs" "translate" " -type \"double3\" 0 -501.94428039937719177 0"
+		2 "|CaveSet|Bones:Femur_Bones|Bones:Femur2" "rotate" " -type \"double3\" 5.23525583192206057 0 0"
 		
-		2 "|Bones:Ribs" "rotate" " -type \"double3\" -90 0 0"
-		2 "|Bones:Ribs" "scale" " -type \"double3\" 400 400 400"
-		2 "|Bones:Ribs" "rotatePivot" " -type \"double3\" 132.38741755485534668 2.58464813232421875 101.63076519966125488"
+		2 "|CaveSet|Bones:Ribs" "translate" " -type \"double3\" 0 -501.94428039937719177 0"
 		
-		2 "|Bones:Ribs" "rotatePivotTranslate" " -type \"double3\" 0 99.04611706733703613 -104.21541333198547363"
+		2 "|CaveSet|Bones:Ribs" "rotate" " -type \"double3\" -90 0 0"
+		2 "|CaveSet|Bones:Ribs" "scale" " -type \"double3\" 400 400 400"
+		2 "|CaveSet|Bones:Ribs" "rotatePivot" " -type \"double3\" 132.38741755485534668 2.58464813232421875 101.63076519966125488"
 		
-		2 "|Bones:Ribs" "scalePivot" " -type \"double3\" 1.32387417554855347 0.025846481323242188 1.01630765199661255"
+		2 "|CaveSet|Bones:Ribs" "rotatePivotTranslate" " -type \"double3\" 0 99.04611706733703613 -104.21541333198547363"
 		
-		2 "|Bones:Ribs" "scalePivotTranslate" " -type \"double3\" 131.06354337930679321 2.55880165100097656 100.61445754766464233"
+		2 "|CaveSet|Bones:Ribs" "scalePivot" " -type \"double3\" 1.32387417554855347 0.025846481323242188 1.01630765199661255"
 		
-		2 "|Bones:Ribs|Bones:Broken_ribs" "translate" " -type \"double3\" -4.2506697300086147 -4.62676773402759256 0.099037873585503769"
+		2 "|CaveSet|Bones:Ribs" "scalePivotTranslate" " -type \"double3\" 131.06354337930679321 2.55880165100097656 100.61445754766464233"
 		
-		2 "|Bones:Ribs|Bones:Broken_ribs" "rotate" " -type \"double3\" -32.55540673854258671 0 0"
+		2 "|CaveSet|Bones:Ribs|Bones:Broken_ribs" "translate" " -type \"double3\" -4.2506697300086147 -4.62676773402759256 0.099037873585503769"
 		
-		2 "|Bones:Ribs|Bones:Broken_ribs1" "translate" " -type \"double3\" -2.82288527751409424 -0.22642288772165231 -0.028965095853865305"
+		2 "|CaveSet|Bones:Ribs|Bones:Broken_ribs" "rotate" " -type \"double3\" -32.55540673854258671 0 0"
 		
-		2 "|Bones:Ribs|Bones:Broken_ribs1" "rotate" " -type \"double3\" 13.17661427193350399 -79.28873392449506241 97.37844393952900646"
+		2 "|CaveSet|Bones:Ribs|Bones:Broken_ribs1" "translate" " -type \"double3\" -2.82288527751409424 -0.22642288772165231 -0.028965095853865305"
 		
-		2 "|Bones:Ribs|Bones:Broken_ribs2" "translate" " -type \"double3\" -0.4710902995054268 -0.30083678799812069 0"
+		2 "|CaveSet|Bones:Ribs|Bones:Broken_ribs1" "rotate" " -type \"double3\" 13.17661427193350399 -79.28873392449506241 97.37844393952900646"
 		
-		2 "|Bones:Ribs|Bones:Broken_ribs2" "rotate" " -type \"double3\" 0 0 25.81942649914186916";
+		2 "|CaveSet|Bones:Ribs|Bones:Broken_ribs2" "translate" " -type \"double3\" -0.4710902995054268 -0.30083678799812069 0"
+		
+		2 "|CaveSet|Bones:Ribs|Bones:Broken_ribs2" "rotate" " -type \"double3\" 0 0 25.81942649914186916"
+		
+		2 "|CaveSet|Bones:bottom" "visibility" " 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode polyBridgeEdge -n "polyBridgeEdge1";
+	rename -uid "14032746-4240-FC1F-FBF7-35ABDFA84EFD";
+	setAttr ".ics" -type "componentList" 2 "e[1754]" "e[1936]";
+	setAttr ".ix" -type "matrix" 2200 0 0 0 0 2000 0 0 0 0 2000 0 0 0 0 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 906;
+	setAttr ".sv2" 1002;
+	setAttr ".d" 1;
+createNode polyBridgeEdge -n "polyBridgeEdge2";
+	rename -uid "981FBA6C-47FE-DBE8-6AAA-0793AA00DDF1";
+	setAttr ".ics" -type "componentList" 2 "e[1752]" "e[1935]";
+	setAttr ".ix" -type "matrix" 2200 0 0 0 0 2000 0 0 0 0 2000 0 0 0 0 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 905;
+	setAttr ".sv2" 1001;
+	setAttr ".d" 1;
+createNode polyBridgeEdge -n "polyBridgeEdge3";
+	rename -uid "0C0809DE-4A31-BD8B-640C-07A3805DEA03";
+	setAttr ".ics" -type "componentList" 2 "e[1750]" "e[1934]";
+	setAttr ".ix" -type "matrix" 2200 0 0 0 0 2000 0 0 0 0 2000 0 0 0 0 1;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".dv" 0;
+	setAttr ".sv1" 904;
+	setAttr ".sv2" 1000;
+	setAttr ".d" 1;
+createNode polyCloseBorder -n "polyCloseBorder1";
+	rename -uid "82E1774E-4F89-A9F3-97A5-978C94DC29DF";
+	setAttr ".ics" -type "componentList" 3 "e[1153]" "e[1748]" "e[1933]";
+createNode polySplit -n "polySplit1";
+	rename -uid "7FA9A04B-4949-B13D-7197-23AE33833A5B";
+	setAttr -s 5 ".e[0:4]"  1 0.67395598 0.673657 0.67072397 0.66499001;
+	setAttr -s 5 ".d[0:4]"  -2147481777 -2147479565 -2147479566 -2147479567 -2147479568;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit2";
+	rename -uid "D99ABAD2-4B0D-D0B1-0AAC-C5AF0681035D";
+	setAttr -s 5 ".e[0:4]"  1 0.500983 0.49693599 0.48986799 0.47903499;
+	setAttr -s 5 ".d[0:4]"  -2147481836 -2147479565 -2147479566 -2147479567 -2147479568;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySplit -n "polySplit3";
+	rename -uid "4FFE7B4F-4DB4-86B4-A399-3D8D185B16F3";
+	setAttr -s 4 ".e[0:3]"  1 0.495132 0.495132 0;
+	setAttr -s 4 ".d[0:3]"  -2147481715 -2147479560 -2147479552 -2147481902;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polySoftEdge -n "polySoftEdge5";
+	rename -uid "86CF01A1-48ED-29BE-A6BA-C2A80ED788BE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[*]";
+	setAttr ".ix" -type "matrix" 2200 0 0 0 0 2000 0 0 0 0 2000 0 0 0 0 1;
+	setAttr ".a" 0;
+createNode polySoftEdge -n "polySoftEdge6";
+	rename -uid "B425DC04-4A61-DF06-EB8E-80823264C8DE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:4104]";
+	setAttr ".ix" -type "matrix" 2200 0 0 0 0 2000 0 0 0 0 2000 0 0 0 0 1;
+	setAttr ".a" 180;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 131 ".st";
+	setAttr -s 52 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 48 ".s";
+	setAttr -s 19 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 92 ".u";
+	setAttr -s 2 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 11 ".r";
+	setAttr -s 9 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 18 ".tx";
+	setAttr -s 3 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 81 ".dsm";
-	setAttr -s 9 ".gn";
+	setAttr -s 80 ".dsm";
+	setAttr -s 7 ".gn";
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".dss" -type "string" "lambert1";
@@ -110486,45 +110533,45 @@ select -ne :defaultColorMgtGlobals;
 	setAttr ".otn" -type "string" "sRGB gamma (legacy)";
 	setAttr ".potn" -type "string" "sRGB gamma (legacy)";
 select -ne :ikSystem;
-	setAttr -s 6 ".sol";
+	setAttr -s 2 ".sol";
 connectAttr "ChainShape1.iog" "DragonGateTorchRN.phl[1]";
 connectAttr "ChainShape2.iog" "DragonGateTorchRN.phl[2]";
 connectAttr "ChainShape3.iog" "DragonGateTorchRN.phl[3]";
-connectAttr "|DragonGateTorch1|MIddleChains|Chain02|Chain04|ChainShape4.iog" "DragonGateTorchRN.phl[4]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain04|ChainShape4.iog" "DragonGateTorchRN.phl[4]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain02|Chain05|ChainShape5.iog" "DragonGateTorchRN.phl[5]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain05|ChainShape5.iog" "DragonGateTorchRN.phl[5]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain02|Chain06|ChainShape6.iog" "DragonGateTorchRN.phl[6]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain06|ChainShape6.iog" "DragonGateTorchRN.phl[6]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain02|Chain07|ChainShape7.iog" "DragonGateTorchRN.phl[7]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain07|ChainShape7.iog" "DragonGateTorchRN.phl[7]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain02|Chain08|ChainShape8.iog" "DragonGateTorchRN.phl[8]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain08|ChainShape8.iog" "DragonGateTorchRN.phl[8]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain02|Chain09|ChainShape9.iog" "DragonGateTorchRN.phl[9]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain02|Chain09|ChainShape9.iog" "DragonGateTorchRN.phl[9]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain03|Chain04|ChainShape4.iog" "DragonGateTorchRN.phl[10]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain04|ChainShape4.iog" "DragonGateTorchRN.phl[10]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain03|Chain05|ChainShape5.iog" "DragonGateTorchRN.phl[11]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain05|ChainShape5.iog" "DragonGateTorchRN.phl[11]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain03|Chain06|ChainShape6.iog" "DragonGateTorchRN.phl[12]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain06|ChainShape6.iog" "DragonGateTorchRN.phl[12]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain03|Chain07|ChainShape7.iog" "DragonGateTorchRN.phl[13]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain07|ChainShape7.iog" "DragonGateTorchRN.phl[13]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain03|Chain08|ChainShape8.iog" "DragonGateTorchRN.phl[14]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain08|ChainShape8.iog" "DragonGateTorchRN.phl[14]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain03|Chain09|ChainShape9.iog" "DragonGateTorchRN.phl[15]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain03|Chain09|ChainShape9.iog" "DragonGateTorchRN.phl[15]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain04|Chain04|ChainShape4.iog" "DragonGateTorchRN.phl[16]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain04|ChainShape4.iog" "DragonGateTorchRN.phl[16]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain04|Chain05|ChainShape5.iog" "DragonGateTorchRN.phl[17]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain05|ChainShape5.iog" "DragonGateTorchRN.phl[17]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain04|Chain06|ChainShape6.iog" "DragonGateTorchRN.phl[18]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain06|ChainShape6.iog" "DragonGateTorchRN.phl[18]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain04|Chain07|ChainShape7.iog" "DragonGateTorchRN.phl[19]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain07|ChainShape7.iog" "DragonGateTorchRN.phl[19]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain04|Chain08|ChainShape8.iog" "DragonGateTorchRN.phl[20]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain08|ChainShape8.iog" "DragonGateTorchRN.phl[20]"
 		;
-connectAttr "|DragonGateTorch1|MIddleChains|Chain04|Chain09|ChainShape9.iog" "DragonGateTorchRN.phl[21]"
+connectAttr "|CaveSet|DragonGateTorch1|MIddleChains|Chain04|Chain09|ChainShape9.iog" "DragonGateTorchRN.phl[21]"
 		;
 connectAttr "HookShape.iog" "DragonGateTorchRN.phl[22]";
 connectAttr "BaseSphereDetail01Shape.iog" "DragonGateTorchRN.phl[23]";
@@ -110532,53 +110579,53 @@ connectAttr "BaseSphereDetail02Shape.iog" "DragonGateTorchRN.phl[24]";
 connectAttr "TopLoopShape.iog" "DragonGateTorchRN.phl[25]";
 connectAttr "MiddleLoopShape1.iog" "DragonGateTorchRN.phl[26]";
 connectAttr "MiddleLoopShape2.iog" "DragonGateTorchRN.phl[27]";
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail|SphereDetailShape.iog" "DragonGateTorchRN.phl[28]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail|SphereDetailShape.iog" "DragonGateTorchRN.phl[28]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail1|SphereDetail1Shape.iog" "DragonGateTorchRN.phl[29]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail1|SphereDetail1Shape.iog" "DragonGateTorchRN.phl[29]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail2|SphereDetail2Shape.iog" "DragonGateTorchRN.phl[30]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail2|SphereDetail2Shape.iog" "DragonGateTorchRN.phl[30]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail3|SphereDetail3Shape.iog" "DragonGateTorchRN.phl[31]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail3|SphereDetail3Shape.iog" "DragonGateTorchRN.phl[31]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail4|SphereDetail4Shape.iog" "DragonGateTorchRN.phl[32]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail4|SphereDetail4Shape.iog" "DragonGateTorchRN.phl[32]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail5|SphereDetail5Shape.iog" "DragonGateTorchRN.phl[33]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail5|SphereDetail5Shape.iog" "DragonGateTorchRN.phl[33]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail6|SphereDetail6Shape.iog" "DragonGateTorchRN.phl[34]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail6|SphereDetail6Shape.iog" "DragonGateTorchRN.phl[34]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail7|SphereDetail7Shape.iog" "DragonGateTorchRN.phl[35]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail7|SphereDetail7Shape.iog" "DragonGateTorchRN.phl[35]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail8|SphereDetail8Shape.iog" "DragonGateTorchRN.phl[36]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail8|SphereDetail8Shape.iog" "DragonGateTorchRN.phl[36]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail9|SphereDetail9Shape.iog" "DragonGateTorchRN.phl[37]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail9|SphereDetail9Shape.iog" "DragonGateTorchRN.phl[37]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail10|SphereDetail10Shape.iog" "DragonGateTorchRN.phl[38]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail10|SphereDetail10Shape.iog" "DragonGateTorchRN.phl[38]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail11|SphereDetail11Shape.iog" "DragonGateTorchRN.phl[39]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SphereDetail11|SphereDetail11Shape.iog" "DragonGateTorchRN.phl[39]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail11|SphereDetail11Shape.iog" "DragonGateTorchRN.phl[40]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail11|SphereDetail11Shape.iog" "DragonGateTorchRN.phl[40]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail10|SphereDetail10Shape.iog" "DragonGateTorchRN.phl[41]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail10|SphereDetail10Shape.iog" "DragonGateTorchRN.phl[41]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail9|SphereDetail9Shape.iog" "DragonGateTorchRN.phl[42]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail9|SphereDetail9Shape.iog" "DragonGateTorchRN.phl[42]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail8|SphereDetail8Shape.iog" "DragonGateTorchRN.phl[43]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail8|SphereDetail8Shape.iog" "DragonGateTorchRN.phl[43]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail7|SphereDetail7Shape.iog" "DragonGateTorchRN.phl[44]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail7|SphereDetail7Shape.iog" "DragonGateTorchRN.phl[44]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail6|SphereDetail6Shape.iog" "DragonGateTorchRN.phl[45]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail6|SphereDetail6Shape.iog" "DragonGateTorchRN.phl[45]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail5|SphereDetail5Shape.iog" "DragonGateTorchRN.phl[46]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail5|SphereDetail5Shape.iog" "DragonGateTorchRN.phl[46]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail4|SphereDetail4Shape.iog" "DragonGateTorchRN.phl[47]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail4|SphereDetail4Shape.iog" "DragonGateTorchRN.phl[47]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail3|SphereDetail3Shape.iog" "DragonGateTorchRN.phl[48]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail3|SphereDetail3Shape.iog" "DragonGateTorchRN.phl[48]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail2|SphereDetail2Shape.iog" "DragonGateTorchRN.phl[49]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail2|SphereDetail2Shape.iog" "DragonGateTorchRN.phl[49]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail1|SphereDetail1Shape.iog" "DragonGateTorchRN.phl[50]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail1|SphereDetail1Shape.iog" "DragonGateTorchRN.phl[50]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail|SphereDetailShape.iog" "DragonGateTorchRN.phl[51]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SphereDetail|SphereDetailShape.iog" "DragonGateTorchRN.phl[51]"
 		;
 connectAttr "LoopShape4.iog" "DragonGateTorchRN.phl[52]";
 connectAttr "LoopShape5.iog" "DragonGateTorchRN.phl[53]";
@@ -110587,57 +110634,57 @@ connectAttr "HookFrameShape1.iog" "DragonGateTorchRN.phl[55]";
 connectAttr "HookFrameShape2.iog" "DragonGateTorchRN.phl[56]";
 connectAttr "TorchHolderRing01Shape.iog" "DragonGateTorchRN.phl[57]";
 connectAttr "TorchHolderRing02Shape.iog" "DragonGateTorchRN.phl[58]";
-connectAttr "|DragonGateTorch1|WallBase|TorchBase|TorchBaseShape.iog" "DragonGateTorchRN.phl[59]"
+connectAttr "|CaveSet|DragonGateTorch1|WallBase|TorchBase|TorchBaseShape.iog" "DragonGateTorchRN.phl[59]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|TorchBase|TorchBaseShape.iog" "DragonGateTorchRN.phl[60]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|TorchBase|TorchBaseShape.iog" "DragonGateTorchRN.phl[60]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail|SquareDetailShape.iog" "DragonGateTorchRN.phl[61]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail|SquareDetailShape.iog" "DragonGateTorchRN.phl[61]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail1|SquareDetail1Shape.iog" "DragonGateTorchRN.phl[62]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail1|SquareDetail1Shape.iog" "DragonGateTorchRN.phl[62]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail2|SquareDetail2Shape.iog" "DragonGateTorchRN.phl[63]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail2|SquareDetail2Shape.iog" "DragonGateTorchRN.phl[63]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail3|SquareDetail3Shape.iog" "DragonGateTorchRN.phl[64]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail3|SquareDetail3Shape.iog" "DragonGateTorchRN.phl[64]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail4|SquareDetail4Shape.iog" "DragonGateTorchRN.phl[65]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail4|SquareDetail4Shape.iog" "DragonGateTorchRN.phl[65]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail5|SquareDetail5Shape.iog" "DragonGateTorchRN.phl[66]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail5|SquareDetail5Shape.iog" "DragonGateTorchRN.phl[66]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail6|SquareDetail6Shape.iog" "DragonGateTorchRN.phl[67]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail6|SquareDetail6Shape.iog" "DragonGateTorchRN.phl[67]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail7|SquareDetail7Shape.iog" "DragonGateTorchRN.phl[68]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail7|SquareDetail7Shape.iog" "DragonGateTorchRN.phl[68]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail8|SquareDetail8Shape.iog" "DragonGateTorchRN.phl[69]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail8|SquareDetail8Shape.iog" "DragonGateTorchRN.phl[69]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail9|SquareDetail9Shape.iog" "DragonGateTorchRN.phl[70]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail9|SquareDetail9Shape.iog" "DragonGateTorchRN.phl[70]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail10|SquareDetail10Shape.iog" "DragonGateTorchRN.phl[71]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail10|SquareDetail10Shape.iog" "DragonGateTorchRN.phl[71]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail11|SquareDetail11Shape.iog" "DragonGateTorchRN.phl[72]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsTop|SquareDetail11|SquareDetail11Shape.iog" "DragonGateTorchRN.phl[72]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail|SquareDetailShape.iog" "DragonGateTorchRN.phl[73]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail|SquareDetailShape.iog" "DragonGateTorchRN.phl[73]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail1|SquareDetail1Shape.iog" "DragonGateTorchRN.phl[74]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail1|SquareDetail1Shape.iog" "DragonGateTorchRN.phl[74]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail2|SquareDetail2Shape.iog" "DragonGateTorchRN.phl[75]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail2|SquareDetail2Shape.iog" "DragonGateTorchRN.phl[75]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail3|SquareDetail3Shape.iog" "DragonGateTorchRN.phl[76]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail3|SquareDetail3Shape.iog" "DragonGateTorchRN.phl[76]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail4|SquareDetail4Shape.iog" "DragonGateTorchRN.phl[77]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail4|SquareDetail4Shape.iog" "DragonGateTorchRN.phl[77]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail5|SquareDetail5Shape.iog" "DragonGateTorchRN.phl[78]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail5|SquareDetail5Shape.iog" "DragonGateTorchRN.phl[78]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail6|SquareDetail6Shape.iog" "DragonGateTorchRN.phl[79]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail6|SquareDetail6Shape.iog" "DragonGateTorchRN.phl[79]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail7|SquareDetail7Shape.iog" "DragonGateTorchRN.phl[80]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail7|SquareDetail7Shape.iog" "DragonGateTorchRN.phl[80]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail8|SquareDetail8Shape.iog" "DragonGateTorchRN.phl[81]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail8|SquareDetail8Shape.iog" "DragonGateTorchRN.phl[81]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail9|SquareDetail9Shape.iog" "DragonGateTorchRN.phl[82]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail9|SquareDetail9Shape.iog" "DragonGateTorchRN.phl[82]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail10|SquareDetail10Shape.iog" "DragonGateTorchRN.phl[83]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail10|SquareDetail10Shape.iog" "DragonGateTorchRN.phl[83]"
 		;
-connectAttr "|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail11|SquareDetail11Shape.iog" "DragonGateTorchRN.phl[84]"
+connectAttr "|CaveSet|DragonGateTorch1|TorchHolder|HolderDetailsBottom|SquareDetail11|SquareDetail11Shape.iog" "DragonGateTorchRN.phl[84]"
 		;
 connectAttr "Wood02Shape.iog" "DragonGateTorchRN.phl[85]";
 connectAttr "Wood03Shape.iog" "DragonGateTorchRN.phl[86]";
@@ -110648,7 +110695,7 @@ connectAttr "Wood07Shape.iog" "DragonGateTorchRN.phl[90]";
 connectAttr "Wood08Shape.iog" "DragonGateTorchRN.phl[91]";
 connectAttr "Wood09Shape.iog" "DragonGateTorchRN.phl[92]";
 connectAttr "Wood10Shape.iog" "DragonGateTorchRN.phl[93]";
-connectAttr "deleteComponent1.og" "Walls_03Shape.i";
+connectAttr "polySoftEdge6.out" "Walls_03Shape.i";
 connectAttr "polyTweakUV10.uvtk[0]" "Walls_03Shape.uvst[0].uvtw";
 connectAttr "polyTweakUV9.out" "Ground03Shape.i";
 connectAttr "polyTweakUV9.uvtk[0]" "Ground03Shape.uvst[0].uvtw";
@@ -110674,9 +110721,11 @@ connectAttr "WallMat.out" "aiStandardSurface2SG.ss";
 connectAttr "aiStandardSurface2SG.msg" "materialInfo2.sg";
 connectAttr "WallMat.msg" "materialInfo2.m";
 connectAttr "WallMat.msg" "materialInfo2.t" -na;
-connectAttr "|CaveWall_03|Walls_03|polySurfaceShape3.o" "polySoftEdge3.ip";
+connectAttr "|CaveSet|CaveWall_03|Walls_03|polySurfaceShape3.o" "polySoftEdge3.ip"
+		;
 connectAttr "Walls_03Shape.wm" "polySoftEdge3.mp";
-connectAttr "|CaveWall_03|Ground03|polySurfaceShape4.o" "polySoftEdge4.ip";
+connectAttr "|CaveSet|CaveWall_03|Ground03|polySurfaceShape4.o" "polySoftEdge4.ip"
+		;
 connectAttr "Ground03Shape.wm" "polySoftEdge4.mp";
 connectAttr "polySoftEdge4.out" "polyLayoutUV3.ip";
 connectAttr "polySoftEdge3.out" "polyLayoutUV4.ip";
@@ -110695,6 +110744,20 @@ connectAttr "polyTweakUV8.out" "polyLayoutUV8.ip";
 connectAttr "polyLayoutUV7.out" "polyTweakUV9.ip";
 connectAttr "polyLayoutUV8.out" "polyTweakUV10.ip";
 connectAttr "polyTweakUV10.out" "deleteComponent1.ig";
+connectAttr "deleteComponent1.og" "polyBridgeEdge1.ip";
+connectAttr "Walls_03Shape.wm" "polyBridgeEdge1.mp";
+connectAttr "polyBridgeEdge1.out" "polyBridgeEdge2.ip";
+connectAttr "Walls_03Shape.wm" "polyBridgeEdge2.mp";
+connectAttr "polyBridgeEdge2.out" "polyBridgeEdge3.ip";
+connectAttr "Walls_03Shape.wm" "polyBridgeEdge3.mp";
+connectAttr "polyBridgeEdge3.out" "polyCloseBorder1.ip";
+connectAttr "polyCloseBorder1.out" "polySplit1.ip";
+connectAttr "polySplit1.out" "polySplit2.ip";
+connectAttr "polySplit2.out" "polySplit3.ip";
+connectAttr "polySplit3.out" "polySoftEdge5.ip";
+connectAttr "Walls_03Shape.wm" "polySoftEdge5.mp";
+connectAttr "polySoftEdge5.out" "polySoftEdge6.ip";
+connectAttr "Walls_03Shape.wm" "polySoftEdge6.mp";
 connectAttr "aiStandardSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface2SG.pa" ":renderPartition.st" -na;
 connectAttr "GroundMat.msg" ":defaultShaderList1.s" -na;
@@ -110702,82 +110765,82 @@ connectAttr "WallMat.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Walls_03Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Ground03Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Stalagmite_01_02|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_02|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_02|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_02|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_02|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_02|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_02|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_02|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_02|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_02|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_02|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_02|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_02|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_02|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_02|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_02|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_02|pCube5|pCubeShape5.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_02|pCube5|pCubeShape5.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_03|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_03|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_03|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_03|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_03|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_03|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_03|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_03|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_03|pCube5|pCubeShape5.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_03|pCube5|pCubeShape5.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_04|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_04|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_04|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_04|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_04|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_04|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_04|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_04|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_02_04|pCube5|pCubeShape5.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_02_04|pCube5|pCubeShape5.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_03|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_03|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_03|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_03|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_03|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_03|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_03|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_03|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_04|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_04|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_04|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_04|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_04|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_04|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_04|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_04|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_05|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_05|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_05|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_05|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_05|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_05|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_05|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_05|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_06|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_06|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_06|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_06|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_06|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_06|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_06|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_06|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_07|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_07|pCube1|pCubeShape1.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_07|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_07|pCube2|pCubeShape2.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_07|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_07|pCube3|pCubeShape3.iog" ":initialShadingGroup.dsm"
 		 -na;
-connectAttr "|Stalagmite_01_07|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
+connectAttr "|CaveSet|Stalagmite_01_07|pCube4|pCubeShape4.iog" ":initialShadingGroup.dsm"
 		 -na;
 // End of DragonGateCaveSet.ma
