@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Skinny_Bookshelf.ma
-//Last modified: Tue, Jan 13, 2026 10:33:43 AM
+//Last modified: Tue, Jan 13, 2026 10:43:47 AM
 //Codeset: 1252
 requires maya "2026";
 requires "mtoa" "5.5.3";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "0D55EE7C-418B-77C7-A3C8-CFB822F2F41F";
+fileInfo "UUID" "A8789A4E-4B1F-5108-9869-B1949E4D363B";
 createNode transform -s -n "persp";
 	rename -uid "1DF36BC1-4A12-02C4-B806-268E0D0C76CB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 13.774648831978494 10.309862501532283 -2.684612093790145 ;
-	setAttr ".r" -type "double3" -20.138352727276999 -262.59999999971512 0 ;
+	setAttr ".t" -type "double3" 15.684814173949411 8.4611499740324909 -2.4503847103434166 ;
+	setAttr ".r" -type "double3" -12.338352727276465 -264.19999999971498 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "783E2D72-44D0-C9FC-3979-2BB6CCB0C713";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 16.252858810695791;
+	setAttr ".coi" 17.535001416646573;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
