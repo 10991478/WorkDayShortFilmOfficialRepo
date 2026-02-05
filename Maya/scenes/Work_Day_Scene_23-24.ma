@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Work_Day_Scene_23-24.ma
-//Last modified: Tue, Dec 02, 2025 11:48:33 PM
+//Last modified: Tue, Jan 20, 2026 10:17:56 AM
 //Codeset: 1252
 file -rdi 1 -ns "Knight_Retopo" -rfn "Knight_RetopoRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitKraken_Test/WorkDayShortFilmOfficial_ForkRepo/Maya//assets/characters/knight/Knight Retopo.ma";
@@ -8,8 +8,6 @@ file -rdi 1 -ns "Axe" -rfn "AxeRN" -op "v=0;" -typ "mayaAscii" "C:/GitKraken_Tes
 file -rdi 1 -ns "Skeleton" -rfn "SkeletonRN" -op "v=0;" -typ "mayaAscii" "C:/GitKraken_Test/WorkDayShortFilmOfficial_ForkRepo/Maya//assets/characters/skeleton/Skeleton.ma";
 file -rdi 1 -ns "TreasureCaveSet" -rfn "TreasureCaveSetRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitKraken_Test/WorkDayShortFilmOfficial_ForkRepo/Maya//assets/environment/caveInterior/TreasureCaveSet.ma";
-file -rdi 2 -ns "Skeleton" -dr 1 -rfn "TreasureCaveSet:SkeletonRN" -op "v=0;"
-		 -typ "mayaAscii" "C:/Users/Jonat/OneDrive/Documents/GitRepos/WorkDayShortFilm/WorkDayShortFilmOfficialRepo/Maya/assets/characters/skeleton/Skeleton.ma";
 file -r -ns "Knight_Retopo" -dr 1 -rfn "Knight_RetopoRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/GitKraken_Test/WorkDayShortFilmOfficial_ForkRepo/Maya//assets/characters/knight/Knight Retopo.ma";
 file -r -ns "Axe" -dr 1 -rfn "AxeRN" -op "v=0;" -typ "mayaAscii" "C:/GitKraken_Test/WorkDayShortFilmOfficial_ForkRepo/Maya//assets/props/HandheldProps/axe/Axe.ma";
@@ -20,13 +18,14 @@ requires maya "2025ff03";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
 		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.4.5";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t 12fps;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "CEDF8C90-4173-3B4B-7A42-C294F1BB92CC";
+fileInfo "UUID" "831F5256-41C3-B7D3-1923-F380438623CA";
 createNode transform -s -n "persp";
 	rename -uid "E3747FA1-4A0C-7E01-5324-E2901BC67069";
 	setAttr ".v" no;
@@ -130,7 +129,7 @@ createNode parentConstraint -n "L_Arm_Wrist_Ctrl_loc" -p "Axe_Ctrl";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 104.44115275028011 4.0061923206446748 -5.5398386486201794 ;
+	setAttr ".lr" -type "double3" -95.738324022999223 3.3495165657106387 17.539382880109354 ;
 	setAttr ".rst" -type "double3" 14.442568572970972 132.52373825469067 70.961039374823201 ;
 	setAttr ".rsrr" -type "double3" -3.6210776894779717 0.10050287568399474 0.045476974509629182 ;
 	setAttr -k on ".w0";
@@ -245,7 +244,7 @@ createNode parentConstraint -n "L_Arm_03_FK_ctrl_loc_parentConstraint1" -p "Knig
 	setAttr ".tg[0].tot" -type "double3" 10.646621670809878 -1.1969046562340537 0.28339280978674708 ;
 	setAttr ".tg[0].tor" -type "double3" -1.4908850069360237e-16 4.9696166897867462e-17 
 		0 ;
-	setAttr ".lr" -type "double3" 129.30110062761716 -10.5870133634652 98.378164753779046 ;
+	setAttr ".lr" -type "double3" -90.281028406912725 6.4068574808035912 -99.311911487414221 ;
 	setAttr ".rst" -type "double3" -39.943504015676886 78.676426760165725 114.28147262670215 ;
 	setAttr ".rsrr" -type "double3" -90.281028406912725 6.4068574808035912 -99.311911487414221 ;
 	setAttr -k on ".w0";
@@ -339265,7 +339264,7 @@ createNode clusterHandle -n "R_Upper_ArmShape" -p "R_Upper_Arm";
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" -10.457734346389771 194.87230682373047 -5.6356457471847534 ;
 createNode fosterParent -n "AxeRNfosterParent1";
-	rename -uid "E4543F34-4663-CA2B-E28A-08BB9EE66788";
+	rename -uid "5A791AB5-42C4-A26F-C5AF-78BE4EBC338A";
 createNode transform -n "bend1Handle" -p "AxeRNfosterParent1";
 	rename -uid "670B3900-4AAC-4A9E-9B3E-579821896FAA";
 	setAttr ".v" no;
@@ -339290,7 +339289,7 @@ createNode mesh -n "AxeShapeDeformed" -p "AxeRNfosterParent1";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".bw" 3;
 createNode fosterParent -n "SkeletonRNfosterParent1";
-	rename -uid "D4DDDC48-4B43-2AA1-A7AE-80994F96EC92";
+	rename -uid "C6E849A4-4B5B-26A7-2626-278E2DA49F6F";
 createNode transform -n "Hands" -p "SkeletonRNfosterParent1";
 	rename -uid "18C57EE7-4081-C5BB-FE7E-448522D4BCE2";
 createNode transform -n "Skeleton:L_Arm_03_FK_Ctrl_loc" -p "Hands";
@@ -339375,7 +339374,7 @@ createNode parentConstraint -n "R_Arm_IK_End_Ctrl_parentConstraint1" -p "Skeleto
 	setAttr ".tg[0].tot" -type "double3" 0.00018123951006727512 1.5316436891437626e-05 
 		-2.0239941846958648e-06 ;
 	setAttr ".tg[0].tor" -type "double3" 90.000000000000014 1.6792844223338341e-12 -89.564773996791899 ;
-	setAttr ".lr" -type "double3" 3.1805546814634935e-15 -3.18055468146354e-15 8.4284699058783197e-13 ;
+	setAttr ".lr" -type "double3" -37.575273419600492 2.0542508442539363e-12 2.6808838369663643e-12 ;
 	setAttr ".rst" -type "double3" 77.439682109546794 -25.792050430396813 43.277139396122408 ;
 	setAttr ".rsrr" -type "double3" -9.5416640443904588e-15 6.3611093629271747e-15 1.6793328718127373e-12 ;
 	setAttr -k on ".w0";
@@ -340082,15 +340081,15 @@ createNode mesh -n "polySurfaceShape139" -p "transform53";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "F3131799-468E-6682-00FA-F0B808F65059";
+	rename -uid "2D9CB39F-49EC-927A-88E6-6998AA13E2B8";
 	setAttr -s 46 ".lnk";
 	setAttr -s 46 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2D516E0D-462E-7C73-5790-7496FEF6D458";
+	rename -uid "53567673-4A6C-6571-A28B-DFAD97DF0D5F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F21B2BD7-4FED-5908-91C2-4BB10D8DD3D1";
+	rename -uid "55B6A20E-487D-30B8-76E0-D19954507074";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "245C3913-485A-BB2C-426E-5D9768D3B5CB";
+	rename -uid "18C06E76-4878-78E1-862A-FCA567BDA8FC";
 	setAttr ".cdl" 1;
 	setAttr -s 6 ".dli[1:5]"  1 2 3 4 5;
 	setAttr -s 6 ".dli";
@@ -340098,7 +340097,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "345A8023-4A72-B9EE-B21E-FFA9431998C7";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B63E346E-4F7C-AEAA-D544-B39975025F79";
+	rename -uid "B3602134-4E1D-418A-21EC-C8ADB20F320B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "D45D51C1-479C-F4C6-62CB-3584D8E78C66";
 	setAttr ".g" yes;
@@ -340106,7 +340105,7 @@ createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "BE85E3F0-4013-A695-6F39-CCAB8A13F760";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.3.4.1";
-	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=cameraShape1;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1 1;Background.Offset=0 0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1 1;Foreground.Offset=0 0;Foreground.Apply Color Management=1;";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=perspShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "4C51DBE0-4ADF-F5E5-BB99-7199A0392397";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -340123,46 +340122,45 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 368\n            -height 311\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 367\n            -height 311\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 368\n            -height 311\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 732\n            -height 382\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
-		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
-		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n"
-		+ "            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n"
-		+ "            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n"
-		+ "                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
-		+ "                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 0.5\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n"
-		+ "                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
-		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
-		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"chronological\" \n                -expandAttribute 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n"
-		+ "                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -frameRange -0.500003 119.500003 \n                -initialized 1\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n"
-		+ "                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n"
-		+ "\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n"
-		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
-		+ "                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
-		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
-		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
-		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
-		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 732\\n    -height 382\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 732\\n    -height 382\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|camera1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 0\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1362\n            -height 668\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
+		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
+		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
+		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
+		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
+		+ "            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
+		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
+		+ "                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 0.5\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
+		+ "                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
+		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n"
+		+ "                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
+		+ "                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n"
+		+ "                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n"
+		+ "                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
+		+ "                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 0\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
+		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
+		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n"
+		+ "                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1362\\n    -height 668\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|camera1\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 0\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1362\\n    -height 668\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -340904,281 +340902,79 @@ createNode reference -n "Knight_RetopoRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Knight_RetopoRN"
 		"Knight_RetopoRN" 0
-		"Knight_RetopoRN" 923
+		"Knight_RetopoRN" 774
 		0 "|Knight_Retopo:Knight" "|group1" "-s -r "
 		2 "|group1|Knight_Retopo:Knight" "visibility" " 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Transform_ctrl_grp|Knight_Retopo:Transform_ctrl" 
-		"LArmIKFK" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Transform_ctrl_grp|Knight_Retopo:Transform_ctrl" 
-		"RArmIKFK" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Transform_ctrl_grp|Knight_Retopo:Transform_ctrl" 
-		"LLegIKFK" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Transform_ctrl_grp|Knight_Retopo:Transform_ctrl" 
-		"RLegIKFK" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Transform_ctrl_grp|Knight_Retopo:Transform_ctrl" 
-		"MasterScale" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:COG_ctrl_grp|Knight_Retopo:COG_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:COG_ctrl_grp|Knight_Retopo:COG_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Spine_ctrl_grp|Knight_Retopo:Spine_01_ctrl_grp|Knight_Retopo:Spine_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Spine_ctrl_grp|Knight_Retopo:Spine_01_ctrl_grp|Knight_Retopo:Spine_01_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Spine_ctrl_grp|Knight_Retopo:Spine_02_ctrl_grp|Knight_Retopo:Spine_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Spine_ctrl_grp|Knight_Retopo:Spine_02_ctrl_grp|Knight_Retopo:Spine_02_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Spine_ctrl_grp|Knight_Retopo:Spine_03_ctrl_grp|Knight_Retopo:Spine_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Spine_ctrl_grp|Knight_Retopo:Spine_03_ctrl_grp|Knight_Retopo:Spine_03_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Neck_ctrl_grp|Knight_Retopo:Neck_01_ctrl_grp|Knight_Retopo:Neck_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Neck_ctrl_grp|Knight_Retopo:Neck_01_ctrl_grp|Knight_Retopo:Neck_01_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Neck_ctrl_grp|Knight_Retopo:Head_ctrl_grp|Knight_Retopo:Head_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Neck_ctrl_grp|Knight_Retopo:Head_ctrl_grp|Knight_Retopo:Head_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Clav_ctrl_grp|Knight_Retopo:L_Clav_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Clav_ctrl_grp|Knight_Retopo:L_Clav_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_01_FK_ctrl_grp|Knight_Retopo:L_Arm_01_FK_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_01_FK_ctrl_grp|Knight_Retopo:L_Arm_01_FK_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_01_FK_ctrl_grp|Knight_Retopo:L_Arm_01_FK_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_02_FK_ctrl_grp|Knight_Retopo:L_Arm_02_FK_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_02_FK_ctrl_grp|Knight_Retopo:L_Arm_02_FK_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_02_FK_ctrl_grp|Knight_Retopo:L_Arm_02_FK_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_03_FK_ctrl_grp|Knight_Retopo:L_Arm_03_FK_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_03_FK_ctrl_grp|Knight_Retopo:L_Arm_03_FK_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Arm_ctrl_grp|Knight_Retopo:L_Arm_FK_ctrl_grp|Knight_Retopo:L_Arm_03_FK_ctrl_grp|Knight_Retopo:L_Arm_03_FK_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Hand_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Hand_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Thumb_01_ctrl_grp|Knight_Retopo:L_Thumb_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Thumb_01_ctrl_grp|Knight_Retopo:L_Thumb_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Thumb_02_ctrl_grp|Knight_Retopo:L_Thumb_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Thumb_02_ctrl_grp|Knight_Retopo:L_Thumb_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Thumb_02_ctrl_grp|Knight_Retopo:L_Thumb_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Thumb_03_ctrl_grp|Knight_Retopo:L_Thumb_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Thumb_03_ctrl_grp|Knight_Retopo:L_Thumb_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Thumb_03_ctrl_grp|Knight_Retopo:L_Thumb_03_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_01_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_01_Knuckle_03_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_01_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_02_Knuckle_03_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_01_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_03_Knuckle_03_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_01_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_01_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_02_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:L_Hand_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_03_ctrl_grp|Knight_Retopo:L_Finger_04_Knuckle_03_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Clav_ctrl_grp|Knight_Retopo:R_Clav_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Clav_ctrl_grp|Knight_Retopo:R_Clav_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Clav_ctrl_grp|Knight_Retopo:R_Clav_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_01_FK_ctrl_grp|Knight_Retopo:R_Arm_01_FK_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_01_FK_ctrl_grp|Knight_Retopo:R_Arm_01_FK_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_01_FK_ctrl_grp|Knight_Retopo:R_Arm_01_FK_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_02_FK_ctrl_grp|Knight_Retopo:R_Arm_02_FK_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_02_FK_ctrl_grp|Knight_Retopo:R_Arm_02_FK_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_02_FK_ctrl_grp|Knight_Retopo:R_Arm_02_FK_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_03_FK_ctrl_grp|Knight_Retopo:R_Arm_03_FK_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_03_FK_ctrl_grp|Knight_Retopo:R_Arm_03_FK_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Arm_ctrl_grp|Knight_Retopo:R_Arm_FK_ctrl_grp|Knight_Retopo:R_Arm_03_FK_ctrl_grp|Knight_Retopo:R_Arm_03_FK_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Hand_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Hand_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Hand_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_01_ctrl_grp|Knight_Retopo:R_Thumb_01_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_01_ctrl_grp|Knight_Retopo:R_Thumb_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_01_ctrl_grp|Knight_Retopo:R_Thumb_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_02_ctrl_grp|Knight_Retopo:R_Thumb_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_02_ctrl_grp|Knight_Retopo:R_Thumb_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_02_ctrl_grp|Knight_Retopo:R_Thumb_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_03_ctrl_grp|Knight_Retopo:R_Thumb_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_03_ctrl_grp|Knight_Retopo:R_Thumb_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Thumb_03_ctrl_grp|Knight_Retopo:R_Thumb_03_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_01_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_01_Knuckle_03_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_01_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_02_Knuckle_03_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_01_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_03_Knuckle_03_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_01_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_01_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_01_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_01_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_02_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_02_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_02_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_02_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_03_ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_03_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Arms_ctrl_grp|Knight_Retopo:R_Hand_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_03_ctrl_grp|Knight_Retopo:R_Finger_04_Knuckle_03_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Pelvis_ctrl_grp|Knight_Retopo:Pelvis_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Pelvis_ctrl_grp|Knight_Retopo:Pelvis_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_Clav_ctrl_grp|Knight_Retopo:L_Leg_Clav_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_Clav_ctrl_grp|Knight_Retopo:L_Leg_Clav_ctrl" 
-		"FollowRotate" " -k 1"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_FK_ctrl_grp|Knight_Retopo:L_Leg_02_FK_ctrl_grp|Knight_Retopo:L_Leg_02_FK_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_FK_ctrl_grp|Knight_Retopo:L_Leg_02_FK_ctrl_grp|Knight_Retopo:L_Leg_02_FK_ctrl" 
@@ -341189,102 +340985,6 @@ createNode reference -n "Knight_RetopoRN";
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_FK_ctrl_grp|Knight_Retopo:L_Foot_FK_ctrl_grp|Knight_Retopo:L_Foot_02_FK_ctrl_grp|Knight_Retopo:L_Foot_02_FK_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_Base_ctrl_grp|Knight_Retopo:L_Leg_IK_Base_ctrl" 
-		"Follow" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"Follow" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"FootRock" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"HeelRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"HeelPivot" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"HeelTwist" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"ToeRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"ToePivot" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"ToeTwist" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"BallRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"BallPivot" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"BallTwist" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"ToeTapRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"ToeTapPivot" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"ToeTapTwist" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"FootRoll" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"ControlVis" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"Stretch" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"MaxStretch" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"LegLength" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"UpperLegLength" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl" 
-		"LowerLegLength" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:L_Leg_ctrl_grp|Knight_Retopo:L_Leg_IK_ctrl_grp|Knight_Retopo:L_Leg_IK_Main_ctrl_grp|Knight_Retopo:L_Leg_IK_PV_ctrl_grp|Knight_Retopo:L_Leg_IK_PV_ctrl_Offset_grp|Knight_Retopo:L_Leg_IK_PV_ctrl" 
-		"Follow" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_Clav_ctrl_grp|Knight_Retopo:R_Leg_Clav_ctrl" 
-		"FollowTranslate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_Clav_ctrl_grp|Knight_Retopo:R_Leg_Clav_ctrl" 
-		"FollowRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_Base_ctrl_grp|Knight_Retopo:R_Leg_IK_Base_ctrl" 
-		"Follow" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"Follow" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"FootRock" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"HeelRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"HeelPivot" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"HeelTwist" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"ToeRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"ToePivot" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"ToeTwist" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"BallRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"BallPivot" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"BallTwist" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"ToeTapRotate" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"ToeTapPivot" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"ToeTapTwist" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"FootRoll" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"ControlVis" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"Stretch" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"MaxStretch" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"LegLength" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"UpperLegLength" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl" 
-		"LowerLegLength" " -k 1"
-		2 "|group1|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_PV_ctrl_grp|Knight_Retopo:R_Leg_IK_PV_ctrl_Offset_grp|Knight_Retopo:R_Leg_IK_PV_ctrl" 
-		"Follow" " -k 1"
 		2 "Knight_Retopo:Geo_Layer" "visibility" " 1"
 		2 "Knight_Retopo:Skeleton_Layer" "visibility" " 0"
 		2 "Knight_Retopo:Prop_Layer" "visibility" " 0"
@@ -345221,221 +344921,221 @@ createNode reference -n "SkeletonRN";
 		""
 		5 4 "SkeletonRN" "Skeleton:set1.dagSetMembers" "SkeletonRN.placeHolderList[652]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[653]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[653]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[654]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[654]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[655]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[655]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[656]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[656]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[657]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[657]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[658]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[658]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[659]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[659]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[660]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[660]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[661]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[661]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[662]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[662]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[663]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[663]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[664]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[664]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[665]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[665]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[666]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[666]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[667]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[667]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[668]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[668]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[669]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[669]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[670]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[670]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[671]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[671]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[672]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[672]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[673]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[673]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[674]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[674]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[675]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[675]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[676]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[676]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[677]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[677]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[678]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[678]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[679]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[679]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[680]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[680]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[681]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[681]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[682]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[682]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[683]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[683]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[684]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[684]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[685]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[685]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[686]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[686]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[687]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[687]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[688]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[688]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[689]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[689]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[690]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[690]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[691]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[691]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[692]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[692]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[693]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[693]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[694]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[694]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[695]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[695]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[696]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[696]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[697]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[697]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[698]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[698]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[699]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[699]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[700]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[700]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[701]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[701]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[702]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[702]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[703]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[703]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[704]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[704]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[705]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[705]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[706]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[706]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[707]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[707]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[708]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[708]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[709]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[709]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[710]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[710]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[711]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[711]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[712]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[712]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[713]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[713]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[714]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[714]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[715]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[715]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[716]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[716]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[717]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[717]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[718]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[718]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[719]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[719]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[720]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[720]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[721]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[721]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[722]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[722]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[723]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[723]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[724]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[724]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[725]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[725]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[726]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[726]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[727]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[727]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[728]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[728]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[729]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[729]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[730]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[730]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[731]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[731]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[732]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[732]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[733]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[733]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[734]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[734]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[735]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[735]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[736]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[736]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[737]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[737]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[738]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[738]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[739]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[739]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[740]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[740]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[741]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[741]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[742]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[742]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[743]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[743]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[744]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[744]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[745]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[745]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[746]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[746]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[747]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[747]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[748]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[748]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[749]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[749]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[750]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[750]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[751]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[751]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[752]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[752]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[753]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[753]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[754]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[754]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[755]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[755]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[756]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[756]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[757]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[757]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[758]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[758]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[759]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[759]" 
 		""
-		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[760]" 
+		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[760]" 
 		""
 		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[761]" 
 		""
@@ -345443,221 +345143,221 @@ createNode reference -n "SkeletonRN";
 		""
 		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[763]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[764]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[764]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[765]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[765]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[766]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[766]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[767]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[767]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[768]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[768]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[769]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[769]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[770]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[770]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[771]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[771]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[772]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[772]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[773]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[773]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[774]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[774]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[775]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[775]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[776]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[776]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[777]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[777]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[778]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[778]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[779]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[779]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[780]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[780]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[781]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[781]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[782]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[782]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[783]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[783]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[784]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[784]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[785]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[785]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[786]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[786]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[787]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[787]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[788]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[788]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[789]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[789]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[790]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[790]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[791]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[791]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[792]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[792]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[793]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[793]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[794]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[794]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[795]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[795]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[796]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[796]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[797]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[797]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[798]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[798]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[799]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[799]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[800]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[800]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[801]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[801]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[802]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[802]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[803]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[803]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[804]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[804]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[805]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[805]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[806]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[806]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[807]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[807]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[808]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[808]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[809]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[809]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[810]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[810]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[811]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[811]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[812]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[812]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[813]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[813]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[814]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[814]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[815]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[815]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[816]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[816]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[817]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[817]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[818]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[818]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[819]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[819]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[820]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[820]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[821]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[821]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[822]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[822]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[823]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[823]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[824]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[824]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[825]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[825]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[826]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[826]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[827]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[827]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[828]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[828]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[829]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[829]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[830]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[830]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[831]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[831]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[832]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[832]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[833]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[833]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[834]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[834]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[835]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[835]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[836]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[836]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[837]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[837]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[838]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[838]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[839]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[839]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[840]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[840]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[841]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[841]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[842]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[842]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[843]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[843]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[844]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[844]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[845]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[845]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[846]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[846]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[847]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[847]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[848]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[848]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[849]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[849]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[850]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[850]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[851]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[851]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[852]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[852]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[853]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[853]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[854]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[854]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[855]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[855]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[856]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[856]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[857]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[857]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[858]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[858]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[859]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[859]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[860]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[860]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[861]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[861]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[862]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[862]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[863]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[863]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[864]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[864]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[865]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[865]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[866]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[866]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[867]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[867]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[868]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[868]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[869]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[869]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[870]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[870]" 
 		""
-		5 3 "SkeletonRN" "Skeleton:set1.memberWireframeColor" "SkeletonRN.placeHolderList[871]" 
+		5 4 "SkeletonRN" "Skeleton:set1.groupNodes" "SkeletonRN.placeHolderList[871]" 
 		""
 		5 3 "SkeletonRN" "Skeleton:ffd1.outputGeometry[0]" "SkeletonRN.placeHolderList[872]" 
 		"Skeleton:Skeleton_Smooth_GeoShape.i";
@@ -348860,7 +348560,7 @@ createNode animCurveTA -n "Spine_03_ctrl_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 24 ".ktv[0:23]"  16 0 17 0 19 0 77 0 78 0 79 0 80 0 81 0
-		 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 108 0 140 16.103920271941575 149 25.218499376786504
+		 82 0 83 0 84 0 85 0 86 0 87 0 88 0 89 0 108 0 140 16.103920271941575 149 25.218499376786507
 		 154 18.87956152403634 156 0 159 0 164 -5.6308408871034015 167 0;
 	setAttr -s 24 ".kit[20:23]"  1 18 18 18;
 	setAttr -s 24 ".kot[3:23]"  5 5 5 5 5 5 5 5 
@@ -349986,7 +349686,7 @@ createNode groupId -n "groupId10";
 createNode groupParts -n "groupParts2";
 	rename -uid "D38FF3DC-4C79-B50C-CF24-E4915265DD9B";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1918 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]" "f[334]" "f[335]" "f[336]" "f[337]" "f[338]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[351]" "f[352]" "f[353]" "f[354]" "f[355]" "f[356]" "f[357]" "f[358]" "f[359]" "f[360]" "f[361]" "f[362]" "f[363]" "f[364]" "f[365]" "f[366]" "f[367]" "f[368]" "f[369]" "f[370]" "f[371]" "f[372]" "f[373]" "f[374]" "f[375]" "f[376]" "f[377]" "f[378]" "f[379]" "f[380]" "f[381]" "f[382]" "f[383]" "f[384]" "f[385]" "f[386]" "f[387]" "f[388]" "f[389]" "f[390]" "f[391]" "f[392]" "f[393]" "f[394]" "f[395]" "f[396]" "f[397]" "f[398]" "f[399]" "f[400]" "f[401]" "f[402]" "f[403]" "f[404]" "f[405]" "f[406]" "f[407]" "f[408]" "f[409]" "f[410]" "f[411]" "f[412]" "f[413]" "f[414]" "f[415]" "f[416]" "f[417]" "f[418]" "f[419]" "f[420]" "f[421]" "f[422]" "f[423]" "f[424]" "f[425]" "f[426]" "f[427]" "f[428]" "f[429]" "f[430]" "f[431]" "f[432]" "f[433]" "f[434]" "f[435]" "f[436]" "f[437]" "f[438]" "f[439]" "f[440]" "f[441]" "f[442]" "f[443]" "f[444]" "f[445]" "f[446]" "f[447]" "f[448]" "f[449]" "f[450]" "f[451]" "f[452]" "f[453]" "f[454]" "f[455]" "f[456]" "f[457]" "f[458]" "f[459]" "f[460]" "f[461]" "f[462]" "f[463]" "f[464]" "f[465]" "f[466]" "f[467]" "f[468]" "f[469]" "f[470]" "f[471]" "f[472]" "f[473]" "f[474]" "f[475]" "f[476]" "f[477]" "f[478]" "f[479]" "f[480]" "f[481]" "f[482]" "f[483]" "f[484]" "f[485]" "f[486]" "f[487]" "f[488]" "f[489]" "f[490]" "f[491]" "f[492]" "f[493]" "f[494]" "f[495]" "f[496]" "f[497]" "f[498]" "f[499]" "f[500]" "f[501]" "f[502]" "f[503]" "f[504]" "f[505]" "f[506]" "f[507]" "f[508]" "f[509]" "f[510]" "f[511]" "f[512]" "f[513]" "f[514]" "f[515]" "f[516]" "f[517]" "f[518]" "f[519]" "f[520]" "f[521]" "f[522]" "f[523]" "f[524]" "f[525]" "f[526]" "f[527]" "f[528]" "f[529]" "f[530]" "f[531]" "f[532]" "f[533]" "f[534]" "f[535]" "f[536]" "f[537]" "f[538]" "f[539]" "f[540]" "f[541]" "f[542]" "f[543]" "f[544]" "f[545]" "f[546]" "f[547]" "f[548]" "f[549]" "f[550]" "f[551]" "f[552]" "f[553]" "f[554]" "f[555]" "f[556]" "f[557]" "f[558]" "f[559]" "f[560]" "f[561]" "f[562]" "f[563]" "f[564]" "f[565]" "f[566]" "f[567]" "f[568]" "f[569]" "f[570]" "f[571]" "f[572]" "f[573]" "f[574]" "f[575]" "f[576]" "f[577]" "f[578]" "f[579]" "f[580]" "f[581]" "f[582]" "f[583]" "f[584]" "f[585]" "f[586]" "f[587]" "f[588]" "f[589]" "f[590]" "f[591]" "f[592]" "f[593]" "f[594]" "f[595]" "f[596]" "f[597]" "f[598]" "f[599]" "f[600]" "f[601]" "f[602]" "f[603]" "f[604]" "f[605]" "f[606]" "f[607]" "f[608]" "f[609]" "f[610]" "f[611]" "f[612]" "f[613]" "f[614]" "f[615]" "f[616]" "f[617]" "f[618]" "f[619]" "f[620]" "f[621]" "f[622]" "f[623]" "f[624]" "f[625]" "f[626]" "f[627]" "f[628]" "f[629]" "f[630]" "f[631]" "f[632]" "f[633]" "f[634]" "f[635]" "f[636]" "f[637]" "f[638]" "f[639]" "f[640]" "f[641]" "f[642]" "f[643]" "f[644]" "f[645]" "f[646]" "f[647]" "f[648]" "f[649]" "f[650]" "f[651]" "f[652]" "f[653]" "f[654]" "f[655]" "f[656]" "f[657]" "f[658]" "f[659]" "f[660]" "f[661]" "f[662]" "f[663]" "f[664]" "f[665]" "f[666]" "f[667]" "f[668]" "f[669]" "f[670]" "f[671]" "f[672]" "f[673]" "f[674]" "f[675]" "f[676]" "f[677]" "f[678]" "f[679]" "f[680]" "f[681]" "f[682]" "f[683]" "f[684]" "f[685]" "f[686]" "f[687]" "f[688]" "f[689]" "f[690]" "f[691]" "f[692]" "f[693]" "f[694]" "f[695]" "f[696]" "f[697]" "f[698]" "f[699]" "f[700]" "f[701]" "f[702]" "f[703]" "f[704]" "f[705]" "f[706]" "f[707]" "f[708]" "f[709]" "f[710]" "f[711]" "f[712]" "f[713]" "f[714]" "f[715]" "f[716]" "f[717]" "f[718]" "f[719]" "f[720]" "f[721]" "f[722]" "f[723]" "f[724]" "f[725]" "f[726]" "f[727]" "f[728]" "f[729]" "f[730]" "f[731]" "f[732]" "f[733]" "f[734]" "f[735]" "f[736]" "f[737]" "f[738]" "f[739]" "f[740]" "f[741]" "f[742]" "f[743]" "f[744]" "f[745]" "f[746]" "f[747]" "f[748]" "f[749]" "f[750]" "f[751]" "f[752]" "f[753]" "f[754]" "f[755]" "f[756]" "f[757]" "f[758]" "f[759]" "f[760]" "f[761]" "f[762]" "f[763]" "f[764]" "f[765]" "f[766]" "f[767]" "f[768]" "f[769]" "f[770]" "f[771]" "f[772]" "f[773]" "f[774]" "f[775]" "f[776]" "f[777]" "f[778]" "f[779]" "f[780]" "f[781]" "f[782]" "f[783]" "f[784]" "f[785]" "f[786]" "f[787]" "f[788]" "f[789]" "f[790]" "f[791]" "f[792]" "f[793]" "f[794]" "f[795]" "f[796]" "f[797]" "f[798]" "f[799]" "f[800]" "f[801]" "f[802]" "f[803]" "f[804]" "f[805]" "f[806]" "f[807]" "f[808]" "f[809]" "f[810]" "f[811]" "f[812]" "f[813]" "f[814]" "f[815]" "f[816]" "f[817]" "f[818]" "f[819]" "f[820]" "f[821]" "f[822]" "f[823]" "f[824]" "f[825]" "f[826]" "f[827]" "f[828]" "f[829]" "f[830]" "f[831]" "f[832]" "f[833]" "f[834]" "f[835]" "f[836]" "f[837]" "f[838]" "f[839]" "f[840]" "f[841]" "f[842]" "f[843]" "f[844]" "f[845]" "f[846]" "f[847]" "f[848]" "f[849]" "f[850]" "f[851]" "f[852]" "f[853]" "f[854]" "f[855]" "f[856]" "f[857]" "f[858]" "f[859]" "f[860]" "f[861]" "f[862]" "f[863]" "f[864]" "f[865]" "f[866]" "f[867]" "f[868]" "f[869]" "f[870]" "f[871]" "f[872]" "f[873]" "f[874]" "f[875]" "f[876]" "f[877]" "f[878]" "f[879]" "f[880]" "f[881]" "f[882]" "f[883]" "f[884]" "f[885]" "f[886]" "f[887]" "f[888]" "f[889]" "f[890]" "f[891]" "f[892]" "f[893]" "f[894]" "f[895]" "f[896]" "f[897]" "f[898]" "f[899]" "f[900]" "f[901]" "f[902]" "f[903]" "f[904]" "f[905]" "f[906]" "f[907]" "f[908]" "f[909]" "f[910]" "f[911]" "f[912]" "f[913]" "f[914]" "f[915]" "f[916]" "f[917]" "f[918]" "f[919]" "f[920]" "f[921]" "f[922]" "f[923]" "f[924]" "f[925]" "f[926]" "f[927]" "f[928]" "f[929]" "f[930]" "f[931]" "f[932]" "f[933]" "f[934]" "f[935]" "f[936]" "f[937]" "f[938]" "f[939]" "f[940]" "f[941]" "f[942]" "f[943]" "f[944]" "f[945]" "f[946]" "f[947]" "f[948]" "f[949]" "f[950]" "f[951]" "f[952]" "f[953]" "f[954]" "f[955]" "f[956]" "f[957]" "f[958]" "f[959]" "f[960]" "f[961]" "f[962]" "f[963]" "f[964]" "f[965]" "f[966]" "f[967]" "f[968]" "f[969]" "f[970]" "f[971]" "f[972]" "f[973]" "f[974]" "f[975]" "f[976]" "f[977]" "f[978]" "f[979]" "f[980]" "f[981]" "f[982]" "f[983]" "f[984]" "f[985]" "f[986]" "f[987]" "f[988]" "f[989]" "f[990]" "f[991]" "f[992]" "f[993]" "f[994]" "f[995]" "f[996]" "f[997]" "f[998]" "f[999]" "f[1000]" "f[1001]" "f[1002]" "f[1003]" "f[1004]" "f[1005]" "f[1006]" "f[1007]" "f[1008]" "f[1009]" "f[1010]" "f[1011]" "f[1012]" "f[1013]" "f[1014]" "f[1015]" "f[1016]" "f[1017]" "f[1018]" "f[1019]" "f[1020]" "f[1021]" "f[1022]" "f[1023]" "f[1024]" "f[1025]" "f[1026]" "f[1027]" "f[1028]" "f[1029]" "f[1030]" "f[1031]" "f[1032]" "f[1033]" "f[1034]" "f[1035]" "f[1036]" "f[1037]" "f[1038]" "f[1039]" "f[1040]" "f[1041]" "f[1042]" "f[1043]" "f[1044]" "f[1045]" "f[1046]" "f[1047]" "f[1048]" "f[1049]" "f[1050]" "f[1051]" "f[1052]" "f[1053]" "f[1054]" "f[1055]" "f[1056]" "f[1057]" "f[1058]" "f[1059]" "f[1060]" "f[1061]" "f[1062]" "f[1063]" "f[1064]" "f[1065]" "f[1066]" "f[1067]" "f[1068]" "f[1069]" "f[1070]" "f[1071]" "f[1072]" "f[1073]" "f[1074]" "f[1075]" "f[1076]" "f[1077]" "f[1078]" "f[1079]" "f[1080]" "f[1081]" "f[1082]" "f[1083]" "f[1084]" "f[1085]" "f[1086]" "f[1087]" "f[1088]" "f[1089]" "f[1090]" "f[1091]" "f[1092]" "f[1093]" "f[1094]" "f[1095]" "f[1096]" "f[1097]" "f[1098]" "f[1099]" "f[1100]" "f[1101]" "f[1102]" "f[1103]" "f[1104]" "f[1105]" "f[1106]" "f[1107]" "f[1108]" "f[1109]" "f[1110]" "f[1111]" "f[1112]" "f[1113]" "f[1114]" "f[1115]" "f[1116]" "f[1117]" "f[1118]" "f[1119]" "f[1120]" "f[1121]" "f[1122]" "f[1123]" "f[1124]" "f[1125]" "f[1126]" "f[1127]" "f[1128]" "f[1129]" "f[1130]" "f[1131]" "f[1132]" "f[1133]" "f[1134]" "f[1135]" "f[1136]" "f[1137]" "f[1138]" "f[1139]" "f[1140]" "f[1141]" "f[1142]" "f[1143]" "f[1144]" "f[1145]" "f[1146]" "f[1147]" "f[1148]" "f[1149]" "f[1150]" "f[1151]" "f[1152]" "f[1153]" "f[1154]" "f[1155]" "f[1156]" "f[1157]" "f[1158]" "f[1159]" "f[1160]" "f[1161]" "f[1162]" "f[1163]" "f[1164]" "f[1165]" "f[1166]" "f[1167]" "f[1168]" "f[1169]" "f[1170]" "f[1171]" "f[1172]" "f[1173]" "f[1174]" "f[1175]" "f[1176]" "f[1177]" "f[1178]" "f[1179]" "f[1180]" "f[1181]" "f[1182]" "f[1183]" "f[1184]" "f[1185]" "f[1186]" "f[1187]" "f[1188]" "f[1189]" "f[1190]" "f[1191]" "f[1192]" "f[1193]" "f[1194]" "f[1195]" "f[1196]" "f[1197]" "f[1198]" "f[1199]" "f[1200]" "f[1201]" "f[1202]" "f[1203]" "f[1204]" "f[1205]" "f[1206]" "f[1207]" "f[1208]" "f[1209]" "f[1210]" "f[1211]" "f[1212]" "f[1213]" "f[1214]" "f[1215]" "f[1216]" "f[1217]" "f[1218]" "f[1219]" "f[1220]" "f[1221]" "f[1222]" "f[1223]" "f[1224]" "f[1225]" "f[1226]" "f[1227]" "f[1228]" "f[1229]" "f[1230]" "f[1231]" "f[1232]" "f[1233]" "f[1234]" "f[1235]" "f[1236]" "f[1237]" "f[1238]" "f[1239]" "f[1240]" "f[1241]" "f[1242]" "f[1243]" "f[1244]" "f[1245]" "f[1246]" "f[1247]" "f[1248]" "f[1249]" "f[1250]" "f[1251]" "f[1252]" "f[1253]" "f[1254]" "f[1255]" "f[1256]" "f[1257]" "f[1258]" "f[1259]" "f[1260]" "f[1261]" "f[1262]" "f[1263]" "f[1264]" "f[1265]" "f[1266]" "f[1267]" "f[1268]" "f[1269]" "f[1270]" "f[1271]" "f[1272]" "f[1273]" "f[1274]" "f[1275]" "f[1276]" "f[1277]" "f[1278]" "f[1279]" "f[1280]" "f[1281]" "f[1282]" "f[1283]" "f[1284]" "f[1285]" "f[1286]" "f[1287]" "f[1288]" "f[1289]" "f[1290]" "f[1291]" "f[1292]" "f[1293]" "f[1294]" "f[1295]" "f[1296]" "f[1297]" "f[1298]" "f[1299]" "f[1300]" "f[1301]" "f[1302]" "f[1303]" "f[1304]" "f[1305]" "f[1306]" "f[1307]" "f[1308]" "f[1309]" "f[1310]" "f[1311]" "f[1312]" "f[1313]" "f[1314]" "f[1315]" "f[1316]" "f[1317]" "f[1318]" "f[1319]" "f[1320]" "f[1321]" "f[1322]" "f[1323]" "f[1324]" "f[1325]" "f[1326]" "f[1327]" "f[1328]" "f[1329]" "f[1330]" "f[1331]" "f[1332]" "f[1333]" "f[1334]" "f[1335]" "f[1336]" "f[1337]" "f[1338]" "f[1339]" "f[1340]" "f[1341]" "f[1342]" "f[1343]" "f[1344]" "f[1345]" "f[1346]" "f[1347]" "f[1348]" "f[1349]" "f[1350]" "f[1351]" "f[1352]" "f[1353]" "f[1354]" "f[1355]" "f[1356]" "f[1357]" "f[1358]" "f[1359]" "f[1360]" "f[1361]" "f[1362]" "f[1363]" "f[1364]" "f[1365]" "f[1366]" "f[1367]" "f[1368]" "f[1369]" "f[1370]" "f[1371]" "f[1372]" "f[1373]" "f[1374]" "f[1375]" "f[1376]" "f[1377]" "f[1378]" "f[1379]" "f[1380]" "f[1381]" "f[1382]" "f[1383]" "f[1384]" "f[1385]" "f[1386]" "f[1387]" "f[1388]" "f[1389]" "f[1390]" "f[1391]" "f[1392]" "f[1393]" "f[1394]" "f[1395]" "f[1396]" "f[1397]" "f[1398]" "f[1399]" "f[1400]" "f[1401]" "f[1402]" "f[1403]" "f[1404]" "f[1405]" "f[1406]" "f[1407]" "f[1408]" "f[1409]" "f[1410]" "f[1411]" "f[1412]" "f[1413]" "f[1414]" "f[1415]" "f[1416]" "f[1417]" "f[1418]" "f[1419]" "f[1420]" "f[1421]" "f[1422]" "f[1423]" "f[1424]" "f[1425]" "f[1426]" "f[1427]" "f[1428]" "f[1429]" "f[1430]" "f[1431]" "f[1432]" "f[1433]" "f[1434]" "f[1435]" "f[1436]" "f[1437]" "f[1438]" "f[1439]" "f[1440]" "f[1441]" "f[1442]" "f[1443]" "f[1444]" "f[1445]" "f[1446]" "f[1447]" "f[1448]" "f[1449]" "f[1450]" "f[1451]" "f[1452]" "f[1453]" "f[1454]" "f[1455]" "f[1456]" "f[1457]" "f[1458]" "f[1459]" "f[1460]" "f[1461]" "f[1462]" "f[1463]" "f[1464]" "f[1465]" "f[1466]" "f[1467]" "f[1468]" "f[1469]" "f[1470]" "f[1471]" "f[1472]" "f[1473]" "f[1474]" "f[1475]" "f[1476]" "f[1477]" "f[1478]" "f[1479]" "f[1480]" "f[1481]" "f[1482]" "f[1483]" "f[1484]" "f[1485]" "f[1486]" "f[1487]" "f[1488]" "f[1489]" "f[1490]" "f[1491]" "f[1492]" "f[1493]" "f[1494]" "f[1495]" "f[1496]" "f[1497]" "f[1498]" "f[1499]" "f[1500]" "f[1501]" "f[1502]" "f[1503]" "f[1504]" "f[1505]" "f[1506]" "f[1507]" "f[1508]" "f[1509]" "f[1510]" "f[1511]" "f[1512]" "f[1513]" "f[1514]" "f[1515]" "f[1516]" "f[1517]" "f[1518]" "f[1519]" "f[1520]" "f[1521]" "f[1522]" "f[1523]" "f[1524]" "f[1525]" "f[1526]" "f[1527]" "f[1528]" "f[1529]" "f[1530]" "f[1531]" "f[1532]" "f[1533]" "f[1534]" "f[1535]" "f[1536]" "f[1537]" "f[1538]" "f[1539]" "f[1540]" "f[1541]" "f[1542]" "f[1543]" "f[1544]" "f[1545]" "f[1546]" "f[1547]" "f[1548]" "f[1549]" "f[1550]" "f[1551]" "f[1552]" "f[1553]" "f[1554]" "f[1555]" "f[1556]" "f[1557]" "f[1558]" "f[1559]" "f[1560]" "f[1561]" "f[1562]" "f[1563]" "f[1564]" "f[1565]" "f[1566]" "f[1567]" "f[1568]" "f[1569]" "f[1570]" "f[1571]" "f[1572]" "f[1573]" "f[1574]" "f[1575]" "f[1576]" "f[1577]" "f[1578]" "f[1579]" "f[1580]" "f[1581]" "f[1582]" "f[1583]" "f[1584]" "f[1585]" "f[1586]" "f[1587]" "f[1588]" "f[1589]" "f[1590]" "f[1591]" "f[1592]" "f[1593]" "f[1594]" "f[1595]" "f[1596]" "f[1597]" "f[1598]" "f[1599]" "f[1600]" "f[1601]" "f[1602]" "f[1603]" "f[1604]" "f[1605]" "f[1606]" "f[1607]" "f[1608]" "f[1609]" "f[1610]" "f[1611]" "f[1612]" "f[1613]" "f[1614]" "f[1615]" "f[1616]" "f[1617]" "f[1618]" "f[1619]" "f[1620]" "f[1621]" "f[1622]" "f[1623]" "f[1624]" "f[1625]" "f[1626]" "f[1627]" "f[1628]" "f[1629]" "f[1630]" "f[1631]" "f[1632]" "f[1633]" "f[1634]" "f[1635]" "f[1636]" "f[1637]" "f[1638]" "f[1639]" "f[1640]" "f[1641]" "f[1642]" "f[1643]" "f[1644]" "f[1645]" "f[1646]" "f[1647]" "f[1648]" "f[1649]" "f[1650]" "f[1651]" "f[1652]" "f[1653]" "f[1654]" "f[1655]" "f[1656]" "f[1657]" "f[1658]" "f[1659]" "f[1660]" "f[1661]" "f[1662]" "f[1663]" "f[1664]" "f[1665]" "f[1666]" "f[1667]" "f[1668]" "f[1669]" "f[1670]" "f[1671]" "f[1672]" "f[1673]" "f[1674]" "f[1675]" "f[1676]" "f[1677]" "f[1678]" "f[1679]" "f[1680]" "f[1681]" "f[1682]" "f[1683]" "f[1684]" "f[1685]" "f[1686]" "f[1687]" "f[1688]" "f[1689]" "f[1690]" "f[1691]" "f[1692]" "f[1693]" "f[1694]" "f[1695]" "f[1696]" "f[1697]" "f[1698]" "f[1699]" "f[1700]" "f[1701]" "f[1702]" "f[1703]" "f[1704]" "f[1705]" "f[1706]" "f[1707]" "f[1708]" "f[1709]" "f[1710]" "f[1711]" "f[1712]" "f[1713]" "f[1714]" "f[1715]" "f[1716]" "f[1717]" "f[1718]" "f[1719]" "f[1720]" "f[1721]" "f[1722]" "f[1723]" "f[1724]" "f[1725]" "f[1726]" "f[1727]" "f[1728]" "f[1729]" "f[1730]" "f[1731]" "f[1732]" "f[1733]" "f[1734]" "f[1735]" "f[1736]" "f[1737]" "f[1738]" "f[1739]" "f[1740]" "f[1741]" "f[1742]" "f[1743]" "f[1744]" "f[1745]" "f[1746]" "f[1747]" "f[1748]" "f[1749]" "f[1750]" "f[1751]" "f[1752]" "f[1753]" "f[1754]" "f[1755]" "f[1756]" "f[1757]" "f[1758]" "f[1759]" "f[1760]" "f[1761]" "f[1762]" "f[1763]" "f[1764]" "f[1765]" "f[1766]" "f[1767]" "f[1768]" "f[1769]" "f[1770]" "f[1771]" "f[1772]" "f[1773]" "f[1774]" "f[1775]" "f[1776]" "f[1777]" "f[1778]" "f[1779]" "f[1780]" "f[1781]" "f[1782]" "f[1783]" "f[1784]" "f[1785]" "f[1786]" "f[1787]" "f[1788]" "f[1789]" "f[1790]" "f[1791]" "f[1792]" "f[1793]" "f[1794]" "f[1795]" "f[1796]" "f[1797]" "f[1798]" "f[1799]" "f[1800]" "f[1801]" "f[1802]" "f[1803]" "f[1804]" "f[1805]" "f[1806]" "f[1807]" "f[1808]" "f[1809]" "f[1810]" "f[1811]" "f[1812]" "f[1813]" "f[1814]" "f[1815]" "f[1816]" "f[1817]" "f[1818]" "f[1819]" "f[1820]" "f[1821]" "f[1822]" "f[1823]" "f[1824]" "f[1825]" "f[1826]" "f[1827]" "f[1828]" "f[1829]" "f[1830]" "f[1831]" "f[1832]" "f[1833]" "f[1834]" "f[1835]" "f[1836]" "f[1837]" "f[1838]" "f[1839]" "f[1840]" "f[1841]" "f[1842]" "f[1843]" "f[1844]" "f[1845]" "f[1846]" "f[1847]" "f[1848]" "f[1849]" "f[1850]" "f[1851]" "f[1852]" "f[1853]" "f[1854]" "f[1855]" "f[1856]" "f[1857]" "f[1858]" "f[1859]" "f[1860]" "f[1861]" "f[1862]" "f[1863]" "f[1864]" "f[1865]" "f[1866]" "f[1867]" "f[1868]" "f[1869]" "f[1870]" "f[1871]" "f[1872]" "f[1873]" "f[1874]" "f[1875]" "f[1876]" "f[1877]" "f[1878]" "f[1879]" "f[1880]" "f[1881]" "f[1882]" "f[1883]" "f[1884]" "f[1885]" "f[1886]" "f[1887]" "f[1888]" "f[1889]" "f[1890]" "f[1891]" "f[1892]" "f[1893]" "f[1894]" "f[1895]" "f[1896]" "f[1897]" "f[1898]" "f[1899]" "f[1900]" "f[1901]" "f[1902]" "f[1903]" "f[1904]" "f[1905]" "f[1906]" "f[1907]" "f[1908]" "f[1909]" "f[1910]" "f[1911]" "f[1912]" "f[1913]" "f[1914]" "f[1915]" "f[1916]" "f[1917]";
+	setAttr ".ic" -type "componentList" 1 "f[0:1917]";
 createNode groupId -n "groupId11";
 	rename -uid "369F083C-457E-E98E-9213-AAA3A0806F28";
 	setAttr ".ihi" 0;
@@ -350485,7 +350185,7 @@ createNode animCurveTA -n "cluster10Handle_rotateZ";
 	rename -uid "FE8F8B4E-4A59-BDE5-8D4F-088FF37BA923";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  42 0 50 -409.26865358338324 53 -409.26865358338324;
+	setAttr -s 3 ".ktv[0:2]"  42 0 50 -409.2686535833833 53 -409.2686535833833;
 createNode animCurveTU -n "cluster10Handle_scaleX";
 	rename -uid "1FD021A7-4708-310C-4466-E2A923DA8BE5";
 	setAttr ".tan" 18;
@@ -350888,7 +350588,7 @@ createNode groupId -n "groupId14";
 createNode groupParts -n "groupParts5";
 	rename -uid "9F0E6F69-4331-2BDA-C159-65B698698198";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 334 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]";
+	setAttr ".ic" -type "componentList" 1 "f[0:333]";
 createNode groupId -n "groupId15";
 	rename -uid "D92B11F7-48B6-2E20-2E1F-F0AB83F8DF4F";
 	setAttr ".ihi" 0;
@@ -350914,7 +350614,7 @@ createNode groupId -n "groupId16";
 createNode groupParts -n "groupParts7";
 	rename -uid "35FC6C78-446F-A811-119B-6C9E29C140ED";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 334 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]";
+	setAttr ".ic" -type "componentList" 1 "f[0:333]";
 createNode groupId -n "groupId17";
 	rename -uid "663D592B-48FF-2E44-BDAB-59A860B81E64";
 	setAttr ".ihi" 0;
@@ -350942,9 +350642,8 @@ createNode polyMergeVert -n "polyMergeVert1";
 createNode polyTweak -n "polyTweak1";
 	rename -uid "A9E4FC09-491D-ED1C-8548-C48824364732";
 	setAttr ".uopa" yes;
-	setAttr -s 6 ".tk";
-	setAttr ".tk[2]" -type "float3" 0.11849785 -0.29492188 0.0014305115 ;
-	setAttr ".tk[3]" -type "float3" -0.11849785 0.29490662 -0.0014305115 ;
+	setAttr -s 2 ".tk[2:3]" -type "float3"  0.11849785 -0.29492188 0.0014305115
+		 -0.11849785 0.29490662 -0.0014305115;
 createNode polyMergeVert -n "polyMergeVert2";
 	rename -uid "8F1739A7-46C6-9C8D-6D03-19AFD4A03612";
 	setAttr ".ics" -type "componentList" 1 "vtx[0:1]";
@@ -350992,7 +350691,7 @@ createNode deleteComponent -n "deleteComponent8";
 createNode polyTweak -n "polyTweak6";
 	rename -uid "5044DBD4-4150-7293-F84D-7A8D5D7DE83E";
 	setAttr ".uopa" yes;
-	setAttr -s 3 ".tk[1:2]" -type "float3"  1.79197109 0.29033741 -0.87364286
+	setAttr -s 2 ".tk[1:2]" -type "float3"  1.79197109 0.29033741 -0.87364286
 		 1.17533827 -1.029378533 -1.041470528;
 createNode deleteComponent -n "deleteComponent9";
 	rename -uid "29895478-4CDD-E04D-4420-52BE7FED4C21";
@@ -351031,7 +350730,7 @@ createNode polyMergeVert -n "polyMergeVert5";
 createNode polyTweak -n "polyTweak8";
 	rename -uid "21DFD251-462F-6054-B541-37844A0D9957";
 	setAttr ".uopa" yes;
-	setAttr -s 3 ".tk[1:2]" -type "float3"  -0.30831718 -0.65985107 -0.083913803
+	setAttr -s 2 ".tk[1:2]" -type "float3"  -0.30831718 -0.65985107 -0.083913803
 		 0.30831718 0.65988159 0.083913803;
 createNode polyMergeVert -n "polyMergeVert6";
 	rename -uid "FA74907A-4D11-BA5D-A35A-A9916AD70137";
@@ -351135,14 +350834,14 @@ createNode groupId -n "groupId18";
 createNode groupParts -n "groupParts9";
 	rename -uid "22E5E5D4-4240-8FFC-7FDC-9BA51AC15399";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 354 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]" "f[334]" "f[335]" "f[336]" "f[337]" "f[338]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[351]" "f[352]" "f[353]";
+	setAttr ".ic" -type "componentList" 1 "f[0:353]";
 createNode groupId -n "groupId19";
 	rename -uid "C5BA9836-4E23-0A75-AE8D-EBA37CBA69FE";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts10";
 	rename -uid "808E0BBA-4076-C2AB-162A-078B93E248A7";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId20";
 	rename -uid "FFFAAC97-4024-7BE4-171C-AF8E1AF35E59";
 	setAttr ".ihi" 0;
@@ -351245,140 +350944,140 @@ createNode groupId -n "groupId23";
 createNode groupParts -n "groupParts13";
 	rename -uid "D0111A37-49AA-9C54-31DE-638DA328A6C8";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 220 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]";
+	setAttr ".ic" -type "componentList" 1 "f[0:219]";
 createNode groupId -n "groupId24";
 	rename -uid "9C45720B-4BF0-E172-514B-938529CEC0A7";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts14";
 	rename -uid "472E7AF5-4144-0CEC-E377-E899E83A2D73";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 148 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]";
+	setAttr ".ic" -type "componentList" 1 "f[0:147]";
 createNode groupId -n "groupId25";
 	rename -uid "A95D768C-4C0E-9F14-7E9D-CA89F2EB7D8F";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts15";
 	rename -uid "8A56D0D4-4C5A-B997-9953-4DA63F5AC7AC";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId26";
 	rename -uid "00507A25-4034-63E5-9799-83A6FACD37CE";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts16";
 	rename -uid "CE6FC533-4510-B68B-6BB7-F09E07EF069B";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId27";
 	rename -uid "C572A641-465B-66B7-0A65-D5ACCDBE245F";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts17";
 	rename -uid "AACEC9DF-402A-AFB3-CB76-C98D84067913";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId28";
 	rename -uid "A730E785-4E1B-FCC2-5798-61A6838925F1";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts18";
 	rename -uid "0CE8E456-4668-0FF2-4066-3292E9F911C9";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId29";
 	rename -uid "31FEE9FF-4FFF-FD95-4A6A-DC97F2FFA0EC";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts19";
 	rename -uid "0331A0BB-46C7-14A6-FE09-F3A5255BF77C";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId30";
 	rename -uid "425FD68C-4193-893F-6E24-95927F4B4EE8";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts20";
 	rename -uid "9D9A0583-4F7F-9A94-A39C-C28AB196364F";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId31";
 	rename -uid "756F8AE3-4A1A-ABE0-A38D-CC85C601324C";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts21";
 	rename -uid "600B18F6-4505-32B5-8BC5-639F47B86C36";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId32";
 	rename -uid "0BB4BF20-4D9C-48B1-1EE4-15B25E28B365";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts22";
 	rename -uid "E9FD1887-43C7-A4F0-EB48-B6B56A87EC20";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId33";
 	rename -uid "EDDE820E-4169-211D-7A03-51ADDA5D5BBF";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts23";
 	rename -uid "B8C26D66-4DE1-BE0D-7B3C-1C98F9016CBA";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId34";
 	rename -uid "A1E06B06-43FF-58E2-597C-27841EA720ED";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts24";
 	rename -uid "783580D4-4DBA-900B-0364-8C8883082BE2";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId35";
 	rename -uid "3D3BD3C7-4FCE-F947-DA7B-FEBF5C9E765B";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts25";
 	rename -uid "9C667740-41F2-1782-8904-12A11F4E4712";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId36";
 	rename -uid "E52B4F7A-42C6-17D5-5FC1-2E8704637456";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts26";
 	rename -uid "AF042143-4011-34D2-BEEA-FA880FE5A810";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId37";
 	rename -uid "4623EF2A-4433-5206-71EE-3AAA905B2179";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts27";
 	rename -uid "43ED29B0-4D1A-8BA7-5BFF-7E80C08B7376";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId38";
 	rename -uid "8547D223-4A3B-B075-B854-218B70381088";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts28";
 	rename -uid "EA23D81B-44BD-AC67-F713-4A9F36357531";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId39";
 	rename -uid "6BA61667-4E9B-C232-A9A1-CA88F614B416";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts29";
 	rename -uid "A14557DE-4DC5-AB59-4D80-579E7B11DD21";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId40";
 	rename -uid "371B2BDA-4EFE-C6F1-0F84-0EAAA5F22914";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts30";
 	rename -uid "4A2F02E4-4970-9522-2BBE-9AB45FD7D37B";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId41";
 	rename -uid "BB313DF5-44D6-F789-AE50-A990865FDB07";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts31";
 	rename -uid "97F37092-4F3F-84BE-4071-FEAFE7B45DBE";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId42";
 	rename -uid "58DB9B91-4B7D-C507-3F77-B7B679DB6636";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts32";
 	rename -uid "E6CA4A73-4ED3-0836-5094-BD99451D5732";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId43";
 	rename -uid "849A6D1B-499D-EBC8-595A-48AA09A7545B";
 	setAttr ".ihi" 0;
@@ -351469,7 +351168,7 @@ createNode groupId -n "groupId46";
 createNode groupParts -n "groupParts35";
 	rename -uid "7A1C6AB9-485A-2884-EE3A-59B0B114575E";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 334 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]";
+	setAttr ".ic" -type "componentList" 1 "f[0:333]";
 createNode groupId -n "groupId47";
 	rename -uid "C1FB5999-498F-C3A0-C63D-E9A53E4D5717";
 	setAttr ".ihi" 0;
@@ -351502,7 +351201,7 @@ createNode animCurveTA -n "polySurface168_rotateX";
 	rename -uid "A2E281DE-4BC6-8051-BDDD-229760DE9455";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  25 0 26 0 44 0 50 444.89665183486079 53 444.89665183486079;
+	setAttr -s 5 ".ktv[0:4]"  25 0 26 0 44 0 50 444.89665183486085 53 444.89665183486085;
 createNode animCurveTA -n "polySurface168_rotateY";
 	rename -uid "DF43C33B-4A0A-7E4D-1D44-3B94CAFD965B";
 	setAttr ".tan" 18;
@@ -351546,14 +351245,14 @@ createNode groupId -n "groupId48";
 createNode groupParts -n "groupParts37";
 	rename -uid "CFBD6FA9-4601-E968-F1F1-6E8CD67F7142";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 354 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]" "f[334]" "f[335]" "f[336]" "f[337]" "f[338]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[351]" "f[352]" "f[353]";
+	setAttr ".ic" -type "componentList" 1 "f[0:353]";
 createNode groupId -n "groupId49";
 	rename -uid "7B24D33D-411C-374A-3C47-D4911B71DCE1";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts38";
 	rename -uid "2F04F4ED-4806-7D94-621A-10BE224B2565";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId50";
 	rename -uid "06CE39C5-4664-FF1F-6032-2A8A532B3AEF";
 	setAttr ".ihi" 0;
@@ -351646,140 +351345,140 @@ createNode groupId -n "groupId53";
 createNode groupParts -n "groupParts41";
 	rename -uid "00052E55-4FEC-2A88-3E4F-52A96AE18BC0";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 220 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]";
+	setAttr ".ic" -type "componentList" 1 "f[0:219]";
 createNode groupId -n "groupId54";
 	rename -uid "86DC47FA-48CA-D90A-E10F-C2A77A66EE19";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts42";
 	rename -uid "6819BA06-48C0-9109-D7B7-0188F84F6B3B";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 148 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]";
+	setAttr ".ic" -type "componentList" 1 "f[0:147]";
 createNode groupId -n "groupId55";
 	rename -uid "569073F9-4590-078E-00AC-54B156469972";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts43";
 	rename -uid "D77E8C69-4DE5-0286-ED78-529A4206835E";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId56";
 	rename -uid "2F792B99-4606-73F8-874C-B6AEF61B071F";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts44";
 	rename -uid "7B19068C-4FE9-B77D-6674-B1BD92441F3C";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId57";
 	rename -uid "BDF54B20-44AB-EEF2-F98C-96AA3C6FBAE4";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts45";
 	rename -uid "02A97B86-46C8-8FF8-109B-C4B0D878C904";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId58";
 	rename -uid "024C5678-4526-F73F-419E-5986E6DD7614";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts46";
 	rename -uid "980E077A-40F8-729E-2678-B8899AC9A55B";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId59";
 	rename -uid "8038A7E6-4A02-F14D-BD89-84AD76EB9846";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts47";
 	rename -uid "B0C45FE1-48C2-32BD-BB67-9F8C065A62C8";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId60";
 	rename -uid "509133A1-4045-77BB-DD1C-15B7BA1E7232";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts48";
 	rename -uid "8F770EE7-48C2-98A6-ABB4-B480CF51F6A4";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId61";
 	rename -uid "A9DA5CFB-460E-62ED-8284-D08C518B7897";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts49";
 	rename -uid "882FA2D7-4619-DB1A-980D-F9A3C50D8D38";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId62";
 	rename -uid "7BF6AA20-4A20-2D4C-6378-CEB3AC9FE669";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts50";
 	rename -uid "AEF9AEDB-4CE4-B44F-6FDC-21BFC6EC6C2A";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId63";
 	rename -uid "E7301964-4F5F-B59A-8ED9-E79F2CD560E2";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts51";
 	rename -uid "DD4DD2C0-4756-7E99-0E64-8AABF9E4908F";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId64";
 	rename -uid "63A69C5A-4E94-DE94-32EF-64840AB460AD";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts52";
 	rename -uid "3B8A71EF-4796-A470-CF57-13BCFC6A8AD2";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId65";
 	rename -uid "B2FC80B3-4CFA-2782-874A-23AF5A1CA232";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts53";
 	rename -uid "666AFAFD-494B-E824-63DD-18B9F25124BA";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId66";
 	rename -uid "6241E151-4E27-AD1E-A393-62BD2A03C95C";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts54";
 	rename -uid "F4A324FB-436D-FEEC-DB33-4DB557687440";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId67";
 	rename -uid "0B81ED25-442E-5FAE-1C92-12A60B3AFC21";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts55";
 	rename -uid "5E2B4836-44B4-0BB8-A9A5-5EB58E4B41F2";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId68";
 	rename -uid "F3915B4B-47BB-A70C-D8AD-098A79C70A63";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts56";
 	rename -uid "ED25CEC3-439C-E306-2186-E188D6DFA74E";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId69";
 	rename -uid "EF39B36E-4F3C-1D68-A6F6-4998D5C22381";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts57";
 	rename -uid "B44D3134-475E-6FD5-D30F-CCBD4BF8E278";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId70";
 	rename -uid "855DA098-47B9-E7CB-1519-A681D5EF42D4";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts58";
 	rename -uid "D111E157-4B59-BF3C-CAA8-95B3741A2302";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId71";
 	rename -uid "A4FAD3BF-4E00-C5CE-A00F-7C931A698700";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts59";
 	rename -uid "489E9691-4A91-A34E-6975-6F882CE376B3";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId72";
 	rename -uid "3F101BF8-4C1B-C1C0-CEF7-8DAA07A8E2BE";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts60";
 	rename -uid "1DB17876-42E0-E72D-31BE-19B03D969D13";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId73";
 	rename -uid "4D1B8B8F-4B65-5891-BEF3-619722680AAF";
 	setAttr ".ihi" 0;
@@ -351871,140 +351570,140 @@ createNode groupId -n "groupId76";
 createNode groupParts -n "groupParts63";
 	rename -uid "C00FCBE8-4192-39B9-244C-E29A99DBD1A8";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 220 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]";
+	setAttr ".ic" -type "componentList" 1 "f[0:219]";
 createNode groupId -n "groupId77";
 	rename -uid "E9BCC871-4976-DAFD-0682-92BC068B30D9";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts64";
 	rename -uid "82D17B80-4A81-9192-43F7-34A84CAE9D78";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 148 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]";
+	setAttr ".ic" -type "componentList" 1 "f[0:147]";
 createNode groupId -n "groupId78";
 	rename -uid "83DE324E-490C-EA8C-DE24-2B8A799F33DD";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts65";
 	rename -uid "5B24D17E-4508-F908-819B-E6BC6F7A698F";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId79";
 	rename -uid "782D75AF-48CE-B180-D541-C988BB28FE75";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts66";
 	rename -uid "728694FE-40E2-9417-A9DF-94A259569AB1";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId80";
 	rename -uid "E6D93090-49C9-30AF-8D8E-02967E8017D0";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts67";
 	rename -uid "011962F5-420A-DF13-EEBB-66BBE5D6FF6A";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId81";
 	rename -uid "BB566A26-4508-BDB8-1FC9-2FBA08AC3D8A";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts68";
 	rename -uid "7861416F-48D6-2C0F-8933-EAAF7DE0C96C";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId82";
 	rename -uid "0A1BE012-4225-B2B1-D933-F9B38EE11A91";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts69";
 	rename -uid "AEEA3753-4F0E-C351-6C28-469E6D2E1085";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId83";
 	rename -uid "31381862-4CFF-8008-33C2-70BAE40E580D";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts70";
 	rename -uid "D065B8FE-4972-0E4C-055C-E6A971A487D3";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId84";
 	rename -uid "1F2AE426-43F5-A142-0A4F-57BE72BC8422";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts71";
 	rename -uid "90D2ACE3-4609-A563-A6E0-CDB1880CFD2E";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId85";
 	rename -uid "A236EEE9-4A07-5658-BB53-18964271FDB8";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts72";
 	rename -uid "7CE06D4A-4145-1AD2-1C28-3492BD02D8C5";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId86";
 	rename -uid "305CC099-4BEC-F619-D956-3EB38956CF1F";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts73";
 	rename -uid "1CAB6C4B-434A-F669-0E55-BE873047088E";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId87";
 	rename -uid "5CC8001C-4950-34B4-6B2A-ABB626491A6E";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts74";
 	rename -uid "6EB72854-437A-9E8D-4AB5-CC88424CDBF1";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId88";
 	rename -uid "8278C0DD-4AC3-1F61-76A2-CC83160DFEF5";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts75";
 	rename -uid "13FAD443-4944-2742-3653-749575A98E21";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId89";
 	rename -uid "C28B0B93-4CCD-C793-7764-1CBE3FEB83F4";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts76";
 	rename -uid "E30339BC-4916-ED80-35DF-E8A05682FF0F";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId90";
 	rename -uid "885BA667-405F-5521-F484-BFABE0755B71";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts77";
 	rename -uid "91457DDE-4B07-A892-E0CA-729B5CE5ED2D";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId91";
 	rename -uid "0FB4881D-463E-0096-0370-FCAC21C4009A";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts78";
 	rename -uid "F7F77918-4FF2-650D-9B1D-00B20E137495";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId92";
 	rename -uid "E813395C-4867-D409-E29B-368BE1E8E6D9";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts79";
 	rename -uid "840998B1-42DB-F9F9-1E24-E0B7E62B5E64";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId93";
 	rename -uid "18D41574-427B-C22E-9BBC-789A4868F18F";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts80";
 	rename -uid "B13C83F6-476B-3FFB-8E2F-86808ED33AB1";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId94";
 	rename -uid "6419010B-4B9D-72E2-F531-D39310AE611F";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts81";
 	rename -uid "9CE0F397-481C-BE5E-71DD-89BFEB395549";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId95";
 	rename -uid "3616549C-4D28-8AE4-643D-FAB16AE0617A";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts82";
 	rename -uid "89CBD038-48AC-99C7-429C-DF8713097FA4";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId96";
 	rename -uid "67CA912E-4ECD-353B-F2EA-668B4EC696A0";
 	setAttr ".ihi" 0;
@@ -352032,140 +351731,140 @@ createNode groupId -n "groupId97";
 createNode groupParts -n "groupParts84";
 	rename -uid "5F65D9BE-4DC6-C879-7838-8CBE99F122B9";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 220 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]";
+	setAttr ".ic" -type "componentList" 1 "f[0:219]";
 createNode groupId -n "groupId98";
 	rename -uid "4F9CD814-46D6-5BB2-AE21-289F959A0632";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts85";
 	rename -uid "86C8F630-45A4-994A-32D9-F5B79740878D";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 148 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]";
+	setAttr ".ic" -type "componentList" 1 "f[0:147]";
 createNode groupId -n "groupId99";
 	rename -uid "7D7728DD-4291-8923-B8BE-7AA33F9A24CB";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts86";
 	rename -uid "295D9A03-41EA-2218-3CBC-FFAE422E8FE2";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId100";
 	rename -uid "7E385985-4FB9-5432-F52F-20B64A90B254";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts87";
 	rename -uid "9321F3E0-48FE-0170-7D03-6BA33A32508F";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId101";
 	rename -uid "61666553-48D2-F597-03D5-E18A853830E5";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts88";
 	rename -uid "437931B2-4547-E970-8097-419D3027B2C8";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId102";
 	rename -uid "C8BD3FF8-403A-7127-1AA6-C5B4271DC133";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts89";
 	rename -uid "DED9683D-440B-2050-CA64-02886DE6BB80";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId103";
 	rename -uid "93082503-43C7-5219-1B7F-809B4050DAF1";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts90";
 	rename -uid "EF0D6BD9-4881-218E-B2AB-8B92EC1DA8E0";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId104";
 	rename -uid "50526723-4988-33E1-14EF-87BA79808E06";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts91";
 	rename -uid "73520E90-486B-D055-7684-C08AFA5B6889";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId105";
 	rename -uid "BB2D4BDF-4500-EE42-93BB-6CAFF7A5DB74";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts92";
 	rename -uid "05B85F7E-47C1-5DA8-07D1-D5BC58B65C83";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId106";
 	rename -uid "BDB6AC39-42FC-1662-DDC6-DEBFD9C9721C";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts93";
 	rename -uid "2D346533-4358-FD6D-A711-188B86AED313";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 152 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]";
+	setAttr ".ic" -type "componentList" 1 "f[0:151]";
 createNode groupId -n "groupId107";
 	rename -uid "45E5EC00-41C4-6118-F831-2A9BDD367522";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts94";
 	rename -uid "32430B36-44C9-5A6F-9C7D-CD8FAE6DB0E3";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId108";
 	rename -uid "BC5B2E0A-4BFE-3742-BBC1-B89ECEAC6459";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts95";
 	rename -uid "3CE212CA-414E-7966-23F7-32B211C0C4D2";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId109";
 	rename -uid "7391A212-45E0-0939-17D1-1EB4697E1A29";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts96";
 	rename -uid "85CD95B1-4DD7-6A39-F8DD-0EBDC7ED1F2C";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId110";
 	rename -uid "19125D69-47DA-7329-8C68-EC851681C57A";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts97";
 	rename -uid "921338FF-42D9-84F2-D381-0982846CCC42";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId111";
 	rename -uid "B6ABAB08-4F79-03B1-C184-96AEB1C066A8";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts98";
 	rename -uid "E6A49D89-426B-E45F-DA2E-B1A23524C274";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId112";
 	rename -uid "2125796F-417D-8D32-1EE3-5280E4AE66A6";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts99";
 	rename -uid "25AE4746-4B26-784F-F768-A3A95510B8ED";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId113";
 	rename -uid "3A0E729A-45AE-52EB-2889-35981BBF6253";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts100";
 	rename -uid "100B1583-4EF0-0977-A53C-1B9C39E37F2C";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId114";
 	rename -uid "43702F3F-41AC-4FEB-D41B-85B9B1775F54";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts101";
 	rename -uid "2E58E49A-4A78-4E42-B9CD-8B9358824674";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId115";
 	rename -uid "DF91E906-49C7-1E3F-FFF8-9CA2CC7311AD";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts102";
 	rename -uid "162AD4EA-4469-65F3-C4E2-199F12D4413C";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 112 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]";
+	setAttr ".ic" -type "componentList" 1 "f[0:111]";
 createNode groupId -n "groupId116";
 	rename -uid "743B14B4-4881-3F1A-4A5E-3785D999B387";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts103";
 	rename -uid "56A63730-4FEA-6DF7-9F4C-619C4BF611DB";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId117";
 	rename -uid "7300F94F-422D-8E50-3B5F-91B45B39584D";
 	setAttr ".ihi" 0;
@@ -352255,14 +351954,14 @@ createNode groupId -n "groupId120";
 createNode groupParts -n "groupParts106";
 	rename -uid "9A35DB49-4D07-A18F-42C0-15A63A8DB3B2";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 354 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]" "f[160]" "f[161]" "f[162]" "f[163]" "f[164]" "f[165]" "f[166]" "f[167]" "f[168]" "f[169]" "f[170]" "f[171]" "f[172]" "f[173]" "f[174]" "f[175]" "f[176]" "f[177]" "f[178]" "f[179]" "f[180]" "f[181]" "f[182]" "f[183]" "f[184]" "f[185]" "f[186]" "f[187]" "f[188]" "f[189]" "f[190]" "f[191]" "f[192]" "f[193]" "f[194]" "f[195]" "f[196]" "f[197]" "f[198]" "f[199]" "f[200]" "f[201]" "f[202]" "f[203]" "f[204]" "f[205]" "f[206]" "f[207]" "f[208]" "f[209]" "f[210]" "f[211]" "f[212]" "f[213]" "f[214]" "f[215]" "f[216]" "f[217]" "f[218]" "f[219]" "f[220]" "f[221]" "f[222]" "f[223]" "f[224]" "f[225]" "f[226]" "f[227]" "f[228]" "f[229]" "f[230]" "f[231]" "f[232]" "f[233]" "f[234]" "f[235]" "f[236]" "f[237]" "f[238]" "f[239]" "f[240]" "f[241]" "f[242]" "f[243]" "f[244]" "f[245]" "f[246]" "f[247]" "f[248]" "f[249]" "f[250]" "f[251]" "f[252]" "f[253]" "f[254]" "f[255]" "f[256]" "f[257]" "f[258]" "f[259]" "f[260]" "f[261]" "f[262]" "f[263]" "f[264]" "f[265]" "f[266]" "f[267]" "f[268]" "f[269]" "f[270]" "f[271]" "f[272]" "f[273]" "f[274]" "f[275]" "f[276]" "f[277]" "f[278]" "f[279]" "f[280]" "f[281]" "f[282]" "f[283]" "f[284]" "f[285]" "f[286]" "f[287]" "f[288]" "f[289]" "f[290]" "f[291]" "f[292]" "f[293]" "f[294]" "f[295]" "f[296]" "f[297]" "f[298]" "f[299]" "f[300]" "f[301]" "f[302]" "f[303]" "f[304]" "f[305]" "f[306]" "f[307]" "f[308]" "f[309]" "f[310]" "f[311]" "f[312]" "f[313]" "f[314]" "f[315]" "f[316]" "f[317]" "f[318]" "f[319]" "f[320]" "f[321]" "f[322]" "f[323]" "f[324]" "f[325]" "f[326]" "f[327]" "f[328]" "f[329]" "f[330]" "f[331]" "f[332]" "f[333]" "f[334]" "f[335]" "f[336]" "f[337]" "f[338]" "f[339]" "f[340]" "f[341]" "f[342]" "f[343]" "f[344]" "f[345]" "f[346]" "f[347]" "f[348]" "f[349]" "f[350]" "f[351]" "f[352]" "f[353]";
+	setAttr ".ic" -type "componentList" 1 "f[0:353]";
 createNode groupId -n "groupId121";
 	rename -uid "C8496282-4811-DAB3-68AD-C3B9771B1BDE";
 	setAttr ".ihi" 0;
 createNode groupParts -n "groupParts107";
 	rename -uid "B3C71595-46A9-336C-0068-2AB9C4F8C4F6";
 	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 160 "f[0]" "f[1]" "f[2]" "f[3]" "f[4]" "f[5]" "f[6]" "f[7]" "f[8]" "f[9]" "f[10]" "f[11]" "f[12]" "f[13]" "f[14]" "f[15]" "f[16]" "f[17]" "f[18]" "f[19]" "f[20]" "f[21]" "f[22]" "f[23]" "f[24]" "f[25]" "f[26]" "f[27]" "f[28]" "f[29]" "f[30]" "f[31]" "f[32]" "f[33]" "f[34]" "f[35]" "f[36]" "f[37]" "f[38]" "f[39]" "f[40]" "f[41]" "f[42]" "f[43]" "f[44]" "f[45]" "f[46]" "f[47]" "f[48]" "f[49]" "f[50]" "f[51]" "f[52]" "f[53]" "f[54]" "f[55]" "f[56]" "f[57]" "f[58]" "f[59]" "f[60]" "f[61]" "f[62]" "f[63]" "f[64]" "f[65]" "f[66]" "f[67]" "f[68]" "f[69]" "f[70]" "f[71]" "f[72]" "f[73]" "f[74]" "f[75]" "f[76]" "f[77]" "f[78]" "f[79]" "f[80]" "f[81]" "f[82]" "f[83]" "f[84]" "f[85]" "f[86]" "f[87]" "f[88]" "f[89]" "f[90]" "f[91]" "f[92]" "f[93]" "f[94]" "f[95]" "f[96]" "f[97]" "f[98]" "f[99]" "f[100]" "f[101]" "f[102]" "f[103]" "f[104]" "f[105]" "f[106]" "f[107]" "f[108]" "f[109]" "f[110]" "f[111]" "f[112]" "f[113]" "f[114]" "f[115]" "f[116]" "f[117]" "f[118]" "f[119]" "f[120]" "f[121]" "f[122]" "f[123]" "f[124]" "f[125]" "f[126]" "f[127]" "f[128]" "f[129]" "f[130]" "f[131]" "f[132]" "f[133]" "f[134]" "f[135]" "f[136]" "f[137]" "f[138]" "f[139]" "f[140]" "f[141]" "f[142]" "f[143]" "f[144]" "f[145]" "f[146]" "f[147]" "f[148]" "f[149]" "f[150]" "f[151]" "f[152]" "f[153]" "f[154]" "f[155]" "f[156]" "f[157]" "f[158]" "f[159]";
+	setAttr ".ic" -type "componentList" 1 "f[0:159]";
 createNode groupId -n "groupId122";
 	rename -uid "B362AEC7-47D8-0ED9-E0F0-23B55DE0B213";
 	setAttr ".ihi" 0;
@@ -352601,8 +352300,8 @@ createNode animCurveTA -n "L_Arm_01_FK_ctrl_rotateX";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
 	setAttr -s 9 ".ktv[0:8]"  108 0 122 -4.1848272042026382 140 0 149 0
-		 154 -10.319390235914735 156 -39.362659530703681 159 -32.083327584725588 164 -46.565853040320739
-		 167 -46.565853040320739;
+		 154 -10.319390235914735 156 -39.362659530703681 159 -32.083327584725588 164 -46.565853040320746
+		 167 -46.565853040320746;
 	setAttr -s 9 ".kit[0:8]"  18 18 18 18 18 1 18 1 
 		18;
 	setAttr -s 9 ".kix[5:8]"  1 1 1 1;
@@ -352622,7 +352321,7 @@ createNode animCurveTA -n "L_Arm_01_FK_ctrl_rotateZ";
 	rename -uid "6DE757E9-4B4B-6C03-42D8-339125ACFAA8";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  108 0 122 12.746367762689268 140 0 149 38.810246102366094
+	setAttr -s 9 ".ktv[0:8]"  108 0 122 12.746367762689269 140 0 149 38.810246102366094
 		 154 19.147070979541791 156 37.660479879578041 159 58.985925543679691 164 40.073565712894023
 		 167 40.073565712894023;
 	setAttr -s 9 ".kit[0:8]"  18 18 18 18 18 1 18 1 
@@ -353868,7 +353567,7 @@ createNode animCurveTA -n "Spine_01_ctrl_rotateZ";
 	rename -uid "D0B03219-4EA4-A33B-D01E-10B88290B728";
 	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  108 0 140 12.67101530271699 149 27.706844793660927
+	setAttr -s 8 ".ktv[0:7]"  108 0 140 12.67101530271699 149 27.706844793660931
 		 154 8.2465934277171691 156 8.2465934277171691 159 8.2465934277171691 164 0 167 0;
 	setAttr -s 8 ".kit[0:7]"  18 18 18 18 18 18 1 18;
 	setAttr -s 8 ".kix[6:7]"  1 1;
@@ -356693,8 +356392,8 @@ select -ne :time1;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 0.5;
-	setAttr ".unw" 0.5;
+	setAttr ".o" 209;
+	setAttr ".unw" 209;
 select -ne :sequenceManager1;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
@@ -356829,7 +356528,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
 select -ne :ikSystem;
-	setAttr -s 8 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "Transform_ctrl_LLegIKFK.o" "Knight_RetopoRN.phl[1]";
 connectAttr "Transform_ctrl_RLegIKFK.o" "Knight_RetopoRN.phl[2]";
 connectAttr "Transform_ctrl_MasterScale.o" "Knight_RetopoRN.phl[3]";
@@ -358246,225 +357945,225 @@ connectAttr "polySurfaceShape237.iog.og[0]" "SkeletonRN.phl[649]";
 connectAttr "polySurfaceShape238.iog.og[0]" "SkeletonRN.phl[650]";
 connectAttr "polySurface237Shape.iog.og[0]" "SkeletonRN.phl[651]";
 connectAttr "polySurface237Shape.ciog.cog[0]" "SkeletonRN.phl[652]";
-connectAttr "groupId8.msg" "SkeletonRN.phl[653]";
-connectAttr "groupId9.msg" "SkeletonRN.phl[654]";
-connectAttr "groupId10.msg" "SkeletonRN.phl[655]";
-connectAttr "groupId11.msg" "SkeletonRN.phl[656]";
-connectAttr "groupId12.msg" "SkeletonRN.phl[657]";
-connectAttr "groupId13.msg" "SkeletonRN.phl[658]";
-connectAttr "groupId14.msg" "SkeletonRN.phl[659]";
-connectAttr "groupId15.msg" "SkeletonRN.phl[660]";
-connectAttr "groupId16.msg" "SkeletonRN.phl[661]";
-connectAttr "groupId17.msg" "SkeletonRN.phl[662]";
-connectAttr "groupId18.msg" "SkeletonRN.phl[663]";
-connectAttr "groupId19.msg" "SkeletonRN.phl[664]";
-connectAttr "groupId20.msg" "SkeletonRN.phl[665]";
-connectAttr "groupId21.msg" "SkeletonRN.phl[666]";
-connectAttr "groupId23.msg" "SkeletonRN.phl[667]";
-connectAttr "groupId24.msg" "SkeletonRN.phl[668]";
-connectAttr "groupId25.msg" "SkeletonRN.phl[669]";
-connectAttr "groupId26.msg" "SkeletonRN.phl[670]";
-connectAttr "groupId27.msg" "SkeletonRN.phl[671]";
-connectAttr "groupId28.msg" "SkeletonRN.phl[672]";
-connectAttr "groupId29.msg" "SkeletonRN.phl[673]";
-connectAttr "groupId30.msg" "SkeletonRN.phl[674]";
-connectAttr "groupId31.msg" "SkeletonRN.phl[675]";
-connectAttr "groupId32.msg" "SkeletonRN.phl[676]";
-connectAttr "groupId33.msg" "SkeletonRN.phl[677]";
-connectAttr "groupId34.msg" "SkeletonRN.phl[678]";
-connectAttr "groupId35.msg" "SkeletonRN.phl[679]";
-connectAttr "groupId36.msg" "SkeletonRN.phl[680]";
-connectAttr "groupId37.msg" "SkeletonRN.phl[681]";
-connectAttr "groupId38.msg" "SkeletonRN.phl[682]";
-connectAttr "groupId39.msg" "SkeletonRN.phl[683]";
-connectAttr "groupId40.msg" "SkeletonRN.phl[684]";
-connectAttr "groupId41.msg" "SkeletonRN.phl[685]";
-connectAttr "groupId42.msg" "SkeletonRN.phl[686]";
-connectAttr "groupId43.msg" "SkeletonRN.phl[687]";
-connectAttr "groupId44.msg" "SkeletonRN.phl[688]";
-connectAttr "groupId46.msg" "SkeletonRN.phl[689]";
-connectAttr "groupId47.msg" "SkeletonRN.phl[690]";
-connectAttr "groupId48.msg" "SkeletonRN.phl[691]";
-connectAttr "groupId49.msg" "SkeletonRN.phl[692]";
-connectAttr "groupId50.msg" "SkeletonRN.phl[693]";
-connectAttr "groupId51.msg" "SkeletonRN.phl[694]";
-connectAttr "groupId53.msg" "SkeletonRN.phl[695]";
-connectAttr "groupId54.msg" "SkeletonRN.phl[696]";
-connectAttr "groupId55.msg" "SkeletonRN.phl[697]";
-connectAttr "groupId56.msg" "SkeletonRN.phl[698]";
-connectAttr "groupId57.msg" "SkeletonRN.phl[699]";
-connectAttr "groupId58.msg" "SkeletonRN.phl[700]";
-connectAttr "groupId59.msg" "SkeletonRN.phl[701]";
-connectAttr "groupId60.msg" "SkeletonRN.phl[702]";
-connectAttr "groupId61.msg" "SkeletonRN.phl[703]";
-connectAttr "groupId62.msg" "SkeletonRN.phl[704]";
-connectAttr "groupId63.msg" "SkeletonRN.phl[705]";
-connectAttr "groupId64.msg" "SkeletonRN.phl[706]";
-connectAttr "groupId65.msg" "SkeletonRN.phl[707]";
-connectAttr "groupId66.msg" "SkeletonRN.phl[708]";
-connectAttr "groupId67.msg" "SkeletonRN.phl[709]";
-connectAttr "groupId68.msg" "SkeletonRN.phl[710]";
-connectAttr "groupId69.msg" "SkeletonRN.phl[711]";
-connectAttr "groupId70.msg" "SkeletonRN.phl[712]";
-connectAttr "groupId71.msg" "SkeletonRN.phl[713]";
-connectAttr "groupId72.msg" "SkeletonRN.phl[714]";
-connectAttr "groupId73.msg" "SkeletonRN.phl[715]";
-connectAttr "groupId74.msg" "SkeletonRN.phl[716]";
-connectAttr "groupId76.msg" "SkeletonRN.phl[717]";
-connectAttr "groupId77.msg" "SkeletonRN.phl[718]";
-connectAttr "groupId78.msg" "SkeletonRN.phl[719]";
-connectAttr "groupId79.msg" "SkeletonRN.phl[720]";
-connectAttr "groupId80.msg" "SkeletonRN.phl[721]";
-connectAttr "groupId81.msg" "SkeletonRN.phl[722]";
-connectAttr "groupId82.msg" "SkeletonRN.phl[723]";
-connectAttr "groupId83.msg" "SkeletonRN.phl[724]";
-connectAttr "groupId84.msg" "SkeletonRN.phl[725]";
-connectAttr "groupId85.msg" "SkeletonRN.phl[726]";
-connectAttr "groupId86.msg" "SkeletonRN.phl[727]";
-connectAttr "groupId87.msg" "SkeletonRN.phl[728]";
-connectAttr "groupId88.msg" "SkeletonRN.phl[729]";
-connectAttr "groupId89.msg" "SkeletonRN.phl[730]";
-connectAttr "groupId90.msg" "SkeletonRN.phl[731]";
-connectAttr "groupId91.msg" "SkeletonRN.phl[732]";
-connectAttr "groupId92.msg" "SkeletonRN.phl[733]";
-connectAttr "groupId93.msg" "SkeletonRN.phl[734]";
-connectAttr "groupId94.msg" "SkeletonRN.phl[735]";
-connectAttr "groupId95.msg" "SkeletonRN.phl[736]";
-connectAttr "groupId96.msg" "SkeletonRN.phl[737]";
-connectAttr "groupId97.msg" "SkeletonRN.phl[738]";
-connectAttr "groupId98.msg" "SkeletonRN.phl[739]";
-connectAttr "groupId99.msg" "SkeletonRN.phl[740]";
-connectAttr "groupId100.msg" "SkeletonRN.phl[741]";
-connectAttr "groupId101.msg" "SkeletonRN.phl[742]";
-connectAttr "groupId102.msg" "SkeletonRN.phl[743]";
-connectAttr "groupId103.msg" "SkeletonRN.phl[744]";
-connectAttr "groupId104.msg" "SkeletonRN.phl[745]";
-connectAttr "groupId105.msg" "SkeletonRN.phl[746]";
-connectAttr "groupId106.msg" "SkeletonRN.phl[747]";
-connectAttr "groupId107.msg" "SkeletonRN.phl[748]";
-connectAttr "groupId108.msg" "SkeletonRN.phl[749]";
-connectAttr "groupId109.msg" "SkeletonRN.phl[750]";
-connectAttr "groupId110.msg" "SkeletonRN.phl[751]";
-connectAttr "groupId111.msg" "SkeletonRN.phl[752]";
-connectAttr "groupId112.msg" "SkeletonRN.phl[753]";
-connectAttr "groupId113.msg" "SkeletonRN.phl[754]";
-connectAttr "groupId114.msg" "SkeletonRN.phl[755]";
-connectAttr "groupId115.msg" "SkeletonRN.phl[756]";
-connectAttr "groupId116.msg" "SkeletonRN.phl[757]";
-connectAttr "groupId117.msg" "SkeletonRN.phl[758]";
-connectAttr "groupId118.msg" "SkeletonRN.phl[759]";
-connectAttr "groupId120.msg" "SkeletonRN.phl[760]";
-connectAttr "groupId121.msg" "SkeletonRN.phl[761]";
-connectAttr "groupId122.msg" "SkeletonRN.phl[762]";
-connectAttr "groupId123.msg" "SkeletonRN.phl[763]";
-connectAttr "SkeletonRN.phl[764]" "HeadShape.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[765]" "polySurfaceShape139.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[766]" "Skeleton_Smooth_GeoShape.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[767]" "polySurfaceShape140.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[768]" "polySurfaceShape141.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[769]" "R_Upper_LegShape.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[770]" "polySurfaceShape143.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[771]" "polySurfaceShape144.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[772]" "polySurfaceShape145.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[773]" "polySurfaceShape146.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[774]" "polySurface144Shape.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[775]" "polySurfaceShape147.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[776]" "polySurfaceShape148.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[777]" "polySurfaceShape149.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[778]" "polySurfaceShape150.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[779]" "polySurfaceShape151.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[780]" "polySurfaceShape152.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[781]" "polySurfaceShape153.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[782]" "polySurfaceShape154.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[783]" "polySurfaceShape155.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[784]" "polySurfaceShape156.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[785]" "polySurfaceShape157.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[786]" "polySurfaceShape158.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[787]" "polySurfaceShape159.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[788]" "polySurfaceShape160.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[789]" "polySurfaceShape161.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[790]" "polySurfaceShape162.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[791]" "polySurfaceShape163.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[792]" "polySurfaceShape164.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[793]" "polySurfaceShape165.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[794]" "polySurfaceShape166.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[795]" "polySurfaceShape167.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[796]" "polySurface147Shape.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[797]" "polySurfaceShape168.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[798]" "polySurfaceShape169.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[799]" "polySurfaceShape170.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[800]" "polySurfaceShape171.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[801]" "polySurfaceShape172.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[802]" "polySurface171Shape.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[803]" "polySurfaceShape173.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[804]" "polySurfaceShape174.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[805]" "polySurfaceShape175.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[806]" "polySurfaceShape176.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[807]" "polySurfaceShape177.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[808]" "polySurfaceShape178.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[809]" "polySurfaceShape179.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[810]" "polySurfaceShape180.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[811]" "polySurfaceShape181.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[812]" "polySurfaceShape182.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[813]" "polySurfaceShape183.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[814]" "polySurfaceShape184.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[815]" "polySurfaceShape185.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[816]" "polySurfaceShape186.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[817]" "polySurfaceShape187.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[818]" "polySurfaceShape188.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[819]" "polySurfaceShape189.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[820]" "polySurfaceShape190.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[821]" "polySurfaceShape191.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[822]" "polySurfaceShape192.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[823]" "polySurfaceShape193.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[824]" "polySurface191Shape.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[825]" "polySurfaceShape194.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[826]" "polySurfaceShape195.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[827]" "polySurfaceShape196.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[828]" "polySurfaceShape197.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[829]" "polySurfaceShape198.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[830]" "polySurfaceShape199.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[831]" "polySurfaceShape200.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[832]" "polySurfaceShape201.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[833]" "polySurfaceShape202.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[834]" "polySurfaceShape203.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[835]" "polySurfaceShape204.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[836]" "polySurfaceShape205.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[837]" "polySurfaceShape206.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[838]" "polySurfaceShape207.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[839]" "polySurfaceShape208.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[840]" "polySurfaceShape209.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[841]" "polySurfaceShape210.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[842]" "polySurfaceShape211.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[843]" "polySurfaceShape212.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[844]" "polySurfaceShape213.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[845]" "polySurfaceShape214.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[846]" "polySurfaceShape215.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[847]" "polySurfaceShape216.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[848]" "polySurfaceShape217.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[849]" "polySurfaceShape218.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[850]" "polySurfaceShape219.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[851]" "polySurfaceShape220.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[852]" "polySurfaceShape221.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[853]" "polySurfaceShape222.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[854]" "polySurfaceShape223.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[855]" "polySurfaceShape224.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[856]" "polySurfaceShape225.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[857]" "polySurfaceShape226.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[858]" "polySurfaceShape227.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[859]" "polySurfaceShape228.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[860]" "polySurfaceShape229.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[861]" "polySurfaceShape230.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[862]" "polySurfaceShape231.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[863]" "polySurfaceShape232.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[864]" "polySurfaceShape233.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[865]" "polySurfaceShape234.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[866]" "polySurfaceShape235.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[867]" "polySurface194Shape.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[868]" "polySurfaceShape236.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[869]" "polySurfaceShape237.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[870]" "polySurfaceShape238.iog.og[0].gco";
-connectAttr "SkeletonRN.phl[871]" "polySurface237Shape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[653]" "HeadShape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[654]" "polySurfaceShape139.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[655]" "Skeleton_Smooth_GeoShape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[656]" "polySurfaceShape140.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[657]" "polySurfaceShape141.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[658]" "R_Upper_LegShape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[659]" "polySurfaceShape143.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[660]" "polySurfaceShape144.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[661]" "polySurfaceShape145.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[662]" "polySurfaceShape146.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[663]" "polySurface144Shape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[664]" "polySurfaceShape147.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[665]" "polySurfaceShape148.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[666]" "polySurfaceShape149.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[667]" "polySurfaceShape150.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[668]" "polySurfaceShape151.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[669]" "polySurfaceShape152.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[670]" "polySurfaceShape153.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[671]" "polySurfaceShape154.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[672]" "polySurfaceShape155.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[673]" "polySurfaceShape156.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[674]" "polySurfaceShape157.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[675]" "polySurfaceShape158.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[676]" "polySurfaceShape159.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[677]" "polySurfaceShape160.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[678]" "polySurfaceShape161.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[679]" "polySurfaceShape162.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[680]" "polySurfaceShape163.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[681]" "polySurfaceShape164.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[682]" "polySurfaceShape165.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[683]" "polySurfaceShape166.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[684]" "polySurfaceShape167.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[685]" "polySurface147Shape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[686]" "polySurfaceShape168.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[687]" "polySurfaceShape169.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[688]" "polySurfaceShape170.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[689]" "polySurfaceShape171.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[690]" "polySurfaceShape172.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[691]" "polySurface171Shape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[692]" "polySurfaceShape173.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[693]" "polySurfaceShape174.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[694]" "polySurfaceShape175.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[695]" "polySurfaceShape176.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[696]" "polySurfaceShape177.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[697]" "polySurfaceShape178.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[698]" "polySurfaceShape179.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[699]" "polySurfaceShape180.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[700]" "polySurfaceShape181.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[701]" "polySurfaceShape182.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[702]" "polySurfaceShape183.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[703]" "polySurfaceShape184.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[704]" "polySurfaceShape185.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[705]" "polySurfaceShape186.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[706]" "polySurfaceShape187.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[707]" "polySurfaceShape188.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[708]" "polySurfaceShape189.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[709]" "polySurfaceShape190.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[710]" "polySurfaceShape191.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[711]" "polySurfaceShape192.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[712]" "polySurfaceShape193.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[713]" "polySurface191Shape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[714]" "polySurfaceShape194.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[715]" "polySurfaceShape195.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[716]" "polySurfaceShape196.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[717]" "polySurfaceShape197.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[718]" "polySurfaceShape198.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[719]" "polySurfaceShape199.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[720]" "polySurfaceShape200.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[721]" "polySurfaceShape201.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[722]" "polySurfaceShape202.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[723]" "polySurfaceShape203.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[724]" "polySurfaceShape204.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[725]" "polySurfaceShape205.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[726]" "polySurfaceShape206.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[727]" "polySurfaceShape207.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[728]" "polySurfaceShape208.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[729]" "polySurfaceShape209.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[730]" "polySurfaceShape210.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[731]" "polySurfaceShape211.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[732]" "polySurfaceShape212.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[733]" "polySurfaceShape213.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[734]" "polySurfaceShape214.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[735]" "polySurfaceShape215.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[736]" "polySurfaceShape216.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[737]" "polySurfaceShape217.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[738]" "polySurfaceShape218.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[739]" "polySurfaceShape219.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[740]" "polySurfaceShape220.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[741]" "polySurfaceShape221.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[742]" "polySurfaceShape222.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[743]" "polySurfaceShape223.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[744]" "polySurfaceShape224.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[745]" "polySurfaceShape225.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[746]" "polySurfaceShape226.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[747]" "polySurfaceShape227.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[748]" "polySurfaceShape228.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[749]" "polySurfaceShape229.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[750]" "polySurfaceShape230.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[751]" "polySurfaceShape231.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[752]" "polySurfaceShape232.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[753]" "polySurfaceShape233.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[754]" "polySurfaceShape234.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[755]" "polySurfaceShape235.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[756]" "polySurface194Shape.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[757]" "polySurfaceShape236.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[758]" "polySurfaceShape237.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[759]" "polySurfaceShape238.iog.og[0].gco";
+connectAttr "SkeletonRN.phl[760]" "polySurface237Shape.iog.og[0].gco";
+connectAttr "groupId8.msg" "SkeletonRN.phl[761]";
+connectAttr "groupId9.msg" "SkeletonRN.phl[762]";
+connectAttr "groupId10.msg" "SkeletonRN.phl[763]";
+connectAttr "groupId11.msg" "SkeletonRN.phl[764]";
+connectAttr "groupId12.msg" "SkeletonRN.phl[765]";
+connectAttr "groupId13.msg" "SkeletonRN.phl[766]";
+connectAttr "groupId14.msg" "SkeletonRN.phl[767]";
+connectAttr "groupId15.msg" "SkeletonRN.phl[768]";
+connectAttr "groupId16.msg" "SkeletonRN.phl[769]";
+connectAttr "groupId17.msg" "SkeletonRN.phl[770]";
+connectAttr "groupId18.msg" "SkeletonRN.phl[771]";
+connectAttr "groupId19.msg" "SkeletonRN.phl[772]";
+connectAttr "groupId20.msg" "SkeletonRN.phl[773]";
+connectAttr "groupId21.msg" "SkeletonRN.phl[774]";
+connectAttr "groupId23.msg" "SkeletonRN.phl[775]";
+connectAttr "groupId24.msg" "SkeletonRN.phl[776]";
+connectAttr "groupId25.msg" "SkeletonRN.phl[777]";
+connectAttr "groupId26.msg" "SkeletonRN.phl[778]";
+connectAttr "groupId27.msg" "SkeletonRN.phl[779]";
+connectAttr "groupId28.msg" "SkeletonRN.phl[780]";
+connectAttr "groupId29.msg" "SkeletonRN.phl[781]";
+connectAttr "groupId30.msg" "SkeletonRN.phl[782]";
+connectAttr "groupId31.msg" "SkeletonRN.phl[783]";
+connectAttr "groupId32.msg" "SkeletonRN.phl[784]";
+connectAttr "groupId33.msg" "SkeletonRN.phl[785]";
+connectAttr "groupId34.msg" "SkeletonRN.phl[786]";
+connectAttr "groupId35.msg" "SkeletonRN.phl[787]";
+connectAttr "groupId36.msg" "SkeletonRN.phl[788]";
+connectAttr "groupId37.msg" "SkeletonRN.phl[789]";
+connectAttr "groupId38.msg" "SkeletonRN.phl[790]";
+connectAttr "groupId39.msg" "SkeletonRN.phl[791]";
+connectAttr "groupId40.msg" "SkeletonRN.phl[792]";
+connectAttr "groupId41.msg" "SkeletonRN.phl[793]";
+connectAttr "groupId42.msg" "SkeletonRN.phl[794]";
+connectAttr "groupId43.msg" "SkeletonRN.phl[795]";
+connectAttr "groupId44.msg" "SkeletonRN.phl[796]";
+connectAttr "groupId46.msg" "SkeletonRN.phl[797]";
+connectAttr "groupId47.msg" "SkeletonRN.phl[798]";
+connectAttr "groupId48.msg" "SkeletonRN.phl[799]";
+connectAttr "groupId49.msg" "SkeletonRN.phl[800]";
+connectAttr "groupId50.msg" "SkeletonRN.phl[801]";
+connectAttr "groupId51.msg" "SkeletonRN.phl[802]";
+connectAttr "groupId53.msg" "SkeletonRN.phl[803]";
+connectAttr "groupId54.msg" "SkeletonRN.phl[804]";
+connectAttr "groupId55.msg" "SkeletonRN.phl[805]";
+connectAttr "groupId56.msg" "SkeletonRN.phl[806]";
+connectAttr "groupId57.msg" "SkeletonRN.phl[807]";
+connectAttr "groupId58.msg" "SkeletonRN.phl[808]";
+connectAttr "groupId59.msg" "SkeletonRN.phl[809]";
+connectAttr "groupId60.msg" "SkeletonRN.phl[810]";
+connectAttr "groupId61.msg" "SkeletonRN.phl[811]";
+connectAttr "groupId62.msg" "SkeletonRN.phl[812]";
+connectAttr "groupId63.msg" "SkeletonRN.phl[813]";
+connectAttr "groupId64.msg" "SkeletonRN.phl[814]";
+connectAttr "groupId65.msg" "SkeletonRN.phl[815]";
+connectAttr "groupId66.msg" "SkeletonRN.phl[816]";
+connectAttr "groupId67.msg" "SkeletonRN.phl[817]";
+connectAttr "groupId68.msg" "SkeletonRN.phl[818]";
+connectAttr "groupId69.msg" "SkeletonRN.phl[819]";
+connectAttr "groupId70.msg" "SkeletonRN.phl[820]";
+connectAttr "groupId71.msg" "SkeletonRN.phl[821]";
+connectAttr "groupId72.msg" "SkeletonRN.phl[822]";
+connectAttr "groupId73.msg" "SkeletonRN.phl[823]";
+connectAttr "groupId74.msg" "SkeletonRN.phl[824]";
+connectAttr "groupId76.msg" "SkeletonRN.phl[825]";
+connectAttr "groupId77.msg" "SkeletonRN.phl[826]";
+connectAttr "groupId78.msg" "SkeletonRN.phl[827]";
+connectAttr "groupId79.msg" "SkeletonRN.phl[828]";
+connectAttr "groupId80.msg" "SkeletonRN.phl[829]";
+connectAttr "groupId81.msg" "SkeletonRN.phl[830]";
+connectAttr "groupId82.msg" "SkeletonRN.phl[831]";
+connectAttr "groupId83.msg" "SkeletonRN.phl[832]";
+connectAttr "groupId84.msg" "SkeletonRN.phl[833]";
+connectAttr "groupId85.msg" "SkeletonRN.phl[834]";
+connectAttr "groupId86.msg" "SkeletonRN.phl[835]";
+connectAttr "groupId87.msg" "SkeletonRN.phl[836]";
+connectAttr "groupId88.msg" "SkeletonRN.phl[837]";
+connectAttr "groupId89.msg" "SkeletonRN.phl[838]";
+connectAttr "groupId90.msg" "SkeletonRN.phl[839]";
+connectAttr "groupId91.msg" "SkeletonRN.phl[840]";
+connectAttr "groupId92.msg" "SkeletonRN.phl[841]";
+connectAttr "groupId93.msg" "SkeletonRN.phl[842]";
+connectAttr "groupId94.msg" "SkeletonRN.phl[843]";
+connectAttr "groupId95.msg" "SkeletonRN.phl[844]";
+connectAttr "groupId96.msg" "SkeletonRN.phl[845]";
+connectAttr "groupId97.msg" "SkeletonRN.phl[846]";
+connectAttr "groupId98.msg" "SkeletonRN.phl[847]";
+connectAttr "groupId99.msg" "SkeletonRN.phl[848]";
+connectAttr "groupId100.msg" "SkeletonRN.phl[849]";
+connectAttr "groupId101.msg" "SkeletonRN.phl[850]";
+connectAttr "groupId102.msg" "SkeletonRN.phl[851]";
+connectAttr "groupId103.msg" "SkeletonRN.phl[852]";
+connectAttr "groupId104.msg" "SkeletonRN.phl[853]";
+connectAttr "groupId105.msg" "SkeletonRN.phl[854]";
+connectAttr "groupId106.msg" "SkeletonRN.phl[855]";
+connectAttr "groupId107.msg" "SkeletonRN.phl[856]";
+connectAttr "groupId108.msg" "SkeletonRN.phl[857]";
+connectAttr "groupId109.msg" "SkeletonRN.phl[858]";
+connectAttr "groupId110.msg" "SkeletonRN.phl[859]";
+connectAttr "groupId111.msg" "SkeletonRN.phl[860]";
+connectAttr "groupId112.msg" "SkeletonRN.phl[861]";
+connectAttr "groupId113.msg" "SkeletonRN.phl[862]";
+connectAttr "groupId114.msg" "SkeletonRN.phl[863]";
+connectAttr "groupId115.msg" "SkeletonRN.phl[864]";
+connectAttr "groupId116.msg" "SkeletonRN.phl[865]";
+connectAttr "groupId117.msg" "SkeletonRN.phl[866]";
+connectAttr "groupId118.msg" "SkeletonRN.phl[867]";
+connectAttr "groupId120.msg" "SkeletonRN.phl[868]";
+connectAttr "groupId121.msg" "SkeletonRN.phl[869]";
+connectAttr "groupId122.msg" "SkeletonRN.phl[870]";
+connectAttr "groupId123.msg" "SkeletonRN.phl[871]";
 connectAttr "SkeletonRN.phl[872]" "polyChipOff1.ip";
 connectAttr "L_Arm_Wrist_Ctrl_loc.ctx" "Axe_Ctrl.tx";
 connectAttr "L_Arm_Wrist_Ctrl_loc.cty" "Axe_Ctrl.ty";
@@ -358569,8 +358268,8 @@ connectAttr "polySurface138_rotateZ.o" "Head.rz";
 connectAttr "polySurface138_scaleX.o" "Head.sx";
 connectAttr "polySurface138_scaleY.o" "Head.sy";
 connectAttr "polySurface138_scaleZ.o" "Head.sz";
-connectAttr "groupParts2.og" "HeadShape.i";
 connectAttr "groupId10.id" "HeadShape.iog.og[0].gid";
+connectAttr "groupParts2.og" "HeadShape.i";
 connectAttr "Skeleton_Smooth_GeoShapeOrig2Tag1.w" "Skeleton_Smooth_GeoShapeOrig2Tag.i"
 		;
 connectAttr "Skeleton_Smooth_GeoShapeOrig2Tag2.w" "Skeleton_Smooth_GeoShapeOrig2Tag1.i"
@@ -358581,96 +358280,96 @@ connectAttr "Skeleton_Smooth_GeoShapeOrig2Tag4.w" "Skeleton_Smooth_GeoShapeOrig2
 		;
 connectAttr "Skeleton_Smooth_GeoShapeOrig2.w" "Skeleton_Smooth_GeoShapeOrig2Tag4.i"
 		;
-connectAttr "polyDelEdge1.out" "polySurfaceShape140.i";
 connectAttr "groupId14.id" "polySurfaceShape140.iog.og[0].gid";
-connectAttr "polyConnectComponents1.out" "polySurfaceShape144.i";
+connectAttr "polyDelEdge1.out" "polySurfaceShape140.i";
 connectAttr "groupId18.id" "polySurfaceShape144.iog.og[0].gid";
-connectAttr "polyConnectComponents2.out" "polySurfaceShape145.i";
+connectAttr "polyConnectComponents1.out" "polySurfaceShape144.i";
 connectAttr "groupId19.id" "polySurfaceShape145.iog.og[0].gid";
-connectAttr "groupParts13.og" "polySurfaceShape147.i";
+connectAttr "polyConnectComponents2.out" "polySurfaceShape145.i";
 connectAttr "groupId23.id" "polySurfaceShape147.iog.og[0].gid";
-connectAttr "groupParts14.og" "polySurfaceShape148.i";
+connectAttr "groupParts13.og" "polySurfaceShape147.i";
 connectAttr "groupId24.id" "polySurfaceShape148.iog.og[0].gid";
-connectAttr "groupParts15.og" "polySurfaceShape149.i";
+connectAttr "groupParts14.og" "polySurfaceShape148.i";
 connectAttr "groupId25.id" "polySurfaceShape149.iog.og[0].gid";
-connectAttr "groupParts16.og" "polySurfaceShape150.i";
+connectAttr "groupParts15.og" "polySurfaceShape149.i";
 connectAttr "groupId26.id" "polySurfaceShape150.iog.og[0].gid";
-connectAttr "groupParts17.og" "polySurfaceShape151.i";
+connectAttr "groupParts16.og" "polySurfaceShape150.i";
 connectAttr "groupId27.id" "polySurfaceShape151.iog.og[0].gid";
-connectAttr "groupParts18.og" "polySurfaceShape152.i";
+connectAttr "groupParts17.og" "polySurfaceShape151.i";
 connectAttr "groupId28.id" "polySurfaceShape152.iog.og[0].gid";
-connectAttr "groupParts19.og" "polySurfaceShape153.i";
+connectAttr "groupParts18.og" "polySurfaceShape152.i";
 connectAttr "groupId29.id" "polySurfaceShape153.iog.og[0].gid";
-connectAttr "groupParts20.og" "polySurfaceShape154.i";
+connectAttr "groupParts19.og" "polySurfaceShape153.i";
 connectAttr "groupId30.id" "polySurfaceShape154.iog.og[0].gid";
-connectAttr "groupParts21.og" "polySurfaceShape155.i";
+connectAttr "groupParts20.og" "polySurfaceShape154.i";
 connectAttr "groupId31.id" "polySurfaceShape155.iog.og[0].gid";
-connectAttr "groupParts22.og" "polySurfaceShape156.i";
+connectAttr "groupParts21.og" "polySurfaceShape155.i";
 connectAttr "groupId32.id" "polySurfaceShape156.iog.og[0].gid";
-connectAttr "groupParts23.og" "polySurfaceShape157.i";
+connectAttr "groupParts22.og" "polySurfaceShape156.i";
 connectAttr "groupId33.id" "polySurfaceShape157.iog.og[0].gid";
-connectAttr "groupParts24.og" "polySurfaceShape158.i";
+connectAttr "groupParts23.og" "polySurfaceShape157.i";
 connectAttr "groupId34.id" "polySurfaceShape158.iog.og[0].gid";
-connectAttr "groupParts25.og" "polySurfaceShape159.i";
+connectAttr "groupParts24.og" "polySurfaceShape158.i";
 connectAttr "groupId35.id" "polySurfaceShape159.iog.og[0].gid";
-connectAttr "groupParts26.og" "polySurfaceShape160.i";
+connectAttr "groupParts25.og" "polySurfaceShape159.i";
 connectAttr "groupId36.id" "polySurfaceShape160.iog.og[0].gid";
-connectAttr "groupParts27.og" "polySurfaceShape161.i";
+connectAttr "groupParts26.og" "polySurfaceShape160.i";
 connectAttr "groupId37.id" "polySurfaceShape161.iog.og[0].gid";
-connectAttr "groupParts28.og" "polySurfaceShape162.i";
+connectAttr "groupParts27.og" "polySurfaceShape161.i";
 connectAttr "groupId38.id" "polySurfaceShape162.iog.og[0].gid";
-connectAttr "groupParts29.og" "polySurfaceShape163.i";
+connectAttr "groupParts28.og" "polySurfaceShape162.i";
 connectAttr "groupId39.id" "polySurfaceShape163.iog.og[0].gid";
-connectAttr "groupParts30.og" "polySurfaceShape164.i";
+connectAttr "groupParts29.og" "polySurfaceShape163.i";
 connectAttr "groupId40.id" "polySurfaceShape164.iog.og[0].gid";
-connectAttr "groupParts31.og" "polySurfaceShape165.i";
+connectAttr "groupParts30.og" "polySurfaceShape164.i";
 connectAttr "groupId41.id" "polySurfaceShape165.iog.og[0].gid";
-connectAttr "groupParts32.og" "polySurfaceShape166.i";
+connectAttr "groupParts31.og" "polySurfaceShape165.i";
 connectAttr "groupId42.id" "polySurfaceShape166.iog.og[0].gid";
-connectAttr "groupParts37.og" "polySurfaceShape170.i";
+connectAttr "groupParts32.og" "polySurfaceShape166.i";
 connectAttr "groupId48.id" "polySurfaceShape170.iog.og[0].gid";
-connectAttr "groupParts38.og" "polySurfaceShape171.i";
+connectAttr "groupParts37.og" "polySurfaceShape170.i";
 connectAttr "groupId49.id" "polySurfaceShape171.iog.og[0].gid";
-connectAttr "groupParts41.og" "polySurfaceShape173.i";
+connectAttr "groupParts38.og" "polySurfaceShape171.i";
 connectAttr "groupId53.id" "polySurfaceShape173.iog.og[0].gid";
-connectAttr "groupParts42.og" "polySurfaceShape174.i";
+connectAttr "groupParts41.og" "polySurfaceShape173.i";
 connectAttr "groupId54.id" "polySurfaceShape174.iog.og[0].gid";
-connectAttr "groupParts43.og" "polySurfaceShape175.i";
+connectAttr "groupParts42.og" "polySurfaceShape174.i";
 connectAttr "groupId55.id" "polySurfaceShape175.iog.og[0].gid";
-connectAttr "groupParts44.og" "polySurfaceShape176.i";
+connectAttr "groupParts43.og" "polySurfaceShape175.i";
 connectAttr "groupId56.id" "polySurfaceShape176.iog.og[0].gid";
-connectAttr "groupParts45.og" "polySurfaceShape177.i";
+connectAttr "groupParts44.og" "polySurfaceShape176.i";
 connectAttr "groupId57.id" "polySurfaceShape177.iog.og[0].gid";
-connectAttr "groupParts46.og" "polySurfaceShape178.i";
+connectAttr "groupParts45.og" "polySurfaceShape177.i";
 connectAttr "groupId58.id" "polySurfaceShape178.iog.og[0].gid";
-connectAttr "groupParts47.og" "polySurfaceShape179.i";
+connectAttr "groupParts46.og" "polySurfaceShape178.i";
 connectAttr "groupId59.id" "polySurfaceShape179.iog.og[0].gid";
-connectAttr "groupParts48.og" "polySurfaceShape180.i";
+connectAttr "groupParts47.og" "polySurfaceShape179.i";
 connectAttr "groupId60.id" "polySurfaceShape180.iog.og[0].gid";
-connectAttr "groupParts49.og" "polySurfaceShape181.i";
+connectAttr "groupParts48.og" "polySurfaceShape180.i";
 connectAttr "groupId61.id" "polySurfaceShape181.iog.og[0].gid";
-connectAttr "groupParts50.og" "polySurfaceShape182.i";
+connectAttr "groupParts49.og" "polySurfaceShape181.i";
 connectAttr "groupId62.id" "polySurfaceShape182.iog.og[0].gid";
-connectAttr "groupParts51.og" "polySurfaceShape183.i";
+connectAttr "groupParts50.og" "polySurfaceShape182.i";
 connectAttr "groupId63.id" "polySurfaceShape183.iog.og[0].gid";
-connectAttr "groupParts52.og" "polySurfaceShape184.i";
+connectAttr "groupParts51.og" "polySurfaceShape183.i";
 connectAttr "groupId64.id" "polySurfaceShape184.iog.og[0].gid";
-connectAttr "groupParts53.og" "polySurfaceShape185.i";
+connectAttr "groupParts52.og" "polySurfaceShape184.i";
 connectAttr "groupId65.id" "polySurfaceShape185.iog.og[0].gid";
-connectAttr "groupParts54.og" "polySurfaceShape186.i";
+connectAttr "groupParts53.og" "polySurfaceShape185.i";
 connectAttr "groupId66.id" "polySurfaceShape186.iog.og[0].gid";
-connectAttr "groupParts55.og" "polySurfaceShape187.i";
+connectAttr "groupParts54.og" "polySurfaceShape186.i";
 connectAttr "groupId67.id" "polySurfaceShape187.iog.og[0].gid";
-connectAttr "groupParts56.og" "polySurfaceShape188.i";
+connectAttr "groupParts55.og" "polySurfaceShape187.i";
 connectAttr "groupId68.id" "polySurfaceShape188.iog.og[0].gid";
-connectAttr "groupParts57.og" "polySurfaceShape189.i";
+connectAttr "groupParts56.og" "polySurfaceShape188.i";
 connectAttr "groupId69.id" "polySurfaceShape189.iog.og[0].gid";
-connectAttr "groupParts58.og" "polySurfaceShape190.i";
+connectAttr "groupParts57.og" "polySurfaceShape189.i";
 connectAttr "groupId70.id" "polySurfaceShape190.iog.og[0].gid";
-connectAttr "groupParts59.og" "polySurfaceShape191.i";
+connectAttr "groupParts58.og" "polySurfaceShape190.i";
 connectAttr "groupId71.id" "polySurfaceShape191.iog.og[0].gid";
-connectAttr "groupParts60.og" "polySurfaceShape192.i";
+connectAttr "groupParts59.og" "polySurfaceShape191.i";
 connectAttr "groupId72.id" "polySurfaceShape192.iog.og[0].gid";
+connectAttr "groupParts60.og" "polySurfaceShape192.i";
 connectAttr "polySurface193_rotateX.o" "polySurface193.rx";
 connectAttr "polySurface193_rotateY.o" "polySurface193.ry";
 connectAttr "polySurface193_rotateZ.o" "polySurface193.rz";
@@ -358681,23 +358380,23 @@ connectAttr "polySurface193_translateZ.o" "polySurface193.tz";
 connectAttr "polySurface193_scaleX.o" "polySurface193.sx";
 connectAttr "polySurface193_scaleY.o" "polySurface193.sy";
 connectAttr "polySurface193_scaleZ.o" "polySurface193.sz";
-connectAttr "groupParts61.og" "polySurfaceShape193.i";
 connectAttr "groupId73.id" "polySurfaceShape193.iog.og[0].gid";
-connectAttr "polyChipOff8.out" "polySurfaceShape172.i";
+connectAttr "groupParts61.og" "polySurfaceShape193.i";
 connectAttr "groupId50.id" "polySurfaceShape172.iog.og[0].gid";
-connectAttr "polyChipOff7.out" "polySurfaceShape169.i";
+connectAttr "polyChipOff8.out" "polySurfaceShape172.i";
 connectAttr "groupId47.id" "polySurfaceShape169.iog.og[0].gid";
-connectAttr "polyChipOff6.out" "polySurfaceShape167.i";
+connectAttr "polyChipOff7.out" "polySurfaceShape169.i";
 connectAttr "groupId43.id" "polySurfaceShape167.iog.og[0].gid";
-connectAttr "polyChipOff5.out" "polySurfaceShape146.i";
+connectAttr "polyChipOff6.out" "polySurfaceShape167.i";
 connectAttr "groupId20.id" "polySurfaceShape146.iog.og[0].gid";
-connectAttr "polyChipOff4.out" "polySurfaceShape143.i";
+connectAttr "polyChipOff5.out" "polySurfaceShape146.i";
 connectAttr "groupId17.id" "polySurfaceShape143.iog.og[0].gid";
-connectAttr "polyChipOff3.out" "polySurfaceShape141.i";
+connectAttr "polyChipOff4.out" "polySurfaceShape143.i";
 connectAttr "groupId15.id" "polySurfaceShape141.iog.og[0].gid";
+connectAttr "polyChipOff3.out" "polySurfaceShape141.i";
 connectAttr "groupId12.id" "Skeleton_Smooth_GeoShape.iog.og[0].gid";
-connectAttr "groupParts4.og" "Skeleton_Smooth_GeoShape.i";
 connectAttr "groupId13.id" "Skeleton_Smooth_GeoShape.ciog.cog[0].cgid";
+connectAttr "groupParts4.og" "Skeleton_Smooth_GeoShape.i";
 connectAttr "L_Skeleton_Reg_Arms_Geo_visibility.o" "L_Skeleton_Reg_Arms_Geo.v";
 connectAttr "L_HandCluster.og[0]" "L_Skeleton_Reg_Arms_GeoShape.i";
 connectAttr "R_Skeleton_Reg_Arms_Geo_visibility.o" "R_Skeleton_Reg_Arms_Geo.v";
@@ -358712,8 +358411,8 @@ connectAttr "R_Upper_Leg_rotateZ.o" "R_Upper_Leg.rz";
 connectAttr "R_Upper_Leg_scaleX.o" "R_Upper_Leg.sx";
 connectAttr "R_Upper_Leg_scaleY.o" "R_Upper_Leg.sy";
 connectAttr "R_Upper_Leg_scaleZ.o" "R_Upper_Leg.sz";
-connectAttr "groupParts7.og" "R_Upper_LegShape.i";
 connectAttr "groupId16.id" "R_Upper_LegShape.iog.og[0].gid";
+connectAttr "groupParts7.og" "R_Upper_LegShape.i";
 connectAttr "polySurface144_translateX.o" "|polySurface144.tx";
 connectAttr "polySurface144_translateY.o" "|polySurface144.ty";
 connectAttr "polySurface144_translateZ.o" "|polySurface144.tz";
@@ -358724,9 +358423,9 @@ connectAttr "polySurface144_rotateZ.o" "|polySurface144.rz";
 connectAttr "polySurface144_scaleX.o" "|polySurface144.sx";
 connectAttr "polySurface144_scaleY.o" "|polySurface144.sy";
 connectAttr "polySurface144_scaleZ.o" "|polySurface144.sz";
-connectAttr "groupParts12.og" "polySurface144Shape.i";
 connectAttr "groupId21.id" "polySurface144Shape.iog.og[0].gid";
 connectAttr "groupId22.id" "polySurface144Shape.ciog.cog[0].cgid";
+connectAttr "groupParts12.og" "polySurface144Shape.i";
 connectAttr "polySurface147_translateX.o" "|polySurface147.tx";
 connectAttr "polySurface147_translateY.o" "|polySurface147.ty";
 connectAttr "polySurface147_translateZ.o" "|polySurface147.tz";
@@ -358737,9 +358436,9 @@ connectAttr "polySurface147_rotateZ.o" "|polySurface147.rz";
 connectAttr "polySurface147_scaleX.o" "|polySurface147.sx";
 connectAttr "polySurface147_scaleY.o" "|polySurface147.sy";
 connectAttr "polySurface147_scaleZ.o" "|polySurface147.sz";
-connectAttr "groupParts34.og" "polySurface147Shape.i";
 connectAttr "groupId44.id" "polySurface147Shape.iog.og[0].gid";
 connectAttr "groupId45.id" "polySurface147Shape.ciog.cog[0].cgid";
+connectAttr "groupParts34.og" "polySurface147Shape.i";
 connectAttr "polySurface171_translateX.o" "|polySurface171.tx";
 connectAttr "polySurface171_translateY.o" "|polySurface171.ty";
 connectAttr "polySurface171_translateZ.o" "|polySurface171.tz";
@@ -358750,9 +358449,9 @@ connectAttr "polySurface171_rotateZ.o" "|polySurface171.rz";
 connectAttr "polySurface171_scaleX.o" "|polySurface171.sx";
 connectAttr "polySurface171_scaleY.o" "|polySurface171.sy";
 connectAttr "polySurface171_scaleZ.o" "|polySurface171.sz";
-connectAttr "groupParts40.og" "polySurface171Shape.i";
 connectAttr "groupId51.id" "polySurface171Shape.iog.og[0].gid";
 connectAttr "groupId52.id" "polySurface171Shape.ciog.cog[0].cgid";
+connectAttr "groupParts40.og" "polySurface171Shape.i";
 connectAttr "polySurface191_translateX.o" "|polySurface191.tx";
 connectAttr "polySurface191_translateY.o" "|polySurface191.ty";
 connectAttr "polySurface191_translateZ.o" "|polySurface191.tz";
@@ -358763,9 +358462,9 @@ connectAttr "polySurface191_rotateZ.o" "|polySurface191.rz";
 connectAttr "polySurface191_scaleX.o" "|polySurface191.sx";
 connectAttr "polySurface191_scaleY.o" "|polySurface191.sy";
 connectAttr "polySurface191_scaleZ.o" "|polySurface191.sz";
-connectAttr "groupParts62.og" "polySurface191Shape.i";
 connectAttr "groupId74.id" "polySurface191Shape.iog.og[0].gid";
 connectAttr "groupId75.id" "polySurface191Shape.ciog.cog[0].cgid";
+connectAttr "groupParts62.og" "polySurface191Shape.i";
 connectAttr "polySurface194_visibility.o" "|polySurface194.v";
 connectAttr "polySurface194_translateX.o" "|polySurface194.tx";
 connectAttr "polySurface194_translateY.o" "|polySurface194.ty";
@@ -358776,9 +358475,9 @@ connectAttr "polySurface194_rotateZ.o" "|polySurface194.rz";
 connectAttr "polySurface194_scaleX.o" "|polySurface194.sx";
 connectAttr "polySurface194_scaleY.o" "|polySurface194.sy";
 connectAttr "polySurface194_scaleZ.o" "|polySurface194.sz";
-connectAttr "groupParts105.og" "polySurface194Shape.i";
 connectAttr "groupId118.id" "polySurface194Shape.iog.og[0].gid";
 connectAttr "groupId119.id" "polySurface194Shape.ciog.cog[0].cgid";
+connectAttr "groupParts105.og" "polySurface194Shape.i";
 connectAttr "polySurface237_translateX.o" "|polySurface237.tx";
 connectAttr "polySurface237_translateY.o" "|polySurface237.ty";
 connectAttr "polySurface237_translateZ.o" "|polySurface237.tz";
@@ -358789,9 +358488,9 @@ connectAttr "polySurface237_rotateZ.o" "|polySurface237.rz";
 connectAttr "polySurface237_scaleX.o" "|polySurface237.sx";
 connectAttr "polySurface237_scaleY.o" "|polySurface237.sy";
 connectAttr "polySurface237_scaleZ.o" "|polySurface237.sz";
-connectAttr "groupParts109.og" "polySurface237Shape.i";
 connectAttr "groupId123.id" "polySurface237Shape.iog.og[0].gid";
 connectAttr "groupId124.id" "polySurface237Shape.ciog.cog[0].cgid";
+connectAttr "groupParts109.og" "polySurface237Shape.i";
 connectAttr "polySurface168_visibility.o" "polySurface168.v";
 connectAttr "polySurface168_translateX.o" "polySurface168.tx";
 connectAttr "polySurface168_translateY.o" "polySurface168.ty";
@@ -358802,8 +358501,8 @@ connectAttr "polySurface168_rotateZ.o" "polySurface168.rz";
 connectAttr "polySurface168_scaleX.o" "polySurface168.sx";
 connectAttr "polySurface168_scaleY.o" "polySurface168.sy";
 connectAttr "polySurface168_scaleZ.o" "polySurface168.sz";
-connectAttr "groupParts35.og" "polySurfaceShape168.i";
 connectAttr "groupId46.id" "polySurfaceShape168.iog.og[0].gid";
+connectAttr "groupParts35.og" "polySurfaceShape168.i";
 connectAttr "cluster4Handle_translateX.o" "Pelvis.tx";
 connectAttr "cluster4Handle_translateY.o" "Pelvis.ty";
 connectAttr "cluster4Handle_translateZ.o" "Pelvis.tz";
@@ -359069,98 +358768,98 @@ connectAttr "Skeleton:R_Arm_Wrist_Ctrl_loc1.pm" "R_Arm_IK_End_Ctrl_parentConstra
 		;
 connectAttr "R_Arm_IK_End_Ctrl_parentConstraint1.w0" "R_Arm_IK_End_Ctrl_parentConstraint1.tg[0].tw"
 		;
-connectAttr "groupParts63.og" "polySurfaceShape194.i";
 connectAttr "groupId76.id" "polySurfaceShape194.iog.og[0].gid";
-connectAttr "groupParts64.og" "polySurfaceShape195.i";
+connectAttr "groupParts63.og" "polySurfaceShape194.i";
 connectAttr "groupId77.id" "polySurfaceShape195.iog.og[0].gid";
-connectAttr "groupParts65.og" "polySurfaceShape196.i";
+connectAttr "groupParts64.og" "polySurfaceShape195.i";
 connectAttr "groupId78.id" "polySurfaceShape196.iog.og[0].gid";
-connectAttr "groupParts66.og" "polySurfaceShape197.i";
+connectAttr "groupParts65.og" "polySurfaceShape196.i";
 connectAttr "groupId79.id" "polySurfaceShape197.iog.og[0].gid";
-connectAttr "groupParts67.og" "polySurfaceShape198.i";
+connectAttr "groupParts66.og" "polySurfaceShape197.i";
 connectAttr "groupId80.id" "polySurfaceShape198.iog.og[0].gid";
-connectAttr "groupParts68.og" "polySurfaceShape199.i";
+connectAttr "groupParts67.og" "polySurfaceShape198.i";
 connectAttr "groupId81.id" "polySurfaceShape199.iog.og[0].gid";
-connectAttr "groupParts69.og" "polySurfaceShape200.i";
+connectAttr "groupParts68.og" "polySurfaceShape199.i";
 connectAttr "groupId82.id" "polySurfaceShape200.iog.og[0].gid";
-connectAttr "groupParts70.og" "polySurfaceShape201.i";
+connectAttr "groupParts69.og" "polySurfaceShape200.i";
 connectAttr "groupId83.id" "polySurfaceShape201.iog.og[0].gid";
-connectAttr "groupParts71.og" "polySurfaceShape202.i";
+connectAttr "groupParts70.og" "polySurfaceShape201.i";
 connectAttr "groupId84.id" "polySurfaceShape202.iog.og[0].gid";
-connectAttr "groupParts72.og" "polySurfaceShape203.i";
+connectAttr "groupParts71.og" "polySurfaceShape202.i";
 connectAttr "groupId85.id" "polySurfaceShape203.iog.og[0].gid";
-connectAttr "groupParts73.og" "polySurfaceShape204.i";
+connectAttr "groupParts72.og" "polySurfaceShape203.i";
 connectAttr "groupId86.id" "polySurfaceShape204.iog.og[0].gid";
-connectAttr "groupParts74.og" "polySurfaceShape205.i";
+connectAttr "groupParts73.og" "polySurfaceShape204.i";
 connectAttr "groupId87.id" "polySurfaceShape205.iog.og[0].gid";
-connectAttr "groupParts75.og" "polySurfaceShape206.i";
+connectAttr "groupParts74.og" "polySurfaceShape205.i";
 connectAttr "groupId88.id" "polySurfaceShape206.iog.og[0].gid";
-connectAttr "groupParts76.og" "polySurfaceShape207.i";
+connectAttr "groupParts75.og" "polySurfaceShape206.i";
 connectAttr "groupId89.id" "polySurfaceShape207.iog.og[0].gid";
-connectAttr "groupParts77.og" "polySurfaceShape208.i";
+connectAttr "groupParts76.og" "polySurfaceShape207.i";
 connectAttr "groupId90.id" "polySurfaceShape208.iog.og[0].gid";
-connectAttr "groupParts78.og" "polySurfaceShape209.i";
+connectAttr "groupParts77.og" "polySurfaceShape208.i";
 connectAttr "groupId91.id" "polySurfaceShape209.iog.og[0].gid";
-connectAttr "groupParts79.og" "polySurfaceShape210.i";
+connectAttr "groupParts78.og" "polySurfaceShape209.i";
 connectAttr "groupId92.id" "polySurfaceShape210.iog.og[0].gid";
-connectAttr "groupParts80.og" "polySurfaceShape211.i";
+connectAttr "groupParts79.og" "polySurfaceShape210.i";
 connectAttr "groupId93.id" "polySurfaceShape211.iog.og[0].gid";
-connectAttr "groupParts81.og" "polySurfaceShape212.i";
+connectAttr "groupParts80.og" "polySurfaceShape211.i";
 connectAttr "groupId94.id" "polySurfaceShape212.iog.og[0].gid";
-connectAttr "groupParts82.og" "polySurfaceShape213.i";
+connectAttr "groupParts81.og" "polySurfaceShape212.i";
 connectAttr "groupId95.id" "polySurfaceShape213.iog.og[0].gid";
-connectAttr "groupParts84.og" "polySurfaceShape215.i";
+connectAttr "groupParts82.og" "polySurfaceShape213.i";
 connectAttr "groupId97.id" "polySurfaceShape215.iog.og[0].gid";
-connectAttr "groupParts85.og" "polySurfaceShape216.i";
+connectAttr "groupParts84.og" "polySurfaceShape215.i";
 connectAttr "groupId98.id" "polySurfaceShape216.iog.og[0].gid";
-connectAttr "groupParts86.og" "polySurfaceShape217.i";
+connectAttr "groupParts85.og" "polySurfaceShape216.i";
 connectAttr "groupId99.id" "polySurfaceShape217.iog.og[0].gid";
-connectAttr "groupParts87.og" "polySurfaceShape218.i";
+connectAttr "groupParts86.og" "polySurfaceShape217.i";
 connectAttr "groupId100.id" "polySurfaceShape218.iog.og[0].gid";
-connectAttr "groupParts88.og" "polySurfaceShape219.i";
+connectAttr "groupParts87.og" "polySurfaceShape218.i";
 connectAttr "groupId101.id" "polySurfaceShape219.iog.og[0].gid";
-connectAttr "groupParts89.og" "polySurfaceShape220.i";
+connectAttr "groupParts88.og" "polySurfaceShape219.i";
 connectAttr "groupId102.id" "polySurfaceShape220.iog.og[0].gid";
-connectAttr "groupParts90.og" "polySurfaceShape221.i";
+connectAttr "groupParts89.og" "polySurfaceShape220.i";
 connectAttr "groupId103.id" "polySurfaceShape221.iog.og[0].gid";
-connectAttr "groupParts91.og" "polySurfaceShape222.i";
+connectAttr "groupParts90.og" "polySurfaceShape221.i";
 connectAttr "groupId104.id" "polySurfaceShape222.iog.og[0].gid";
-connectAttr "groupParts92.og" "polySurfaceShape223.i";
+connectAttr "groupParts91.og" "polySurfaceShape222.i";
 connectAttr "groupId105.id" "polySurfaceShape223.iog.og[0].gid";
-connectAttr "groupParts93.og" "polySurfaceShape224.i";
+connectAttr "groupParts92.og" "polySurfaceShape223.i";
 connectAttr "groupId106.id" "polySurfaceShape224.iog.og[0].gid";
-connectAttr "groupParts94.og" "polySurfaceShape225.i";
+connectAttr "groupParts93.og" "polySurfaceShape224.i";
 connectAttr "groupId107.id" "polySurfaceShape225.iog.og[0].gid";
-connectAttr "groupParts95.og" "polySurfaceShape226.i";
+connectAttr "groupParts94.og" "polySurfaceShape225.i";
 connectAttr "groupId108.id" "polySurfaceShape226.iog.og[0].gid";
-connectAttr "groupParts96.og" "polySurfaceShape227.i";
+connectAttr "groupParts95.og" "polySurfaceShape226.i";
 connectAttr "groupId109.id" "polySurfaceShape227.iog.og[0].gid";
-connectAttr "groupParts97.og" "polySurfaceShape228.i";
+connectAttr "groupParts96.og" "polySurfaceShape227.i";
 connectAttr "groupId110.id" "polySurfaceShape228.iog.og[0].gid";
-connectAttr "groupParts98.og" "polySurfaceShape229.i";
+connectAttr "groupParts97.og" "polySurfaceShape228.i";
 connectAttr "groupId111.id" "polySurfaceShape229.iog.og[0].gid";
-connectAttr "groupParts99.og" "polySurfaceShape230.i";
+connectAttr "groupParts98.og" "polySurfaceShape229.i";
 connectAttr "groupId112.id" "polySurfaceShape230.iog.og[0].gid";
-connectAttr "groupParts100.og" "polySurfaceShape231.i";
+connectAttr "groupParts99.og" "polySurfaceShape230.i";
 connectAttr "groupId113.id" "polySurfaceShape231.iog.og[0].gid";
-connectAttr "groupParts101.og" "polySurfaceShape232.i";
+connectAttr "groupParts100.og" "polySurfaceShape231.i";
 connectAttr "groupId114.id" "polySurfaceShape232.iog.og[0].gid";
-connectAttr "groupParts102.og" "polySurfaceShape233.i";
+connectAttr "groupParts101.og" "polySurfaceShape232.i";
 connectAttr "groupId115.id" "polySurfaceShape233.iog.og[0].gid";
-connectAttr "groupParts103.og" "polySurfaceShape234.i";
+connectAttr "groupParts102.og" "polySurfaceShape233.i";
 connectAttr "groupId116.id" "polySurfaceShape234.iog.og[0].gid";
-connectAttr "groupParts106.og" "polySurfaceShape236.i";
+connectAttr "groupParts103.og" "polySurfaceShape234.i";
 connectAttr "groupId120.id" "polySurfaceShape236.iog.og[0].gid";
-connectAttr "groupParts107.og" "polySurfaceShape237.i";
+connectAttr "groupParts106.og" "polySurfaceShape236.i";
 connectAttr "groupId121.id" "polySurfaceShape237.iog.og[0].gid";
-connectAttr "groupParts108.og" "polySurfaceShape238.i";
+connectAttr "groupParts107.og" "polySurfaceShape237.i";
 connectAttr "groupId122.id" "polySurfaceShape238.iog.og[0].gid";
-connectAttr "polyChipOff11.out" "polySurfaceShape235.i";
+connectAttr "groupParts108.og" "polySurfaceShape238.i";
 connectAttr "groupId117.id" "polySurfaceShape235.iog.og[0].gid";
-connectAttr "polyChipOff10.out" "polySurfaceShape214.i";
+connectAttr "polyChipOff11.out" "polySurfaceShape235.i";
 connectAttr "groupId96.id" "polySurfaceShape214.iog.og[0].gid";
-connectAttr "polyChipOff9.out" "polySurfaceShape139.i";
+connectAttr "polyChipOff10.out" "polySurfaceShape214.i";
 connectAttr "groupId11.id" "polySurfaceShape139.iog.og[0].gid";
+connectAttr "polyChipOff9.out" "polySurfaceShape139.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Skeleton1:set1.message" ":defaultLightSet.message";
