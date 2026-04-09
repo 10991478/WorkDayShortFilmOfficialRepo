@@ -10,6 +10,10 @@ file -rdi 2 -ns "TreasureCaveLighting" -rfn "TreasureCaveSet:TreasureCaveLightin
 		 -op "v=0;" -typ "mayaAscii" "D:/GithubStuff/University/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/TreasureCaveLighting.ma";
 file -rdi 1 -ns "Knight_Retopo" -rfn "Knight_RetopoRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/git/WorkDayShortFilmOfficialRepo/Maya//assets/characters/knight/Knight Retopo.ma";
+file -rdi 1 -ns "TreasureCaveLighting" -rfn "TreasureCaveLightingRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/brook/Github/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/TreasureCaveLighting.ma";
+file -rdi 2 -ns "TreasureCaveSet" -dr 1 -rfn "TreasureCaveLighting:TreasureCaveSetRN"
+		 -op "v=0;" -typ "mayaAscii" "D:/GithubStuff/University/WorkDayShortFilmOfficialRepo/Maya//assets/environment/caveInterior/TreasureCaveSet.ma";
 file -r -ns "TreasureCaveSet" -dr 1 -rfn "TreasureCaveSetRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/git/WorkDayShortFilmOfficialRepo/Maya//assets/environment/caveInterior/TreasureCaveSet.ma";
 file -r -ns "Knight_Retopo" -dr 1 -rfn "Knight_RetopoRN" -op "v=0;" -typ "mayaAscii"
@@ -33,12 +37,13 @@ createNode transform -s -n "persp";
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C1A79901-43EA-3F00-E543-E19F5652DB7E";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".coi" 2187.6234498680587;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 38.069086794143374 159.07367635965278 24.814315821208709 ;
+	setAttr ".tp" -type "double3" 0 445.10251662202745 640.85155879779552 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "E951DC97-45AD-F288-9C5A-C0A445627025";
@@ -95,7 +100,6 @@ createNode transform -n "Render_Camera";
 createNode camera -n "Render_CameraShape" -p "Render_Camera";
 	rename -uid "82FF7BBF-4DB6-8013-A809-5F910B3320DF";
 	setAttr -k off ".v";
-	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
@@ -147,6 +151,8 @@ createNode renderLayer -n "defaultRenderLayer";
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "A8771833-4C0F-06A2-50E7-2A9CF1C39F5D";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
+	setAttr -s 2 ".aovs";
+	setAttr ".GI_sss_samples" 0;
 	setAttr ".version" -type "string" "5.2.1.1";
 	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=Render_CameraShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1    1;Background.Offset=0    0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1    1;Foreground.Offset=0    0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
@@ -163,7 +169,8 @@ createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
 	rename -uid "8104302A-4E2B-B174-405E-BB9A1464BAB2";
 createNode reference -n "TreasureCaveSetRN";
 	rename -uid "1DCBAD51-4213-C0AE-8958-FFBA9DF5ED91";
-	setAttr -s 10 ".phl";
+	setAttr ".fn[0]" -type "string" "C:/Users/brook/Github/WorkDayShortFilmOfficialRepo/Maya//assets/environment/caveInterior/TreasureCaveSet.ma";
+	setAttr -s 17 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -174,6 +181,13 @@ createNode reference -n "TreasureCaveSetRN";
 	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
 	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"TreasureCaveSetRN"
 		"TreasureCaveSetRN" 0
@@ -465,11 +479,149 @@ createNode reference -n "Knight_RetopoRN";
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Knight_Retopo:Knight|Knight_Retopo:Controls|Knight_Retopo:Legs_ctrl_grp|Knight_Retopo:R_Leg_ctrl_grp|Knight_Retopo:R_Leg_IK_ctrl_grp|Knight_Retopo:R_Leg_IK_Main_ctrl_grp|Knight_Retopo:R_Leg_IK_PV_ctrl_grp|Knight_Retopo:R_Leg_IK_PV_ctrl_Offset_grp|Knight_Retopo:R_Leg_IK_PV_ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
+		2 "Knight_Retopo:Skin_ZSphereSG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Skin_ZSphereSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Skin_ZSphereSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract47SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract47SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract47SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract48SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract48SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract48SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract29_01SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract29_01SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract29_01SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract29SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract29SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract29SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract39SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract39SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract39SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract11SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract11SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract11SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract33SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract33SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract33SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract25SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract25SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract25SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract30SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract30SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract30SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract11_copy1SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract11_copy1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract11_copy1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:PM3D_Plane3D1SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:PM3D_Plane3D1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:PM3D_Plane3D1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:PM3D_Plane3D2SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:PM3D_Plane3D2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:PM3D_Plane3D2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:PM3D_Sphere3D1SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:PM3D_Sphere3D1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:PM3D_Sphere3D1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract10SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract10SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract10SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:PM3D_Sphere3D1_1SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:PM3D_Sphere3D1_1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:PM3D_Sphere3D1_1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:PM3D_Sphere3D1_2SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:PM3D_Sphere3D1_2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:PM3D_Sphere3D1_2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract36SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract36SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract36SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract28SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract28SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract28SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:Extract50SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:Extract50SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:Extract50SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:standardSurface1SG" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:standardSurface1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:standardSurface1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
 		2 "Knight_Retopo:Geo_Layer" "displayType" " 2"
 		2 "Knight_Retopo:Control_Layer" "visibility" " 0"
+		2 "Knight_Retopo:file1" "fileTextureName" " -type \"string\" \"C:/Users/brook/OneDrive/Desktop/school/Spring 2026/WorkDay/Textures/Knight Textures-20260331T144817Z-3-001/Knight Textures/Knight_SuperTemp_lambert1_BaseColor.1001.png\""
+		
+		2 "Knight_Retopo:file1" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "Knight_Retopo:file2" "fileTextureName" " -type \"string\" \"C:/Users/brook/OneDrive/Desktop/school/Spring 2026/WorkDay/Textures/Knight Textures-20260331T144817Z-3-001/Knight Textures/Knight_SuperTemp_lambert1_Height.1001.png\""
+		
+		2 "Knight_Retopo:file2" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "Knight_Retopo:file3" "fileTextureName" " -type \"string\" \"C:/Users/brook/OneDrive/Desktop/school/Spring 2026/WorkDay/Textures/Knight Textures-20260331T144817Z-3-001/Knight Textures/Knight_SuperTemp_lambert1_Metallic.1001.png\""
+		
+		2 "Knight_Retopo:file3" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "Knight_Retopo:file4" "fileTextureName" " -type \"string\" \"C:/Users/brook/OneDrive/Desktop/school/Spring 2026/WorkDay/Textures/Knight Textures-20260331T144817Z-3-001/Knight Textures/Knight_SuperTemp_lambert1_Normal.1001.png\""
+		
+		2 "Knight_Retopo:file4" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "Knight_Retopo:file5" "fileTextureName" " -type \"string\" \"C:/Users/brook/OneDrive/Desktop/school/Spring 2026/WorkDay/Textures/Knight Textures-20260331T144817Z-3-001/Knight Textures/Knight_SuperTemp_lambert1_Roughness.1001.png\""
+		
+		2 "Knight_Retopo:file5" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "Knight_Retopo:set1" "aiCustomAOVs" " -s 2"
+		2 "Knight_Retopo:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Knight_Retopo:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Knight_Retopo:file6" "fileTextureName" " -type \"string\" \"C:/Users/brook/OneDrive/Desktop/school/Spring 2026/WorkDay/Textures/Knight Textures-20260331T144817Z-3-001/Knight Textures/Knight_SuperTemp_lambert1_Roughness.1001.png\""
+		
+		2 "Knight_Retopo:file6" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
 		2 "Knight_Retopo:file6" "viewNameUsed" " 0"
 		2 "Knight_Retopo:file6" "viewNameStr" " -type \"string\" \"<N/A>\""
 		2 "Knight_Retopo:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Knight Textures-20260331T144817Z-3-001/Knight Textures/Knight_SuperTemp_lambert1_BaseColor.1001.png\""
+		
+		2 "Knight_Retopo:file7" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "Knight_Retopo:file8" "fileTextureName" " -type \"string\" \"C:/Users/brook/OneDrive/Desktop/school/Spring 2026/WorkDay/Textures/Knight Textures-20260331T144817Z-3-001/Knight Textures/Knight_SuperTemp_lambert1_BaseColor.1001.png\""
 		
 		2 "Knight_Retopo:file8" "colorSpace" " -type \"string\" \"sRGB\""
 		2 "Knight_Retopo:file8" "viewNameUsed" " 0"
@@ -3188,7 +3340,6 @@ createNode animCurveTU -n "Treasure_Chest_scaleZ";
 		0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode displayLayer -n "Treasure_Chest_Layer";
 	rename -uid "59634D67-4724-A88A-EF1E-9B8B03B7869D";
-	setAttr ".dt" 2;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode animCurveTA -n "Pelvis_ctrl_rotateX";
@@ -3235,6 +3386,37 @@ createNode animCurveTL -n "L_Leg_IK_PV_ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  162 0 168 10.503074394374707 174 8.0805387564073392;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode reference -n "TreasureCaveLightingRN";
+	rename -uid "F97B789D-4571-A4FB-A2E3-B392934A95F2";
+	setAttr ".fn[0]" -type "string" "C:/Users/brook/Github/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/TreasureCaveLighting.ma";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"TreasureCaveLightingRN"
+		"TreasureCaveLightingRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode polyPlane -n "polyPlane1";
+	rename -uid "86E6073B-4AE7-2E3D-3AED-1894526977DA";
+	setAttr ".sw" 1;
+	setAttr ".sh" 1;
+	setAttr ".cuv" 2;
+createNode polyPlane -n "polyPlane2";
+	rename -uid "B320194D-472A-D3E0-2C65-00B76A2DA28A";
+	setAttr ".cuv" 2;
+createNode reference -n "sharedReferenceNode";
+	rename -uid "50BAC246-492A-00EB-300E-B689C1299A3C";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
+createNode aiAOV -n "aiAOV_Z";
+	rename -uid "C6B6BBE9-40A5-B0FB-6E33-DE868A2AF3B3";
+	setAttr ".aovn" -type "string" "Z";
+	setAttr ".aovt" 4;
+createNode aiAOVFilter -n "aiAOVFilter1";
+	rename -uid "800F4666-4DB8-FAB8-1B5D-61AD10F0C150";
+	setAttr ".ai_translator" -type "string" "closest";
+createNode aiAOV -n "aiAOV_albedo";
+	rename -uid "EEACD7FA-418C-17E9-355D-299EA4BB80D9";
+	setAttr ".aovn" -type "string" "albedo";
+	setAttr ".aovt" 5;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".fzn";
@@ -3533,6 +3715,10 @@ connectAttr "Treasure_Chest_scaleX.o" "TreasureCaveSetRN.phl[7]";
 connectAttr "Treasure_Chest_scaleY.o" "TreasureCaveSetRN.phl[8]";
 connectAttr "Treasure_Chest_scaleZ.o" "TreasureCaveSetRN.phl[9]";
 connectAttr "Treasure_Chest_Layer.di" "TreasureCaveSetRN.phl[10]";
+connectAttr "TreasureCaveSetRN.phl[11]" "TreasureCaveSetRN.phl[12]";
+connectAttr "pPlaneShape1.iog" "TreasureCaveSetRN.phl[13]";
+connectAttr "TreasureCaveSetRN.phl[14]" "TreasureCaveSetRN.phl[15]";
+connectAttr "TreasureCaveSetRN.phl[16]" "TreasureCaveSetRN.phl[17]";
 connectAttr "Transform_ctrl_translateY.o" "Knight_RetopoRN.phl[1]";
 connectAttr "Transform_ctrl_translateZ.o" "Knight_RetopoRN.phl[2]";
 connectAttr "Transform_ctrl_translateX.o" "Knight_RetopoRN.phl[3]";
@@ -3701,6 +3887,8 @@ connectAttr "Render_Camera_rotateZ.o" "Render_Camera.rz";
 connectAttr "Render_Camera_scaleX.o" "Render_Camera.sx";
 connectAttr "Render_Camera_scaleY.o" "Render_Camera.sy";
 connectAttr "Render_Camera_scaleZ.o" "Render_Camera.sz";
+connectAttr "polyPlane1.out" "pPlaneShape1.i";
+connectAttr "polyPlane2.out" "pPlaneShape2.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -3711,7 +3899,15 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "aiAOV_Z.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_albedo.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "sharedReferenceNode.sr" "TreasureCaveSetRN.sr";
 connectAttr "layerManager.dli[1]" "Treasure_Chest_Layer.id";
+connectAttr "sharedReferenceNode.sr" "TreasureCaveLightingRN.sr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_Z.out[0].drvr";
+connectAttr "aiAOVFilter1.msg" "aiAOV_Z.out[0].ftr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_albedo.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_albedo.out[0].ftr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "aiAreaLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "aiAreaLight1.iog" ":defaultLightSet.dsm" -na;
