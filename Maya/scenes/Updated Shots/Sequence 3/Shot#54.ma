@@ -1,55 +1,76 @@
-//Maya ASCII 2025ff03 scene
+//Maya ASCII 2026 scene
 //Name: Shot#54.ma
-//Last modified: Thu, Feb 26, 2026 10:14:00 AM
+//Last modified: Sun, Apr 12, 2026 04:53:16 PM
 //Codeset: 1252
 file -rdi 1 -ns "DragonGateCaveSet" -rfn "DragonGateCaveSetRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/waitw/OneDrive/Desktop/Repos/WorkDayShortFilmOfficialRepo_TS_Fork/Maya//assets/environment/caveInterior/DragonGateCaveSet.ma";
 file -rdi 2 -ns "DragonGate" -rfn "DragonGateCaveSet:DragonGateRN" -op "v=0;"
 		 -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/dragonGate/DragonGate.ma";
-file -rdi 2 -ns "Stalagmite_1" -dr 1 -rfn "DragonGateCaveSet:Stalagmite_1RN"
-		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
-file -rdi 2 -ns "Stalagmite_2" -dr 1 -rfn "DragonGateCaveSet:Stalagmite_2RN"
-		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_2.ma";
+file -rdi 2 -ns "Stalagmite_1" -rfn "DragonGateCaveSet:Stalagmite_1RN" -op "v=0;"
+		 -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_2" -rfn "DragonGateCaveSet:Stalagmite_2RN" -op "v=0;"
+		 -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_2.ma";
 file -rdi 2 -ns "Emergency_Button" -rfn "DragonGateCaveSet:Emergency_ButtonRN"
 		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/emergencyButton/Emergency Button.ma";
 file -rdi 2 -ns "DragonGateTorch" -rfn "DragonGateCaveSet:DragonGateTorchRN"
 		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/dragonGate/DragonGateTorch.ma";
-file -rdi 2 -ns "Large_Boulder" -dr 1 -rfn "DragonGateCaveSet:Large_BoulderRN"
-		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Large_Boulder/Large_Boulder.ma";
-file -rdi 2 -ns "roundedRocks" -dr 1 -rfn "DragonGateCaveSet:roundedRocksRN"
-		 -op "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/rocks/roundedRocks.ma";
-file -rdi 2 -ns "Bones" -dr 1 -rfn "DragonGateCaveSet:BonesRN" -op "v=0;" -typ
-		 "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/bones/Bones.ma";
+file -rdi 2 -ns "Large_Boulder" -rfn "DragonGateCaveSet:Large_BoulderRN" -op
+		 "v=0;" -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Large_Boulder/Large_Boulder.ma";
+file -rdi 2 -ns "roundedRocks" -rfn "DragonGateCaveSet:roundedRocksRN" -op "v=0;"
+		 -typ "mayaAscii" "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/rocks/roundedRocks.ma";
+file -rdi 2 -ns "Bones" -rfn "DragonGateCaveSet:BonesRN" -op "v=0;" -typ "mayaAscii"
+		 "D:/GitRepos/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/bones/Bones.ma";
+file -rdi 2 -ns "Material_Ref" -rfn "DragonGateCaveSet:Material_RefRN" -op "v=0;"
+		 -typ "mayaAscii" "C:/Users/Brick/OneDrive/Documents/DGM/DAGV Repos/WorkDayShortFilmOfficialRepo/Maya//assets/Material_Ref.ma";
+file -rdi 2 -ns "DragonGateLighting" -rfn "DragonGateCaveSet:DragonGateLightingRN"
+		 -op "v=0;" -typ "mayaAscii" "D:/GithubStuff/University/WorkDayShortFilmOfficialRepo/Maya//scenes/LightingScenes/DragonGateLighting.ma";
+file -rdi 2 -ns "Stalagmite_4" -rfn "DragonGateCaveSet:Stalagmite_1RN1" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_5" -rfn "DragonGateCaveSet:Stalagmite_2RN1" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_2.ma";
+file -rdi 2 -ns "Stalagmite_6" -rfn "DragonGateCaveSet:Stalagmite_2RN2" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_2.ma";
+file -rdi 2 -ns "Stalagmite_7" -rfn "DragonGateCaveSet:Stalagmite_1RN2" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_8" -rfn "DragonGateCaveSet:Stalagmite_1RN3" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_9" -rfn "DragonGateCaveSet:Stalagmite_1RN4" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_10" -rfn "DragonGateCaveSet:Stalagmite_1RN5" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
+file -rdi 2 -ns "Stalagmite_11" -rfn "DragonGateCaveSet:Stalagmite_1RN6" -op
+		 "v=0;" -typ "mayaAscii" "C:/Users/Brick/Documents/WorkDayShortFilmOfficialRepo/Maya//assets/props/DungeonProps/Stalagemites/Stalagmite_1.ma";
 file -rdi 1 -ns "Skeleton" -rfn "SkeletonRN" -op "v=0;" -typ "mayaAscii" "C:/Users/waitw/OneDrive/Desktop/Repos/WorkDayShortFilmOfficialRepo_TS_Fork/Maya//assets/characters/skeleton/Skeleton.ma";
 file -r -ns "DragonGateCaveSet" -dr 1 -rfn "DragonGateCaveSetRN" -op "v=0;" -typ
 		 "mayaAscii" "C:/Users/waitw/OneDrive/Desktop/Repos/WorkDayShortFilmOfficialRepo_TS_Fork/Maya//assets/environment/caveInterior/DragonGateCaveSet.ma";
 file -r -ns "Skeleton" -dr 1 -rfn "SkeletonRN" -op "v=0;" -typ "mayaAscii" "C:/Users/waitw/OneDrive/Desktop/Repos/WorkDayShortFilmOfficialRepo_TS_Fork/Maya//assets/characters/skeleton/Skeleton.ma";
-requires maya "2025ff03";
+requires maya "2026";
 requires -nodeType "ikSpringSolver" "ikSpringSolver" "1.0";
 requires -nodeType "bluePencil" -dataType "czLayerData" "bluePencil" "2.6.1";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.5.4.2";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiAreaLight"
+		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.4.2";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2025";
-fileInfo "version" "2025";
-fileInfo "cutIdentifier" "202512041342-b90de33065";
+fileInfo "product" "Maya 2026";
+fileInfo "version" "2026";
+fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "E6E6768D-4097-CF21-B973-B08B91B11D48";
+fileInfo "UUID" "52B7F5C5-4536-4396-0E84-0B940FDE8171";
 createNode transform -s -n "persp";
 	rename -uid "84FCC882-422F-B52E-9831-C5AEECACB90E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 70584.486208759714 71138.099523889119 139772.70259422736 ;
-	setAttr ".r" -type "double3" -24.00000000000032 27.199999999997814 8.9400048643521354e-16 ;
+	setAttr ".t" -type "double3" -552.87038526219635 155.28315454571143 886.38258111783443 ;
+	setAttr ".r" -type "double3" -7.1999999999914923 42.399999999999729 5.3837965996152829e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "79AF5DDF-4C83-8D4D-5122-EF84469A737A";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 172116.85057613751;
+	setAttr ".coi" 1800.0931132623257;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1288.0226373672485 1131.8695037710386 -76.074600219726562 ;
+	setAttr ".tp" -type "double3" -1886.3063655484204 -237.26958735346446 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "6718274B-4048-FB60-3D1C-E9874E25EFF0";
@@ -145,24 +166,56 @@ createNode bluePencil -n "bluePencilShape" -p "bluePencil";
 	rename -uid "5EB0D259-4432-1141-7287-73A4CD896A85";
 	setAttr -k off ".v";
 	setAttr ".tmp" yes;
-	setAttr -l on ".lpx";
-	setAttr -l on ".lpy";
-	setAttr -l on ".lpz";
-	setAttr -l on ".lsx";
-	setAttr -l on ".lsy";
-	setAttr -l on ".lsz";
-	setAttr ".ld" -type "czLayerData" 3 1 "56EF9D2C-412C-6FAE-3570-F485253E124B" 0
+	setAttr -l on -cb off ".lpx";
+	setAttr -l on -cb off ".lpy";
+	setAttr -l on -cb off ".lpz";
+	setAttr -l on -cb off ".lsx";
+	setAttr -l on -cb off ".lsy";
+	setAttr -l on -cb off ".lsz";
+	setAttr ".ld" -type "czLayerData" 3 1 "84FCC882-422F-B52E-9831-C5AEECACB90E" 0
 		;
+createNode transform -n "aiAreaLight1";
+	rename -uid "3B796324-4056-8860-C77D-63839B315D70";
+	setAttr ".t" -type "double3" -2028.3253787240978 -159.08355290757243 117.19234764667848 ;
+	setAttr ".r" -type "double3" -31.148273768955846 99.439181023271047 11.669482547219419 ;
+	setAttr ".s" -type "double3" 73.565563004194075 73.565563004194075 73.565563004194075 ;
+createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
+	rename -uid "079F9832-4536-8DD2-B1E9-93B9D9714F99";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr -k off ".v";
+	setAttr ".csh" no;
+	setAttr ".rcsh" no;
+	setAttr ".ai_exposure" 17;
+	setAttr ".ai_use_color_temperature" yes;
+	setAttr ".ai_color_temperature" 10000;
+	setAttr ".ai_translator" -type "string" "quad";
+	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
+createNode transform -n "aiAreaLight2";
+	rename -uid "649CFB79-424C-072A-A36C-D7AF31B24615";
+	setAttr ".t" -type "double3" -2028.3253787240978 -159.08355290757243 248.84505341799235 ;
+	setAttr ".r" -type "double3" -39.785487809863163 61.811050751948486 20.12565122668147 ;
+	setAttr ".s" -type "double3" 73.565563004194075 73.565563004194075 73.565563004194075 ;
+createNode aiAreaLight -n "aiAreaLightShape2" -p "aiAreaLight2";
+	rename -uid "7E1D590B-43BA-D016-415F-948810EC5F59";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
+	setAttr -k off ".v";
+	setAttr ".csh" no;
+	setAttr ".rcsh" no;
+	setAttr ".ai_exposure" 15;
+	setAttr ".ai_use_color_temperature" yes;
+	setAttr ".ai_color_temperature" 3000;
+	setAttr ".ai_translator" -type "string" "quad";
+	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "488C7DCB-45F9-D12D-1784-73BAA472A937";
-	setAttr -s 56 ".lnk";
-	setAttr -s 56 ".slnk";
+	rename -uid "6BCEB039-4B7B-171D-B464-B382BCCD5382";
+	setAttr -s 90 ".lnk";
+	setAttr -s 90 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "90814820-4219-DD5F-D160-7DBD7EC04099";
+	rename -uid "86C75B99-4F7E-EACA-5D1D-3E8D76325AAF";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "DD1E86F6-47DF-2E46-674F-8DB8DA5A26BD";
+	rename -uid "94D666DE-445A-1D6E-20DB-22BD0A19B3B4";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "780DCE89-4B44-E418-FA48-F38B7719159E";
+	rename -uid "17515FD7-49F7-699C-6F93-389C78E4E8C3";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
@@ -170,13 +223,15 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "0122C659-450A-5A93-AFB0-BDAC72DDEA90";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "14B6A970-40E9-CC4F-5032-578067F03BD7";
+	rename -uid "54C54DDE-4CF7-D2D4-985C-34B3693353E5";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "9B2A45CA-4AB7-46D7-F65F-959579314229";
 	setAttr ".g" yes;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "547FBBB7-4CCA-16A8-1759-3DAD09BE6287";
+	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.2.1.1";
+	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=Render_CameraShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "5F6C4833-4E00-6AC0-76E1-EDB4205AFA27";
 	setAttr ".ai_translator" -type "string" "gaussian";
@@ -190,6 +245,10 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 createNode reference -n "DragonGateCaveSetRN";
 	rename -uid "1BCA19A8-4009-57AD-7788-F18F7DE9C08D";
 	setAttr -s 386 ".phl";
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
 	setAttr ".phl[11]" 0;
 	setAttr ".phl[12]" 0;
 	setAttr ".phl[13]" 0;
@@ -573,32 +632,41 @@ createNode reference -n "DragonGateCaveSetRN";
 	setAttr ".phl[391]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"DragonGateCaveSetRN"
-		"DragonGateCaveSet:roundedRocksRN" 1
-		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[7]" ""
-		"DragonGateCaveSet:Stalagmite_2RN" 0
-		"DragonGateCaveSet:BonesRN" 3
-		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Forearm_Bones.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[8]" ""
-		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Femur_Bones.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[9]" ""
-		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Ribs.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[10]" ""
-		"DragonGateCaveSet:Stalagmite_1RN" 0
-		"DragonGateCaveSet:DragonGateRN" 0
 		"DragonGateCaveSet:Emergency_ButtonRN" 0
 		"DragonGateCaveSet:DragonGateTorchRN" 0
+		"DragonGateCaveSet:Stalagmite_2RN2" 0
+		"DragonGateCaveSet:roundedRocksRN" 0
+		"DragonGateCaveSet:DragonGateLightingRN" 0
+		"DragonGateCaveSet:Stalagmite_2RN1" 0
+		"DragonGateCaveSet:Stalagmite_2RN" 0
+		"DragonGateCaveSet:BonesRN" 0
+		"DragonGateCaveSet:Stalagmite_1RN" 0
+		"DragonGateCaveSet:DragonGateRN" 0
+		"DragonGateCaveSet:Stalagmite_1RN2" 0
+		"DragonGateCaveSet:Material_RefRN" 0
+		"DragonGateCaveSet:Stalagmite_1RN6" 0
 		"DragonGateCaveSet:Large_BoulderRN" 1
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Large_Boulder:polySurface3.drawOverride" 
 		"DragonGateCaveSetRN.placeHolderList[6]" ""
+		"DragonGateCaveSet:Stalagmite_1RN4" 0
+		"DragonGateCaveSet:Stalagmite_1RN5" 0
 		"DragonGateCaveSetRN" 0
-		"DragonGateCaveSet:DragonGateTorchRN" 1
-		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch.drawOverride" 
+		"DragonGateCaveSet:Stalagmite_1RN3" 0
+		"DragonGateCaveSet:Stalagmite_1RN1" 0
+		"DragonGateCaveSet:roundedRocksRN" 1
+		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:roundedRocks:Rocks.drawOverride" 
+		"DragonGateCaveSetRN.placeHolderList[375]" ""
+		"DragonGateCaveSet:BonesRN" 3
+		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Forearm_Bones.drawOverride" 
+		"DragonGateCaveSetRN.placeHolderList[376]" ""
+		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Femur_Bones.drawOverride" 
+		"DragonGateCaveSetRN.placeHolderList[377]" ""
+		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Bones:Ribs.drawOverride" 
 		"DragonGateCaveSetRN.placeHolderList[378]" ""
 		"DragonGateCaveSet:DragonGateRN" 1
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGate:DragonGate.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[11]" ""
-		"DragonGateCaveSet:Emergency_ButtonRN" 373
+		"DragonGateCaveSetRN.placeHolderList[7]" ""
+		"DragonGateCaveSet:Emergency_ButtonRN" 378
 		2 "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:polySurface1" 
 		"visibility" " 0"
 		2 "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button" 
@@ -613,739 +681,848 @@ createNode reference -n "DragonGateCaveSetRN";
 		"pnts[52]" " -type \"float3\" 0 0 0"
 		2 "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button" 
 		"pnts[53]" " -type \"float3\" 0 0 0"
+		2 "DragonGateCaveSet:Emergency_Button:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_Cover_Mat_BaseColor.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_ButtonBase_Mat_BaseColor.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_ButtonBase_Mat_Metallic.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_Button_Mat_BaseColor.1001.png\""
+		
+		2 "DragonGateCaveSet:Emergency_Button:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/EmergencyButton/Emergency_Button_Button_Mat_Metallic.1001.png\""
+		
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:box1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[12]" ""
+		"DragonGateCaveSetRN.placeHolderList[8]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:polySurface1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[13]" ""
+		"DragonGateCaveSetRN.placeHolderList[9]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1.drawOverride" 
-		"DragonGateCaveSetRN.placeHolderList[14]" ""
+		"DragonGateCaveSetRN.placeHolderList[10]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[61].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[15]" ""
+		"DragonGateCaveSetRN.placeHolderList[11]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[61].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[16]" ""
+		"DragonGateCaveSetRN.placeHolderList[12]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[61].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[17]" ""
+		"DragonGateCaveSetRN.placeHolderList[13]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[62].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[18]" ""
+		"DragonGateCaveSetRN.placeHolderList[14]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[62].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[19]" ""
+		"DragonGateCaveSetRN.placeHolderList[15]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[62].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[20]" ""
+		"DragonGateCaveSetRN.placeHolderList[16]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[63].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[21]" ""
+		"DragonGateCaveSetRN.placeHolderList[17]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[63].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[22]" ""
+		"DragonGateCaveSetRN.placeHolderList[18]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[63].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[23]" ""
+		"DragonGateCaveSetRN.placeHolderList[19]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[64].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[24]" ""
+		"DragonGateCaveSetRN.placeHolderList[20]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[64].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[25]" ""
+		"DragonGateCaveSetRN.placeHolderList[21]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[64].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[26]" ""
+		"DragonGateCaveSetRN.placeHolderList[22]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[65].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[27]" ""
+		"DragonGateCaveSetRN.placeHolderList[23]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[65].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[28]" ""
+		"DragonGateCaveSetRN.placeHolderList[24]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[65].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[29]" ""
+		"DragonGateCaveSetRN.placeHolderList[25]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[66].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[30]" ""
+		"DragonGateCaveSetRN.placeHolderList[26]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[66].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[31]" ""
+		"DragonGateCaveSetRN.placeHolderList[27]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[66].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[32]" ""
+		"DragonGateCaveSetRN.placeHolderList[28]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[67].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[33]" ""
+		"DragonGateCaveSetRN.placeHolderList[29]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[67].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[34]" ""
+		"DragonGateCaveSetRN.placeHolderList[30]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[67].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[35]" ""
+		"DragonGateCaveSetRN.placeHolderList[31]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[68].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[36]" ""
+		"DragonGateCaveSetRN.placeHolderList[32]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[68].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[37]" ""
+		"DragonGateCaveSetRN.placeHolderList[33]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[68].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[38]" ""
+		"DragonGateCaveSetRN.placeHolderList[34]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[69].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[39]" ""
+		"DragonGateCaveSetRN.placeHolderList[35]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[69].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[40]" ""
+		"DragonGateCaveSetRN.placeHolderList[36]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[69].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[41]" ""
+		"DragonGateCaveSetRN.placeHolderList[37]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[70].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[42]" ""
+		"DragonGateCaveSetRN.placeHolderList[38]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[70].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[43]" ""
+		"DragonGateCaveSetRN.placeHolderList[39]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[70].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[44]" ""
+		"DragonGateCaveSetRN.placeHolderList[40]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[71].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[45]" ""
+		"DragonGateCaveSetRN.placeHolderList[41]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[71].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[46]" ""
+		"DragonGateCaveSetRN.placeHolderList[42]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[71].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[47]" ""
+		"DragonGateCaveSetRN.placeHolderList[43]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[72].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[48]" ""
+		"DragonGateCaveSetRN.placeHolderList[44]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[72].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[49]" ""
+		"DragonGateCaveSetRN.placeHolderList[45]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[72].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[50]" ""
+		"DragonGateCaveSetRN.placeHolderList[46]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[73].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[51]" ""
+		"DragonGateCaveSetRN.placeHolderList[47]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[73].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[52]" ""
+		"DragonGateCaveSetRN.placeHolderList[48]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[73].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[53]" ""
+		"DragonGateCaveSetRN.placeHolderList[49]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[74].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[54]" ""
+		"DragonGateCaveSetRN.placeHolderList[50]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[74].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[55]" ""
+		"DragonGateCaveSetRN.placeHolderList[51]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[74].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[56]" ""
+		"DragonGateCaveSetRN.placeHolderList[52]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[75].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[57]" ""
+		"DragonGateCaveSetRN.placeHolderList[53]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[75].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[58]" ""
+		"DragonGateCaveSetRN.placeHolderList[54]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[75].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[59]" ""
+		"DragonGateCaveSetRN.placeHolderList[55]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[76].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[60]" ""
+		"DragonGateCaveSetRN.placeHolderList[56]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[76].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[61]" ""
+		"DragonGateCaveSetRN.placeHolderList[57]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[76].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[62]" ""
+		"DragonGateCaveSetRN.placeHolderList[58]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[77].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[63]" ""
+		"DragonGateCaveSetRN.placeHolderList[59]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[77].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[64]" ""
+		"DragonGateCaveSetRN.placeHolderList[60]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[77].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[65]" ""
+		"DragonGateCaveSetRN.placeHolderList[61]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[78].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[66]" ""
+		"DragonGateCaveSetRN.placeHolderList[62]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[78].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[67]" ""
+		"DragonGateCaveSetRN.placeHolderList[63]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[78].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[68]" ""
+		"DragonGateCaveSetRN.placeHolderList[64]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[79].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[69]" ""
+		"DragonGateCaveSetRN.placeHolderList[65]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[79].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[70]" ""
+		"DragonGateCaveSetRN.placeHolderList[66]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[79].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[71]" ""
+		"DragonGateCaveSetRN.placeHolderList[67]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[80].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[72]" ""
+		"DragonGateCaveSetRN.placeHolderList[68]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[80].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[73]" ""
+		"DragonGateCaveSetRN.placeHolderList[69]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[80].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[74]" ""
+		"DragonGateCaveSetRN.placeHolderList[70]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[81].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[75]" ""
+		"DragonGateCaveSetRN.placeHolderList[71]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[81].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[76]" ""
+		"DragonGateCaveSetRN.placeHolderList[72]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[81].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[77]" ""
+		"DragonGateCaveSetRN.placeHolderList[73]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[87].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[78]" ""
+		"DragonGateCaveSetRN.placeHolderList[74]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[87].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[79]" ""
+		"DragonGateCaveSetRN.placeHolderList[75]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[87].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[80]" ""
+		"DragonGateCaveSetRN.placeHolderList[76]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[88].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[81]" ""
+		"DragonGateCaveSetRN.placeHolderList[77]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[88].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[82]" ""
+		"DragonGateCaveSetRN.placeHolderList[78]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[88].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[83]" ""
+		"DragonGateCaveSetRN.placeHolderList[79]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[94].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[84]" ""
+		"DragonGateCaveSetRN.placeHolderList[80]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[94].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[85]" ""
+		"DragonGateCaveSetRN.placeHolderList[81]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[94].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[86]" ""
+		"DragonGateCaveSetRN.placeHolderList[82]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[95].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[87]" ""
+		"DragonGateCaveSetRN.placeHolderList[83]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[95].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[88]" ""
+		"DragonGateCaveSetRN.placeHolderList[84]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[95].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[89]" ""
+		"DragonGateCaveSetRN.placeHolderList[85]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[101].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[90]" ""
+		"DragonGateCaveSetRN.placeHolderList[86]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[101].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[91]" ""
+		"DragonGateCaveSetRN.placeHolderList[87]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[101].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[92]" ""
+		"DragonGateCaveSetRN.placeHolderList[88]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[102].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[93]" ""
+		"DragonGateCaveSetRN.placeHolderList[89]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[102].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[94]" ""
+		"DragonGateCaveSetRN.placeHolderList[90]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[102].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[95]" ""
+		"DragonGateCaveSetRN.placeHolderList[91]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[108].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[96]" ""
+		"DragonGateCaveSetRN.placeHolderList[92]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[108].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[97]" ""
+		"DragonGateCaveSetRN.placeHolderList[93]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[108].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[98]" ""
+		"DragonGateCaveSetRN.placeHolderList[94]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[109].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[99]" ""
+		"DragonGateCaveSetRN.placeHolderList[95]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[109].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[100]" ""
+		"DragonGateCaveSetRN.placeHolderList[96]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[109].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[101]" ""
+		"DragonGateCaveSetRN.placeHolderList[97]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[115].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[102]" ""
+		"DragonGateCaveSetRN.placeHolderList[98]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[115].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[103]" ""
+		"DragonGateCaveSetRN.placeHolderList[99]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[115].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[104]" ""
+		"DragonGateCaveSetRN.placeHolderList[100]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[116].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[105]" ""
+		"DragonGateCaveSetRN.placeHolderList[101]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[116].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[106]" ""
+		"DragonGateCaveSetRN.placeHolderList[102]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[116].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[107]" ""
+		"DragonGateCaveSetRN.placeHolderList[103]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[122].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[108]" ""
+		"DragonGateCaveSetRN.placeHolderList[104]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[122].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[109]" ""
+		"DragonGateCaveSetRN.placeHolderList[105]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[122].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[110]" ""
+		"DragonGateCaveSetRN.placeHolderList[106]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[123].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[111]" ""
+		"DragonGateCaveSetRN.placeHolderList[107]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[123].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[112]" ""
+		"DragonGateCaveSetRN.placeHolderList[108]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[123].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[113]" ""
+		"DragonGateCaveSetRN.placeHolderList[109]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[129].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[114]" ""
+		"DragonGateCaveSetRN.placeHolderList[110]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[129].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[115]" ""
+		"DragonGateCaveSetRN.placeHolderList[111]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[129].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[116]" ""
+		"DragonGateCaveSetRN.placeHolderList[112]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[130].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[117]" ""
+		"DragonGateCaveSetRN.placeHolderList[113]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[130].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[118]" ""
+		"DragonGateCaveSetRN.placeHolderList[114]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[130].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[119]" ""
+		"DragonGateCaveSetRN.placeHolderList[115]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[136].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[120]" ""
+		"DragonGateCaveSetRN.placeHolderList[116]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[136].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[121]" ""
+		"DragonGateCaveSetRN.placeHolderList[117]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[136].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[122]" ""
+		"DragonGateCaveSetRN.placeHolderList[118]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[137].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[123]" ""
+		"DragonGateCaveSetRN.placeHolderList[119]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[137].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[124]" ""
+		"DragonGateCaveSetRN.placeHolderList[120]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[137].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[125]" ""
+		"DragonGateCaveSetRN.placeHolderList[121]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[143].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[126]" ""
+		"DragonGateCaveSetRN.placeHolderList[122]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[143].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[127]" ""
+		"DragonGateCaveSetRN.placeHolderList[123]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[143].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[128]" ""
+		"DragonGateCaveSetRN.placeHolderList[124]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[144].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[129]" ""
+		"DragonGateCaveSetRN.placeHolderList[125]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[144].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[130]" ""
+		"DragonGateCaveSetRN.placeHolderList[126]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[144].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[131]" ""
+		"DragonGateCaveSetRN.placeHolderList[127]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[150].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[132]" ""
+		"DragonGateCaveSetRN.placeHolderList[128]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[150].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[133]" ""
+		"DragonGateCaveSetRN.placeHolderList[129]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[150].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[134]" ""
+		"DragonGateCaveSetRN.placeHolderList[130]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[151].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[135]" ""
+		"DragonGateCaveSetRN.placeHolderList[131]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[151].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[136]" ""
+		"DragonGateCaveSetRN.placeHolderList[132]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[151].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[137]" ""
+		"DragonGateCaveSetRN.placeHolderList[133]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[152].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[138]" ""
+		"DragonGateCaveSetRN.placeHolderList[134]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[152].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[139]" ""
+		"DragonGateCaveSetRN.placeHolderList[135]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[152].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[140]" ""
+		"DragonGateCaveSetRN.placeHolderList[136]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[153].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[141]" ""
+		"DragonGateCaveSetRN.placeHolderList[137]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[153].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[142]" ""
+		"DragonGateCaveSetRN.placeHolderList[138]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[153].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[143]" ""
+		"DragonGateCaveSetRN.placeHolderList[139]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[154].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[144]" ""
+		"DragonGateCaveSetRN.placeHolderList[140]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[154].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[145]" ""
+		"DragonGateCaveSetRN.placeHolderList[141]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[154].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[146]" ""
+		"DragonGateCaveSetRN.placeHolderList[142]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[155].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[147]" ""
+		"DragonGateCaveSetRN.placeHolderList[143]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[155].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[148]" ""
+		"DragonGateCaveSetRN.placeHolderList[144]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[155].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[149]" ""
+		"DragonGateCaveSetRN.placeHolderList[145]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[156].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[150]" ""
+		"DragonGateCaveSetRN.placeHolderList[146]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[156].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[151]" ""
+		"DragonGateCaveSetRN.placeHolderList[147]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[156].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[152]" ""
+		"DragonGateCaveSetRN.placeHolderList[148]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[157].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[153]" ""
+		"DragonGateCaveSetRN.placeHolderList[149]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[157].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[154]" ""
+		"DragonGateCaveSetRN.placeHolderList[150]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[157].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[155]" ""
+		"DragonGateCaveSetRN.placeHolderList[151]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[158].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[156]" ""
+		"DragonGateCaveSetRN.placeHolderList[152]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[158].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[157]" ""
+		"DragonGateCaveSetRN.placeHolderList[153]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[158].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[158]" ""
+		"DragonGateCaveSetRN.placeHolderList[154]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[159].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[159]" ""
+		"DragonGateCaveSetRN.placeHolderList[155]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[159].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[160]" ""
+		"DragonGateCaveSetRN.placeHolderList[156]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[159].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[161]" ""
+		"DragonGateCaveSetRN.placeHolderList[157]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[160].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[162]" ""
+		"DragonGateCaveSetRN.placeHolderList[158]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[160].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[163]" ""
+		"DragonGateCaveSetRN.placeHolderList[159]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[160].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[164]" ""
+		"DragonGateCaveSetRN.placeHolderList[160]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[161].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[165]" ""
+		"DragonGateCaveSetRN.placeHolderList[161]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[161].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[166]" ""
+		"DragonGateCaveSetRN.placeHolderList[162]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[161].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[167]" ""
+		"DragonGateCaveSetRN.placeHolderList[163]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[162].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[168]" ""
+		"DragonGateCaveSetRN.placeHolderList[164]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[162].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[169]" ""
+		"DragonGateCaveSetRN.placeHolderList[165]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[162].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[170]" ""
+		"DragonGateCaveSetRN.placeHolderList[166]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[163].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[171]" ""
+		"DragonGateCaveSetRN.placeHolderList[167]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[163].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[172]" ""
+		"DragonGateCaveSetRN.placeHolderList[168]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[163].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[173]" ""
+		"DragonGateCaveSetRN.placeHolderList[169]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[164].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[174]" ""
+		"DragonGateCaveSetRN.placeHolderList[170]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[164].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[175]" ""
+		"DragonGateCaveSetRN.placeHolderList[171]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[164].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[176]" ""
+		"DragonGateCaveSetRN.placeHolderList[172]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[165].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[177]" ""
+		"DragonGateCaveSetRN.placeHolderList[173]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[165].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[178]" ""
+		"DragonGateCaveSetRN.placeHolderList[174]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[165].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[179]" ""
+		"DragonGateCaveSetRN.placeHolderList[175]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[166].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[180]" ""
+		"DragonGateCaveSetRN.placeHolderList[176]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[166].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[181]" ""
+		"DragonGateCaveSetRN.placeHolderList[177]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[166].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[182]" ""
+		"DragonGateCaveSetRN.placeHolderList[178]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[167].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[183]" ""
+		"DragonGateCaveSetRN.placeHolderList[179]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[167].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[184]" ""
+		"DragonGateCaveSetRN.placeHolderList[180]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[167].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[185]" ""
+		"DragonGateCaveSetRN.placeHolderList[181]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[168].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[186]" ""
+		"DragonGateCaveSetRN.placeHolderList[182]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[168].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[187]" ""
+		"DragonGateCaveSetRN.placeHolderList[183]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[168].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[188]" ""
+		"DragonGateCaveSetRN.placeHolderList[184]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[169].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[189]" ""
+		"DragonGateCaveSetRN.placeHolderList[185]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[169].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[190]" ""
+		"DragonGateCaveSetRN.placeHolderList[186]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[169].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[191]" ""
+		"DragonGateCaveSetRN.placeHolderList[187]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[170].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[192]" ""
+		"DragonGateCaveSetRN.placeHolderList[188]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[170].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[193]" ""
+		"DragonGateCaveSetRN.placeHolderList[189]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[170].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[194]" ""
+		"DragonGateCaveSetRN.placeHolderList[190]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[171].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[195]" ""
+		"DragonGateCaveSetRN.placeHolderList[191]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[171].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[196]" ""
+		"DragonGateCaveSetRN.placeHolderList[192]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[171].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[197]" ""
+		"DragonGateCaveSetRN.placeHolderList[193]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[172].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[198]" ""
+		"DragonGateCaveSetRN.placeHolderList[194]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[172].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[199]" ""
+		"DragonGateCaveSetRN.placeHolderList[195]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[172].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[200]" ""
+		"DragonGateCaveSetRN.placeHolderList[196]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[173].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[201]" ""
+		"DragonGateCaveSetRN.placeHolderList[197]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[173].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[202]" ""
+		"DragonGateCaveSetRN.placeHolderList[198]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[173].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[203]" ""
+		"DragonGateCaveSetRN.placeHolderList[199]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[174].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[204]" ""
+		"DragonGateCaveSetRN.placeHolderList[200]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[174].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[205]" ""
+		"DragonGateCaveSetRN.placeHolderList[201]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[174].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[206]" ""
+		"DragonGateCaveSetRN.placeHolderList[202]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[175].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[207]" ""
+		"DragonGateCaveSetRN.placeHolderList[203]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[175].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[208]" ""
+		"DragonGateCaveSetRN.placeHolderList[204]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[175].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[209]" ""
+		"DragonGateCaveSetRN.placeHolderList[205]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[176].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[210]" ""
+		"DragonGateCaveSetRN.placeHolderList[206]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[176].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[211]" ""
+		"DragonGateCaveSetRN.placeHolderList[207]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[176].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[212]" ""
+		"DragonGateCaveSetRN.placeHolderList[208]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[177].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[213]" ""
+		"DragonGateCaveSetRN.placeHolderList[209]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[177].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[214]" ""
+		"DragonGateCaveSetRN.placeHolderList[210]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[177].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[215]" ""
+		"DragonGateCaveSetRN.placeHolderList[211]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[178].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[216]" ""
+		"DragonGateCaveSetRN.placeHolderList[212]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[178].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[217]" ""
+		"DragonGateCaveSetRN.placeHolderList[213]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[178].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[218]" ""
+		"DragonGateCaveSetRN.placeHolderList[214]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[179].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[219]" ""
+		"DragonGateCaveSetRN.placeHolderList[215]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[179].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[220]" ""
+		"DragonGateCaveSetRN.placeHolderList[216]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[179].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[221]" ""
+		"DragonGateCaveSetRN.placeHolderList[217]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[180].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[222]" ""
+		"DragonGateCaveSetRN.placeHolderList[218]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[180].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[223]" ""
+		"DragonGateCaveSetRN.placeHolderList[219]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[180].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[224]" ""
+		"DragonGateCaveSetRN.placeHolderList[220]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[181].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[225]" ""
+		"DragonGateCaveSetRN.placeHolderList[221]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[181].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[226]" ""
+		"DragonGateCaveSetRN.placeHolderList[222]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[181].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[227]" ""
+		"DragonGateCaveSetRN.placeHolderList[223]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[182].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[228]" ""
+		"DragonGateCaveSetRN.placeHolderList[224]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[182].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[229]" ""
+		"DragonGateCaveSetRN.placeHolderList[225]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[182].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[230]" ""
+		"DragonGateCaveSetRN.placeHolderList[226]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[183].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[231]" ""
+		"DragonGateCaveSetRN.placeHolderList[227]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[183].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[232]" ""
+		"DragonGateCaveSetRN.placeHolderList[228]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[183].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[233]" ""
+		"DragonGateCaveSetRN.placeHolderList[229]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[184].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[234]" ""
+		"DragonGateCaveSetRN.placeHolderList[230]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[184].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[235]" ""
+		"DragonGateCaveSetRN.placeHolderList[231]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[184].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[236]" ""
+		"DragonGateCaveSetRN.placeHolderList[232]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[185].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[237]" ""
+		"DragonGateCaveSetRN.placeHolderList[233]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[185].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[238]" ""
+		"DragonGateCaveSetRN.placeHolderList[234]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[185].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[239]" ""
+		"DragonGateCaveSetRN.placeHolderList[235]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[186].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[240]" ""
+		"DragonGateCaveSetRN.placeHolderList[236]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[186].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[241]" ""
+		"DragonGateCaveSetRN.placeHolderList[237]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[186].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[242]" ""
+		"DragonGateCaveSetRN.placeHolderList[238]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[187].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[243]" ""
+		"DragonGateCaveSetRN.placeHolderList[239]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[187].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[244]" ""
+		"DragonGateCaveSetRN.placeHolderList[240]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[187].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[245]" ""
+		"DragonGateCaveSetRN.placeHolderList[241]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[188].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[246]" ""
+		"DragonGateCaveSetRN.placeHolderList[242]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[188].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[247]" ""
+		"DragonGateCaveSetRN.placeHolderList[243]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[188].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[248]" ""
+		"DragonGateCaveSetRN.placeHolderList[244]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[189].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[249]" ""
+		"DragonGateCaveSetRN.placeHolderList[245]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[189].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[250]" ""
+		"DragonGateCaveSetRN.placeHolderList[246]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[189].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[251]" ""
+		"DragonGateCaveSetRN.placeHolderList[247]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[190].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[252]" ""
+		"DragonGateCaveSetRN.placeHolderList[248]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[190].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[253]" ""
+		"DragonGateCaveSetRN.placeHolderList[249]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[190].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[254]" ""
+		"DragonGateCaveSetRN.placeHolderList[250]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[191].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[255]" ""
+		"DragonGateCaveSetRN.placeHolderList[251]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[191].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[256]" ""
+		"DragonGateCaveSetRN.placeHolderList[252]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[191].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[257]" ""
+		"DragonGateCaveSetRN.placeHolderList[253]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[192].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[258]" ""
+		"DragonGateCaveSetRN.placeHolderList[254]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[192].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[259]" ""
+		"DragonGateCaveSetRN.placeHolderList[255]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[192].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[260]" ""
+		"DragonGateCaveSetRN.placeHolderList[256]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[193].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[261]" ""
+		"DragonGateCaveSetRN.placeHolderList[257]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[193].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[262]" ""
+		"DragonGateCaveSetRN.placeHolderList[258]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[193].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[263]" ""
+		"DragonGateCaveSetRN.placeHolderList[259]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[194].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[264]" ""
+		"DragonGateCaveSetRN.placeHolderList[260]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[194].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[265]" ""
+		"DragonGateCaveSetRN.placeHolderList[261]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[194].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[266]" ""
+		"DragonGateCaveSetRN.placeHolderList[262]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[195].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[267]" ""
+		"DragonGateCaveSetRN.placeHolderList[263]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[195].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[268]" ""
+		"DragonGateCaveSetRN.placeHolderList[264]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[195].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[269]" ""
+		"DragonGateCaveSetRN.placeHolderList[265]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[196].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[270]" ""
+		"DragonGateCaveSetRN.placeHolderList[266]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[196].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[271]" ""
+		"DragonGateCaveSetRN.placeHolderList[267]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[196].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[272]" ""
+		"DragonGateCaveSetRN.placeHolderList[268]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[197].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[273]" ""
+		"DragonGateCaveSetRN.placeHolderList[269]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[197].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[274]" ""
+		"DragonGateCaveSetRN.placeHolderList[270]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[197].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[275]" ""
+		"DragonGateCaveSetRN.placeHolderList[271]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[198].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[276]" ""
+		"DragonGateCaveSetRN.placeHolderList[272]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[198].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[277]" ""
+		"DragonGateCaveSetRN.placeHolderList[273]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[198].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[278]" ""
+		"DragonGateCaveSetRN.placeHolderList[274]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[199].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[279]" ""
+		"DragonGateCaveSetRN.placeHolderList[275]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[199].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[280]" ""
+		"DragonGateCaveSetRN.placeHolderList[276]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[199].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[281]" ""
+		"DragonGateCaveSetRN.placeHolderList[277]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[200].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[282]" ""
+		"DragonGateCaveSetRN.placeHolderList[278]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[200].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[283]" ""
+		"DragonGateCaveSetRN.placeHolderList[279]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[200].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[284]" ""
+		"DragonGateCaveSetRN.placeHolderList[280]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[201].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[285]" ""
+		"DragonGateCaveSetRN.placeHolderList[281]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[201].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[286]" ""
+		"DragonGateCaveSetRN.placeHolderList[282]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[201].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[287]" ""
+		"DragonGateCaveSetRN.placeHolderList[283]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[202].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[288]" ""
+		"DragonGateCaveSetRN.placeHolderList[284]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[202].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[289]" ""
+		"DragonGateCaveSetRN.placeHolderList[285]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[202].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[290]" ""
+		"DragonGateCaveSetRN.placeHolderList[286]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[203].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[291]" ""
+		"DragonGateCaveSetRN.placeHolderList[287]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[203].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[292]" ""
+		"DragonGateCaveSetRN.placeHolderList[288]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[203].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[293]" ""
+		"DragonGateCaveSetRN.placeHolderList[289]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[204].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[294]" ""
+		"DragonGateCaveSetRN.placeHolderList[290]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[204].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[295]" ""
+		"DragonGateCaveSetRN.placeHolderList[291]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[204].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[296]" ""
+		"DragonGateCaveSetRN.placeHolderList[292]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[205].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[297]" ""
+		"DragonGateCaveSetRN.placeHolderList[293]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[205].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[298]" ""
+		"DragonGateCaveSetRN.placeHolderList[294]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[205].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[299]" ""
+		"DragonGateCaveSetRN.placeHolderList[295]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[206].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[300]" ""
+		"DragonGateCaveSetRN.placeHolderList[296]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[206].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[301]" ""
+		"DragonGateCaveSetRN.placeHolderList[297]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[206].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[302]" ""
+		"DragonGateCaveSetRN.placeHolderList[298]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[207].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[303]" ""
+		"DragonGateCaveSetRN.placeHolderList[299]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[207].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[304]" ""
+		"DragonGateCaveSetRN.placeHolderList[300]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[207].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[305]" ""
+		"DragonGateCaveSetRN.placeHolderList[301]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[208].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[306]" ""
+		"DragonGateCaveSetRN.placeHolderList[302]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[208].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[307]" ""
+		"DragonGateCaveSetRN.placeHolderList[303]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[208].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[308]" ""
+		"DragonGateCaveSetRN.placeHolderList[304]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[209].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[309]" ""
+		"DragonGateCaveSetRN.placeHolderList[305]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[209].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[310]" ""
+		"DragonGateCaveSetRN.placeHolderList[306]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[209].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[311]" ""
+		"DragonGateCaveSetRN.placeHolderList[307]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[210].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[312]" ""
+		"DragonGateCaveSetRN.placeHolderList[308]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[210].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[313]" ""
+		"DragonGateCaveSetRN.placeHolderList[309]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[210].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[314]" ""
+		"DragonGateCaveSetRN.placeHolderList[310]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[211].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[315]" ""
+		"DragonGateCaveSetRN.placeHolderList[311]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[211].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[316]" ""
+		"DragonGateCaveSetRN.placeHolderList[312]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[211].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[317]" ""
+		"DragonGateCaveSetRN.placeHolderList[313]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[212].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[318]" ""
+		"DragonGateCaveSetRN.placeHolderList[314]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[212].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[319]" ""
+		"DragonGateCaveSetRN.placeHolderList[315]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[212].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[320]" ""
+		"DragonGateCaveSetRN.placeHolderList[316]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[213].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[321]" ""
+		"DragonGateCaveSetRN.placeHolderList[317]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[213].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[322]" ""
+		"DragonGateCaveSetRN.placeHolderList[318]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[213].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[323]" ""
+		"DragonGateCaveSetRN.placeHolderList[319]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[214].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[324]" ""
+		"DragonGateCaveSetRN.placeHolderList[320]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[214].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[325]" ""
+		"DragonGateCaveSetRN.placeHolderList[321]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[214].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[326]" ""
+		"DragonGateCaveSetRN.placeHolderList[322]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[215].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[327]" ""
+		"DragonGateCaveSetRN.placeHolderList[323]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[215].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[328]" ""
+		"DragonGateCaveSetRN.placeHolderList[324]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[215].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[329]" ""
+		"DragonGateCaveSetRN.placeHolderList[325]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[216].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[330]" ""
+		"DragonGateCaveSetRN.placeHolderList[326]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[216].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[331]" ""
+		"DragonGateCaveSetRN.placeHolderList[327]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[216].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[332]" ""
+		"DragonGateCaveSetRN.placeHolderList[328]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[217].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[333]" ""
+		"DragonGateCaveSetRN.placeHolderList[329]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[217].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[334]" ""
+		"DragonGateCaveSetRN.placeHolderList[330]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[217].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[335]" ""
+		"DragonGateCaveSetRN.placeHolderList[331]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[218].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[336]" ""
+		"DragonGateCaveSetRN.placeHolderList[332]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[218].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[337]" ""
+		"DragonGateCaveSetRN.placeHolderList[333]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[218].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[338]" ""
+		"DragonGateCaveSetRN.placeHolderList[334]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[219].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[339]" ""
+		"DragonGateCaveSetRN.placeHolderList[335]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[219].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[340]" ""
+		"DragonGateCaveSetRN.placeHolderList[336]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[219].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[341]" ""
+		"DragonGateCaveSetRN.placeHolderList[337]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[220].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[342]" ""
+		"DragonGateCaveSetRN.placeHolderList[338]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[220].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[343]" ""
+		"DragonGateCaveSetRN.placeHolderList[339]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[220].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[344]" ""
+		"DragonGateCaveSetRN.placeHolderList[340]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[221].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[345]" ""
+		"DragonGateCaveSetRN.placeHolderList[341]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[221].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[346]" ""
+		"DragonGateCaveSetRN.placeHolderList[342]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[221].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[347]" ""
+		"DragonGateCaveSetRN.placeHolderList[343]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[222].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[348]" ""
+		"DragonGateCaveSetRN.placeHolderList[344]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[222].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[349]" ""
+		"DragonGateCaveSetRN.placeHolderList[345]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[222].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[350]" ""
+		"DragonGateCaveSetRN.placeHolderList[346]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[223].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[351]" ""
+		"DragonGateCaveSetRN.placeHolderList[347]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[223].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[352]" ""
+		"DragonGateCaveSetRN.placeHolderList[348]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[223].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[353]" ""
+		"DragonGateCaveSetRN.placeHolderList[349]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[224].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[354]" ""
+		"DragonGateCaveSetRN.placeHolderList[350]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[224].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[355]" ""
+		"DragonGateCaveSetRN.placeHolderList[351]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[224].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[356]" ""
+		"DragonGateCaveSetRN.placeHolderList[352]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[225].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[357]" ""
+		"DragonGateCaveSetRN.placeHolderList[353]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[225].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[358]" ""
+		"DragonGateCaveSetRN.placeHolderList[354]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[225].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[359]" ""
+		"DragonGateCaveSetRN.placeHolderList[355]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[226].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[360]" ""
+		"DragonGateCaveSetRN.placeHolderList[356]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[226].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[361]" ""
+		"DragonGateCaveSetRN.placeHolderList[357]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[226].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[362]" ""
+		"DragonGateCaveSetRN.placeHolderList[358]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[227].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[363]" ""
+		"DragonGateCaveSetRN.placeHolderList[359]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[227].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[364]" ""
+		"DragonGateCaveSetRN.placeHolderList[360]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[227].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[365]" ""
+		"DragonGateCaveSetRN.placeHolderList[361]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[228].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[366]" ""
+		"DragonGateCaveSetRN.placeHolderList[362]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[228].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[367]" ""
+		"DragonGateCaveSetRN.placeHolderList[363]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[228].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[368]" ""
+		"DragonGateCaveSetRN.placeHolderList[364]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[229].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[369]" ""
+		"DragonGateCaveSetRN.placeHolderList[365]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[229].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[370]" ""
+		"DragonGateCaveSetRN.placeHolderList[366]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[229].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[371]" ""
+		"DragonGateCaveSetRN.placeHolderList[367]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[230].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[372]" ""
+		"DragonGateCaveSetRN.placeHolderList[368]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[230].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[373]" ""
+		"DragonGateCaveSetRN.placeHolderList[369]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[230].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[374]" ""
+		"DragonGateCaveSetRN.placeHolderList[370]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[231].pntx" 
-		"DragonGateCaveSetRN.placeHolderList[375]" ""
+		"DragonGateCaveSetRN.placeHolderList[371]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[231].pnty" 
-		"DragonGateCaveSetRN.placeHolderList[376]" ""
+		"DragonGateCaveSetRN.placeHolderList[372]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1|DragonGateCaveSet:Emergency_Button:button1|DragonGateCaveSet:Emergency_Button:Button.pnts[231].pntz" 
-		"DragonGateCaveSetRN.placeHolderList[377]" ""
-		"DragonGateCaveSetRN" 25
+		"DragonGateCaveSetRN.placeHolderList[373]" ""
+		"DragonGateCaveSet:Material_RefRN" 40
+		2 "DragonGateCaveSet:Material_Ref:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file1" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file3" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file2" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__pasted__file4" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file11" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file12" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__file13" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__pasted__pasted__file13" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "DragonGateCaveSet:Material_Ref:pasted__file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		
+		"DragonGateCaveSet:DragonGateTorchRN" 1
+		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:DragonGateTorch:DragonGateTorch.drawOverride" 
+		"DragonGateCaveSetRN.placeHolderList[374]" ""
+		"DragonGateCaveSetRN" 29
 		2 "|DragonGateCaveSet:CaveSet" "overrideDisplayType" " 0"
 		2 "|DragonGateCaveSet:CaveSet" "overrideLevelOfDetail" " 0"
 		2 "|DragonGateCaveSet:CaveSet" "overrideShading" " 1"
@@ -1359,6 +1536,15 @@ createNode reference -n "DragonGateCaveSetRN";
 		2 "|DragonGateCaveSet:CaveSet" "overrideColorRGB" " -type \"float3\" 0 0 0"
 		
 		2 "|DragonGateCaveSet:CaveSet" "overrideColorA" " 1"
+		2 "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1" "translate" 
+		" -type \"double3\" -2149.16669391908317266 -304.94635130775810694 166.60199176861846126"
+		
+		2 "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Emergency_Button1" "rotate" 
+		" -type \"double3\" -11.30911025300220807 90 0"
+		2 "DragonGateCaveSet:Stalagmite_3:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Stalagmite2Files-20260324T022654Z-3-001/Stalagmite2Files/Stalagmite2Export_standardSurface1_BaseColor.png\""
+		
+		2 "DragonGateCaveSet:Stalagmite_3:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Stalagmite2Files-20260324T022654Z-3-001/Stalagmite2Files/Stalagmite2Export_standardSurface1_Roughness.png\""
+		
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:CaveWall_03.drawOverride" 
 		"DragonGateCaveSetRN.placeHolderList[379]" ""
 		5 4 "DragonGateCaveSetRN" "|DragonGateCaveSet:CaveSet|DragonGateCaveSet:Stalagmite_01_01.drawOverride" 
@@ -1399,7 +1585,7 @@ createNode animCurveTL -n "Render_Camera_translateX";
 	rename -uid "C3E14CE8-48D2-0F2B-C76A-4BA9845B4A5B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 -2053.8342661529687;
+	setAttr ".ktv[0]"  0 -2089.5020585547641;
 	setAttr ".kot[0]"  5;
 createNode animCurveTL -n "Render_Camera_translateY";
 	rename -uid "ED095BE5-415B-810E-9A9F-C0AA0F96E97A";
@@ -1453,47 +1639,51 @@ createNode script -n "uiConfigurationScriptNode";
 	rename -uid "D16208B5-448B-2F9A-8793-FC8BD33F7671";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
-		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1728\n            -height 744\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
-		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
-		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 860\n            -height 338\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
-		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
-		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 860\n            -height 338\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
-		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 860\n            -height 339\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
-		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
-		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
-		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
-		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
-		+ "            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
-		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n"
-		+ "                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n"
-		+ "                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n"
-		+ "                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n"
-		+ "                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n"
-		+ "                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n"
-		+ "                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n"
-		+ "                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n"
-		+ "                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
-		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
-		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n"
-		+ "                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Render_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1728\\n    -height 744\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -camera \\\"|Render_Camera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1728\\n    -height 744\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n"
+		+ "            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n"
+		+ "            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n"
+		+ "            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n"
+		+ "            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n"
+		+ "            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
+		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
+		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
+		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
+		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 616\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -camera \"|persp1\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n"
+		+ "            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 615\n            -height 330\n            -sceneRenderFilter 0\n"
+		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
+		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
+		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n"
+		+ "            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n"
+		+ "            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -ufeFilter \"USD\" \"InactivePrims\" -ufeFilterValue 1\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n"
+		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
+		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n"
+		+ "                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n"
+		+ "                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n"
+		+ "                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n"
+		+ "                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n"
+		+ "            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n"
+		+ "                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n"
+		+ "\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n"
+		+ "                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
+		+ "                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -editorChanged \"updateModelPanelBar\" \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n"
+		+ "                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -rendererOverrideName \"stereoOverrideVP2\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
+		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n"
+		+ "                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
+		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel5\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel5\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|Render_Camera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n"
+		+ "            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n"
+		+ "            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n"
+		+ "            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -editorChanged \\\"updateModelPanelBar\\\" \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1038\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -editorChanged \\\"updateModelPanelBar\\\" \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1038\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 0.05 -size 0.12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -1707,9 +1897,9 @@ createNode reference -n "SkeletonRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"SkeletonRN"
 		"SkeletonRN" 0
-		"SkeletonRN" 236
+		"SkeletonRN" 240
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl" 
-		"translate" " -type \"double3\" -2017.89011839952695482 -404.25114185767279196 166.60199176861846126"
+		"translate" " -type \"double3\" -2053.55791080132212301 -404.25114185767279196 166.60199176861846126"
 		
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl" 
 		"rotate" " -type \"double3\" 0 -90 0"
@@ -1780,6 +1970,13 @@ createNode reference -n "SkeletonRN";
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Right_Arm|Skeleton:R_Arm_Reg_Controls|Skeleton:Right_Hand|Skeleton:Right_Finger_05|Skeleton:R_Finger_05_Knuckle_03_Ctrl_Grp|Skeleton:R_Finger_05_Knuckle_03_Ctrl" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "Skeleton:Geo_Layer" "displayType" " 0"
+		2 "Skeleton:Ctrl_Layer" "visibility" " 1"
+		2 "Skeleton:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_BaseColor.1001.png\""
+		
+		2 "Skeleton:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_Normal.1001.png\""
+		
+		2 "Skeleton:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_Roughness.1001.png\""
+		
 		5 4 "SkeletonRN" "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Right_Arm|Skeleton:R_Arm_Reg_Controls|Skeleton:Right_Arm_IK|Skeleton:R_Arm_IK_End_Ctrl_Grp|Skeleton:R_Arm_IK_End_Ctrl.rotateY" 
 		"SkeletonRN.placeHolderList[1]" ""
 		5 4 "SkeletonRN" "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Right_Arm|Skeleton:R_Arm_Reg_Controls|Skeleton:Right_Arm_IK|Skeleton:R_Arm_IK_End_Ctrl_Grp|Skeleton:R_Arm_IK_End_Ctrl.rotateX" 
@@ -5738,44 +5935,247 @@ createNode animCurveTL -n "Button_pnts_95__pntz";
 	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  6 0 8 0 10 0 12 0;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
+	rename -uid "817ACA3A-455B-DC17-9DD7-E0A85EED7464";
 select -ne :time1;
-	setAttr ".o" 0;
+	setAttr -av -k on ".cch";
+	setAttr -k on ".fzn";
+	setAttr -av -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".o" 48;
+	setAttr -av -k on ".unw" 48;
+	setAttr -av -k on ".etw";
+	setAttr -av -k on ".tps";
+	setAttr -av -k on ".tms";
 select -ne :hardwareRenderingGlobals;
+	setAttr -av -k on ".cch";
+	setAttr -av -k on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+	setAttr -k on ".hwi";
+	setAttr -av ".ta";
+	setAttr -av ".tq";
+	setAttr -av ".etmr";
+	setAttr -av ".tmr";
+	setAttr -av ".aoon";
+	setAttr -av ".aoam";
+	setAttr -av ".aora";
+	setAttr -k on ".hff";
+	setAttr -av -k on ".hfd";
+	setAttr -av -k on ".hfs";
+	setAttr -av -k on ".hfe";
+	setAttr -av ".hfc";
+	setAttr -av -k on ".hfcr";
+	setAttr -av -k on ".hfcg";
+	setAttr -av -k on ".hfcb";
+	setAttr -av -k on ".hfa";
+	setAttr -av ".mbe";
+	setAttr -av -k on ".mbsof";
+	setAttr -k on ".blen";
+	setAttr -k on ".blat";
+	setAttr -av ".msaa";
 	setAttr ".dli" 1;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 56 ".st";
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 90 ".st";
+	setAttr -cb on ".an";
+	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 select -ne :defaultShaderList1;
-	setAttr -s 21 ".s";
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -s 60 ".s";
 select -ne :postProcessList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 3 ".u";
+	setAttr -s 128 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 6 ".r";
+	setAttr -k on ".ihi";
+	setAttr -s 21 ".r";
+select -ne :lightList1;
+	setAttr -s 13 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 3 ".tx";
+	setAttr -s 105 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.40000000596046448;
+select -ne :openPBR_shader1;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 47 ".dsm";
-	setAttr ".ro" yes;
-	setAttr -s 5 ".gn";
+	setAttr -av -k on ".cch";
+	setAttr -k on ".fzn";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".bbx";
+	setAttr -k on ".vwm";
+	setAttr -k on ".tpv";
+	setAttr -k on ".uit";
+	setAttr -s 42 ".dsm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
+	setAttr -k on ".ro" yes;
+	setAttr -s 15 ".gn";
 select -ne :initialParticleSE;
-	setAttr ".ro" yes;
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
+	setAttr -k on ".ro" yes;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
-	setAttr ".ren" -type "string" "arnold";
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -av -k on ".macc";
+	setAttr -av -k on ".macd";
+	setAttr -av -k on ".macq";
+	setAttr -av -k on ".mcfr";
+	setAttr -cb on ".ifg";
+	setAttr -av -k on ".clip";
+	setAttr -av -k on ".edm";
+	setAttr -av -k on ".edl";
+	setAttr -av -cb on ".ren" -type "string" "arnold";
+	setAttr -av -k on ".esr";
+	setAttr -av -k on ".ors";
+	setAttr -cb on ".sdf";
+	setAttr -av -k on ".outf";
+	setAttr -av -cb on ".imfkey";
+	setAttr -av -k on ".gama";
+	setAttr -k on ".exrc";
+	setAttr -k on ".expt";
+	setAttr -av -k on ".an";
+	setAttr -cb on ".ar";
+	setAttr -av -k on ".fs";
+	setAttr -av -k on ".ef";
+	setAttr -av -k on ".bfs";
+	setAttr -av -cb on ".me";
+	setAttr -cb on ".se";
+	setAttr -av -k on ".be";
+	setAttr -av -cb on ".ep";
+	setAttr -av -k on ".fec";
+	setAttr -av -k on ".ofc";
+	setAttr -cb on ".ofe";
+	setAttr -cb on ".efe";
+	setAttr -cb on ".oft";
+	setAttr -cb on ".umfn";
+	setAttr -cb on ".ufe";
+	setAttr -av -cb on ".pff";
+	setAttr -av -cb on ".peie";
+	setAttr -av -cb on ".ifp";
+	setAttr -k on ".rv";
+	setAttr -av -k on ".comp";
+	setAttr -av -k on ".cth";
+	setAttr -av -k on ".soll";
+	setAttr -cb on ".sosl";
+	setAttr -av -k on ".rd";
+	setAttr -av -k on ".lp";
+	setAttr -av -k on ".sp";
+	setAttr -av -k on ".shs";
+	setAttr -av -k on ".lpr";
+	setAttr -cb on ".gv";
+	setAttr -cb on ".sv";
+	setAttr -av -k on ".mm";
+	setAttr -av -k on ".npu";
+	setAttr -av -k on ".itf";
+	setAttr -av -k on ".shp";
+	setAttr -cb on ".isp";
+	setAttr -av -k on ".uf";
+	setAttr -av -k on ".oi";
+	setAttr -av -k on ".rut";
+	setAttr -av -k on ".mot";
+	setAttr -av -cb on ".mb";
+	setAttr -av -k on ".mbf";
+	setAttr -av -k on ".mbso";
+	setAttr -av -k on ".mbsc";
+	setAttr -av -k on ".afp";
+	setAttr -av -k on ".pfb";
+	setAttr -av -k on ".pram";
+	setAttr -av -k on ".poam";
+	setAttr -av -k on ".prlm";
+	setAttr -av -k on ".polm";
+	setAttr -av -cb on ".prm";
+	setAttr -av -cb on ".pom";
+	setAttr -cb on ".pfrm";
+	setAttr -cb on ".pfom";
+	setAttr -av -k on ".bll";
+	setAttr -av -k on ".bls";
+	setAttr -av -k on ".smv";
+	setAttr -av -k on ".ubc";
+	setAttr -av -k on ".mbc";
+	setAttr -cb on ".mbt";
+	setAttr -av -k on ".udbx";
+	setAttr -av -k on ".smc";
+	setAttr -av -k on ".kmv";
+	setAttr -cb on ".isl";
+	setAttr -cb on ".ism";
+	setAttr -cb on ".imb";
+	setAttr -av -k on ".rlen";
+	setAttr -av -k on ".frts";
+	setAttr -av -k on ".tlwd";
+	setAttr -av -k on ".tlht";
+	setAttr -av -k on ".jfc";
+	setAttr -cb on ".rsb";
+	setAttr -av -k on ".ope";
+	setAttr -av -k on ".oppf";
+	setAttr -av -k on ".rcp";
+	setAttr -av -k on ".icp";
+	setAttr -av -k on ".ocp";
+	setAttr -cb on ".hbl";
 	setAttr ".dss" -type "string" "lambert1";
 select -ne :defaultResolution;
-	setAttr ".pa" 1;
+	setAttr -av -k on ".cch";
+	setAttr -av -k on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -k on ".bnm";
+	setAttr -av -k on ".w";
+	setAttr -av -k on ".h";
+	setAttr -av -k on ".pa" 1;
+	setAttr -av -k on ".al";
+	setAttr -av -k on ".dar";
+	setAttr -av -k on ".ldar";
+	setAttr -av -k on ".dpi";
+	setAttr -av -k on ".off";
+	setAttr -av -k on ".fld";
+	setAttr -av -k on ".zsl";
+	setAttr -av -k on ".isu";
+	setAttr -av -k on ".pdu";
+select -ne :defaultLightSet;
+	setAttr -s 13 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -5786,378 +6186,417 @@ select -ne :defaultColorMgtGlobals;
 	setAttr ".otn" -type "string" "ACES 1.0 SDR-video (sRGB)";
 	setAttr ".potn" -type "string" "ACES 1.0 SDR-video (sRGB)";
 select -ne :hardwareRenderGlobals;
-	setAttr ".ctrs" 256;
-	setAttr ".btrs" 512;
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -av -k off -cb on ".ctrs" 256;
+	setAttr -av -k off -cb on ".btrs" 512;
+	setAttr -av -k off -cb on ".fbfm";
+	setAttr -av -k off -cb on ".ehql";
+	setAttr -av -k off -cb on ".eams";
+	setAttr -av -k off -cb on ".eeaa";
+	setAttr -av -k off -cb on ".engm";
+	setAttr -av -k off -cb on ".mes";
+	setAttr -av -k off -cb on ".emb";
+	setAttr -av -k off -cb on ".mbbf";
+	setAttr -av -k off -cb on ".mbs";
+	setAttr -av -k off -cb on ".trm";
+	setAttr -av -k off -cb on ".tshc";
+	setAttr -av -k off -cb on ".enpt";
+	setAttr -av -k off -cb on ".clmt";
+	setAttr -av -k off -cb on ".tcov";
+	setAttr -av -k off -cb on ".lith";
+	setAttr -av -k off -cb on ".sobc";
+	setAttr -av -k off -cb on ".cuth";
+	setAttr -av -k off -cb on ".hgcd";
+	setAttr -av -k off -cb on ".hgci";
+	setAttr -av -k off -cb on ".mgcs";
+	setAttr -av -k off -cb on ".twa";
+	setAttr -av -k off -cb on ".twz";
+	setAttr -k on ".hwcc";
+	setAttr -k on ".hwdp";
+	setAttr -k on ".hwql";
+	setAttr -k on ".hwfr";
+	setAttr -k on ".soll";
+	setAttr -k on ".sosl";
+	setAttr -k on ".bswa";
+	setAttr -k on ".shml";
+	setAttr -k on ".hwel";
 select -ne :ikSystem;
 	setAttr -s 2 ".sol";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[375]";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[376]";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[377]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[378]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[11]";
-connectAttr "Button_Layer.di" "DragonGateCaveSetRN.phl[12]";
-connectAttr "Button_Layer.di" "DragonGateCaveSetRN.phl[13]";
-connectAttr "Button_Layer.di" "DragonGateCaveSetRN.phl[14]";
-connectAttr "Button_pnts_61__pntx.o" "DragonGateCaveSetRN.phl[15]";
-connectAttr "Button_pnts_61__pnty.o" "DragonGateCaveSetRN.phl[16]";
-connectAttr "Button_pnts_61__pntz.o" "DragonGateCaveSetRN.phl[17]";
-connectAttr "Button_pnts_62__pntx.o" "DragonGateCaveSetRN.phl[18]";
-connectAttr "Button_pnts_62__pnty.o" "DragonGateCaveSetRN.phl[19]";
-connectAttr "Button_pnts_62__pntz.o" "DragonGateCaveSetRN.phl[20]";
-connectAttr "Button_pnts_63__pntx.o" "DragonGateCaveSetRN.phl[21]";
-connectAttr "Button_pnts_63__pnty.o" "DragonGateCaveSetRN.phl[22]";
-connectAttr "Button_pnts_63__pntz.o" "DragonGateCaveSetRN.phl[23]";
-connectAttr "Button_pnts_64__pntx.o" "DragonGateCaveSetRN.phl[24]";
-connectAttr "Button_pnts_64__pnty.o" "DragonGateCaveSetRN.phl[25]";
-connectAttr "Button_pnts_64__pntz.o" "DragonGateCaveSetRN.phl[26]";
-connectAttr "Button_pnts_65__pntx.o" "DragonGateCaveSetRN.phl[27]";
-connectAttr "Button_pnts_65__pnty.o" "DragonGateCaveSetRN.phl[28]";
-connectAttr "Button_pnts_65__pntz.o" "DragonGateCaveSetRN.phl[29]";
-connectAttr "Button_pnts_66__pntx.o" "DragonGateCaveSetRN.phl[30]";
-connectAttr "Button_pnts_66__pnty.o" "DragonGateCaveSetRN.phl[31]";
-connectAttr "Button_pnts_66__pntz.o" "DragonGateCaveSetRN.phl[32]";
-connectAttr "Button_pnts_67__pntx.o" "DragonGateCaveSetRN.phl[33]";
-connectAttr "Button_pnts_67__pnty.o" "DragonGateCaveSetRN.phl[34]";
-connectAttr "Button_pnts_67__pntz.o" "DragonGateCaveSetRN.phl[35]";
-connectAttr "Button_pnts_68__pntx.o" "DragonGateCaveSetRN.phl[36]";
-connectAttr "Button_pnts_68__pnty.o" "DragonGateCaveSetRN.phl[37]";
-connectAttr "Button_pnts_68__pntz.o" "DragonGateCaveSetRN.phl[38]";
-connectAttr "Button_pnts_69__pntx.o" "DragonGateCaveSetRN.phl[39]";
-connectAttr "Button_pnts_69__pnty.o" "DragonGateCaveSetRN.phl[40]";
-connectAttr "Button_pnts_69__pntz.o" "DragonGateCaveSetRN.phl[41]";
-connectAttr "Button_pnts_70__pntx.o" "DragonGateCaveSetRN.phl[42]";
-connectAttr "Button_pnts_70__pnty.o" "DragonGateCaveSetRN.phl[43]";
-connectAttr "Button_pnts_70__pntz.o" "DragonGateCaveSetRN.phl[44]";
-connectAttr "Button_pnts_71__pntx.o" "DragonGateCaveSetRN.phl[45]";
-connectAttr "Button_pnts_71__pnty.o" "DragonGateCaveSetRN.phl[46]";
-connectAttr "Button_pnts_71__pntz.o" "DragonGateCaveSetRN.phl[47]";
-connectAttr "Button_pnts_72__pntx.o" "DragonGateCaveSetRN.phl[48]";
-connectAttr "Button_pnts_72__pnty.o" "DragonGateCaveSetRN.phl[49]";
-connectAttr "Button_pnts_72__pntz.o" "DragonGateCaveSetRN.phl[50]";
-connectAttr "Button_pnts_73__pntx.o" "DragonGateCaveSetRN.phl[51]";
-connectAttr "Button_pnts_73__pnty.o" "DragonGateCaveSetRN.phl[52]";
-connectAttr "Button_pnts_73__pntz.o" "DragonGateCaveSetRN.phl[53]";
-connectAttr "Button_pnts_74__pntx.o" "DragonGateCaveSetRN.phl[54]";
-connectAttr "Button_pnts_74__pnty.o" "DragonGateCaveSetRN.phl[55]";
-connectAttr "Button_pnts_74__pntz.o" "DragonGateCaveSetRN.phl[56]";
-connectAttr "Button_pnts_75__pntx.o" "DragonGateCaveSetRN.phl[57]";
-connectAttr "Button_pnts_75__pnty.o" "DragonGateCaveSetRN.phl[58]";
-connectAttr "Button_pnts_75__pntz.o" "DragonGateCaveSetRN.phl[59]";
-connectAttr "Button_pnts_76__pntx.o" "DragonGateCaveSetRN.phl[60]";
-connectAttr "Button_pnts_76__pnty.o" "DragonGateCaveSetRN.phl[61]";
-connectAttr "Button_pnts_76__pntz.o" "DragonGateCaveSetRN.phl[62]";
-connectAttr "Button_pnts_77__pntx.o" "DragonGateCaveSetRN.phl[63]";
-connectAttr "Button_pnts_77__pnty.o" "DragonGateCaveSetRN.phl[64]";
-connectAttr "Button_pnts_77__pntz.o" "DragonGateCaveSetRN.phl[65]";
-connectAttr "Button_pnts_78__pntx.o" "DragonGateCaveSetRN.phl[66]";
-connectAttr "Button_pnts_78__pnty.o" "DragonGateCaveSetRN.phl[67]";
-connectAttr "Button_pnts_78__pntz.o" "DragonGateCaveSetRN.phl[68]";
-connectAttr "Button_pnts_79__pntx.o" "DragonGateCaveSetRN.phl[69]";
-connectAttr "Button_pnts_79__pnty.o" "DragonGateCaveSetRN.phl[70]";
-connectAttr "Button_pnts_79__pntz.o" "DragonGateCaveSetRN.phl[71]";
-connectAttr "Button_pnts_80__pntx.o" "DragonGateCaveSetRN.phl[72]";
-connectAttr "Button_pnts_80__pnty.o" "DragonGateCaveSetRN.phl[73]";
-connectAttr "Button_pnts_80__pntz.o" "DragonGateCaveSetRN.phl[74]";
-connectAttr "Button_pnts_81__pntx.o" "DragonGateCaveSetRN.phl[75]";
-connectAttr "Button_pnts_81__pnty.o" "DragonGateCaveSetRN.phl[76]";
-connectAttr "Button_pnts_81__pntz.o" "DragonGateCaveSetRN.phl[77]";
-connectAttr "Button_pnts_87__pntx.o" "DragonGateCaveSetRN.phl[78]";
-connectAttr "Button_pnts_87__pnty.o" "DragonGateCaveSetRN.phl[79]";
-connectAttr "Button_pnts_87__pntz.o" "DragonGateCaveSetRN.phl[80]";
-connectAttr "Button_pnts_88__pntx.o" "DragonGateCaveSetRN.phl[81]";
-connectAttr "Button_pnts_88__pnty.o" "DragonGateCaveSetRN.phl[82]";
-connectAttr "Button_pnts_88__pntz.o" "DragonGateCaveSetRN.phl[83]";
-connectAttr "Button_pnts_94__pntx.o" "DragonGateCaveSetRN.phl[84]";
-connectAttr "Button_pnts_94__pnty.o" "DragonGateCaveSetRN.phl[85]";
-connectAttr "Button_pnts_94__pntz.o" "DragonGateCaveSetRN.phl[86]";
-connectAttr "Button_pnts_95__pntx.o" "DragonGateCaveSetRN.phl[87]";
-connectAttr "Button_pnts_95__pnty.o" "DragonGateCaveSetRN.phl[88]";
-connectAttr "Button_pnts_95__pntz.o" "DragonGateCaveSetRN.phl[89]";
-connectAttr "Button_pnts_101__pntx.o" "DragonGateCaveSetRN.phl[90]";
-connectAttr "Button_pnts_101__pnty.o" "DragonGateCaveSetRN.phl[91]";
-connectAttr "Button_pnts_101__pntz.o" "DragonGateCaveSetRN.phl[92]";
-connectAttr "Button_pnts_102__pntx.o" "DragonGateCaveSetRN.phl[93]";
-connectAttr "Button_pnts_102__pnty.o" "DragonGateCaveSetRN.phl[94]";
-connectAttr "Button_pnts_102__pntz.o" "DragonGateCaveSetRN.phl[95]";
-connectAttr "Button_pnts_108__pntx.o" "DragonGateCaveSetRN.phl[96]";
-connectAttr "Button_pnts_108__pnty.o" "DragonGateCaveSetRN.phl[97]";
-connectAttr "Button_pnts_108__pntz.o" "DragonGateCaveSetRN.phl[98]";
-connectAttr "Button_pnts_109__pntx.o" "DragonGateCaveSetRN.phl[99]";
-connectAttr "Button_pnts_109__pnty.o" "DragonGateCaveSetRN.phl[100]";
-connectAttr "Button_pnts_109__pntz.o" "DragonGateCaveSetRN.phl[101]";
-connectAttr "Button_pnts_115__pntx.o" "DragonGateCaveSetRN.phl[102]";
-connectAttr "Button_pnts_115__pnty.o" "DragonGateCaveSetRN.phl[103]";
-connectAttr "Button_pnts_115__pntz.o" "DragonGateCaveSetRN.phl[104]";
-connectAttr "Button_pnts_116__pntx.o" "DragonGateCaveSetRN.phl[105]";
-connectAttr "Button_pnts_116__pnty.o" "DragonGateCaveSetRN.phl[106]";
-connectAttr "Button_pnts_116__pntz.o" "DragonGateCaveSetRN.phl[107]";
-connectAttr "Button_pnts_122__pntx.o" "DragonGateCaveSetRN.phl[108]";
-connectAttr "Button_pnts_122__pnty.o" "DragonGateCaveSetRN.phl[109]";
-connectAttr "Button_pnts_122__pntz.o" "DragonGateCaveSetRN.phl[110]";
-connectAttr "Button_pnts_123__pntx.o" "DragonGateCaveSetRN.phl[111]";
-connectAttr "Button_pnts_123__pnty.o" "DragonGateCaveSetRN.phl[112]";
-connectAttr "Button_pnts_123__pntz.o" "DragonGateCaveSetRN.phl[113]";
-connectAttr "Button_pnts_129__pntx.o" "DragonGateCaveSetRN.phl[114]";
-connectAttr "Button_pnts_129__pnty.o" "DragonGateCaveSetRN.phl[115]";
-connectAttr "Button_pnts_129__pntz.o" "DragonGateCaveSetRN.phl[116]";
-connectAttr "Button_pnts_130__pntx.o" "DragonGateCaveSetRN.phl[117]";
-connectAttr "Button_pnts_130__pnty.o" "DragonGateCaveSetRN.phl[118]";
-connectAttr "Button_pnts_130__pntz.o" "DragonGateCaveSetRN.phl[119]";
-connectAttr "Button_pnts_136__pntx.o" "DragonGateCaveSetRN.phl[120]";
-connectAttr "Button_pnts_136__pnty.o" "DragonGateCaveSetRN.phl[121]";
-connectAttr "Button_pnts_136__pntz.o" "DragonGateCaveSetRN.phl[122]";
-connectAttr "Button_pnts_137__pntx.o" "DragonGateCaveSetRN.phl[123]";
-connectAttr "Button_pnts_137__pnty.o" "DragonGateCaveSetRN.phl[124]";
-connectAttr "Button_pnts_137__pntz.o" "DragonGateCaveSetRN.phl[125]";
-connectAttr "Button_pnts_143__pntx.o" "DragonGateCaveSetRN.phl[126]";
-connectAttr "Button_pnts_143__pnty.o" "DragonGateCaveSetRN.phl[127]";
-connectAttr "Button_pnts_143__pntz.o" "DragonGateCaveSetRN.phl[128]";
-connectAttr "Button_pnts_144__pntx.o" "DragonGateCaveSetRN.phl[129]";
-connectAttr "Button_pnts_144__pnty.o" "DragonGateCaveSetRN.phl[130]";
-connectAttr "Button_pnts_144__pntz.o" "DragonGateCaveSetRN.phl[131]";
-connectAttr "Button_pnts_150__pntx.o" "DragonGateCaveSetRN.phl[132]";
-connectAttr "Button_pnts_150__pnty.o" "DragonGateCaveSetRN.phl[133]";
-connectAttr "Button_pnts_150__pntz.o" "DragonGateCaveSetRN.phl[134]";
-connectAttr "Button_pnts_151__pntx.o" "DragonGateCaveSetRN.phl[135]";
-connectAttr "Button_pnts_151__pnty.o" "DragonGateCaveSetRN.phl[136]";
-connectAttr "Button_pnts_151__pntz.o" "DragonGateCaveSetRN.phl[137]";
-connectAttr "Button_pnts_152__pntx.o" "DragonGateCaveSetRN.phl[138]";
-connectAttr "Button_pnts_152__pnty.o" "DragonGateCaveSetRN.phl[139]";
-connectAttr "Button_pnts_152__pntz.o" "DragonGateCaveSetRN.phl[140]";
-connectAttr "Button_pnts_153__pntx.o" "DragonGateCaveSetRN.phl[141]";
-connectAttr "Button_pnts_153__pnty.o" "DragonGateCaveSetRN.phl[142]";
-connectAttr "Button_pnts_153__pntz.o" "DragonGateCaveSetRN.phl[143]";
-connectAttr "Button_pnts_154__pntx.o" "DragonGateCaveSetRN.phl[144]";
-connectAttr "Button_pnts_154__pnty.o" "DragonGateCaveSetRN.phl[145]";
-connectAttr "Button_pnts_154__pntz.o" "DragonGateCaveSetRN.phl[146]";
-connectAttr "Button_pnts_155__pntx.o" "DragonGateCaveSetRN.phl[147]";
-connectAttr "Button_pnts_155__pnty.o" "DragonGateCaveSetRN.phl[148]";
-connectAttr "Button_pnts_155__pntz.o" "DragonGateCaveSetRN.phl[149]";
-connectAttr "Button_pnts_156__pntx.o" "DragonGateCaveSetRN.phl[150]";
-connectAttr "Button_pnts_156__pnty.o" "DragonGateCaveSetRN.phl[151]";
-connectAttr "Button_pnts_156__pntz.o" "DragonGateCaveSetRN.phl[152]";
-connectAttr "Button_pnts_157__pntx.o" "DragonGateCaveSetRN.phl[153]";
-connectAttr "Button_pnts_157__pnty.o" "DragonGateCaveSetRN.phl[154]";
-connectAttr "Button_pnts_157__pntz.o" "DragonGateCaveSetRN.phl[155]";
-connectAttr "Button_pnts_158__pntx.o" "DragonGateCaveSetRN.phl[156]";
-connectAttr "Button_pnts_158__pnty.o" "DragonGateCaveSetRN.phl[157]";
-connectAttr "Button_pnts_158__pntz.o" "DragonGateCaveSetRN.phl[158]";
-connectAttr "Button_pnts_159__pntx.o" "DragonGateCaveSetRN.phl[159]";
-connectAttr "Button_pnts_159__pnty.o" "DragonGateCaveSetRN.phl[160]";
-connectAttr "Button_pnts_159__pntz.o" "DragonGateCaveSetRN.phl[161]";
-connectAttr "Button_pnts_160__pntx.o" "DragonGateCaveSetRN.phl[162]";
-connectAttr "Button_pnts_160__pnty.o" "DragonGateCaveSetRN.phl[163]";
-connectAttr "Button_pnts_160__pntz.o" "DragonGateCaveSetRN.phl[164]";
-connectAttr "Button_pnts_161__pntx.o" "DragonGateCaveSetRN.phl[165]";
-connectAttr "Button_pnts_161__pnty.o" "DragonGateCaveSetRN.phl[166]";
-connectAttr "Button_pnts_161__pntz.o" "DragonGateCaveSetRN.phl[167]";
-connectAttr "Button_pnts_162__pntx.o" "DragonGateCaveSetRN.phl[168]";
-connectAttr "Button_pnts_162__pnty.o" "DragonGateCaveSetRN.phl[169]";
-connectAttr "Button_pnts_162__pntz.o" "DragonGateCaveSetRN.phl[170]";
-connectAttr "Button_pnts_163__pntx.o" "DragonGateCaveSetRN.phl[171]";
-connectAttr "Button_pnts_163__pnty.o" "DragonGateCaveSetRN.phl[172]";
-connectAttr "Button_pnts_163__pntz.o" "DragonGateCaveSetRN.phl[173]";
-connectAttr "Button_pnts_164__pntx.o" "DragonGateCaveSetRN.phl[174]";
-connectAttr "Button_pnts_164__pnty.o" "DragonGateCaveSetRN.phl[175]";
-connectAttr "Button_pnts_164__pntz.o" "DragonGateCaveSetRN.phl[176]";
-connectAttr "Button_pnts_165__pntx.o" "DragonGateCaveSetRN.phl[177]";
-connectAttr "Button_pnts_165__pnty.o" "DragonGateCaveSetRN.phl[178]";
-connectAttr "Button_pnts_165__pntz.o" "DragonGateCaveSetRN.phl[179]";
-connectAttr "Button_pnts_166__pntx.o" "DragonGateCaveSetRN.phl[180]";
-connectAttr "Button_pnts_166__pnty.o" "DragonGateCaveSetRN.phl[181]";
-connectAttr "Button_pnts_166__pntz.o" "DragonGateCaveSetRN.phl[182]";
-connectAttr "Button_pnts_167__pntx.o" "DragonGateCaveSetRN.phl[183]";
-connectAttr "Button_pnts_167__pnty.o" "DragonGateCaveSetRN.phl[184]";
-connectAttr "Button_pnts_167__pntz.o" "DragonGateCaveSetRN.phl[185]";
-connectAttr "Button_pnts_168__pntx.o" "DragonGateCaveSetRN.phl[186]";
-connectAttr "Button_pnts_168__pnty.o" "DragonGateCaveSetRN.phl[187]";
-connectAttr "Button_pnts_168__pntz.o" "DragonGateCaveSetRN.phl[188]";
-connectAttr "Button_pnts_169__pntx.o" "DragonGateCaveSetRN.phl[189]";
-connectAttr "Button_pnts_169__pnty.o" "DragonGateCaveSetRN.phl[190]";
-connectAttr "Button_pnts_169__pntz.o" "DragonGateCaveSetRN.phl[191]";
-connectAttr "Button_pnts_170__pntx.o" "DragonGateCaveSetRN.phl[192]";
-connectAttr "Button_pnts_170__pnty.o" "DragonGateCaveSetRN.phl[193]";
-connectAttr "Button_pnts_170__pntz.o" "DragonGateCaveSetRN.phl[194]";
-connectAttr "Button_pnts_171__pntx.o" "DragonGateCaveSetRN.phl[195]";
-connectAttr "Button_pnts_171__pnty.o" "DragonGateCaveSetRN.phl[196]";
-connectAttr "Button_pnts_171__pntz.o" "DragonGateCaveSetRN.phl[197]";
-connectAttr "Button_pnts_172__pntx.o" "DragonGateCaveSetRN.phl[198]";
-connectAttr "Button_pnts_172__pnty.o" "DragonGateCaveSetRN.phl[199]";
-connectAttr "Button_pnts_172__pntz.o" "DragonGateCaveSetRN.phl[200]";
-connectAttr "Button_pnts_173__pntx.o" "DragonGateCaveSetRN.phl[201]";
-connectAttr "Button_pnts_173__pnty.o" "DragonGateCaveSetRN.phl[202]";
-connectAttr "Button_pnts_173__pntz.o" "DragonGateCaveSetRN.phl[203]";
-connectAttr "Button_pnts_174__pntx.o" "DragonGateCaveSetRN.phl[204]";
-connectAttr "Button_pnts_174__pnty.o" "DragonGateCaveSetRN.phl[205]";
-connectAttr "Button_pnts_174__pntz.o" "DragonGateCaveSetRN.phl[206]";
-connectAttr "Button_pnts_175__pntx.o" "DragonGateCaveSetRN.phl[207]";
-connectAttr "Button_pnts_175__pnty.o" "DragonGateCaveSetRN.phl[208]";
-connectAttr "Button_pnts_175__pntz.o" "DragonGateCaveSetRN.phl[209]";
-connectAttr "Button_pnts_176__pntx.o" "DragonGateCaveSetRN.phl[210]";
-connectAttr "Button_pnts_176__pnty.o" "DragonGateCaveSetRN.phl[211]";
-connectAttr "Button_pnts_176__pntz.o" "DragonGateCaveSetRN.phl[212]";
-connectAttr "Button_pnts_177__pntx.o" "DragonGateCaveSetRN.phl[213]";
-connectAttr "Button_pnts_177__pnty.o" "DragonGateCaveSetRN.phl[214]";
-connectAttr "Button_pnts_177__pntz.o" "DragonGateCaveSetRN.phl[215]";
-connectAttr "Button_pnts_178__pntx.o" "DragonGateCaveSetRN.phl[216]";
-connectAttr "Button_pnts_178__pnty.o" "DragonGateCaveSetRN.phl[217]";
-connectAttr "Button_pnts_178__pntz.o" "DragonGateCaveSetRN.phl[218]";
-connectAttr "Button_pnts_179__pntx.o" "DragonGateCaveSetRN.phl[219]";
-connectAttr "Button_pnts_179__pnty.o" "DragonGateCaveSetRN.phl[220]";
-connectAttr "Button_pnts_179__pntz.o" "DragonGateCaveSetRN.phl[221]";
-connectAttr "Button_pnts_180__pntx.o" "DragonGateCaveSetRN.phl[222]";
-connectAttr "Button_pnts_180__pnty.o" "DragonGateCaveSetRN.phl[223]";
-connectAttr "Button_pnts_180__pntz.o" "DragonGateCaveSetRN.phl[224]";
-connectAttr "Button_pnts_181__pntx.o" "DragonGateCaveSetRN.phl[225]";
-connectAttr "Button_pnts_181__pnty.o" "DragonGateCaveSetRN.phl[226]";
-connectAttr "Button_pnts_181__pntz.o" "DragonGateCaveSetRN.phl[227]";
-connectAttr "Button_pnts_182__pntx.o" "DragonGateCaveSetRN.phl[228]";
-connectAttr "Button_pnts_182__pnty.o" "DragonGateCaveSetRN.phl[229]";
-connectAttr "Button_pnts_182__pntz.o" "DragonGateCaveSetRN.phl[230]";
-connectAttr "Button_pnts_183__pntx.o" "DragonGateCaveSetRN.phl[231]";
-connectAttr "Button_pnts_183__pnty.o" "DragonGateCaveSetRN.phl[232]";
-connectAttr "Button_pnts_183__pntz.o" "DragonGateCaveSetRN.phl[233]";
-connectAttr "Button_pnts_184__pntx.o" "DragonGateCaveSetRN.phl[234]";
-connectAttr "Button_pnts_184__pnty.o" "DragonGateCaveSetRN.phl[235]";
-connectAttr "Button_pnts_184__pntz.o" "DragonGateCaveSetRN.phl[236]";
-connectAttr "Button_pnts_185__pntx.o" "DragonGateCaveSetRN.phl[237]";
-connectAttr "Button_pnts_185__pnty.o" "DragonGateCaveSetRN.phl[238]";
-connectAttr "Button_pnts_185__pntz.o" "DragonGateCaveSetRN.phl[239]";
-connectAttr "Button_pnts_186__pntx.o" "DragonGateCaveSetRN.phl[240]";
-connectAttr "Button_pnts_186__pnty.o" "DragonGateCaveSetRN.phl[241]";
-connectAttr "Button_pnts_186__pntz.o" "DragonGateCaveSetRN.phl[242]";
-connectAttr "Button_pnts_187__pntx.o" "DragonGateCaveSetRN.phl[243]";
-connectAttr "Button_pnts_187__pnty.o" "DragonGateCaveSetRN.phl[244]";
-connectAttr "Button_pnts_187__pntz.o" "DragonGateCaveSetRN.phl[245]";
-connectAttr "Button_pnts_188__pntx.o" "DragonGateCaveSetRN.phl[246]";
-connectAttr "Button_pnts_188__pnty.o" "DragonGateCaveSetRN.phl[247]";
-connectAttr "Button_pnts_188__pntz.o" "DragonGateCaveSetRN.phl[248]";
-connectAttr "Button_pnts_189__pntx.o" "DragonGateCaveSetRN.phl[249]";
-connectAttr "Button_pnts_189__pnty.o" "DragonGateCaveSetRN.phl[250]";
-connectAttr "Button_pnts_189__pntz.o" "DragonGateCaveSetRN.phl[251]";
-connectAttr "Button_pnts_190__pntx.o" "DragonGateCaveSetRN.phl[252]";
-connectAttr "Button_pnts_190__pnty.o" "DragonGateCaveSetRN.phl[253]";
-connectAttr "Button_pnts_190__pntz.o" "DragonGateCaveSetRN.phl[254]";
-connectAttr "Button_pnts_191__pntx.o" "DragonGateCaveSetRN.phl[255]";
-connectAttr "Button_pnts_191__pnty.o" "DragonGateCaveSetRN.phl[256]";
-connectAttr "Button_pnts_191__pntz.o" "DragonGateCaveSetRN.phl[257]";
-connectAttr "Button_pnts_192__pntx.o" "DragonGateCaveSetRN.phl[258]";
-connectAttr "Button_pnts_192__pnty.o" "DragonGateCaveSetRN.phl[259]";
-connectAttr "Button_pnts_192__pntz.o" "DragonGateCaveSetRN.phl[260]";
-connectAttr "Button_pnts_193__pntx.o" "DragonGateCaveSetRN.phl[261]";
-connectAttr "Button_pnts_193__pnty.o" "DragonGateCaveSetRN.phl[262]";
-connectAttr "Button_pnts_193__pntz.o" "DragonGateCaveSetRN.phl[263]";
-connectAttr "Button_pnts_194__pntx.o" "DragonGateCaveSetRN.phl[264]";
-connectAttr "Button_pnts_194__pnty.o" "DragonGateCaveSetRN.phl[265]";
-connectAttr "Button_pnts_194__pntz.o" "DragonGateCaveSetRN.phl[266]";
-connectAttr "Button_pnts_195__pntx.o" "DragonGateCaveSetRN.phl[267]";
-connectAttr "Button_pnts_195__pnty.o" "DragonGateCaveSetRN.phl[268]";
-connectAttr "Button_pnts_195__pntz.o" "DragonGateCaveSetRN.phl[269]";
-connectAttr "Button_pnts_196__pntx.o" "DragonGateCaveSetRN.phl[270]";
-connectAttr "Button_pnts_196__pnty.o" "DragonGateCaveSetRN.phl[271]";
-connectAttr "Button_pnts_196__pntz.o" "DragonGateCaveSetRN.phl[272]";
-connectAttr "Button_pnts_197__pntx.o" "DragonGateCaveSetRN.phl[273]";
-connectAttr "Button_pnts_197__pnty.o" "DragonGateCaveSetRN.phl[274]";
-connectAttr "Button_pnts_197__pntz.o" "DragonGateCaveSetRN.phl[275]";
-connectAttr "Button_pnts_198__pntx.o" "DragonGateCaveSetRN.phl[276]";
-connectAttr "Button_pnts_198__pnty.o" "DragonGateCaveSetRN.phl[277]";
-connectAttr "Button_pnts_198__pntz.o" "DragonGateCaveSetRN.phl[278]";
-connectAttr "Button_pnts_199__pntx.o" "DragonGateCaveSetRN.phl[279]";
-connectAttr "Button_pnts_199__pnty.o" "DragonGateCaveSetRN.phl[280]";
-connectAttr "Button_pnts_199__pntz.o" "DragonGateCaveSetRN.phl[281]";
-connectAttr "Button_pnts_200__pntx.o" "DragonGateCaveSetRN.phl[282]";
-connectAttr "Button_pnts_200__pnty.o" "DragonGateCaveSetRN.phl[283]";
-connectAttr "Button_pnts_200__pntz.o" "DragonGateCaveSetRN.phl[284]";
-connectAttr "Button_pnts_201__pntx.o" "DragonGateCaveSetRN.phl[285]";
-connectAttr "Button_pnts_201__pnty.o" "DragonGateCaveSetRN.phl[286]";
-connectAttr "Button_pnts_201__pntz.o" "DragonGateCaveSetRN.phl[287]";
-connectAttr "Button_pnts_202__pntx.o" "DragonGateCaveSetRN.phl[288]";
-connectAttr "Button_pnts_202__pnty.o" "DragonGateCaveSetRN.phl[289]";
-connectAttr "Button_pnts_202__pntz.o" "DragonGateCaveSetRN.phl[290]";
-connectAttr "Button_pnts_203__pntx.o" "DragonGateCaveSetRN.phl[291]";
-connectAttr "Button_pnts_203__pnty.o" "DragonGateCaveSetRN.phl[292]";
-connectAttr "Button_pnts_203__pntz.o" "DragonGateCaveSetRN.phl[293]";
-connectAttr "Button_pnts_204__pntx.o" "DragonGateCaveSetRN.phl[294]";
-connectAttr "Button_pnts_204__pnty.o" "DragonGateCaveSetRN.phl[295]";
-connectAttr "Button_pnts_204__pntz.o" "DragonGateCaveSetRN.phl[296]";
-connectAttr "Button_pnts_205__pntx.o" "DragonGateCaveSetRN.phl[297]";
-connectAttr "Button_pnts_205__pnty.o" "DragonGateCaveSetRN.phl[298]";
-connectAttr "Button_pnts_205__pntz.o" "DragonGateCaveSetRN.phl[299]";
-connectAttr "Button_pnts_206__pntx.o" "DragonGateCaveSetRN.phl[300]";
-connectAttr "Button_pnts_206__pnty.o" "DragonGateCaveSetRN.phl[301]";
-connectAttr "Button_pnts_206__pntz.o" "DragonGateCaveSetRN.phl[302]";
-connectAttr "Button_pnts_207__pntx.o" "DragonGateCaveSetRN.phl[303]";
-connectAttr "Button_pnts_207__pnty.o" "DragonGateCaveSetRN.phl[304]";
-connectAttr "Button_pnts_207__pntz.o" "DragonGateCaveSetRN.phl[305]";
-connectAttr "Button_pnts_208__pntx.o" "DragonGateCaveSetRN.phl[306]";
-connectAttr "Button_pnts_208__pnty.o" "DragonGateCaveSetRN.phl[307]";
-connectAttr "Button_pnts_208__pntz.o" "DragonGateCaveSetRN.phl[308]";
-connectAttr "Button_pnts_209__pntx.o" "DragonGateCaveSetRN.phl[309]";
-connectAttr "Button_pnts_209__pnty.o" "DragonGateCaveSetRN.phl[310]";
-connectAttr "Button_pnts_209__pntz.o" "DragonGateCaveSetRN.phl[311]";
-connectAttr "Button_pnts_210__pntx.o" "DragonGateCaveSetRN.phl[312]";
-connectAttr "Button_pnts_210__pnty.o" "DragonGateCaveSetRN.phl[313]";
-connectAttr "Button_pnts_210__pntz.o" "DragonGateCaveSetRN.phl[314]";
-connectAttr "Button_pnts_211__pntx.o" "DragonGateCaveSetRN.phl[315]";
-connectAttr "Button_pnts_211__pnty.o" "DragonGateCaveSetRN.phl[316]";
-connectAttr "Button_pnts_211__pntz.o" "DragonGateCaveSetRN.phl[317]";
-connectAttr "Button_pnts_212__pntx.o" "DragonGateCaveSetRN.phl[318]";
-connectAttr "Button_pnts_212__pnty.o" "DragonGateCaveSetRN.phl[319]";
-connectAttr "Button_pnts_212__pntz.o" "DragonGateCaveSetRN.phl[320]";
-connectAttr "Button_pnts_213__pntx.o" "DragonGateCaveSetRN.phl[321]";
-connectAttr "Button_pnts_213__pnty.o" "DragonGateCaveSetRN.phl[322]";
-connectAttr "Button_pnts_213__pntz.o" "DragonGateCaveSetRN.phl[323]";
-connectAttr "Button_pnts_214__pntx.o" "DragonGateCaveSetRN.phl[324]";
-connectAttr "Button_pnts_214__pnty.o" "DragonGateCaveSetRN.phl[325]";
-connectAttr "Button_pnts_214__pntz.o" "DragonGateCaveSetRN.phl[326]";
-connectAttr "Button_pnts_215__pntx.o" "DragonGateCaveSetRN.phl[327]";
-connectAttr "Button_pnts_215__pnty.o" "DragonGateCaveSetRN.phl[328]";
-connectAttr "Button_pnts_215__pntz.o" "DragonGateCaveSetRN.phl[329]";
-connectAttr "Button_pnts_216__pntx.o" "DragonGateCaveSetRN.phl[330]";
-connectAttr "Button_pnts_216__pnty.o" "DragonGateCaveSetRN.phl[331]";
-connectAttr "Button_pnts_216__pntz.o" "DragonGateCaveSetRN.phl[332]";
-connectAttr "Button_pnts_217__pntx.o" "DragonGateCaveSetRN.phl[333]";
-connectAttr "Button_pnts_217__pnty.o" "DragonGateCaveSetRN.phl[334]";
-connectAttr "Button_pnts_217__pntz.o" "DragonGateCaveSetRN.phl[335]";
-connectAttr "Button_pnts_218__pntx.o" "DragonGateCaveSetRN.phl[336]";
-connectAttr "Button_pnts_218__pnty.o" "DragonGateCaveSetRN.phl[337]";
-connectAttr "Button_pnts_218__pntz.o" "DragonGateCaveSetRN.phl[338]";
-connectAttr "Button_pnts_219__pntx.o" "DragonGateCaveSetRN.phl[339]";
-connectAttr "Button_pnts_219__pnty.o" "DragonGateCaveSetRN.phl[340]";
-connectAttr "Button_pnts_219__pntz.o" "DragonGateCaveSetRN.phl[341]";
-connectAttr "Button_pnts_220__pntx.o" "DragonGateCaveSetRN.phl[342]";
-connectAttr "Button_pnts_220__pnty.o" "DragonGateCaveSetRN.phl[343]";
-connectAttr "Button_pnts_220__pntz.o" "DragonGateCaveSetRN.phl[344]";
-connectAttr "Button_pnts_221__pntx.o" "DragonGateCaveSetRN.phl[345]";
-connectAttr "Button_pnts_221__pnty.o" "DragonGateCaveSetRN.phl[346]";
-connectAttr "Button_pnts_221__pntz.o" "DragonGateCaveSetRN.phl[347]";
-connectAttr "Button_pnts_222__pntx.o" "DragonGateCaveSetRN.phl[348]";
-connectAttr "Button_pnts_222__pnty.o" "DragonGateCaveSetRN.phl[349]";
-connectAttr "Button_pnts_222__pntz.o" "DragonGateCaveSetRN.phl[350]";
-connectAttr "Button_pnts_223__pntx.o" "DragonGateCaveSetRN.phl[351]";
-connectAttr "Button_pnts_223__pnty.o" "DragonGateCaveSetRN.phl[352]";
-connectAttr "Button_pnts_223__pntz.o" "DragonGateCaveSetRN.phl[353]";
-connectAttr "Button_pnts_224__pntx.o" "DragonGateCaveSetRN.phl[354]";
-connectAttr "Button_pnts_224__pnty.o" "DragonGateCaveSetRN.phl[355]";
-connectAttr "Button_pnts_224__pntz.o" "DragonGateCaveSetRN.phl[356]";
-connectAttr "Button_pnts_225__pntx.o" "DragonGateCaveSetRN.phl[357]";
-connectAttr "Button_pnts_225__pnty.o" "DragonGateCaveSetRN.phl[358]";
-connectAttr "Button_pnts_225__pntz.o" "DragonGateCaveSetRN.phl[359]";
-connectAttr "Button_pnts_226__pntx.o" "DragonGateCaveSetRN.phl[360]";
-connectAttr "Button_pnts_226__pnty.o" "DragonGateCaveSetRN.phl[361]";
-connectAttr "Button_pnts_226__pntz.o" "DragonGateCaveSetRN.phl[362]";
-connectAttr "Button_pnts_227__pntx.o" "DragonGateCaveSetRN.phl[363]";
-connectAttr "Button_pnts_227__pnty.o" "DragonGateCaveSetRN.phl[364]";
-connectAttr "Button_pnts_227__pntz.o" "DragonGateCaveSetRN.phl[365]";
-connectAttr "Button_pnts_228__pntx.o" "DragonGateCaveSetRN.phl[366]";
-connectAttr "Button_pnts_228__pnty.o" "DragonGateCaveSetRN.phl[367]";
-connectAttr "Button_pnts_228__pntz.o" "DragonGateCaveSetRN.phl[368]";
-connectAttr "Button_pnts_229__pntx.o" "DragonGateCaveSetRN.phl[369]";
-connectAttr "Button_pnts_229__pnty.o" "DragonGateCaveSetRN.phl[370]";
-connectAttr "Button_pnts_229__pntz.o" "DragonGateCaveSetRN.phl[371]";
-connectAttr "Button_pnts_230__pntx.o" "DragonGateCaveSetRN.phl[372]";
-connectAttr "Button_pnts_230__pnty.o" "DragonGateCaveSetRN.phl[373]";
-connectAttr "Button_pnts_230__pntz.o" "DragonGateCaveSetRN.phl[374]";
-connectAttr "Button_pnts_231__pntx.o" "DragonGateCaveSetRN.phl[375]";
-connectAttr "Button_pnts_231__pnty.o" "DragonGateCaveSetRN.phl[376]";
-connectAttr "Button_pnts_231__pntz.o" "DragonGateCaveSetRN.phl[377]";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[7]";
+connectAttr "Button_Layer.di" "DragonGateCaveSetRN.phl[8]";
+connectAttr "Button_Layer.di" "DragonGateCaveSetRN.phl[9]";
+connectAttr "Button_Layer.di" "DragonGateCaveSetRN.phl[10]";
+connectAttr "Button_pnts_61__pntx.o" "DragonGateCaveSetRN.phl[11]";
+connectAttr "Button_pnts_61__pnty.o" "DragonGateCaveSetRN.phl[12]";
+connectAttr "Button_pnts_61__pntz.o" "DragonGateCaveSetRN.phl[13]";
+connectAttr "Button_pnts_62__pntx.o" "DragonGateCaveSetRN.phl[14]";
+connectAttr "Button_pnts_62__pnty.o" "DragonGateCaveSetRN.phl[15]";
+connectAttr "Button_pnts_62__pntz.o" "DragonGateCaveSetRN.phl[16]";
+connectAttr "Button_pnts_63__pntx.o" "DragonGateCaveSetRN.phl[17]";
+connectAttr "Button_pnts_63__pnty.o" "DragonGateCaveSetRN.phl[18]";
+connectAttr "Button_pnts_63__pntz.o" "DragonGateCaveSetRN.phl[19]";
+connectAttr "Button_pnts_64__pntx.o" "DragonGateCaveSetRN.phl[20]";
+connectAttr "Button_pnts_64__pnty.o" "DragonGateCaveSetRN.phl[21]";
+connectAttr "Button_pnts_64__pntz.o" "DragonGateCaveSetRN.phl[22]";
+connectAttr "Button_pnts_65__pntx.o" "DragonGateCaveSetRN.phl[23]";
+connectAttr "Button_pnts_65__pnty.o" "DragonGateCaveSetRN.phl[24]";
+connectAttr "Button_pnts_65__pntz.o" "DragonGateCaveSetRN.phl[25]";
+connectAttr "Button_pnts_66__pntx.o" "DragonGateCaveSetRN.phl[26]";
+connectAttr "Button_pnts_66__pnty.o" "DragonGateCaveSetRN.phl[27]";
+connectAttr "Button_pnts_66__pntz.o" "DragonGateCaveSetRN.phl[28]";
+connectAttr "Button_pnts_67__pntx.o" "DragonGateCaveSetRN.phl[29]";
+connectAttr "Button_pnts_67__pnty.o" "DragonGateCaveSetRN.phl[30]";
+connectAttr "Button_pnts_67__pntz.o" "DragonGateCaveSetRN.phl[31]";
+connectAttr "Button_pnts_68__pntx.o" "DragonGateCaveSetRN.phl[32]";
+connectAttr "Button_pnts_68__pnty.o" "DragonGateCaveSetRN.phl[33]";
+connectAttr "Button_pnts_68__pntz.o" "DragonGateCaveSetRN.phl[34]";
+connectAttr "Button_pnts_69__pntx.o" "DragonGateCaveSetRN.phl[35]";
+connectAttr "Button_pnts_69__pnty.o" "DragonGateCaveSetRN.phl[36]";
+connectAttr "Button_pnts_69__pntz.o" "DragonGateCaveSetRN.phl[37]";
+connectAttr "Button_pnts_70__pntx.o" "DragonGateCaveSetRN.phl[38]";
+connectAttr "Button_pnts_70__pnty.o" "DragonGateCaveSetRN.phl[39]";
+connectAttr "Button_pnts_70__pntz.o" "DragonGateCaveSetRN.phl[40]";
+connectAttr "Button_pnts_71__pntx.o" "DragonGateCaveSetRN.phl[41]";
+connectAttr "Button_pnts_71__pnty.o" "DragonGateCaveSetRN.phl[42]";
+connectAttr "Button_pnts_71__pntz.o" "DragonGateCaveSetRN.phl[43]";
+connectAttr "Button_pnts_72__pntx.o" "DragonGateCaveSetRN.phl[44]";
+connectAttr "Button_pnts_72__pnty.o" "DragonGateCaveSetRN.phl[45]";
+connectAttr "Button_pnts_72__pntz.o" "DragonGateCaveSetRN.phl[46]";
+connectAttr "Button_pnts_73__pntx.o" "DragonGateCaveSetRN.phl[47]";
+connectAttr "Button_pnts_73__pnty.o" "DragonGateCaveSetRN.phl[48]";
+connectAttr "Button_pnts_73__pntz.o" "DragonGateCaveSetRN.phl[49]";
+connectAttr "Button_pnts_74__pntx.o" "DragonGateCaveSetRN.phl[50]";
+connectAttr "Button_pnts_74__pnty.o" "DragonGateCaveSetRN.phl[51]";
+connectAttr "Button_pnts_74__pntz.o" "DragonGateCaveSetRN.phl[52]";
+connectAttr "Button_pnts_75__pntx.o" "DragonGateCaveSetRN.phl[53]";
+connectAttr "Button_pnts_75__pnty.o" "DragonGateCaveSetRN.phl[54]";
+connectAttr "Button_pnts_75__pntz.o" "DragonGateCaveSetRN.phl[55]";
+connectAttr "Button_pnts_76__pntx.o" "DragonGateCaveSetRN.phl[56]";
+connectAttr "Button_pnts_76__pnty.o" "DragonGateCaveSetRN.phl[57]";
+connectAttr "Button_pnts_76__pntz.o" "DragonGateCaveSetRN.phl[58]";
+connectAttr "Button_pnts_77__pntx.o" "DragonGateCaveSetRN.phl[59]";
+connectAttr "Button_pnts_77__pnty.o" "DragonGateCaveSetRN.phl[60]";
+connectAttr "Button_pnts_77__pntz.o" "DragonGateCaveSetRN.phl[61]";
+connectAttr "Button_pnts_78__pntx.o" "DragonGateCaveSetRN.phl[62]";
+connectAttr "Button_pnts_78__pnty.o" "DragonGateCaveSetRN.phl[63]";
+connectAttr "Button_pnts_78__pntz.o" "DragonGateCaveSetRN.phl[64]";
+connectAttr "Button_pnts_79__pntx.o" "DragonGateCaveSetRN.phl[65]";
+connectAttr "Button_pnts_79__pnty.o" "DragonGateCaveSetRN.phl[66]";
+connectAttr "Button_pnts_79__pntz.o" "DragonGateCaveSetRN.phl[67]";
+connectAttr "Button_pnts_80__pntx.o" "DragonGateCaveSetRN.phl[68]";
+connectAttr "Button_pnts_80__pnty.o" "DragonGateCaveSetRN.phl[69]";
+connectAttr "Button_pnts_80__pntz.o" "DragonGateCaveSetRN.phl[70]";
+connectAttr "Button_pnts_81__pntx.o" "DragonGateCaveSetRN.phl[71]";
+connectAttr "Button_pnts_81__pnty.o" "DragonGateCaveSetRN.phl[72]";
+connectAttr "Button_pnts_81__pntz.o" "DragonGateCaveSetRN.phl[73]";
+connectAttr "Button_pnts_87__pntx.o" "DragonGateCaveSetRN.phl[74]";
+connectAttr "Button_pnts_87__pnty.o" "DragonGateCaveSetRN.phl[75]";
+connectAttr "Button_pnts_87__pntz.o" "DragonGateCaveSetRN.phl[76]";
+connectAttr "Button_pnts_88__pntx.o" "DragonGateCaveSetRN.phl[77]";
+connectAttr "Button_pnts_88__pnty.o" "DragonGateCaveSetRN.phl[78]";
+connectAttr "Button_pnts_88__pntz.o" "DragonGateCaveSetRN.phl[79]";
+connectAttr "Button_pnts_94__pntx.o" "DragonGateCaveSetRN.phl[80]";
+connectAttr "Button_pnts_94__pnty.o" "DragonGateCaveSetRN.phl[81]";
+connectAttr "Button_pnts_94__pntz.o" "DragonGateCaveSetRN.phl[82]";
+connectAttr "Button_pnts_95__pntx.o" "DragonGateCaveSetRN.phl[83]";
+connectAttr "Button_pnts_95__pnty.o" "DragonGateCaveSetRN.phl[84]";
+connectAttr "Button_pnts_95__pntz.o" "DragonGateCaveSetRN.phl[85]";
+connectAttr "Button_pnts_101__pntx.o" "DragonGateCaveSetRN.phl[86]";
+connectAttr "Button_pnts_101__pnty.o" "DragonGateCaveSetRN.phl[87]";
+connectAttr "Button_pnts_101__pntz.o" "DragonGateCaveSetRN.phl[88]";
+connectAttr "Button_pnts_102__pntx.o" "DragonGateCaveSetRN.phl[89]";
+connectAttr "Button_pnts_102__pnty.o" "DragonGateCaveSetRN.phl[90]";
+connectAttr "Button_pnts_102__pntz.o" "DragonGateCaveSetRN.phl[91]";
+connectAttr "Button_pnts_108__pntx.o" "DragonGateCaveSetRN.phl[92]";
+connectAttr "Button_pnts_108__pnty.o" "DragonGateCaveSetRN.phl[93]";
+connectAttr "Button_pnts_108__pntz.o" "DragonGateCaveSetRN.phl[94]";
+connectAttr "Button_pnts_109__pntx.o" "DragonGateCaveSetRN.phl[95]";
+connectAttr "Button_pnts_109__pnty.o" "DragonGateCaveSetRN.phl[96]";
+connectAttr "Button_pnts_109__pntz.o" "DragonGateCaveSetRN.phl[97]";
+connectAttr "Button_pnts_115__pntx.o" "DragonGateCaveSetRN.phl[98]";
+connectAttr "Button_pnts_115__pnty.o" "DragonGateCaveSetRN.phl[99]";
+connectAttr "Button_pnts_115__pntz.o" "DragonGateCaveSetRN.phl[100]";
+connectAttr "Button_pnts_116__pntx.o" "DragonGateCaveSetRN.phl[101]";
+connectAttr "Button_pnts_116__pnty.o" "DragonGateCaveSetRN.phl[102]";
+connectAttr "Button_pnts_116__pntz.o" "DragonGateCaveSetRN.phl[103]";
+connectAttr "Button_pnts_122__pntx.o" "DragonGateCaveSetRN.phl[104]";
+connectAttr "Button_pnts_122__pnty.o" "DragonGateCaveSetRN.phl[105]";
+connectAttr "Button_pnts_122__pntz.o" "DragonGateCaveSetRN.phl[106]";
+connectAttr "Button_pnts_123__pntx.o" "DragonGateCaveSetRN.phl[107]";
+connectAttr "Button_pnts_123__pnty.o" "DragonGateCaveSetRN.phl[108]";
+connectAttr "Button_pnts_123__pntz.o" "DragonGateCaveSetRN.phl[109]";
+connectAttr "Button_pnts_129__pntx.o" "DragonGateCaveSetRN.phl[110]";
+connectAttr "Button_pnts_129__pnty.o" "DragonGateCaveSetRN.phl[111]";
+connectAttr "Button_pnts_129__pntz.o" "DragonGateCaveSetRN.phl[112]";
+connectAttr "Button_pnts_130__pntx.o" "DragonGateCaveSetRN.phl[113]";
+connectAttr "Button_pnts_130__pnty.o" "DragonGateCaveSetRN.phl[114]";
+connectAttr "Button_pnts_130__pntz.o" "DragonGateCaveSetRN.phl[115]";
+connectAttr "Button_pnts_136__pntx.o" "DragonGateCaveSetRN.phl[116]";
+connectAttr "Button_pnts_136__pnty.o" "DragonGateCaveSetRN.phl[117]";
+connectAttr "Button_pnts_136__pntz.o" "DragonGateCaveSetRN.phl[118]";
+connectAttr "Button_pnts_137__pntx.o" "DragonGateCaveSetRN.phl[119]";
+connectAttr "Button_pnts_137__pnty.o" "DragonGateCaveSetRN.phl[120]";
+connectAttr "Button_pnts_137__pntz.o" "DragonGateCaveSetRN.phl[121]";
+connectAttr "Button_pnts_143__pntx.o" "DragonGateCaveSetRN.phl[122]";
+connectAttr "Button_pnts_143__pnty.o" "DragonGateCaveSetRN.phl[123]";
+connectAttr "Button_pnts_143__pntz.o" "DragonGateCaveSetRN.phl[124]";
+connectAttr "Button_pnts_144__pntx.o" "DragonGateCaveSetRN.phl[125]";
+connectAttr "Button_pnts_144__pnty.o" "DragonGateCaveSetRN.phl[126]";
+connectAttr "Button_pnts_144__pntz.o" "DragonGateCaveSetRN.phl[127]";
+connectAttr "Button_pnts_150__pntx.o" "DragonGateCaveSetRN.phl[128]";
+connectAttr "Button_pnts_150__pnty.o" "DragonGateCaveSetRN.phl[129]";
+connectAttr "Button_pnts_150__pntz.o" "DragonGateCaveSetRN.phl[130]";
+connectAttr "Button_pnts_151__pntx.o" "DragonGateCaveSetRN.phl[131]";
+connectAttr "Button_pnts_151__pnty.o" "DragonGateCaveSetRN.phl[132]";
+connectAttr "Button_pnts_151__pntz.o" "DragonGateCaveSetRN.phl[133]";
+connectAttr "Button_pnts_152__pntx.o" "DragonGateCaveSetRN.phl[134]";
+connectAttr "Button_pnts_152__pnty.o" "DragonGateCaveSetRN.phl[135]";
+connectAttr "Button_pnts_152__pntz.o" "DragonGateCaveSetRN.phl[136]";
+connectAttr "Button_pnts_153__pntx.o" "DragonGateCaveSetRN.phl[137]";
+connectAttr "Button_pnts_153__pnty.o" "DragonGateCaveSetRN.phl[138]";
+connectAttr "Button_pnts_153__pntz.o" "DragonGateCaveSetRN.phl[139]";
+connectAttr "Button_pnts_154__pntx.o" "DragonGateCaveSetRN.phl[140]";
+connectAttr "Button_pnts_154__pnty.o" "DragonGateCaveSetRN.phl[141]";
+connectAttr "Button_pnts_154__pntz.o" "DragonGateCaveSetRN.phl[142]";
+connectAttr "Button_pnts_155__pntx.o" "DragonGateCaveSetRN.phl[143]";
+connectAttr "Button_pnts_155__pnty.o" "DragonGateCaveSetRN.phl[144]";
+connectAttr "Button_pnts_155__pntz.o" "DragonGateCaveSetRN.phl[145]";
+connectAttr "Button_pnts_156__pntx.o" "DragonGateCaveSetRN.phl[146]";
+connectAttr "Button_pnts_156__pnty.o" "DragonGateCaveSetRN.phl[147]";
+connectAttr "Button_pnts_156__pntz.o" "DragonGateCaveSetRN.phl[148]";
+connectAttr "Button_pnts_157__pntx.o" "DragonGateCaveSetRN.phl[149]";
+connectAttr "Button_pnts_157__pnty.o" "DragonGateCaveSetRN.phl[150]";
+connectAttr "Button_pnts_157__pntz.o" "DragonGateCaveSetRN.phl[151]";
+connectAttr "Button_pnts_158__pntx.o" "DragonGateCaveSetRN.phl[152]";
+connectAttr "Button_pnts_158__pnty.o" "DragonGateCaveSetRN.phl[153]";
+connectAttr "Button_pnts_158__pntz.o" "DragonGateCaveSetRN.phl[154]";
+connectAttr "Button_pnts_159__pntx.o" "DragonGateCaveSetRN.phl[155]";
+connectAttr "Button_pnts_159__pnty.o" "DragonGateCaveSetRN.phl[156]";
+connectAttr "Button_pnts_159__pntz.o" "DragonGateCaveSetRN.phl[157]";
+connectAttr "Button_pnts_160__pntx.o" "DragonGateCaveSetRN.phl[158]";
+connectAttr "Button_pnts_160__pnty.o" "DragonGateCaveSetRN.phl[159]";
+connectAttr "Button_pnts_160__pntz.o" "DragonGateCaveSetRN.phl[160]";
+connectAttr "Button_pnts_161__pntx.o" "DragonGateCaveSetRN.phl[161]";
+connectAttr "Button_pnts_161__pnty.o" "DragonGateCaveSetRN.phl[162]";
+connectAttr "Button_pnts_161__pntz.o" "DragonGateCaveSetRN.phl[163]";
+connectAttr "Button_pnts_162__pntx.o" "DragonGateCaveSetRN.phl[164]";
+connectAttr "Button_pnts_162__pnty.o" "DragonGateCaveSetRN.phl[165]";
+connectAttr "Button_pnts_162__pntz.o" "DragonGateCaveSetRN.phl[166]";
+connectAttr "Button_pnts_163__pntx.o" "DragonGateCaveSetRN.phl[167]";
+connectAttr "Button_pnts_163__pnty.o" "DragonGateCaveSetRN.phl[168]";
+connectAttr "Button_pnts_163__pntz.o" "DragonGateCaveSetRN.phl[169]";
+connectAttr "Button_pnts_164__pntx.o" "DragonGateCaveSetRN.phl[170]";
+connectAttr "Button_pnts_164__pnty.o" "DragonGateCaveSetRN.phl[171]";
+connectAttr "Button_pnts_164__pntz.o" "DragonGateCaveSetRN.phl[172]";
+connectAttr "Button_pnts_165__pntx.o" "DragonGateCaveSetRN.phl[173]";
+connectAttr "Button_pnts_165__pnty.o" "DragonGateCaveSetRN.phl[174]";
+connectAttr "Button_pnts_165__pntz.o" "DragonGateCaveSetRN.phl[175]";
+connectAttr "Button_pnts_166__pntx.o" "DragonGateCaveSetRN.phl[176]";
+connectAttr "Button_pnts_166__pnty.o" "DragonGateCaveSetRN.phl[177]";
+connectAttr "Button_pnts_166__pntz.o" "DragonGateCaveSetRN.phl[178]";
+connectAttr "Button_pnts_167__pntx.o" "DragonGateCaveSetRN.phl[179]";
+connectAttr "Button_pnts_167__pnty.o" "DragonGateCaveSetRN.phl[180]";
+connectAttr "Button_pnts_167__pntz.o" "DragonGateCaveSetRN.phl[181]";
+connectAttr "Button_pnts_168__pntx.o" "DragonGateCaveSetRN.phl[182]";
+connectAttr "Button_pnts_168__pnty.o" "DragonGateCaveSetRN.phl[183]";
+connectAttr "Button_pnts_168__pntz.o" "DragonGateCaveSetRN.phl[184]";
+connectAttr "Button_pnts_169__pntx.o" "DragonGateCaveSetRN.phl[185]";
+connectAttr "Button_pnts_169__pnty.o" "DragonGateCaveSetRN.phl[186]";
+connectAttr "Button_pnts_169__pntz.o" "DragonGateCaveSetRN.phl[187]";
+connectAttr "Button_pnts_170__pntx.o" "DragonGateCaveSetRN.phl[188]";
+connectAttr "Button_pnts_170__pnty.o" "DragonGateCaveSetRN.phl[189]";
+connectAttr "Button_pnts_170__pntz.o" "DragonGateCaveSetRN.phl[190]";
+connectAttr "Button_pnts_171__pntx.o" "DragonGateCaveSetRN.phl[191]";
+connectAttr "Button_pnts_171__pnty.o" "DragonGateCaveSetRN.phl[192]";
+connectAttr "Button_pnts_171__pntz.o" "DragonGateCaveSetRN.phl[193]";
+connectAttr "Button_pnts_172__pntx.o" "DragonGateCaveSetRN.phl[194]";
+connectAttr "Button_pnts_172__pnty.o" "DragonGateCaveSetRN.phl[195]";
+connectAttr "Button_pnts_172__pntz.o" "DragonGateCaveSetRN.phl[196]";
+connectAttr "Button_pnts_173__pntx.o" "DragonGateCaveSetRN.phl[197]";
+connectAttr "Button_pnts_173__pnty.o" "DragonGateCaveSetRN.phl[198]";
+connectAttr "Button_pnts_173__pntz.o" "DragonGateCaveSetRN.phl[199]";
+connectAttr "Button_pnts_174__pntx.o" "DragonGateCaveSetRN.phl[200]";
+connectAttr "Button_pnts_174__pnty.o" "DragonGateCaveSetRN.phl[201]";
+connectAttr "Button_pnts_174__pntz.o" "DragonGateCaveSetRN.phl[202]";
+connectAttr "Button_pnts_175__pntx.o" "DragonGateCaveSetRN.phl[203]";
+connectAttr "Button_pnts_175__pnty.o" "DragonGateCaveSetRN.phl[204]";
+connectAttr "Button_pnts_175__pntz.o" "DragonGateCaveSetRN.phl[205]";
+connectAttr "Button_pnts_176__pntx.o" "DragonGateCaveSetRN.phl[206]";
+connectAttr "Button_pnts_176__pnty.o" "DragonGateCaveSetRN.phl[207]";
+connectAttr "Button_pnts_176__pntz.o" "DragonGateCaveSetRN.phl[208]";
+connectAttr "Button_pnts_177__pntx.o" "DragonGateCaveSetRN.phl[209]";
+connectAttr "Button_pnts_177__pnty.o" "DragonGateCaveSetRN.phl[210]";
+connectAttr "Button_pnts_177__pntz.o" "DragonGateCaveSetRN.phl[211]";
+connectAttr "Button_pnts_178__pntx.o" "DragonGateCaveSetRN.phl[212]";
+connectAttr "Button_pnts_178__pnty.o" "DragonGateCaveSetRN.phl[213]";
+connectAttr "Button_pnts_178__pntz.o" "DragonGateCaveSetRN.phl[214]";
+connectAttr "Button_pnts_179__pntx.o" "DragonGateCaveSetRN.phl[215]";
+connectAttr "Button_pnts_179__pnty.o" "DragonGateCaveSetRN.phl[216]";
+connectAttr "Button_pnts_179__pntz.o" "DragonGateCaveSetRN.phl[217]";
+connectAttr "Button_pnts_180__pntx.o" "DragonGateCaveSetRN.phl[218]";
+connectAttr "Button_pnts_180__pnty.o" "DragonGateCaveSetRN.phl[219]";
+connectAttr "Button_pnts_180__pntz.o" "DragonGateCaveSetRN.phl[220]";
+connectAttr "Button_pnts_181__pntx.o" "DragonGateCaveSetRN.phl[221]";
+connectAttr "Button_pnts_181__pnty.o" "DragonGateCaveSetRN.phl[222]";
+connectAttr "Button_pnts_181__pntz.o" "DragonGateCaveSetRN.phl[223]";
+connectAttr "Button_pnts_182__pntx.o" "DragonGateCaveSetRN.phl[224]";
+connectAttr "Button_pnts_182__pnty.o" "DragonGateCaveSetRN.phl[225]";
+connectAttr "Button_pnts_182__pntz.o" "DragonGateCaveSetRN.phl[226]";
+connectAttr "Button_pnts_183__pntx.o" "DragonGateCaveSetRN.phl[227]";
+connectAttr "Button_pnts_183__pnty.o" "DragonGateCaveSetRN.phl[228]";
+connectAttr "Button_pnts_183__pntz.o" "DragonGateCaveSetRN.phl[229]";
+connectAttr "Button_pnts_184__pntx.o" "DragonGateCaveSetRN.phl[230]";
+connectAttr "Button_pnts_184__pnty.o" "DragonGateCaveSetRN.phl[231]";
+connectAttr "Button_pnts_184__pntz.o" "DragonGateCaveSetRN.phl[232]";
+connectAttr "Button_pnts_185__pntx.o" "DragonGateCaveSetRN.phl[233]";
+connectAttr "Button_pnts_185__pnty.o" "DragonGateCaveSetRN.phl[234]";
+connectAttr "Button_pnts_185__pntz.o" "DragonGateCaveSetRN.phl[235]";
+connectAttr "Button_pnts_186__pntx.o" "DragonGateCaveSetRN.phl[236]";
+connectAttr "Button_pnts_186__pnty.o" "DragonGateCaveSetRN.phl[237]";
+connectAttr "Button_pnts_186__pntz.o" "DragonGateCaveSetRN.phl[238]";
+connectAttr "Button_pnts_187__pntx.o" "DragonGateCaveSetRN.phl[239]";
+connectAttr "Button_pnts_187__pnty.o" "DragonGateCaveSetRN.phl[240]";
+connectAttr "Button_pnts_187__pntz.o" "DragonGateCaveSetRN.phl[241]";
+connectAttr "Button_pnts_188__pntx.o" "DragonGateCaveSetRN.phl[242]";
+connectAttr "Button_pnts_188__pnty.o" "DragonGateCaveSetRN.phl[243]";
+connectAttr "Button_pnts_188__pntz.o" "DragonGateCaveSetRN.phl[244]";
+connectAttr "Button_pnts_189__pntx.o" "DragonGateCaveSetRN.phl[245]";
+connectAttr "Button_pnts_189__pnty.o" "DragonGateCaveSetRN.phl[246]";
+connectAttr "Button_pnts_189__pntz.o" "DragonGateCaveSetRN.phl[247]";
+connectAttr "Button_pnts_190__pntx.o" "DragonGateCaveSetRN.phl[248]";
+connectAttr "Button_pnts_190__pnty.o" "DragonGateCaveSetRN.phl[249]";
+connectAttr "Button_pnts_190__pntz.o" "DragonGateCaveSetRN.phl[250]";
+connectAttr "Button_pnts_191__pntx.o" "DragonGateCaveSetRN.phl[251]";
+connectAttr "Button_pnts_191__pnty.o" "DragonGateCaveSetRN.phl[252]";
+connectAttr "Button_pnts_191__pntz.o" "DragonGateCaveSetRN.phl[253]";
+connectAttr "Button_pnts_192__pntx.o" "DragonGateCaveSetRN.phl[254]";
+connectAttr "Button_pnts_192__pnty.o" "DragonGateCaveSetRN.phl[255]";
+connectAttr "Button_pnts_192__pntz.o" "DragonGateCaveSetRN.phl[256]";
+connectAttr "Button_pnts_193__pntx.o" "DragonGateCaveSetRN.phl[257]";
+connectAttr "Button_pnts_193__pnty.o" "DragonGateCaveSetRN.phl[258]";
+connectAttr "Button_pnts_193__pntz.o" "DragonGateCaveSetRN.phl[259]";
+connectAttr "Button_pnts_194__pntx.o" "DragonGateCaveSetRN.phl[260]";
+connectAttr "Button_pnts_194__pnty.o" "DragonGateCaveSetRN.phl[261]";
+connectAttr "Button_pnts_194__pntz.o" "DragonGateCaveSetRN.phl[262]";
+connectAttr "Button_pnts_195__pntx.o" "DragonGateCaveSetRN.phl[263]";
+connectAttr "Button_pnts_195__pnty.o" "DragonGateCaveSetRN.phl[264]";
+connectAttr "Button_pnts_195__pntz.o" "DragonGateCaveSetRN.phl[265]";
+connectAttr "Button_pnts_196__pntx.o" "DragonGateCaveSetRN.phl[266]";
+connectAttr "Button_pnts_196__pnty.o" "DragonGateCaveSetRN.phl[267]";
+connectAttr "Button_pnts_196__pntz.o" "DragonGateCaveSetRN.phl[268]";
+connectAttr "Button_pnts_197__pntx.o" "DragonGateCaveSetRN.phl[269]";
+connectAttr "Button_pnts_197__pnty.o" "DragonGateCaveSetRN.phl[270]";
+connectAttr "Button_pnts_197__pntz.o" "DragonGateCaveSetRN.phl[271]";
+connectAttr "Button_pnts_198__pntx.o" "DragonGateCaveSetRN.phl[272]";
+connectAttr "Button_pnts_198__pnty.o" "DragonGateCaveSetRN.phl[273]";
+connectAttr "Button_pnts_198__pntz.o" "DragonGateCaveSetRN.phl[274]";
+connectAttr "Button_pnts_199__pntx.o" "DragonGateCaveSetRN.phl[275]";
+connectAttr "Button_pnts_199__pnty.o" "DragonGateCaveSetRN.phl[276]";
+connectAttr "Button_pnts_199__pntz.o" "DragonGateCaveSetRN.phl[277]";
+connectAttr "Button_pnts_200__pntx.o" "DragonGateCaveSetRN.phl[278]";
+connectAttr "Button_pnts_200__pnty.o" "DragonGateCaveSetRN.phl[279]";
+connectAttr "Button_pnts_200__pntz.o" "DragonGateCaveSetRN.phl[280]";
+connectAttr "Button_pnts_201__pntx.o" "DragonGateCaveSetRN.phl[281]";
+connectAttr "Button_pnts_201__pnty.o" "DragonGateCaveSetRN.phl[282]";
+connectAttr "Button_pnts_201__pntz.o" "DragonGateCaveSetRN.phl[283]";
+connectAttr "Button_pnts_202__pntx.o" "DragonGateCaveSetRN.phl[284]";
+connectAttr "Button_pnts_202__pnty.o" "DragonGateCaveSetRN.phl[285]";
+connectAttr "Button_pnts_202__pntz.o" "DragonGateCaveSetRN.phl[286]";
+connectAttr "Button_pnts_203__pntx.o" "DragonGateCaveSetRN.phl[287]";
+connectAttr "Button_pnts_203__pnty.o" "DragonGateCaveSetRN.phl[288]";
+connectAttr "Button_pnts_203__pntz.o" "DragonGateCaveSetRN.phl[289]";
+connectAttr "Button_pnts_204__pntx.o" "DragonGateCaveSetRN.phl[290]";
+connectAttr "Button_pnts_204__pnty.o" "DragonGateCaveSetRN.phl[291]";
+connectAttr "Button_pnts_204__pntz.o" "DragonGateCaveSetRN.phl[292]";
+connectAttr "Button_pnts_205__pntx.o" "DragonGateCaveSetRN.phl[293]";
+connectAttr "Button_pnts_205__pnty.o" "DragonGateCaveSetRN.phl[294]";
+connectAttr "Button_pnts_205__pntz.o" "DragonGateCaveSetRN.phl[295]";
+connectAttr "Button_pnts_206__pntx.o" "DragonGateCaveSetRN.phl[296]";
+connectAttr "Button_pnts_206__pnty.o" "DragonGateCaveSetRN.phl[297]";
+connectAttr "Button_pnts_206__pntz.o" "DragonGateCaveSetRN.phl[298]";
+connectAttr "Button_pnts_207__pntx.o" "DragonGateCaveSetRN.phl[299]";
+connectAttr "Button_pnts_207__pnty.o" "DragonGateCaveSetRN.phl[300]";
+connectAttr "Button_pnts_207__pntz.o" "DragonGateCaveSetRN.phl[301]";
+connectAttr "Button_pnts_208__pntx.o" "DragonGateCaveSetRN.phl[302]";
+connectAttr "Button_pnts_208__pnty.o" "DragonGateCaveSetRN.phl[303]";
+connectAttr "Button_pnts_208__pntz.o" "DragonGateCaveSetRN.phl[304]";
+connectAttr "Button_pnts_209__pntx.o" "DragonGateCaveSetRN.phl[305]";
+connectAttr "Button_pnts_209__pnty.o" "DragonGateCaveSetRN.phl[306]";
+connectAttr "Button_pnts_209__pntz.o" "DragonGateCaveSetRN.phl[307]";
+connectAttr "Button_pnts_210__pntx.o" "DragonGateCaveSetRN.phl[308]";
+connectAttr "Button_pnts_210__pnty.o" "DragonGateCaveSetRN.phl[309]";
+connectAttr "Button_pnts_210__pntz.o" "DragonGateCaveSetRN.phl[310]";
+connectAttr "Button_pnts_211__pntx.o" "DragonGateCaveSetRN.phl[311]";
+connectAttr "Button_pnts_211__pnty.o" "DragonGateCaveSetRN.phl[312]";
+connectAttr "Button_pnts_211__pntz.o" "DragonGateCaveSetRN.phl[313]";
+connectAttr "Button_pnts_212__pntx.o" "DragonGateCaveSetRN.phl[314]";
+connectAttr "Button_pnts_212__pnty.o" "DragonGateCaveSetRN.phl[315]";
+connectAttr "Button_pnts_212__pntz.o" "DragonGateCaveSetRN.phl[316]";
+connectAttr "Button_pnts_213__pntx.o" "DragonGateCaveSetRN.phl[317]";
+connectAttr "Button_pnts_213__pnty.o" "DragonGateCaveSetRN.phl[318]";
+connectAttr "Button_pnts_213__pntz.o" "DragonGateCaveSetRN.phl[319]";
+connectAttr "Button_pnts_214__pntx.o" "DragonGateCaveSetRN.phl[320]";
+connectAttr "Button_pnts_214__pnty.o" "DragonGateCaveSetRN.phl[321]";
+connectAttr "Button_pnts_214__pntz.o" "DragonGateCaveSetRN.phl[322]";
+connectAttr "Button_pnts_215__pntx.o" "DragonGateCaveSetRN.phl[323]";
+connectAttr "Button_pnts_215__pnty.o" "DragonGateCaveSetRN.phl[324]";
+connectAttr "Button_pnts_215__pntz.o" "DragonGateCaveSetRN.phl[325]";
+connectAttr "Button_pnts_216__pntx.o" "DragonGateCaveSetRN.phl[326]";
+connectAttr "Button_pnts_216__pnty.o" "DragonGateCaveSetRN.phl[327]";
+connectAttr "Button_pnts_216__pntz.o" "DragonGateCaveSetRN.phl[328]";
+connectAttr "Button_pnts_217__pntx.o" "DragonGateCaveSetRN.phl[329]";
+connectAttr "Button_pnts_217__pnty.o" "DragonGateCaveSetRN.phl[330]";
+connectAttr "Button_pnts_217__pntz.o" "DragonGateCaveSetRN.phl[331]";
+connectAttr "Button_pnts_218__pntx.o" "DragonGateCaveSetRN.phl[332]";
+connectAttr "Button_pnts_218__pnty.o" "DragonGateCaveSetRN.phl[333]";
+connectAttr "Button_pnts_218__pntz.o" "DragonGateCaveSetRN.phl[334]";
+connectAttr "Button_pnts_219__pntx.o" "DragonGateCaveSetRN.phl[335]";
+connectAttr "Button_pnts_219__pnty.o" "DragonGateCaveSetRN.phl[336]";
+connectAttr "Button_pnts_219__pntz.o" "DragonGateCaveSetRN.phl[337]";
+connectAttr "Button_pnts_220__pntx.o" "DragonGateCaveSetRN.phl[338]";
+connectAttr "Button_pnts_220__pnty.o" "DragonGateCaveSetRN.phl[339]";
+connectAttr "Button_pnts_220__pntz.o" "DragonGateCaveSetRN.phl[340]";
+connectAttr "Button_pnts_221__pntx.o" "DragonGateCaveSetRN.phl[341]";
+connectAttr "Button_pnts_221__pnty.o" "DragonGateCaveSetRN.phl[342]";
+connectAttr "Button_pnts_221__pntz.o" "DragonGateCaveSetRN.phl[343]";
+connectAttr "Button_pnts_222__pntx.o" "DragonGateCaveSetRN.phl[344]";
+connectAttr "Button_pnts_222__pnty.o" "DragonGateCaveSetRN.phl[345]";
+connectAttr "Button_pnts_222__pntz.o" "DragonGateCaveSetRN.phl[346]";
+connectAttr "Button_pnts_223__pntx.o" "DragonGateCaveSetRN.phl[347]";
+connectAttr "Button_pnts_223__pnty.o" "DragonGateCaveSetRN.phl[348]";
+connectAttr "Button_pnts_223__pntz.o" "DragonGateCaveSetRN.phl[349]";
+connectAttr "Button_pnts_224__pntx.o" "DragonGateCaveSetRN.phl[350]";
+connectAttr "Button_pnts_224__pnty.o" "DragonGateCaveSetRN.phl[351]";
+connectAttr "Button_pnts_224__pntz.o" "DragonGateCaveSetRN.phl[352]";
+connectAttr "Button_pnts_225__pntx.o" "DragonGateCaveSetRN.phl[353]";
+connectAttr "Button_pnts_225__pnty.o" "DragonGateCaveSetRN.phl[354]";
+connectAttr "Button_pnts_225__pntz.o" "DragonGateCaveSetRN.phl[355]";
+connectAttr "Button_pnts_226__pntx.o" "DragonGateCaveSetRN.phl[356]";
+connectAttr "Button_pnts_226__pnty.o" "DragonGateCaveSetRN.phl[357]";
+connectAttr "Button_pnts_226__pntz.o" "DragonGateCaveSetRN.phl[358]";
+connectAttr "Button_pnts_227__pntx.o" "DragonGateCaveSetRN.phl[359]";
+connectAttr "Button_pnts_227__pnty.o" "DragonGateCaveSetRN.phl[360]";
+connectAttr "Button_pnts_227__pntz.o" "DragonGateCaveSetRN.phl[361]";
+connectAttr "Button_pnts_228__pntx.o" "DragonGateCaveSetRN.phl[362]";
+connectAttr "Button_pnts_228__pnty.o" "DragonGateCaveSetRN.phl[363]";
+connectAttr "Button_pnts_228__pntz.o" "DragonGateCaveSetRN.phl[364]";
+connectAttr "Button_pnts_229__pntx.o" "DragonGateCaveSetRN.phl[365]";
+connectAttr "Button_pnts_229__pnty.o" "DragonGateCaveSetRN.phl[366]";
+connectAttr "Button_pnts_229__pntz.o" "DragonGateCaveSetRN.phl[367]";
+connectAttr "Button_pnts_230__pntx.o" "DragonGateCaveSetRN.phl[368]";
+connectAttr "Button_pnts_230__pnty.o" "DragonGateCaveSetRN.phl[369]";
+connectAttr "Button_pnts_230__pntz.o" "DragonGateCaveSetRN.phl[370]";
+connectAttr "Button_pnts_231__pntx.o" "DragonGateCaveSetRN.phl[371]";
+connectAttr "Button_pnts_231__pnty.o" "DragonGateCaveSetRN.phl[372]";
+connectAttr "Button_pnts_231__pntz.o" "DragonGateCaveSetRN.phl[373]";
+connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[374]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[379]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[380]";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[381]";
@@ -6393,11 +6832,11 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[6]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[7]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[8]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[9]";
-connectAttr "Background_Layer.di" "DragonGateCaveSetRN.phl[10]";
 connectAttr "layerManager.dli[1]" "Background_Layer.id";
 connectAttr "layerManager.dli[2]" "Button_Layer.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
+connectAttr "aiAreaLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "aiAreaLightShape2.ltd" ":lightList1.l" -na;
+connectAttr "aiAreaLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "aiAreaLight2.iog" ":defaultLightSet.dsm" -na;
 // End of Shot#54.ma
