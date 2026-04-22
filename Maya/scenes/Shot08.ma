@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Shot08.ma
-//Last modified: Thu, Apr 02, 2026 06:39:17 PM
+//Last modified: Fri, Apr 17, 2026 10:49:57 AM
 //Codeset: 1252
 file -rdi 1 -ns "Skeleton" -rfn "SkeletonRN" -op "v=0;" -typ "mayaAscii" "D:/trist/WorkDayShortFilmOfficialRepo/Maya//assets/characters/skeleton/Skeleton.ma";
 file -rdi 1 -ns "livingroomKitchen" -rfn "livingroomKitchenRN" -op "v=0;" -typ
@@ -8,7 +8,7 @@ file -rdi 1 -ns "livingroomKitchen" -rfn "livingroomKitchenRN" -op "v=0;" -typ
 file -rdi 2 -ns "LivingRoomSet" -rfn "livingroomKitchen:LivingRoomSetRN" -op
 		 "v=0;" -typ "mayaAscii" "../Maya/assets/environment/apartmentInterior//LivingRoomSet.ma";
 file -rdi 3 -ns "Skeleton" -dr 1 -rfn "livingroomKitchen:LivingRoomSet:SkeletonRN"
-		 -op "v=0;" -typ "mayaAscii" "D:/GithubStuff/University/WorkDayShortFilmOfficialRepo/Maya//assets/characters/skeleton/Skeleton.ma";
+		 -op "v=0;" -typ "mayaAscii" "C:/git/WorkDayShortFilmOfficialRepo/Maya//assets/characters/skeleton/Skeleton.ma";
 file -rdi 2 -ns "bowlAndSpoon" -rfn "livingroomKitchen:bowlAndSpoonRN" -op "v=0;"
 		 -typ "mayaAscii" "../Maya/assets/props/ApartmentProps/bowlAndSpoon/bowlAndSpoon.ma";
 file -rdi 2 -ns "Cabinets" -rfn "livingroomKitchen:CabinetsRN" -op "v=0;" -typ
@@ -55,27 +55,29 @@ file -r -ns "LivingroomLighting" -dr 1 -rfn "LivingroomLightingRN" -op "v=0;" -t
 requires maya "2026";
 requires -dataType "czLayerData" "bluePencil" "2.6.1";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
-		 -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.4.2";
+requires -nodeType "aiOptions" -nodeType "aiAOV" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter"
+		 -nodeType "aiStandardSurface" -nodeType "aiImagerDenoiserOidn" "mtoa" "5.5.4.2";
+requires "stereoCamera" "10.0";
 requires "Mayatomr" "2010.0m - 3.7.53.5 ";
 currentUnit -l centimeter -a degree -t 12fps;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
-fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "AC8CD778-4CB3-1A6F-B3C5-D3A835508F6E";
+fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
+fileInfo "UUID" "15A1C0A3-46C1-81CC-001B-C7A232F57B30";
 createNode transform -s -n "persp";
 	rename -uid "A5AB0C49-4479-4887-1D93-CEA0A071F624";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -151.71597989650428 534.50241928710375 811.23944153335231 ;
-	setAttr ".r" -type "double3" -21.000000000000419 2158.7999999999975 0 ;
+	setAttr ".t" -type "double3" -63.180028963619456 270.27822317927689 407.04484765864828 ;
+	setAttr ".r" -type "double3" -33.000000000000441 2157.9999999999977 1.989058356522937e-16 ;
 	setAttr ".rpt" -type "double3" -8.767926068837572e-15 -4.3870102976520094e-15 2.7099633829619382e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "44D0B96A-4FD5-521A-C047-4AAD0045C9B8";
 	setAttr -k off ".v" no;
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 806.79735916180516;
+	setAttr ".coi" 322.25059908893525;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -153,11 +155,9 @@ createNode transform -n "ShotCamera";
 	setAttr -l on ".rx";
 	setAttr -l on ".ry";
 	setAttr -l on ".rz";
-	setAttr ".s" -type "double3" 69.917510354273915 69.917510354273915 69.917510354273915 ;
 createNode camera -n "ShotCameraShape" -p "ShotCamera";
 	rename -uid "DDD43461-4C88-BCDE-45B0-DA8D12D9E5DB";
 	setAttr -k off ".v";
-	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
@@ -313,6 +313,7 @@ createNode transform -n "persp1";
 createNode camera -n "persp1Shape" -p "persp1";
 	rename -uid "0C63601C-4AE4-EF99-C83B-A4A9004779FD";
 	setAttr -k off ".v";
+	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".coi" 69.839060831379058;
 	setAttr ".imn" -type "string" "persp";
@@ -27337,7 +27338,7 @@ createNode transform -n "Fishbowl_grp";
 	setAttr ".t" -type "double3" -52.61536 68.298097 90.313856 ;
 	setAttr ".s" -type "double3" 0.3 0.3 0.3 ;
 createNode fosterParent -n "SkeletonRNfosterParent1";
-	rename -uid "656F6224-4A67-255E-2733-8092FE04EEBE";
+	rename -uid "B6F51B22-4ABA-3CE1-7095-ADBAE8B2148C";
 createNode mesh -n "Skeleton_Smooth_GeoShapeDeformed" -p "SkeletonRNfosterParent1";
 	rename -uid "21206B83-4401-5C87-D0C1-70B637ABD86E";
 	setAttr -k off ".v";
@@ -27372,15 +27373,15 @@ createNode mesh -n "L_Skeleton_Reg_Arms_GeoShapeDeformed" -p "SkeletonRNfosterPa
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".vcs" 2;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9AF20231-4477-17D0-966F-00A597E3A7FE";
-	setAttr -s 183 ".lnk";
-	setAttr -s 183 ".slnk";
+	rename -uid "24EE8345-454E-B224-2EB7-17B2F02C985A";
+	setAttr -s 136 ".lnk";
+	setAttr -s 136 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "77724AC0-4D84-CF54-F0D7-E5BA440D846E";
+	rename -uid "2BD2162F-46F4-3B4E-78EA-B9978F9A7FB5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6C4D8B34-42C3-D94A-2330-658E5560A5A8";
+	rename -uid "DAD40EC2-4201-DF93-7996-2B88141F0A08";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "94A19D8B-4B67-FEEB-FCB2-768430277839";
+	rename -uid "931D3C08-4B9F-4047-5A8F-EEB779B3AAD7";
 	setAttr ".cdl" 3;
 	setAttr -s 4 ".dli[1:3]"  2 3 4;
 	setAttr -s 4 ".dli";
@@ -27388,7 +27389,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "AEC4204B-4076-C7C5-C591-F49B865660C6";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "04605144-425C-08F4-456F-6B9BE5237A8B";
+	rename -uid "2828146A-450C-C083-8BA7-5383E799B27B";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BDB40158-45CD-07E7-2C59-69953C09C507";
 	setAttr ".g" yes;
@@ -27396,19 +27397,19 @@ createNode script -n "uiConfigurationScriptNode";
 	rename -uid "C1491AB5-4364-3F75-7336-8F8271E07B97";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n"
-		+ "            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n"
-		+ "            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n"
-		+ "            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n"
-		+ "            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n"
-		+ "            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n"
-		+ "            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
-		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
-		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|ShotCamera\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
+		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
+		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2941\n            -height 1599\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
+		+ "        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
+		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
+		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1466\n            -height 766\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -editorChanged \"updateModelPanelBar\" \n            -camera \"|front\" \n            -useInteractiveMode 0\n"
+		+ "            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n"
+		+ "            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n"
+		+ "            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1467\n            -height 766\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -docTag \"RADRENDER\" \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n"
 		+ "            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n"
-		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1038\n            -height 706\n            -sceneRenderFilter 0\n"
+		+ "            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1466\n            -height 766\n            -sceneRenderFilter 0\n"
 		+ "            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n"
 		+ "            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n"
 		+ "            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n"
@@ -27424,8 +27425,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
 		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
 		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
-		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
+		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n"
+		+ "                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n"
 		+ "                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
@@ -27436,8 +27437,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n"
 		+ "                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n"
 		+ "        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Top View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -editorChanged \\\"updateModelPanelBar\\\" \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1038\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -editorChanged \\\"updateModelPanelBar\\\" \\n    -camera \\\"|persp\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1038\\n    -height 706\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -editorChanged \\\"updateModelPanelBar\\\" \\n    -camera \\\"|ShotCamera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2941\\n    -height 1599\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Top View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -docTag \\\"RADRENDER\\\" \\n    -editorChanged \\\"updateModelPanelBar\\\" \\n    -camera \\\"|ShotCamera\\\" \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2941\\n    -height 1599\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 0.05 -size 0.12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -28827,7 +28828,7 @@ createNode reference -n "SkeletonRN";
 		"SkeletonRN.placeHolderList[234]" ""
 		5 3 "SkeletonRN" "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Spine_And_Head|Skeleton:Head_Controls|Skeleton:Face_Controls|Skeleton:R_Brow_Ctrl_Grp|Skeleton:R_Brow_Ctrl.instObjGroups" 
 		"SkeletonRN.placeHolderList[345]" ""
-		"SkeletonRN" 1503
+		"SkeletonRN" 1524
 		0 "|SkeletonRNfosterParent1|L_Skeleton_Reg_Arms_GeoShapeDeformed" "|Skeleton:Skeleton_Asset|Skeleton:Geometry|Skeleton:L_Skeleton_Reg_Arms_Geo" 
 		"-s -r "
 		0 "|SkeletonRNfosterParent1|R_Skeleton_Reg_Arms_GeoShapeDeformed" "|Skeleton:Skeleton_Asset|Skeleton:Geometry|Skeleton:R_Skeleton_Reg_Arms_Geo" 
@@ -28880,8 +28881,6 @@ createNode reference -n "SkeletonRN";
 		"Follow_Rotate" " -k 1 1"
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Spine_And_Head|Skeleton:Head_Controls|Skeleton:Head_COG_Ctrl_Grp|Skeleton:Head_COG_Ctrl" 
 		"Hat_Visibility" " -k 1 0"
-		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Spine_And_Head|Skeleton:Head_Controls|Skeleton:Face_Controls|Skeleton:L_Brow_Mid_Ctrl_Grp|Skeleton:L_Brow_Mid_Ctrl_Offset_Grp|Skeleton:L_Brow_Mid_Ctrl" 
-		"visibility" " -av 1"
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Left_Arm|Skeleton:L_Scap_Ctrl_Grp|Skeleton:L_Scap_Ctrl" 
 		"visibility" " 1"
 		2 "|Skeleton:Skeleton_Asset|Skeleton:Controls|Skeleton:Transform_Ctrl_Grp|Skeleton:Transform_Ctrl|Skeleton:COG_Ctrl_Grp|Skeleton:COG_Ctrl|Skeleton:Left_Arm|Skeleton:L_Scap_Ctrl_Grp|Skeleton:L_Scap_Ctrl" 
@@ -29096,11 +29095,43 @@ createNode reference -n "SkeletonRN";
 		2 "Skeleton:Jnt_Layer" "visibility" " 0"
 		2 "Skeleton:Ctrl_Layer" "visibility" " 0"
 		2 "Skeleton:Loc_Layer" "visibility" " 0"
-		2 "Skeleton:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_BaseColor.1001.png\""
+		2 "Skeleton:lambert1SG" "aiCustomAOVs" " -s 2"
+		2 "Skeleton:lambert1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
 		
-		2 "Skeleton:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_Normal.1001.png\""
+		2 "Skeleton:lambert1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
 		
-		2 "Skeleton:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_Roughness.1001.png\""
+		2 "Skeleton:file1" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_BaseColor.1001.png\""
+		
+		2 "Skeleton:file1" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "Skeleton:file2" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_Normal.1001.png\""
+		
+		2 "Skeleton:file2" "colorSpace" " -type \"string\" \"Raw\""
+		2 "Skeleton:file2" "viewNameUsed" " 0"
+		2 "Skeleton:file2" "viewNameStr" " -type \"string\" \"<N/A>\""
+		2 "Skeleton:file3" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Skeleton Textures-20260329T015056Z-3-001/Skeleton Textures/SkellyTemp_Toes_lambert1_Roughness.1001.png\""
+		
+		2 "Skeleton:file3" "colorSpace" " -type \"string\" \"Raw\""
+		2 "Skeleton:file3" "viewNameUsed" " 0"
+		2 "Skeleton:file3" "viewNameStr" " -type \"string\" \"<N/A>\""
+		2 "Skeleton:set1" "aiCustomAOVs" " -s 2"
+		2 "Skeleton:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		2 "Skeleton:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Skeleton:NIghtCapSG" "aiCustomAOVs" " -s 2"
+		2 "Skeleton:NIghtCapSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Skeleton:NIghtCapSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Skeleton:NIghtCapSG1" "aiCustomAOVs" " -s 2"
+		2 "Skeleton:NIghtCapSG1" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Skeleton:NIghtCapSG1" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "Skeleton:NightCapBallSG" "aiCustomAOVs" " -s 2"
+		2 "Skeleton:NightCapBallSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "Skeleton:NightCapBallSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
 		
 		5 3 "SkeletonRN" "|Skeleton:Skeleton_Asset|Skeleton:Geometry|Skeleton:L_Skeleton_Reg_Arms_Geo|Skeleton:L_Skeleton_Reg_Arms_GeoShape.worldMesh" 
 		"SkeletonRN.placeHolderList[346]" ""
@@ -31845,6 +31876,8 @@ lockNode -l 1 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "BE85E3F0-4013-A695-6F39-CCAB8A13F760";
 	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
+	setAttr -s 2 ".aovs";
+	setAttr ".GI_sss_samples" 0;
 	setAttr ".version" -type "string" "5.3.4.1";
 	setAttr ".ARV_options" -type "string" "Test Resolution=100%;Camera=ShotCameraShape;Color Management.Gamma=1;Color Management.Exposure=0;Background.BG=BG Color;Background.Color=0 0 0;Background.Image=;Background.Scale=1  1;Background.Offset=0  0;Background.Apply Color Management=1;Foreground.Enable FG=0;Foreground.Image=;Foreground.Scale=1  1;Foreground.Offset=0  0;Foreground.Apply Color Management=1;";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
@@ -53070,8 +53103,13 @@ createNode materialInfo -n "FishBowl1:materialInfo1";
 	rename -uid "FB77C13B-4CB5-3758-461B-44BA0F0C1E7B";
 createNode shadingEngine -n "FishBowl1:aiStandardSurface1SG";
 	rename -uid "B985BE35-44AD-3FA7-CFEF-818515EAF956";
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "Z";
+	setAttr ".aovs[1].aov_name" -type "string" "albedo";
+	setAttr ".aal" -type "attributeAlias" 4 "ai_aov_Z" "aiCustomAOVs[0].aovName" "ai_aov_albedo" "aiCustomAOVs[1].aovName" ;
 createNode aiStandardSurface -n "FishBowl1:glass";
 	rename -uid "88495ED9-4639-621D-AB18-CE94D97C69CB";
 	setAttr ".base" 0;
@@ -80033,6 +80071,7 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:PottedPlantRN" 0
 		"livingroomKitchen:CabinetsRN" 0
 		"livingroomKitchen:Spoon_and_BowlRN" 0
+		"livingroomKitchen:LivingRoomCouchRN" 0
 		"livingroomKitchen:Spatula_holderRN" 6
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[1]" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -80046,7 +80085,6 @@ createNode reference -n "livingroomKitchenRN";
 		""
 		3 ":initialShadingGroup.memberWireframeColor" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:cup|livingroomKitchen:Spatula_holder:cupShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
-		"livingroomKitchen:LivingRoomCouchRN" 0
 		"livingroomKitchen:bowlAndSpoonRN" 0
 		"livingroomKitchen:MilkRN" 60
 		3 "|Props|livingroomKitchen:Milk:Milk|livingroomKitchen:Milk:MilkBox|livingroomKitchen:Milk:polySurface15|livingroomKitchen:Milk:polySurfaceShape15.instObjGroups.objectGroups[0]" 
@@ -80204,7 +80242,307 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:LivingRoomSetRN" 0
 		"livingroomKitchen:FanRN" 0
 		"livingroomKitchen:cerealBoxRN" 0
-		"livingroomKitchenRN" 0
+		"livingroomKitchenRN" 124
+		2 "livingroomKitchen:Material_Ref:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__pasted__file1" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__pasted__file3" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__pasted__file2" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__pasted__file4" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref:file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "livingroomKitchen:Material_Ref:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref:pasted__pasted__file12" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__pasted__file1" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__pasted__file3" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__pasted__file2" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__pasted__file4" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__pasted__file1" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__pasted__file3" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__pasted__file2" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__pasted__file4" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file12" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "livingroomKitchen:Material_Ref2:pasted__file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file1" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file3" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file2" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file4" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__pasted__file1" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__pasted__file3" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__pasted__file2" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__pasted__file4" 
+		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file12" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file13" "fileTextureName" 
+		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref3:file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		
 		"livingroomKitchen:BroomRN" 0
 		"livingroomKitchen:DoorRN" 0
 		"livingroomKitchen:owlbearskinRugRN" 0
@@ -80291,41 +80629,41 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:PotHooksRN" 37
 		0 "|livingroomKitchen:PotHooks:PotHooks" "|Props" "-s -r "
 		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polyExtrudeFace8.manipMatrix" ""
+		"livingroomKitchen:PotHooks:polyBevel4.manipMatrix" ""
 		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polySplitRing9.manipMatrix" ""
+		"livingroomKitchen:PotHooks:polyBevel3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
+		"livingroomKitchen:PotHooks:polyExtrudeFace8.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Hook06|livingroomKitchen:PotHooks:HookShape6.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Hook06|livingroomKitchen:PotHooks:HookShape6.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyPlanarProj4.manipMatrix" ""
 		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
+		"livingroomKitchen:PotHooks:polyPlanarProj3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
+		"livingroomKitchen:PotHooks:polySplitRing9.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
+		"livingroomKitchen:PotHooks:polySplitRing11.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.instObjGroups" 
+		":initialShadingGroup.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyPlanarProj1.manipMatrix" ""
 		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polySplitRing10.manipMatrix" ""
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Hook06|livingroomKitchen:PotHooks:HookShape6.instObjGroups" 
+		"livingroomKitchen:PotHooks:polyBevel6.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Hook07|livingroomKitchen:PotHooks:HookShape7.instObjGroups" 
 		":initialShadingGroup.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyPlanarProj2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
+		"livingroomKitchen:PotHooks:polySplitRing10.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
+		"livingroomKitchen:PotHooks:polySoftEdge1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
+		"livingroomKitchen:PotHooks:polyBridgeEdge1.manipMatrix" ""
 		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Hook07|livingroomKitchen:PotHooks:HookShape7.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyPlanarProj5.manipMatrix" ""
 		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyBevel5.manipMatrix" ""
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polyBridgeEdge1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polyBevel3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polyPlanarProj3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polyBevel4.manipMatrix" ""
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Hook07|livingroomKitchen:PotHooks:HookShape7.instObjGroups" 
-		":initialShadingGroup.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polyBevel6.manipMatrix" ""
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polySoftEdge1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
-		"livingroomKitchen:PotHooks:polySplitRing11.manipMatrix" ""
 		5 3 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.instObjGroups" 
 		"livingroomKitchenRN.placeHolderList[293]" ":initialShadingGroup.dsm"
 		5 3 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Hook06|livingroomKitchen:PotHooks:HookShape6.instObjGroups" 
@@ -80334,51 +80672,51 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchenRN.placeHolderList[295]" ":initialShadingGroup.dsm"
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polySplitRing9.manipMatrix" "livingroomKitchenRN.placeHolderList[296]" 
-		"livingroomKitchenRN.placeHolderList[297]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[297]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polySplitRing10.manipMatrix" "livingroomKitchenRN.placeHolderList[298]" 
-		"livingroomKitchenRN.placeHolderList[299]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[299]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polySplitRing11.manipMatrix" "livingroomKitchenRN.placeHolderList[300]" 
-		"livingroomKitchenRN.placeHolderList[301]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[301]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyExtrudeFace8.manipMatrix" "livingroomKitchenRN.placeHolderList[302]" 
-		"livingroomKitchenRN.placeHolderList[303]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[303]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyBevel3.manipMatrix" "livingroomKitchenRN.placeHolderList[304]" 
-		"livingroomKitchenRN.placeHolderList[305]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[305]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyBridgeEdge1.manipMatrix" "livingroomKitchenRN.placeHolderList[306]" 
-		"livingroomKitchenRN.placeHolderList[307]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[307]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyBevel4.manipMatrix" "livingroomKitchenRN.placeHolderList[308]" 
-		"livingroomKitchenRN.placeHolderList[309]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[309]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyBevel5.manipMatrix" "livingroomKitchenRN.placeHolderList[310]" 
-		"livingroomKitchenRN.placeHolderList[311]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[311]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyBevel6.manipMatrix" "livingroomKitchenRN.placeHolderList[312]" 
-		"livingroomKitchenRN.placeHolderList[313]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[313]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyPlanarProj1.manipMatrix" "livingroomKitchenRN.placeHolderList[314]" 
-		"livingroomKitchenRN.placeHolderList[315]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[315]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyPlanarProj2.manipMatrix" "livingroomKitchenRN.placeHolderList[316]" 
-		"livingroomKitchenRN.placeHolderList[317]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[317]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyPlanarProj3.manipMatrix" "livingroomKitchenRN.placeHolderList[318]" 
-		"livingroomKitchenRN.placeHolderList[319]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[319]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Hook06|livingroomKitchen:PotHooks:HookShape6.worldMatrix" 
 		"livingroomKitchen:PotHooks:polyPlanarProj4.manipMatrix" "livingroomKitchenRN.placeHolderList[320]" 
@@ -80390,9 +80728,9 @@ createNode reference -n "livingroomKitchenRN";
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PotHooks:PotHooks|livingroomKitchen:PotHooks:Board|livingroomKitchen:PotHooks:BoardShape.worldMatrix" 
 		"livingroomKitchen:PotHooks:polySoftEdge1.manipMatrix" "livingroomKitchenRN.placeHolderList[324]" 
-		"livingroomKitchenRN.placeHolderList[325]" "livingroomKitchen:PotHooks:polySplitRing9.mp"
+		"livingroomKitchenRN.placeHolderList[325]" "livingroomKitchen:PotHooks:polyExtrudeFace8.mp"
 		
-		"livingroomKitchen:PottedPlantRN" 74
+		"livingroomKitchen:PottedPlantRN" 101
 		0 "|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly" "|Props" "-s -r "
 		
 		2 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot" 
@@ -80441,34 +80779,54 @@ createNode reference -n "livingroomKitchenRN";
 		"visibility" " 0"
 		2 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Leaf1" 
 		"visibility" " 0"
-		3 "livingroomKitchen:PottedPlant:groupId41.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "livingroomKitchen:PottedPlant:set4.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "livingroomKitchen:PottedPlant:groupId42.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[1].objectGroupId" 
-		""
-		3 "livingroomKitchen:PottedPlant:set2.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[1].objectGrpColor" 
-		""
-		3 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[0]" 
-		"livingroomKitchen:PottedPlant:set3.dagSetMembers" "-na"
+		2 "livingroomKitchen:PottedPlant:lambert2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:PottedPlant:lambert2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:PottedPlant:lambert2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:PottedPlant:lambert3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:PottedPlant:lambert3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:PottedPlant:lambert3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:PottedPlant:lambert4SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:PottedPlant:lambert4SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:PottedPlant:lambert4SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:PottedPlant:lambert5SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:PottedPlant:lambert5SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:PottedPlant:lambert5SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:PottedPlant:set1" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:PottedPlant:set1" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:PottedPlant:set1" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:PottedPlant:set2" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:PottedPlant:set2" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:PottedPlant:set2" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:PottedPlant:set3" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:PottedPlant:set3" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:PottedPlant:set3" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:PottedPlant:set4" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:PottedPlant:set4" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:PottedPlant:set4" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:PottedPlant:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:PottedPlant:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:PottedPlant:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		3 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[1]" 
 		"livingroomKitchen:PottedPlant:set1.dagSetMembers" "-na"
-		3 "livingroomKitchen:PottedPlant:groupId39.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "livingroomKitchen:PottedPlant:set3.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "livingroomKitchen:PottedPlant:groupId40.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[1].objectGroupId" 
-		""
-		3 "livingroomKitchen:PottedPlant:set1.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[1].objectGrpColor" 
-		""
-		3 "livingroomKitchen:PottedPlant:groupId35.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "livingroomKitchen:PottedPlant:set4.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "livingroomKitchen:PottedPlant:groupId36.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[1].objectGroupId" 
-		""
-		3 "livingroomKitchen:PottedPlant:set2.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[1].objectGrpColor" 
-		""
 		3 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.instObjGroups.objectGroups[1]" 
 		"livingroomKitchen:PottedPlant:set2.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[1]" 
@@ -80489,12 +80847,38 @@ createNode reference -n "livingroomKitchenRN";
 		""
 		3 "livingroomKitchen:PottedPlant:set2.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.instObjGroups.objectGroups[1].objectGrpColor" 
 		""
+		3 "livingroomKitchen:PottedPlant:groupId35.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "livingroomKitchen:PottedPlant:set4.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "livingroomKitchen:PottedPlant:groupId36.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[1].objectGroupId" 
+		""
+		3 "livingroomKitchen:PottedPlant:set2.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[1].objectGrpColor" 
+		""
 		3 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.instObjGroups.objectGroups[0]" 
 		"livingroomKitchen:PottedPlant:set4.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[0]" 
 		"livingroomKitchen:PottedPlant:set4.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[0]" 
 		"livingroomKitchen:PottedPlant:set4.dagSetMembers" "-na"
+		3 "livingroomKitchen:PottedPlant:groupId39.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "livingroomKitchen:PottedPlant:set3.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "livingroomKitchen:PottedPlant:groupId40.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[1].objectGroupId" 
+		""
+		3 "livingroomKitchen:PottedPlant:set1.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[1].objectGrpColor" 
+		""
+		3 "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[0]" 
+		"livingroomKitchen:PottedPlant:set3.dagSetMembers" "-na"
+		3 "livingroomKitchen:PottedPlant:groupId41.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "livingroomKitchen:PottedPlant:set4.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "livingroomKitchen:PottedPlant:groupId42.groupId" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[1].objectGroupId" 
+		""
+		3 "livingroomKitchen:PottedPlant:set2.memberWireframeColor" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[1].objectGrpColor" 
+		""
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:groupId39.groupId" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[0].objectGroupId" 
 		"livingroomKitchenRN.placeHolderList[326]" "livingroomKitchenRN.placeHolderList[327]" 
@@ -80523,7 +80907,7 @@ createNode reference -n "livingroomKitchenRN";
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:set4.memberWireframeColor" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		"livingroomKitchenRN.placeHolderList[336]" "livingroomKitchenRN.placeHolderList[337]" 
-		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.iog.og[0].gco"
+		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.iog.og[0].gco"
 		
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:groupId38.groupId" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.instObjGroups.objectGroups[1].objectGroupId" 
@@ -80533,7 +80917,7 @@ createNode reference -n "livingroomKitchenRN";
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:set2.memberWireframeColor" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.instObjGroups.objectGroups[1].objectGrpColor" 
 		"livingroomKitchenRN.placeHolderList[340]" "livingroomKitchenRN.placeHolderList[341]" 
-		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.iog.og[1].gco"
+		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.iog.og[1].gco"
 		
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:groupId35.groupId" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[0].objectGroupId" 
@@ -80543,7 +80927,7 @@ createNode reference -n "livingroomKitchenRN";
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:set4.memberWireframeColor" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[0].objectGrpColor" 
 		"livingroomKitchenRN.placeHolderList[344]" "livingroomKitchenRN.placeHolderList[345]" 
-		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.iog.og[0].gco"
+		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.iog.og[0].gco"
 		
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:groupId36.groupId" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[1].objectGroupId" 
@@ -80553,7 +80937,7 @@ createNode reference -n "livingroomKitchenRN";
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:set2.memberWireframeColor" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick01|livingroomKitchen:PottedPlant:Stick01Shape.instObjGroups.objectGroups[1].objectGrpColor" 
 		"livingroomKitchenRN.placeHolderList[348]" "livingroomKitchenRN.placeHolderList[349]" 
-		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.iog.og[1].gco"
+		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.iog.og[1].gco"
 		
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:groupId41.groupId" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[0].objectGroupId" 
@@ -80563,7 +80947,7 @@ createNode reference -n "livingroomKitchenRN";
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:set4.memberWireframeColor" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[0].objectGrpColor" 
 		"livingroomKitchenRN.placeHolderList[352]" "livingroomKitchenRN.placeHolderList[353]" 
-		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.iog.og[0].gco"
+		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.iog.og[0].gco"
 		
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:groupId42.groupId" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[1].objectGroupId" 
@@ -80573,7 +80957,7 @@ createNode reference -n "livingroomKitchenRN";
 		5 0 "livingroomKitchenRN" "livingroomKitchen:PottedPlant:set2.memberWireframeColor" 
 		"|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.instObjGroups.objectGroups[1].objectGrpColor" 
 		"livingroomKitchenRN.placeHolderList[356]" "livingroomKitchenRN.placeHolderList[357]" 
-		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick03|livingroomKitchen:PottedPlant:Stick03Shape.iog.og[1].gco"
+		"|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Plant|livingroomKitchen:PottedPlant:Stick02|livingroomKitchen:PottedPlant:StickShape2.iog.og[1].gco"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:PottedPlant:GEO_Potted_Plant_HighPoly|livingroomKitchen:PottedPlant:Pot|livingroomKitchen:PottedPlant:PotShape.instObjGroups.objectGroups[1]" 
 		"livingroomKitchen:PottedPlant:set1.dagSetMembers" "livingroomKitchenRN.placeHolderList[358]" 
@@ -80619,8 +81003,13 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:PottedPlant:set4.dagSetMembers" "livingroomKitchenRN.placeHolderList[378]" 
 		"livingroomKitchenRN.placeHolderList[379]" "livingroomKitchen:PottedPlant:set4.dsm"
 		
-		"livingroomKitchen:CabinetsRN" 55
+		"livingroomKitchen:CabinetsRN" 58
 		0 "|livingroomKitchen:Cabinets:Cabinets" "|Props" "-s -r "
+		2 "livingroomKitchen:Cabinets:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Cabinets:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Cabinets:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		3 "|Props|livingroomKitchen:Cabinets:Cabinets|livingroomKitchen:Cabinets:CabinetBox2|livingroomKitchen:Cabinets:CabinetShelf2a|livingroomKitchen:Cabinets:CabinetShelf2aShape.instObjGroups" 
 		"livingroomKitchen:Cabinets:standardSurface2SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:Cabinets:Cabinets|livingroomKitchen:Cabinets:CabinetBox1|livingroomKitchen:Cabinets:CabinetDoor1|livingroomKitchen:Cabinets:CabinetKnob1|livingroomKitchen:Cabinets:CabinetKnob2Shape4.instObjGroups" 
@@ -80756,9 +81145,24 @@ createNode reference -n "livingroomKitchenRN";
 		5 3 "livingroomKitchenRN" "|Props|livingroomKitchen:Cabinets:Cabinets|livingroomKitchen:Cabinets:CabinetBox7|livingroomKitchen:Cabinets:CabinetShelf7|livingroomKitchen:Cabinets:CabinetShelfShape7.instObjGroups" 
 		"livingroomKitchenRN.placeHolderList[200]" "livingroomKitchen:Cabinets:standardSurface2SG.dsm"
 		
-		"livingroomKitchen:Spoon_and_BowlRN" 6
+		"livingroomKitchen:Spoon_and_BowlRN" 15
 		0 "|livingroomKitchen:Spoon_and_Bowl:Spoon" "|Props" "-s -r "
 		0 "|livingroomKitchen:Spoon_and_Bowl:Bowl" "|Props" "-s -r "
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert4SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Spoon_and_Bowl:lambert4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		3 "|Props|livingroomKitchen:Spoon_and_Bowl:Bowl|livingroomKitchen:Spoon_and_Bowl:BowlShape.instObjGroups" 
 		"livingroomKitchen:Spoon_and_Bowl:lambert3SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:Spoon_and_Bowl:Spoon|livingroomKitchen:Spoon_and_Bowl:SpoonShape.instObjGroups" 
@@ -80771,133 +81175,41 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:Spoon_and_Bowl:lambert4SG.dagSetMembers" "livingroomKitchenRN.placeHolderList[203]" 
 		"livingroomKitchenRN.placeHolderList[204]" "livingroomKitchen:Spoon_and_Bowl:lambert4SG.dsm"
 		
-		"livingroomKitchen:Spatula_holderRN" 165
+		"livingroomKitchen:Spatula_holderRN" 177
 		2 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:cup|livingroomKitchen:Spatula_holder:cupShape" 
 		"instObjGroups.objectGroups" " -s 2"
 		2 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape" 
 		"instObjGroups.objectGroups" " -s 8"
 		2 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape" 
 		"instObjGroups.objectGroups" " -s 6"
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace7.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace8.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[0]" 
-		"livingroomKitchen:Spatula_holder:set10.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.compInstObjGroups.compObjectGroups[0]" 
-		"livingroomKitchen:Spatula_holder:set10.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace14.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge24.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge26.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel9.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge6.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge14.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge19.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge13.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[3]" 
-		"livingroomKitchen:Spatula_holder:set4.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel4.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge23.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace4.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace13.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel5.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:cup|livingroomKitchen:Spatula_holder:cupShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyMergeVert1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace5.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace9.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge25.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[2]" 
-		"livingroomKitchen:Spatula_holder:set9.dagSetMembers" "-na"
-		3 "livingroomKitchen:Spatula_holder:groupId16.groupId" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[0].objectGroupId" 
-		""
-		3 "livingroomKitchen:Spatula_holder:set10.memberWireframeColor" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
-		""
-		3 "livingroomKitchen:Spatula_holder:groupId18.groupId" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[2].objectGroupId" 
-		""
-		3 "livingroomKitchen:Spatula_holder:set9.memberWireframeColor" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[2].objectGrpColor" 
-		""
-		3 "livingroomKitchen:Spatula_holder:groupId19.groupId" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace6.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge22.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[2]" 
-		"livingroomKitchen:Spatula_holder:set3.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyAutoProj3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge7.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge9.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[1]" 
-		"livingroomKitchen:Spatula_holder:set2.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge15.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace11.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyMergeVert2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge5.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace10.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge16.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge4.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[0]" 
-		"livingroomKitchen:Spatula_holder:set1.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge8.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyAutoProj2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polySewEdge1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel7.manipMatrix" ""
+		2 "livingroomKitchen:Spatula_holder:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:Spatula_holder:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Spatula_holder:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Spatula_holder:standardSurface3SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:Spatula_holder:standardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Spatula_holder:standardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Spatula_holder:standardSurface4SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:Spatula_holder:standardSurface4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Spatula_holder:standardSurface4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Spatula_holder:standardSurface5SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:Spatula_holder:standardSurface5SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Spatula_holder:standardSurface5SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge20.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge17.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.instObjGroups" 
-		"livingroomKitchen:Spatula_holder:standardSurface4SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyAutoProj4.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups" 
+		"livingroomKitchen:Spatula_holder:standardSurface3SG.dagSetMembers" "-na"
 		3 "livingroomKitchen:Spatula_holder:groupId2.groupId" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "livingroomKitchen:Spatula_holder:set1.memberWireframeColor" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[0].objectGrpColor" 
@@ -80915,25 +81227,141 @@ createNode reference -n "livingroomKitchenRN";
 		3 "livingroomKitchen:Spatula_holder:set4.memberWireframeColor" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[3].objectGrpColor" 
 		""
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel10.manipMatrix" ""
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace4.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge14.manipMatrix" ""
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge12.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBridgeEdge11.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel6.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge23.manipMatrix" ""
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyExtrudeFace12.manipMatrix" ""
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace8.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace11.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyAutoProj3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyAutoProj2.manipMatrix" ""
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
-		"livingroomKitchen:Spatula_holder:polyBevel8.manipMatrix" ""
+		"livingroomKitchen:Spatula_holder:polyBevel7.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[2]" 
+		"livingroomKitchen:Spatula_holder:set3.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge6.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[0]" 
+		"livingroomKitchen:Spatula_holder:set10.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.compInstObjGroups.compObjectGroups[0]" 
+		"livingroomKitchen:Spatula_holder:set10.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyMergeVert2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge9.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel9.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel10.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel5.manipMatrix" ""
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge18.manipMatrix" ""
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel6.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge13.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge5.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge22.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[2]" 
+		"livingroomKitchen:Spatula_holder:set9.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge25.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge17.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel4.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge8.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[3]" 
+		"livingroomKitchen:Spatula_holder:set4.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge4.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyAutoProj4.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace5.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge7.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge10.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge24.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBevel8.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace9.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace13.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[1]" 
+		"livingroomKitchen:Spatula_holder:set2.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace14.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace12.manipMatrix" ""
 		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:cup|livingroomKitchen:Spatula_holder:cupShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyAutoProj1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups" 
-		"livingroomKitchen:Spatula_holder:standardSurface3SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[0]" 
+		"livingroomKitchen:Spatula_holder:set1.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace6.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polySewEdge1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:cup|livingroomKitchen:Spatula_holder:cupShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyMergeVert1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace10.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge16.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge26.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge15.manipMatrix" ""
+		3 "livingroomKitchen:Spatula_holder:groupId16.groupId" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[0].objectGroupId" 
+		""
+		3 "livingroomKitchen:Spatula_holder:set10.memberWireframeColor" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[0].objectGrpColor" 
+		""
+		3 "livingroomKitchen:Spatula_holder:groupId18.groupId" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[2].objectGroupId" 
+		""
+		3 "livingroomKitchen:Spatula_holder:set9.memberWireframeColor" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[2].objectGrpColor" 
+		""
+		3 "livingroomKitchen:Spatula_holder:groupId19.groupId" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyExtrudeFace7.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge19.manipMatrix" ""
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.instObjGroups" 
+		"livingroomKitchen:Spatula_holder:standardSurface4SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
+		"livingroomKitchen:Spatula_holder:polyBridgeEdge11.manipMatrix" ""
 		5 3 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:cup|livingroomKitchen:Spatula_holder:cupShape.instObjGroups.objectGroups[0]" 
 		"livingroomKitchenRN.placeHolderList[380]" ""
 		5 0 "livingroomKitchenRN" "livingroomKitchen:Spatula_holder:groupId1.groupId" 
@@ -81014,15 +81442,15 @@ createNode reference -n "livingroomKitchenRN";
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel1.manipMatrix" "livingroomKitchenRN.placeHolderList[418]" 
-		"livingroomKitchenRN.placeHolderList[419]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[419]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel2.manipMatrix" "livingroomKitchenRN.placeHolderList[420]" 
-		"livingroomKitchenRN.placeHolderList[421]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[421]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace1.manipMatrix" "livingroomKitchenRN.placeHolderList[422]" 
-		"livingroomKitchenRN.placeHolderList[423]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[423]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[0]" 
 		"livingroomKitchen:Spatula_holder:set1.dagSetMembers" "livingroomKitchenRN.placeHolderList[424]" 
@@ -81034,59 +81462,59 @@ createNode reference -n "livingroomKitchenRN";
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge1.manipMatrix" "livingroomKitchenRN.placeHolderList[428]" 
-		"livingroomKitchenRN.placeHolderList[429]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[429]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge2.manipMatrix" "livingroomKitchenRN.placeHolderList[430]" 
-		"livingroomKitchenRN.placeHolderList[431]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[431]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge3.manipMatrix" "livingroomKitchenRN.placeHolderList[432]" 
-		"livingroomKitchenRN.placeHolderList[433]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[433]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge4.manipMatrix" "livingroomKitchenRN.placeHolderList[434]" 
-		"livingroomKitchenRN.placeHolderList[435]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[435]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge5.manipMatrix" "livingroomKitchenRN.placeHolderList[436]" 
-		"livingroomKitchenRN.placeHolderList[437]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[437]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge6.manipMatrix" "livingroomKitchenRN.placeHolderList[438]" 
-		"livingroomKitchenRN.placeHolderList[439]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[439]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge7.manipMatrix" "livingroomKitchenRN.placeHolderList[440]" 
-		"livingroomKitchenRN.placeHolderList[441]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[441]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge8.manipMatrix" "livingroomKitchenRN.placeHolderList[442]" 
-		"livingroomKitchenRN.placeHolderList[443]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[443]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge9.manipMatrix" "livingroomKitchenRN.placeHolderList[444]" 
-		"livingroomKitchenRN.placeHolderList[445]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[445]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge10.manipMatrix" "livingroomKitchenRN.placeHolderList[446]" 
-		"livingroomKitchenRN.placeHolderList[447]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[447]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge11.manipMatrix" "livingroomKitchenRN.placeHolderList[448]" 
-		"livingroomKitchenRN.placeHolderList[449]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[449]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge12.manipMatrix" "livingroomKitchenRN.placeHolderList[450]" 
-		"livingroomKitchenRN.placeHolderList[451]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[451]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace2.manipMatrix" "livingroomKitchenRN.placeHolderList[452]" 
-		"livingroomKitchenRN.placeHolderList[453]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[453]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polySewEdge1.manipMatrix" "livingroomKitchenRN.placeHolderList[454]" 
-		"livingroomKitchenRN.placeHolderList[455]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[455]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.instObjGroups.objectGroups[2]" 
 		"livingroomKitchen:Spatula_holder:set3.dagSetMembers" "livingroomKitchenRN.placeHolderList[456]" 
@@ -81098,119 +81526,119 @@ createNode reference -n "livingroomKitchenRN";
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge13.manipMatrix" "livingroomKitchenRN.placeHolderList[460]" 
-		"livingroomKitchenRN.placeHolderList[461]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[461]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge14.manipMatrix" "livingroomKitchenRN.placeHolderList[462]" 
-		"livingroomKitchenRN.placeHolderList[463]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[463]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyMergeVert2.manipMatrix" "livingroomKitchenRN.placeHolderList[464]" 
-		"livingroomKitchenRN.placeHolderList[465]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[465]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel3.manipMatrix" "livingroomKitchenRN.placeHolderList[466]" 
-		"livingroomKitchenRN.placeHolderList[467]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[467]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel4.manipMatrix" "livingroomKitchenRN.placeHolderList[468]" 
-		"livingroomKitchenRN.placeHolderList[469]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[469]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel5.manipMatrix" "livingroomKitchenRN.placeHolderList[470]" 
-		"livingroomKitchenRN.placeHolderList[471]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[471]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel6.manipMatrix" "livingroomKitchenRN.placeHolderList[472]" 
-		"livingroomKitchenRN.placeHolderList[473]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[473]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel7.manipMatrix" "livingroomKitchenRN.placeHolderList[474]" 
-		"livingroomKitchenRN.placeHolderList[475]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[475]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel8.manipMatrix" "livingroomKitchenRN.placeHolderList[476]" 
-		"livingroomKitchenRN.placeHolderList[477]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[477]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge15.manipMatrix" "livingroomKitchenRN.placeHolderList[478]" 
-		"livingroomKitchenRN.placeHolderList[479]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[479]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge16.manipMatrix" "livingroomKitchenRN.placeHolderList[480]" 
-		"livingroomKitchenRN.placeHolderList[481]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[481]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge17.manipMatrix" "livingroomKitchenRN.placeHolderList[482]" 
-		"livingroomKitchenRN.placeHolderList[483]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[483]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge18.manipMatrix" "livingroomKitchenRN.placeHolderList[484]" 
-		"livingroomKitchenRN.placeHolderList[485]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[485]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace3.manipMatrix" "livingroomKitchenRN.placeHolderList[486]" 
-		"livingroomKitchenRN.placeHolderList[487]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[487]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace4.manipMatrix" "livingroomKitchenRN.placeHolderList[488]" 
-		"livingroomKitchenRN.placeHolderList[489]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[489]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace5.manipMatrix" "livingroomKitchenRN.placeHolderList[490]" 
-		"livingroomKitchenRN.placeHolderList[491]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[491]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace6.manipMatrix" "livingroomKitchenRN.placeHolderList[492]" 
-		"livingroomKitchenRN.placeHolderList[493]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[493]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace7.manipMatrix" "livingroomKitchenRN.placeHolderList[494]" 
-		"livingroomKitchenRN.placeHolderList[495]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[495]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace8.manipMatrix" "livingroomKitchenRN.placeHolderList[496]" 
-		"livingroomKitchenRN.placeHolderList[497]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[497]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace9.manipMatrix" "livingroomKitchenRN.placeHolderList[498]" 
-		"livingroomKitchenRN.placeHolderList[499]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[499]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace10.manipMatrix" "livingroomKitchenRN.placeHolderList[500]" 
-		"livingroomKitchenRN.placeHolderList[501]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[501]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace11.manipMatrix" "livingroomKitchenRN.placeHolderList[502]" 
-		"livingroomKitchenRN.placeHolderList[503]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[503]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace12.manipMatrix" "livingroomKitchenRN.placeHolderList[504]" 
-		"livingroomKitchenRN.placeHolderList[505]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[505]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace13.manipMatrix" "livingroomKitchenRN.placeHolderList[506]" 
-		"livingroomKitchenRN.placeHolderList[507]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[507]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel9.manipMatrix" "livingroomKitchenRN.placeHolderList[508]" 
-		"livingroomKitchenRN.placeHolderList[509]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[509]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBevel10.manipMatrix" "livingroomKitchenRN.placeHolderList[510]" 
-		"livingroomKitchenRN.placeHolderList[511]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[511]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge19.manipMatrix" "livingroomKitchenRN.placeHolderList[512]" 
-		"livingroomKitchenRN.placeHolderList[513]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[513]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge20.manipMatrix" "livingroomKitchenRN.placeHolderList[514]" 
-		"livingroomKitchenRN.placeHolderList[515]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[515]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyExtrudeFace14.manipMatrix" "livingroomKitchenRN.placeHolderList[516]" 
-		"livingroomKitchenRN.placeHolderList[517]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[517]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.instObjGroups.objectGroups[2]" 
 		"livingroomKitchen:Spatula_holder:set9.dagSetMembers" "livingroomKitchenRN.placeHolderList[518]" 
@@ -81226,23 +81654,23 @@ createNode reference -n "livingroomKitchenRN";
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge22.manipMatrix" "livingroomKitchenRN.placeHolderList[524]" 
-		"livingroomKitchenRN.placeHolderList[525]" "livingroomKitchen:Spatula_holder:polyBridgeEdge22.mp"
+		"livingroomKitchenRN.placeHolderList[525]" "livingroomKitchen:Spatula_holder:polyBridgeEdge24.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge23.manipMatrix" "livingroomKitchenRN.placeHolderList[526]" 
-		"livingroomKitchenRN.placeHolderList[527]" "livingroomKitchen:Spatula_holder:polyBridgeEdge22.mp"
+		"livingroomKitchenRN.placeHolderList[527]" "livingroomKitchen:Spatula_holder:polyBridgeEdge24.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge24.manipMatrix" "livingroomKitchenRN.placeHolderList[528]" 
-		"livingroomKitchenRN.placeHolderList[529]" "livingroomKitchen:Spatula_holder:polyBridgeEdge22.mp"
+		"livingroomKitchenRN.placeHolderList[529]" "livingroomKitchen:Spatula_holder:polyBridgeEdge24.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge25.manipMatrix" "livingroomKitchenRN.placeHolderList[530]" 
-		"livingroomKitchenRN.placeHolderList[531]" "livingroomKitchen:Spatula_holder:polyBridgeEdge22.mp"
+		"livingroomKitchenRN.placeHolderList[531]" "livingroomKitchen:Spatula_holder:polyBridgeEdge24.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyBridgeEdge26.manipMatrix" "livingroomKitchenRN.placeHolderList[532]" 
-		"livingroomKitchenRN.placeHolderList[533]" "livingroomKitchen:Spatula_holder:polyBridgeEdge22.mp"
+		"livingroomKitchenRN.placeHolderList[533]" "livingroomKitchen:Spatula_holder:polyBridgeEdge24.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:cup|livingroomKitchen:Spatula_holder:cupShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyAutoProj1.manipMatrix" "livingroomKitchenRN.placeHolderList[534]" 
@@ -81250,30 +81678,124 @@ createNode reference -n "livingroomKitchenRN";
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:pCube2|livingroomKitchen:Spatula_holder:pCube2Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyAutoProj2.manipMatrix" "livingroomKitchenRN.placeHolderList[536]" 
-		"livingroomKitchenRN.placeHolderList[537]" "livingroomKitchen:Spatula_holder:polyBridgeEdge22.mp"
+		"livingroomKitchenRN.placeHolderList[537]" "livingroomKitchen:Spatula_holder:polyBridgeEdge24.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula1|livingroomKitchen:Spatula_holder:spatula1Shape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyAutoProj3.manipMatrix" "livingroomKitchenRN.placeHolderList[538]" 
-		"livingroomKitchenRN.placeHolderList[539]" "livingroomKitchen:Spatula_holder:polyBridgeEdge18.mp"
+		"livingroomKitchenRN.placeHolderList[539]" "livingroomKitchen:Spatula_holder:polyExtrudeFace7.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:SpatulaHolder_Reference|livingroomKitchen:Spatula_holder:spatula|livingroomKitchen:Spatula_holder:spatulaShape.worldMatrix" 
 		"livingroomKitchen:Spatula_holder:polyAutoProj4.manipMatrix" "livingroomKitchenRN.placeHolderList[540]" 
-		"livingroomKitchenRN.placeHolderList[541]" "livingroomKitchen:Spatula_holder:polyBridgeEdge12.mp"
+		"livingroomKitchenRN.placeHolderList[541]" "livingroomKitchen:Spatula_holder:polyBridgeEdge3.mp"
 		
-		"livingroomKitchen:LivingRoomCouchRN" 13
+		"livingroomKitchen:LivingRoomCouchRN" 64
 		0 "|livingroomKitchen:LivingRoomCouch:Couch" "|Props" "-s -r "
+		2 "livingroomKitchen:LivingRoomCouch:ClothSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:ClothSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomCouch:ClothSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomCouch:lambert2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:lambert2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:lambert3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert4SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:lambert4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert5SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:lambert5SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert5SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert6SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:lambert6SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert6SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert7SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:lambert7SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert7SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert8SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:lambert8SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:lambert8SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowR_highSG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowR_highSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowR_highSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowMid_highSG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowMid_highSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowMid_highSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowL_highSG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowL_highSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowL_highSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchSeat_lowSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomCouch:CouchSeat_lowSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchSeat_lowSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchArms_lowSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomCouch:CouchArms_lowSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchArms_lowSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowR_lowSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowR_lowSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowR_lowSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowMid_lowSG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowMid_lowSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowMid_lowSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowL_lowSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowL_lowSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchPillowL_lowSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchSupport_lowSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomCouch:CouchSupport_lowSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomCouch:CouchSupport_lowSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:CouchSeatGeo|livingroomKitchen:LivingRoomCouch:CouchSeatGeoShape.instObjGroups" 
 		"livingroomKitchen:LivingRoomCouch:lambert4SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:BaseSupportGeo|livingroomKitchen:LivingRoomCouch:BaseSupportGeoShape.instObjGroups" 
-		"livingroomKitchen:LivingRoomCouch:lambert2SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:ArmsGrp|livingroomKitchen:LivingRoomCouch:LeftArmGrp|livingroomKitchen:LivingRoomCouch:ArmButtonGeo|livingroomKitchen:LivingRoomCouch:ArmButtonGeoShape.instObjGroups" 
-		"livingroomKitchen:LivingRoomCouch:lambert8SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:ArmsGrp|livingroomKitchen:LivingRoomCouch:RightArmGrp|livingroomKitchen:LivingRoomCouch:ArmButtonGeo|livingroomKitchen:LivingRoomCouch:ArmButtonGeoShape.instObjGroups" 
-		"livingroomKitchen:LivingRoomCouch:lambert8SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:ArmsGrp|livingroomKitchen:LivingRoomCouch:LeftArmGrp|livingroomKitchen:LivingRoomCouch:LeftArmGeo|livingroomKitchen:LivingRoomCouch:LeftArmGeoShape.instObjGroups" 
 		"livingroomKitchen:LivingRoomCouch:lambert3SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:ArmsGrp|livingroomKitchen:LivingRoomCouch:RightArmGrp|livingroomKitchen:LivingRoomCouch:RightArmGeo|livingroomKitchen:LivingRoomCouch:RightArmGeoShape.instObjGroups" 
 		"livingroomKitchen:LivingRoomCouch:lambert3SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:ArmsGrp|livingroomKitchen:LivingRoomCouch:LeftArmGrp|livingroomKitchen:LivingRoomCouch:ArmButtonGeo|livingroomKitchen:LivingRoomCouch:ArmButtonGeoShape.instObjGroups" 
+		"livingroomKitchen:LivingRoomCouch:lambert8SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:ArmsGrp|livingroomKitchen:LivingRoomCouch:RightArmGrp|livingroomKitchen:LivingRoomCouch:ArmButtonGeo|livingroomKitchen:LivingRoomCouch:ArmButtonGeoShape.instObjGroups" 
+		"livingroomKitchen:LivingRoomCouch:lambert8SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:BaseSupportGeo|livingroomKitchen:LivingRoomCouch:BaseSupportGeoShape.instObjGroups" 
+		"livingroomKitchen:LivingRoomCouch:lambert2SG.dagSetMembers" "-na"
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:LivingRoomCouch:Couch|livingroomKitchen:LivingRoomCouch:BaseSupportGeo|livingroomKitchen:LivingRoomCouch:BaseSupportGeoShape.instObjGroups" 
 		"livingroomKitchen:LivingRoomCouch:lambert2SG.dagSetMembers" "livingroomKitchenRN.placeHolderList[542]" 
 		"livingroomKitchenRN.placeHolderList[543]" "livingroomKitchen:LivingRoomCouch:lambert2SG.dsm"
@@ -81298,11 +81820,22 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:LivingRoomCouch:lambert8SG.dagSetMembers" "livingroomKitchenRN.placeHolderList[552]" 
 		"livingroomKitchenRN.placeHolderList[553]" "livingroomKitchen:LivingRoomCouch:lambert8SG.dsm"
 		
-		"livingroomKitchen:bowlAndSpoonRN" 8
+		"livingroomKitchen:bowlAndSpoonRN" 14
 		0 "|livingroomKitchen:bowlAndSpoon:Spoon" "|Props" "-s -r "
 		0 "|livingroomKitchen:bowlAndSpoon:Bowl" "|Props" "-s -r "
 		2 "|Props|livingroomKitchen:bowlAndSpoon:Spoon" "visibility" " 0"
 		2 "|Props|livingroomKitchen:bowlAndSpoon:Bowl" "visibility" " 0"
+		2 "livingroomKitchen:bowlAndSpoon:SpoonSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:bowlAndSpoon:SpoonSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:bowlAndSpoon:SpoonSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:bowlAndSpoon:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:bowlAndSpoon:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:bowlAndSpoon:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		3 "|Props|livingroomKitchen:bowlAndSpoon:Spoon|livingroomKitchen:bowlAndSpoon:SpoonShape.instObjGroups" 
 		"livingroomKitchen:bowlAndSpoon:standardSurface2SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:bowlAndSpoon:Bowl|livingroomKitchen:bowlAndSpoon:BowlShape.instObjGroups" 
@@ -81315,10 +81848,15 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:bowlAndSpoon:SpoonSG.dagSetMembers" "livingroomKitchenRN.placeHolderList[172]" 
 		"livingroomKitchenRN.placeHolderList[173]" "livingroomKitchen:bowlAndSpoon:standardSurface2SG.dsm"
 		
-		"livingroomKitchen:MilkRN" 42
+		"livingroomKitchen:MilkRN" 45
 		0 "|livingroomKitchen:Milk:Milk" "|Props" "-s -r "
 		2 "|Props|livingroomKitchen:Milk:Milk|livingroomKitchen:Milk:MilkBox|livingroomKitchen:Milk:transform1|livingroomKitchen:Milk:MilkBox_Shape" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:862]\""
+		
+		2 "livingroomKitchen:Milk:MilkBox_SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Milk:MilkBox_SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:Milk:MilkBox_SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
 		
 		3 "|Props|livingroomKitchen:Milk:Milk|livingroomKitchen:Milk:MilkBox|livingroomKitchen:Milk:transform1|livingroomKitchen:Milk:MilkBox_Shape.instObjGroups.objectGroups[0]" 
 		":initialShadingGroup.dagSetMembers" "-na"
@@ -81404,8 +81942,14 @@ createNode reference -n "livingroomKitchenRN";
 		"|Props|livingroomKitchen:Milk:Milk|livingroomKitchen:Milk:MilkBox|livingroomKitchen:Milk:transform1|livingroomKitchen:Milk:MilkBox_Shape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"livingroomKitchenRN.placeHolderList[285]" "livingroomKitchenRN.placeHolderList[286]" 
 		"livingroomKitchen:Milk:MilkBox_Shape.ciog.cog[0].cgid"
-		"livingroomKitchen:CouchChairRN" 17
+		"livingroomKitchen:CouchChairRN" 20
 		0 "|livingroomKitchen:CouchChair:CouchChair" "|Props" "-s -r "
+		2 "livingroomKitchen:CouchChair:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:CouchChair:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:CouchChair:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		3 "|Props|livingroomKitchen:CouchChair:CouchChair|livingroomKitchen:CouchChair:ChairBase|livingroomKitchen:CouchChair:ChairBack|livingroomKitchen:CouchChair:ChairArmL|livingroomKitchen:CouchChair:ChairArmLButton|livingroomKitchen:CouchChair:ChairArmLButtonShape.instObjGroups" 
 		"livingroomKitchen:CouchChair:standardSurface2SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:CouchChair:CouchChair|livingroomKitchen:CouchChair:ChairBase|livingroomKitchen:CouchChair:ChairBaseShape.instObjGroups" 
@@ -81446,7 +81990,7 @@ createNode reference -n "livingroomKitchenRN";
 		5 3 "livingroomKitchenRN" "|Props|livingroomKitchen:CouchChair:CouchChair|livingroomKitchen:CouchChair:ChairBase|livingroomKitchen:CouchChair:ChairBaseCushion|livingroomKitchen:CouchChair:ChairBaseCushionShape.instObjGroups" 
 		"livingroomKitchenRN.placeHolderList[566]" "livingroomKitchen:CouchChair:standardSurface2SG.dsm"
 		
-		"livingroomKitchen:LivingRoomSetRN" 39
+		"livingroomKitchen:LivingRoomSetRN" 197
 		2 "|Background|livingroomKitchen:OriginalSet_AddedRoomStructure|livingroomKitchen:LivingRoomSet:SkellyLivingRoom|livingroomKitchen:LivingRoomSet:InsideHouse|livingroomKitchen:LivingRoomSet:Living_Room_Table|livingroomKitchen:LivingRoomSet:LivingRoomTable" 
 		"visibility" " 0"
 		2 "|Background|livingroomKitchen:OriginalSet_AddedRoomStructure|livingroomKitchen:LivingRoomSet:SkellyLivingRoom|livingroomKitchen:LivingRoomSet:InsideHouse|livingroomKitchen:LivingRoomSet:Coat_Stand" 
@@ -81456,120 +82000,425 @@ createNode reference -n "livingroomKitchenRN";
 		
 		2 "|Background|livingroomKitchen:OriginalSet_AddedRoomStructure|livingroomKitchen:LivingRoomSet:SkellyLivingRoom|livingroomKitchen:LivingRoomSet:InsideHouse|livingroomKitchen:LivingRoomSet:Hat|livingroomKitchen:LivingRoomSet:Hat" 
 		"translate" " -type \"double3\" -15.793216 51.613905 -69.770422"
+		2 "livingroomKitchen:LivingRoomSet:woodenFrameSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:woodenFrameSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:woodenFrameSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:window1_SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:window1_SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:window1_SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:window1_GlassSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomSet:window1_GlassSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:window1_GlassSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:walls1SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:walls1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:walls2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:walls3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls4SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:walls4SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls4SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls5SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:walls5SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls5SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls66SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:walls66SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:walls66SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:CubeFBXASC046002SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomSet:CubeFBXASC046002SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:CubeFBXASC046002SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:CubeFBXASC046001SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomSet:CubeFBXASC046001SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:CubeFBXASC046001SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:Clothesrack_ClSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomSet:Clothesrack_ClSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Clothesrack_ClSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:Rug_SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Rug_SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Rug_SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:lamp2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:lamp2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:lamp2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:hatSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:hatSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:hatSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:CylinderFBXASC046001SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:CylinderFBXASC046001SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:CylinderFBXASC046001SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:door2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:door2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:door2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:cutlery2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:cutlery2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:cutlery2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:cushionSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:cushionSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:cushionSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Chest1SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Chest1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Chest1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:chairSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:chairSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:chairSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:CF_centerSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:CF_centerSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:CF_centerSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:CF_3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:CF_3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:CF_3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:candlesBaseSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:candlesBaseSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:candlesBaseSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:candlesSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:candlesSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:LivingRoomSet:candlesSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:LivingRoomSet:armchair_2_2SG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:LivingRoomSet:armchair_2_2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:armchair_2_2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:armchair_1SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:armchair_1SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:armchair_1SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface2SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file1" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file2" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file3" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file4" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file5" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file5" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file1" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file3" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file2" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wall_normal.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file4" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader1SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader1SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader1SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file6" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file6" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file5" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Ground/Ground_Painted_basecolor.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file5" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file7" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Ground/Ground_ambientocclusion.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file7" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file6" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Ground/Ground_roughness.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file6" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file8" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Ground/Ground_normal.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file8" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader2SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file7" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Ground/Ground_height.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file7" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file1" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file3" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_2/Cave_Test_2_roughness.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file2" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_2/Cave_Test_2_normal.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file4" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Cave2Displacement5" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Cave2Displacement5" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Cave2Displacement5" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file8" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_2/Cave_Test_2_height.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file8" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__file1" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		"fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__file1" 
+		"colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__file3" 
+		"fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__file3" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
+		"colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__file2" 
+		"fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_3/Cave_Test_3_roughness.png\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__file2" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
+		"colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__file4" 
+		"fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_3/Cave_Test_3_normal.png\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__file4" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
-		
+		"colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader4SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__displacementShader4SG" 
+		"aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__displacementShader4SG" 
+		"aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__displacementShader4SG" 
+		"aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__displacementShader4SG1" 
+		"aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__displacementShader4SG1" 
+		"aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__displacementShader4SG1" 
+		"aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader5SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader5SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader5SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file9" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_3/Cave_Test_3_height.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file9" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__pasted__file1" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		"fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__pasted__file1" 
+		"colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__pasted__file3" 
+		"fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_4/Cave_Test_4_roughness.png\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__pasted__file3" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		"colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__pasted__file2" 
+		"fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_4/Cave_Test_4_roughness.png\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__pasted__file2" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		"colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__pasted__file4" 
+		"fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_4/Cave_Test_4_normal.png\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__pasted__pasted__file4" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
-		
+		"colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader6SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader6SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:displacementShader6SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file10" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Cave_4/Cave_Test_4_height.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file10" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface3SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file11" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file11" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface4SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file12" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file12" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file12" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__file12" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Blue_Paint_MatSG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Blue_Paint_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Blue_Paint_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface5SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface5SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:standardSurface5SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file13" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic Metal/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:file13" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file12" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		"livingroomKitchen:cerealBoxRN" 3
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:pasted__pasted__file12" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Brown_Paint_MatSG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Brown_Paint_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:LivingRoomSet:Material_Ref:Brown_Paint_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		"livingroomKitchen:cerealBoxRN" 9
 		0 "|livingroomKitchen:cerealBox:cerealBox" "|Props" "-s -r "
+		2 "livingroomKitchen:cerealBox:pasted__blinn8SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:cerealBox:pasted__blinn8SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:cerealBox:pasted__blinn8SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:cerealBox:lambert2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:cerealBox:lambert2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:cerealBox:lambert2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
 		3 "|Props|livingroomKitchen:cerealBox:cerealBox|livingroomKitchen:cerealBox:cerealBoxShape.instObjGroups" 
 		"livingroomKitchen:cerealBox:lambert2SG.dagSetMembers" "-na"
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:cerealBox:cerealBox|livingroomKitchen:cerealBox:cerealBoxShape.instObjGroups" 
 		"livingroomKitchen:cerealBox:lambert2SG.dagSetMembers" "livingroomKitchenRN.placeHolderList[205]" 
 		"livingroomKitchenRN.placeHolderList[206]" "livingroomKitchen:cerealBox:lambert2SG.dsm"
 		
-		"livingroomKitchenRN" 162
+		"livingroomKitchenRN" 120
 		0 "|livingroomKitchen:Door1" "|Props" "-s -r "
 		0 "|livingroomKitchen:SpatulaHolder_Reference" "|Props" "-s -r "
 		0 "|livingroomKitchen:Fridge_Reference" "|Props" "-s -r "
@@ -81588,443 +82437,277 @@ createNode reference -n "livingroomKitchenRN";
 		"translate" " -type \"double3\" 92.344837 142.478458 23.552041"
 		2 "|Background|livingroomKitchen:OriginalSet_AddedRoomStructure|livingroomKitchen:NonReferences|livingroomKitchen:AddedtoOriginal|livingroomKitchen:Picture" 
 		"rotate" " -type \"double3\" 89.99999100000000851 180 -179.99999116455427384"
-		2 "livingroomKitchen:Material_Ref:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		2 "livingroomKitchen:Material_Ref:standardSurface2SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		2 "livingroomKitchen:Material_Ref:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref:file1" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
 		
-		2 "livingroomKitchen:Material_Ref:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref:file1" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		2 "livingroomKitchen:Material_Ref:file2" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
 		
-		2 "livingroomKitchen:Material_Ref:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		2 "livingroomKitchen:Material_Ref:file2" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		2 "livingroomKitchen:Material_Ref:file3" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref:file3" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		2 "livingroomKitchen:Material_Ref:file4" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
+		2 "livingroomKitchen:Material_Ref:file4" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		2 "livingroomKitchen:Material_Ref:file5" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		2 "livingroomKitchen:Material_Ref:file5" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref:pasted__file1" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
+		2 "livingroomKitchen:Material_Ref:pasted__file1" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
+		2 "livingroomKitchen:Material_Ref:pasted__file3" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
 		
-		2 "livingroomKitchen:Material_Ref:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
+		2 "livingroomKitchen:Material_Ref:pasted__file3" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
+		2 "livingroomKitchen:Material_Ref:pasted__file2" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref:pasted__file2" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
+		2 "livingroomKitchen:Material_Ref:pasted__file4" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wall_normal.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
+		2 "livingroomKitchen:Material_Ref:pasted__file4" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
+		2 "livingroomKitchen:Material_Ref:displacementShader1SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
+		2 "livingroomKitchen:Material_Ref:displacementShader1SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref:displacementShader1SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref:file6" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Plastered_Wall/Plastered_Wall_height.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref:file6" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
+		2 "livingroomKitchen:Material_Ref:standardSurface3SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
+		2 "livingroomKitchen:Material_Ref:standardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref:standardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref:file11" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
+		2 "livingroomKitchen:Material_Ref:file11" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__pasted__file1" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
+		2 "livingroomKitchen:Material_Ref1:standardSurface3SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__pasted__file3" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		2 "livingroomKitchen:Material_Ref1:standardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref1:standardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref1:file11" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__pasted__file2" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
+		2 "livingroomKitchen:Material_Ref1:file11" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__pasted__pasted__file4" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
+		2 "livingroomKitchen:Material_Ref1:standardSurface4SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
+		2 "livingroomKitchen:Material_Ref1:standardSurface4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref1:standardSurface4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref1:file12" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref:file11" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		2 "livingroomKitchen:Material_Ref1:file12" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		2 "livingroomKitchen:Material_Ref1:pasted__file12" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref:pasted__file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		2 "livingroomKitchen:Material_Ref1:pasted__file12" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		2 "livingroomKitchen:Material_Ref1:Blue_Paint_MatSG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref:pasted__pasted__file12" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__pasted__file1" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__pasted__file3" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__pasted__file2" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__pasted__pasted__pasted__file4" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file11" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:pasted__file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref1:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
-		
+		2 "livingroomKitchen:Material_Ref1:Blue_Paint_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref1:Blue_Paint_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file12" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref1:pasted__file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file12" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
+		2 "livingroomKitchen:Material_Ref1:Brown_Paint_MatSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:Material_Ref1:Brown_Paint_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref1:Brown_Paint_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref1:pasted__file13" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic Metal/DefaultMaterial_Base_color.png\""
+		
+		2 "livingroomKitchen:Material_Ref1:pasted__file13" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "livingroomKitchen:Material_Ref1:Stone_MatSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Material_Ref1:Stone_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref1:Stone_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file13" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic Metal/DefaultMaterial_Base_color.png\""
 		
-		2 "livingroomKitchen:Material_Ref1:file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		2 "livingroomKitchen:Material_Ref1:pasted__pasted__file13" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref2:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		2 "livingroomKitchen:Material_Ref1:file14" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic Metal/DefaultMaterial_Metallic.png\""
 		
-		2 "livingroomKitchen:Material_Ref2:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		2 "livingroomKitchen:Material_Ref1:file14" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref2:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref1:Generic_Metal_MatSG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref2:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		2 "livingroomKitchen:Material_Ref1:Generic_Metal_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref1:Generic_Metal_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref2:standardSurface3SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref2:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		2 "livingroomKitchen:Material_Ref2:standardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref2:standardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref2:file11" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref2:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		2 "livingroomKitchen:Material_Ref2:file11" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref2:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref2:standardSurface4SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref2:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		2 "livingroomKitchen:Material_Ref2:standardSurface4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref2:standardSurface4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref2:file12" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref2:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
+		2 "livingroomKitchen:Material_Ref2:file12" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref2:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
+		2 "livingroomKitchen:Material_Ref2:pasted__file12" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref2:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
+		2 "livingroomKitchen:Material_Ref2:pasted__file12" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref2:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref2:Blue_Paint_MatSG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref2:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__pasted__file1" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__pasted__file3" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__pasted__file2" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__pasted__pasted__file4" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:file11" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file12" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref2:pasted__file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
-		
+		2 "livingroomKitchen:Material_Ref2:Blue_Paint_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref2:Blue_Paint_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
 		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file13" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic Metal/DefaultMaterial_Base_color.png\""
 		
-		2 "livingroomKitchen:Material_Ref2:file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		2 "livingroomKitchen:Material_Ref2:pasted__pasted__file13" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref3:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_Painted_Base_color.png\""
+		2 "livingroomKitchen:Material_Ref2:file14" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic Metal/DefaultMaterial_Metallic.png\""
 		
-		2 "livingroomKitchen:Material_Ref3:file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_roughness.png\""
+		2 "livingroomKitchen:Material_Ref2:file14" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref3:file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref2:Generic_Metal_MatSG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref3:file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_normal.png\""
+		2 "livingroomKitchen:Material_Ref2:Generic_Metal_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref2:Generic_Metal_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref3:standardSurface3SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref3:file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Appartment_Floor/Appartemnt_Floor_height.png\""
+		2 "livingroomKitchen:Material_Ref3:standardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref3:standardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref3:file11" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref3:pasted__file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wal_Paintedl_basecolor.png\""
+		2 "livingroomKitchen:Material_Ref3:file11" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
-		2 "livingroomKitchen:Material_Ref3:pasted__file3" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_ambientocclusion.png\""
+		2 "livingroomKitchen:Material_Ref3:standardSurface4SG" "aiCustomAOVs" " -s 2"
 		
-		2 "livingroomKitchen:Material_Ref3:pasted__file2" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_roughness.png\""
+		2 "livingroomKitchen:Material_Ref3:standardSurface4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref3:standardSurface4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:Material_Ref3:file12" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
 		
-		2 "livingroomKitchen:Material_Ref3:pasted__file4" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Plastered_Wall/Plastered_Wall_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__file5" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_Painted_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__file6" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file7" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Ground/Ground_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_Painted_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file8" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_2/Cave_Test_2_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file1" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file3" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_ambientocclusion.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file2" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file4" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file9" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_3/Cave_Test_3_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__pasted__file1" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_basecolor.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__pasted__file3" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__pasted__file2" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_roughness.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__pasted__file4" 
-		"fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_normal.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file10" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Cave_4/Cave_Test_4_height.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file11" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__file12" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file12" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Generic_Wood/plane_divided_DefaultMaterial_BaseColor.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__file13" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:pasted__pasted__file13" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
-		
-		2 "livingroomKitchen:Material_Ref3:file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		2 "livingroomKitchen:Material_Ref3:file12" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
 		
 		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file13" "fileTextureName" 
-		" -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Base_color.png\""
+		" -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic Metal/DefaultMaterial_Base_color.png\""
 		
-		2 "livingroomKitchen:Material_Ref3:pasted__file14" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/Marble/DefaultMaterial_Metallic.png\""
+		2 "livingroomKitchen:Material_Ref3:pasted__pasted__pasted__file13" "colorSpace" 
+		" -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		2 "livingroomKitchen:Material_Ref3:pasted__file14" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Generic Metal/DefaultMaterial_Metallic.png\""
 		
-		"livingroomKitchen:BroomRN" 86
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyBevel4.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyExtrudeFace1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyPlanarProj1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj6.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyExtrudeFace2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyCylProj2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyPlanarProj2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush3|livingroomKitchen:Broom:BroomBrushShape3.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj4.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj9.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polySplitRing3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.instObjGroups" 
-		"livingroomKitchen:Broom:lambert4SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.instObjGroups" 
-		"livingroomKitchen:Broom:lambert4SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyExtrudeFace3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyBevel2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj8.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyBevel1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyExtrudeFace5.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyCylProj1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyCut1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj7.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush|livingroomKitchen:Broom:BroomBrushShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj5.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polySoftEdge1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj10.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyPoke1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
-		"livingroomKitchen:Broom:polySoftEdge2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush2|livingroomKitchen:Broom:BroomBrushShape2.worldMatrix" 
-		"livingroomKitchen:Broom:polyAutoProj3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
-		"livingroomKitchen:Broom:polySplitRing1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.instObjGroups" 
-		"livingroomKitchen:Broom:lambert3SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
-		"livingroomKitchen:Broom:polySoftEdge3.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyExtrudeFace4.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyExtrudeFace6.manipMatrix" ""
+		2 "livingroomKitchen:Material_Ref3:pasted__file14" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\""
+		
+		2 "livingroomKitchen:Material_Ref3:Gold_Metal_MatSG" "aiCustomAOVs" " -s 2"
+		
+		2 "livingroomKitchen:Material_Ref3:Gold_Metal_MatSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:Material_Ref3:Gold_Metal_MatSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:standardSurface2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:standardSurface2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:standardSurface3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:standardSurface3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:standardSurface3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:file1" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/Picture/image.png\""
+		
+		"livingroomKitchen:BroomRN" 95
+		2 "livingroomKitchen:Broom:lambert2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Broom:lambert2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:Broom:lambert2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:Broom:lambert3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Broom:lambert3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:Broom:lambert3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:Broom:lambert4SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Broom:lambert4SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:Broom:lambert4SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
 		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polySphProj1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyBevel1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyCylProj2.manipMatrix" ""
 		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush4|livingroomKitchen:Broom:BroomBrushShape4.worldMatrix" 
 		"livingroomKitchen:Broom:polyAutoProj2.manipMatrix" ""
 		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyBridgeEdge1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
-		"livingroomKitchen:Broom:polySplitRing2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyMergeVert1.manipMatrix" ""
-		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyExtrudeFace7.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polySoftEdge1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj9.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj10.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyPlanarProj1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polySplitRing1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj6.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyCut1.manipMatrix" ""
 		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
-		"livingroomKitchen:Broom:polyBevel3.manipMatrix" ""
+		"livingroomKitchen:Broom:polyBevel4.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj8.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyBevel2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyPoke1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.instObjGroups" 
+		"livingroomKitchen:Broom:lambert3SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyBridgeEdge1.manipMatrix" ""
 		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush4|livingroomKitchen:Broom:BroomBrushShape4.instObjGroups" 
 		"livingroomKitchen:Broom:lambert2SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush3|livingroomKitchen:Broom:BroomBrushShape3.instObjGroups" 
@@ -82033,93 +82716,135 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:Broom:lambert2SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush|livingroomKitchen:Broom:BroomBrushShape.instObjGroups" 
 		"livingroomKitchen:Broom:lambert2SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush2|livingroomKitchen:Broom:BroomBrushShape2.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyExtrudeFace2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polySplitRing3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.instObjGroups" 
+		"livingroomKitchen:Broom:lambert4SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.instObjGroups" 
+		"livingroomKitchen:Broom:lambert4SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyExtrudeFace6.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyExtrudeFace4.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyCylProj1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush3|livingroomKitchen:Broom:BroomBrushShape3.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj4.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyBevel3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush|livingroomKitchen:Broom:BroomBrushShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj5.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyAutoProj7.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyExtrudeFace3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyMergeVert1.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyPlanarProj2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyExtrudeFace5.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
+		"livingroomKitchen:Broom:polySplitRing2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
+		"livingroomKitchen:Broom:polySoftEdge2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
+		"livingroomKitchen:Broom:polySoftEdge3.manipMatrix" ""
+		3 "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
+		"livingroomKitchen:Broom:polyExtrudeFace1.manipMatrix" ""
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polySplitRing1.manipMatrix" "livingroomKitchenRN.placeHolderList[567]" 
-		"livingroomKitchenRN.placeHolderList[568]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[568]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyBevel1.manipMatrix" "livingroomKitchenRN.placeHolderList[569]" 
-		"livingroomKitchenRN.placeHolderList[570]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[570]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyExtrudeFace1.manipMatrix" "livingroomKitchenRN.placeHolderList[571]" 
-		"livingroomKitchenRN.placeHolderList[572]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[572]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyExtrudeFace2.manipMatrix" "livingroomKitchenRN.placeHolderList[573]" 
-		"livingroomKitchenRN.placeHolderList[574]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[574]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyCut1.manipMatrix" "livingroomKitchenRN.placeHolderList[575]" 
-		"livingroomKitchenRN.placeHolderList[576]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[576]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyPoke1.manipMatrix" "livingroomKitchenRN.placeHolderList[577]" 
-		"livingroomKitchenRN.placeHolderList[578]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[578]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polySoftEdge1.manipMatrix" "livingroomKitchenRN.placeHolderList[579]" 
-		"livingroomKitchenRN.placeHolderList[580]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[580]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polySplitRing2.manipMatrix" "livingroomKitchenRN.placeHolderList[581]" 
-		"livingroomKitchenRN.placeHolderList[582]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[582]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polySplitRing3.manipMatrix" "livingroomKitchenRN.placeHolderList[583]" 
-		"livingroomKitchenRN.placeHolderList[584]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[584]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyExtrudeFace3.manipMatrix" "livingroomKitchenRN.placeHolderList[585]" 
-		"livingroomKitchenRN.placeHolderList[586]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[586]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyExtrudeFace4.manipMatrix" "livingroomKitchenRN.placeHolderList[587]" 
-		"livingroomKitchenRN.placeHolderList[588]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[588]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyExtrudeFace5.manipMatrix" "livingroomKitchenRN.placeHolderList[589]" 
-		"livingroomKitchenRN.placeHolderList[590]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[590]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyExtrudeFace6.manipMatrix" "livingroomKitchenRN.placeHolderList[591]" 
-		"livingroomKitchenRN.placeHolderList[592]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[592]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyBridgeEdge1.manipMatrix" "livingroomKitchenRN.placeHolderList[593]" 
-		"livingroomKitchenRN.placeHolderList[594]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[594]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyExtrudeFace7.manipMatrix" "livingroomKitchenRN.placeHolderList[595]" 
-		"livingroomKitchenRN.placeHolderList[596]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[596]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyBevel2.manipMatrix" "livingroomKitchenRN.placeHolderList[597]" 
-		"livingroomKitchenRN.placeHolderList[598]" "livingroomKitchen:Broom:polyMergeVert1.mp"
+		"livingroomKitchenRN.placeHolderList[598]" "livingroomKitchen:Broom:polyBevel4.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyBevel3.manipMatrix" "livingroomKitchenRN.placeHolderList[599]" 
-		"livingroomKitchenRN.placeHolderList[600]" "livingroomKitchen:Broom:polyMergeVert1.mp"
+		"livingroomKitchenRN.placeHolderList[600]" "livingroomKitchen:Broom:polyBevel4.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyBevel4.manipMatrix" "livingroomKitchenRN.placeHolderList[601]" 
-		"livingroomKitchenRN.placeHolderList[602]" "livingroomKitchen:Broom:polyMergeVert1.mp"
+		"livingroomKitchenRN.placeHolderList[602]" "livingroomKitchen:Broom:polyBevel4.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
 		"livingroomKitchen:Broom:polySoftEdge2.manipMatrix" "livingroomKitchenRN.placeHolderList[603]" 
-		"livingroomKitchenRN.placeHolderList[604]" "livingroomKitchen:Broom:polyMergeVert1.mp"
+		"livingroomKitchenRN.placeHolderList[604]" "livingroomKitchen:Broom:polyBevel4.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyMergeVert1.manipMatrix" "livingroomKitchenRN.placeHolderList[605]" 
-		"livingroomKitchenRN.placeHolderList[606]" "livingroomKitchen:Broom:polyMergeVert1.mp"
+		"livingroomKitchenRN.placeHolderList[606]" "livingroomKitchen:Broom:polyBevel4.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
 		"livingroomKitchen:Broom:polySoftEdge3.manipMatrix" "livingroomKitchenRN.placeHolderList[607]" 
-		"livingroomKitchenRN.placeHolderList[608]" "livingroomKitchen:Broom:polyMergeVert1.mp"
+		"livingroomKitchenRN.placeHolderList[608]" "livingroomKitchen:Broom:polyBevel4.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Dustpan|livingroomKitchen:Broom:DustpanShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyAutoProj1.manipMatrix" "livingroomKitchenRN.placeHolderList[609]" 
-		"livingroomKitchenRN.placeHolderList[610]" "livingroomKitchen:Broom:polyMergeVert1.mp"
+		"livingroomKitchenRN.placeHolderList[610]" "livingroomKitchen:Broom:polyBevel4.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush4|livingroomKitchen:Broom:BroomBrushShape4.worldMatrix" 
 		"livingroomKitchen:Broom:polyAutoProj2.manipMatrix" "livingroomKitchenRN.placeHolderList[611]" 
@@ -82139,43 +82864,43 @@ createNode reference -n "livingroomKitchenRN";
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomConnector|livingroomKitchen:Broom:BroomConnectorShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyAutoProj6.manipMatrix" "livingroomKitchenRN.placeHolderList[619]" 
-		"livingroomKitchenRN.placeHolderList[620]" "livingroomKitchen:Broom:polySplitRing2.mp"
+		"livingroomKitchenRN.placeHolderList[620]" "livingroomKitchen:Broom:polyAutoProj6.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyAutoProj7.manipMatrix" "livingroomKitchenRN.placeHolderList[621]" 
-		"livingroomKitchenRN.placeHolderList[622]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[622]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyAutoProj8.manipMatrix" "livingroomKitchenRN.placeHolderList[623]" 
-		"livingroomKitchenRN.placeHolderList[624]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[624]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyCylProj1.manipMatrix" "livingroomKitchenRN.placeHolderList[625]" 
-		"livingroomKitchenRN.placeHolderList[626]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[626]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyAutoProj9.manipMatrix" "livingroomKitchenRN.placeHolderList[627]" 
-		"livingroomKitchenRN.placeHolderList[628]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[628]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyPlanarProj1.manipMatrix" "livingroomKitchenRN.placeHolderList[629]" 
-		"livingroomKitchenRN.placeHolderList[630]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[630]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyPlanarProj2.manipMatrix" "livingroomKitchenRN.placeHolderList[631]" 
-		"livingroomKitchenRN.placeHolderList[632]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[632]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyCylProj2.manipMatrix" "livingroomKitchenRN.placeHolderList[633]" 
-		"livingroomKitchenRN.placeHolderList[634]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[634]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polySphProj1.manipMatrix" "livingroomKitchenRN.placeHolderList[635]" 
-		"livingroomKitchenRN.placeHolderList[636]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[636]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHandle|livingroomKitchen:Broom:BroomHandleShape.worldMatrix" 
 		"livingroomKitchen:Broom:polyAutoProj10.manipMatrix" "livingroomKitchenRN.placeHolderList[637]" 
-		"livingroomKitchenRN.placeHolderList[638]" "livingroomKitchen:Broom:polyPlanarProj2.mp"
+		"livingroomKitchenRN.placeHolderList[638]" "livingroomKitchen:Broom:polyExtrudeFace1.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:BroomAndPan_References|livingroomKitchen:Broom:Broom|livingroomKitchen:Broom:BroomHead|livingroomKitchen:Broom:BroomBrush3|livingroomKitchen:Broom:BroomBrushShape3.instObjGroups" 
 		"livingroomKitchen:Broom:lambert2SG.dagSetMembers" "livingroomKitchenRN.placeHolderList[639]" 
@@ -82205,7 +82930,27 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:Broom:lambert4SG.dagSetMembers" "livingroomKitchenRN.placeHolderList[651]" 
 		"livingroomKitchenRN.placeHolderList[652]" "livingroomKitchen:Broom:lambert4SG.dsm"
 		
-		"livingroomKitchen:DoorRN" 8
+		"livingroomKitchen:DoorRN" 20
+		2 "livingroomKitchen:Door:lambert2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Door:lambert2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:Door:lambert2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:Door:lambert3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Door:lambert3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:Door:lambert3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:Door:lambert4SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Door:lambert4SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:Door:lambert4SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:Door:lambert5SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:Door:lambert5SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:Door:lambert5SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
 		3 "|Props|livingroomKitchen:Door1|livingroomKitchen:Door:knob|livingroomKitchen:Door:knobShape.instObjGroups" 
 		"livingroomKitchen:Door:lambert5SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:Door1|livingroomKitchen:Door:Door_frame|livingroomKitchen:Door:Door_frameShape.instObjGroups" 
@@ -82242,22 +82987,57 @@ createNode reference -n "livingroomKitchenRN";
 		5 3 "livingroomKitchenRN" "|Props|livingroomKitchen:owlbearskinRug:OwlRug_HighPoly:ZBrushPolyMesh3D|livingroomKitchen:owlbearskinRug:OwlRug_HighPoly:ZBrushPolyMesh3DShape.instObjGroups" 
 		"livingroomKitchenRN.placeHolderList[554]" ":initialShadingGroup.dsm"
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:owlbearskinRug:OwlRug_HighPoly:ZBrushPolyMesh3D|livingroomKitchen:owlbearskinRug:OwlRug_HighPoly:ZBrushPolyMesh3DShape.worldMatrix" 
-		"livingroomKitchen:polyUnsmooth2.manipMatrix" "livingroomKitchenRN.placeHolderList[555]" 
+		"livingroomKitchen:polyUnsmooth1.manipMatrix" "livingroomKitchenRN.placeHolderList[555]" 
 		"livingroomKitchenRN.placeHolderList[556]" "livingroomKitchen:polyUnsmooth2.mp"
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:owlbearskinRug:OwlRug_HighPoly:ZBrushPolyMesh3D|livingroomKitchen:owlbearskinRug:OwlRug_HighPoly:ZBrushPolyMesh3DShape.worldMatrix" 
-		"livingroomKitchen:polyUnsmooth1.manipMatrix" "livingroomKitchenRN.placeHolderList[557]" 
+		"livingroomKitchen:polyUnsmooth2.manipMatrix" "livingroomKitchenRN.placeHolderList[557]" 
 		"livingroomKitchenRN.placeHolderList[558]" "livingroomKitchen:polyUnsmooth2.mp"
-		"livingroomKitchen:OvenStovetopRN" 8
+		"livingroomKitchen:OvenStovetopRN" 29
 		0 "|livingroomKitchen:OvenStovetop:Oven" "|Props" "-s -r "
 		2 "|Props|livingroomKitchen:OvenStovetop:Oven|livingroomKitchen:OvenStovetop:OvenShape" 
 		"instObjGroups.objectGroups[0].objectGrpCompList" " -type \"componentList\" 1 \"f[0:9853]\""
 		
-		3 "|Props|livingroomKitchen:OvenStovetop:Oven|livingroomKitchen:OvenStovetop:OvenShape.instObjGroups.objectGroups[0]" 
-		"livingroomKitchen:OvenStovetop:lambert2SG.dagSetMembers" "-na"
+		2 "livingroomKitchen:OvenStovetop:ovenSG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:OvenStovetop:ovenSG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:OvenStovetop:ovenSG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:OvenStovetop:polySurface3SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:OvenStovetop:polySurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:OvenStovetop:polySurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:OvenStovetop:polySurface4SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:OvenStovetop:polySurface4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:OvenStovetop:polySurface4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:OvenStovetop:polySurface5SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:OvenStovetop:polySurface5SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:OvenStovetop:polySurface5SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:OvenStovetop:polySurface6SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:OvenStovetop:polySurface6SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:OvenStovetop:polySurface6SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:OvenStovetop:oven1SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:OvenStovetop:oven1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:OvenStovetop:oven1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "livingroomKitchen:OvenStovetop:lambert2SG" "aiCustomAOVs" " -s 2"
+		2 "livingroomKitchen:OvenStovetop:lambert2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "livingroomKitchen:OvenStovetop:lambert2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
 		3 "livingroomKitchen:OvenStovetop:groupId1.groupId" "|Props|livingroomKitchen:OvenStovetop:Oven|livingroomKitchen:OvenStovetop:OvenShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "livingroomKitchen:OvenStovetop:lambert2SG.memberWireframeColor" "|Props|livingroomKitchen:OvenStovetop:Oven|livingroomKitchen:OvenStovetop:OvenShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
+		3 "|Props|livingroomKitchen:OvenStovetop:Oven|livingroomKitchen:OvenStovetop:OvenShape.instObjGroups.objectGroups[0]" 
+		"livingroomKitchen:OvenStovetop:lambert2SG.dagSetMembers" "-na"
 		5 0 "livingroomKitchenRN" "livingroomKitchen:OvenStovetop:groupId1.groupId" 
 		"|Props|livingroomKitchen:OvenStovetop:Oven|livingroomKitchen:OvenStovetop:OvenShape.instObjGroups.objectGroups[0].objectGroupId" 
 		"livingroomKitchenRN.placeHolderList[287]" "livingroomKitchenRN.placeHolderList[288]" 
@@ -82270,21 +83050,61 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchen:OvenStovetop:lambert2SG.dagSetMembers" "livingroomKitchenRN.placeHolderList[291]" 
 		"livingroomKitchenRN.placeHolderList[292]" "livingroomKitchen:OvenStovetop:lambert2SG.dsm"
 		
-		"livingroomKitchen:FridgeForWorkDayRN" 35
+		"livingroomKitchen:FridgeForWorkDayRN" 56
 		2 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2" 
 		"instObjGroups.objectGroups" " -s 2"
-		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
-		"livingroomKitchen:FridgeForWorkDay:polySoftEdge2.manipMatrix" ""
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurfaceSG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurfaceSG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurfaceSG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface1SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface1SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface1SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface2SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface2SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface2SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface2SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface3SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface3SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface3SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface4SG" "aiCustomAOVs" 
+		" -s 2"
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface4SG" "aiCustomAOVs[0].aovName" 
+		" -type \"string\" \"Z\""
+		2 "livingroomKitchen:FridgeForWorkDay:standardSurface4SG" "aiCustomAOVs[1].aovName" 
+		" -type \"string\" \"albedo\""
+		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:FridgeBase|livingroomKitchen:FridgeForWorkDay:FridgeBaseShape.instObjGroups" 
+		"livingroomKitchen:FridgeForWorkDay:standardSurface2SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.instObjGroups.objectGroups[0]" 
+		"livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.compInstObjGroups.compObjectGroups[0]" 
+		"livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:DownHandle|livingroomKitchen:FridgeForWorkDay:DownHandleShape.instObjGroups" 
 		"livingroomKitchen:FridgeForWorkDay:standardSurface3SG.dagSetMembers" "-na"
 		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:UpHandle|livingroomKitchen:FridgeForWorkDay:UpHandleShape.instObjGroups" 
 		"livingroomKitchen:FridgeForWorkDay:standardSurface3SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
-		"livingroomKitchen:FridgeForWorkDay:polyRemesh2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
-		"livingroomKitchen:FridgeForWorkDay:polyAutoProj2.manipMatrix" ""
-		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:FridgeBase|livingroomKitchen:FridgeForWorkDay:FridgeBaseShape.instObjGroups" 
-		"livingroomKitchen:FridgeForWorkDay:standardSurface2SG.dagSetMembers" "-na"
 		3 "livingroomKitchen:FridgeForWorkDay:groupId21.groupId" "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG.memberWireframeColor" 
@@ -82292,10 +83112,12 @@ createNode reference -n "livingroomKitchenRN";
 		""
 		3 "livingroomKitchen:FridgeForWorkDay:groupId22.groupId" "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		""
-		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.instObjGroups.objectGroups[0]" 
-		"livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG.dagSetMembers" "-na"
-		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.compInstObjGroups.compObjectGroups[0]" 
-		"livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG.dagSetMembers" "-na"
+		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
+		"livingroomKitchen:FridgeForWorkDay:polyAutoProj2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
+		"livingroomKitchen:FridgeForWorkDay:polySoftEdge2.manipMatrix" ""
+		3 "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
+		"livingroomKitchen:FridgeForWorkDay:polyRemesh2.manipMatrix" ""
 		5 0 "livingroomKitchenRN" "livingroomKitchen:FridgeForWorkDay:typeStandardSurface3SG.memberWireframeColor" 
 		"|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:polySurface7|livingroomKitchen:FridgeForWorkDay:polySurfaceShape8.instObjGroups.objectGroups[0].objectGrpColor" 
 		"livingroomKitchenRN.placeHolderList[207]" "livingroomKitchenRN.placeHolderList[208]" 
@@ -82369,15 +83191,15 @@ createNode reference -n "livingroomKitchenRN";
 		"livingroomKitchenRN.placeHolderList[243]" ""
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
 		"livingroomKitchen:FridgeForWorkDay:polySoftEdge2.manipMatrix" "livingroomKitchenRN.placeHolderList[244]" 
-		"livingroomKitchenRN.placeHolderList[245]" "livingroomKitchen:FridgeForWorkDay:polyAutoProj2.mp"
+		"livingroomKitchenRN.placeHolderList[245]" "livingroomKitchen:FridgeForWorkDay:polySoftEdge2.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
 		"livingroomKitchen:FridgeForWorkDay:polyRemesh2.manipMatrix" "livingroomKitchenRN.placeHolderList[246]" 
-		"livingroomKitchenRN.placeHolderList[247]" "livingroomKitchen:FridgeForWorkDay:polyAutoProj2.mp"
+		"livingroomKitchenRN.placeHolderList[247]" "livingroomKitchen:FridgeForWorkDay:polySoftEdge2.mp"
 		
 		5 0 "livingroomKitchenRN" "|Props|livingroomKitchen:Fridge_Reference|livingroomKitchen:FridgeForWorkDay:typeMesh2|livingroomKitchen:FridgeForWorkDay:transform6|livingroomKitchen:FridgeForWorkDay:typeMeshShape2.worldMatrix" 
 		"livingroomKitchen:FridgeForWorkDay:polyAutoProj2.manipMatrix" "livingroomKitchenRN.placeHolderList[248]" 
-		"livingroomKitchenRN.placeHolderList[249]" "livingroomKitchen:FridgeForWorkDay:polyAutoProj2.mp";
+		"livingroomKitchenRN.placeHolderList[249]" "livingroomKitchen:FridgeForWorkDay:polySoftEdge2.mp";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode timeEditor -s -n "timeEditor";
@@ -82387,13 +83209,20 @@ createNode reference -n "TallTableRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"TallTableRN"
 		"TallTableRN" 0
-		"TallTableRN" 4
+		"TallTableRN" 8
 		2 "|TallTable:TallTable" "translate" " -type \"double3\" -56.601568 -11.537476 91.173393"
 		
 		2 "|TallTable:TallTable" "rotate" " -type \"double3\" 0 -90 0"
 		2 "|TallTable:TallTable" "scale" " -type \"double3\" 3 3.591919 3.372049"
 		
-		2 "TallTable:file1" "fileTextureName" " -type \"string\" \"D:/GithubStuff/University/LocalFiles/WorkDayShortfilmTextures/Textures/CouchChair-20260323T054128Z-3-001/CouchChair/standardSurface1_Base_color.png\"";
+		2 "TallTable:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		2 "TallTable:standardSurface2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "TallTable:standardSurface2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "TallTable:file1" "fileTextureName" " -type \"string\" \"C:/git/WorkDayShortFilmOfficialRepo/Maya//Textures/CouchChair-20260323T054128Z-3-001/CouchChair/standardSurface1_Base_color.png\""
+		
+		2 "TallTable:file1" "colorSpace" " -type \"string\" \"sRGB Encoded Rec.709 (sRGB)\"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "FishBowlRN";
@@ -82408,13 +83237,48 @@ createNode reference -n "FishBowlRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"FishBowlRN"
 		"FishBowlRN" 0
-		"FishBowlRN" 12
+		"FishBowlRN" 33
 		0 "|FishBowl:Fishbowl" "|Fishbowl_grp" "-s -r "
 		0 "|FishBowl:Castle" "|Fishbowl_grp" "-s -r "
 		0 "|FishBowl:Seaweeds" "|Fishbowl_grp" "-s -r "
 		0 "|FishBowl:SkelyFish" "|Fishbowl_grp" "-s -r "
 		0 "|FishBowl:Sand" "|Fishbowl_grp" "-s -r "
 		2 "|Fishbowl_grp|FishBowl:Fishbowl" "visibility" " 1"
+		2 "FishBowl:aiStandardSurface1SG" "aiCustomAOVs" " -s 2"
+		2 "FishBowl:aiStandardSurface1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "FishBowl:aiStandardSurface1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "FishBowl:lambert1SG" "aiCustomAOVs" " -s 2"
+		2 "FishBowl:lambert1SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "FishBowl:lambert1SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "FishBowl:standardSurface2SG" "aiCustomAOVs" " -s 2"
+		2 "FishBowl:standardSurface2SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "FishBowl:standardSurface2SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "FishBowl:standardSurface3SG" "aiCustomAOVs" " -s 2"
+		2 "FishBowl:standardSurface3SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "FishBowl:standardSurface3SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "FishBowl:standardSurface4SG" "aiCustomAOVs" " -s 2"
+		2 "FishBowl:standardSurface4SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "FishBowl:standardSurface4SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "FishBowl:standardSurface5SG" "aiCustomAOVs" " -s 2"
+		2 "FishBowl:standardSurface5SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "FishBowl:standardSurface5SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
+		2 "FishBowl:standardSurface6SG" "aiCustomAOVs" " -s 2"
+		2 "FishBowl:standardSurface6SG" "aiCustomAOVs[0].aovName" " -type \"string\" \"Z\""
+		
+		2 "FishBowl:standardSurface6SG" "aiCustomAOVs[1].aovName" " -type \"string\" \"albedo\""
+		
 		5 4 "FishBowlRN" "|Fishbowl_grp|FishBowl:SkelyFish.translateX" "FishBowlRN.placeHolderList[1]" 
 		""
 		5 4 "FishBowlRN" "|Fishbowl_grp|FishBowl:SkelyFish.translateY" "FishBowlRN.placeHolderList[2]" 
@@ -82543,6 +83407,17 @@ createNode reference -n "LivingroomLightingRN";
 		"LivingroomLightingRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode aiAOV -n "aiAOV_Z";
+	rename -uid "B9C1D086-4FE7-21D2-3FD6-5E9819C86060";
+	setAttr ".aovn" -type "string" "Z";
+	setAttr ".aovt" 4;
+createNode aiAOVFilter -n "aiAOVFilter1";
+	rename -uid "92944396-4855-3A84-8707-C4A05F072CB1";
+	setAttr ".ai_translator" -type "string" "closest";
+createNode aiAOV -n "aiAOV_albedo";
+	rename -uid "7E3A2688-4F4E-2185-0228-D185D57C0C1F";
+	setAttr ".aovn" -type "string" "albedo";
+	setAttr ".aovt" 5;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -k on ".fzn";
@@ -82593,7 +83468,7 @@ select -ne :renderPartition;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 183 ".st";
+	setAttr -s 136 ".st";
 	setAttr -cb on ".an";
 	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
@@ -82606,7 +83481,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 186 ".s";
+	setAttr -s 130 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -82614,17 +83489,21 @@ select -ne :postProcessList1;
 	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 320 ".u";
+	setAttr -s 142 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -k on ".ihi";
 	setAttr -s 24 ".r";
 select -ne :lightList1;
-	setAttr -s 14 ".l";
+	setAttr -s 15 ".l";
 select -ne :defaultTextureList1;
-	setAttr -s 245 ".tx";
+	setAttr -s 121 ".tx";
 select -ne :standardSurface1;
 	setAttr ".sr" 0.5;
+select -ne :openPBR_shader1;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -av -k on ".cch";
 	setAttr -k on ".fzn";
 	setAttr -cb on ".ihi";
@@ -82634,7 +83513,7 @@ select -ne :initialShadingGroup;
 	setAttr -k on ".vwm";
 	setAttr -k on ".tpv";
 	setAttr -k on ".uit";
-	setAttr -s 158 ".dsm";
+	setAttr -s 157 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
@@ -82644,7 +83523,12 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
 	setAttr -s 26 ".gn";
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "Z";
+	setAttr ".aovs[1].aov_name" -type "string" "albedo";
+	setAttr ".aal" -type "attributeAlias" 4 "ai_aov_Z" "aiCustomAOVs[0].aovName" "ai_aov_albedo" "aiCustomAOVs[1].aovName" ;
 select -ne :initialParticleSE;
+	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
@@ -82657,6 +83541,10 @@ select -ne :initialParticleSE;
 	setAttr -cb on ".fo";
 	setAttr -cb on ".epo";
 	setAttr -k on ".ro" yes;
+	setAttr -s 2 ".aovs";
+	setAttr ".aovs[0].aov_name" -type "string" "Z";
+	setAttr ".aovs[1].aov_name" -type "string" "albedo";
+	setAttr ".aal" -type "attributeAlias" 4 "ai_aov_Z" "aiCustomAOVs[0].aovName" "ai_aov_albedo" "aiCustomAOVs[1].aovName" ;
 select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
@@ -82672,19 +83560,19 @@ select -ne :defaultRenderGlobals;
 	setAttr -av -k on ".clip";
 	setAttr -av -k on ".edm";
 	setAttr -av -k on ".edl";
-	setAttr -av -cb on ".ren";
+	setAttr -av -cb on ".ren" -type "string" "arnold";
 	setAttr -av -k on ".esr";
 	setAttr -av -k on ".ors";
 	setAttr -cb on ".sdf";
-	setAttr -av -k on ".outf";
-	setAttr -av -cb on ".imfkey";
+	setAttr -av -k on ".outf" 51;
+	setAttr -av -cb on ".imfkey" -type "string" "exr";
 	setAttr -av -k on ".gama";
 	setAttr -k on ".exrc";
 	setAttr -k on ".expt";
-	setAttr -av -k on ".an";
+	setAttr -av -k on ".an" yes;
 	setAttr -cb on ".ar";
-	setAttr -av -k on ".fs";
-	setAttr -av -k on ".ef";
+	setAttr -av -k on ".fs" 0;
+	setAttr -av -k on ".ef" 45;
 	setAttr -av -k on ".bfs";
 	setAttr -av -cb on ".me";
 	setAttr -cb on ".se";
@@ -82697,9 +83585,9 @@ select -ne :defaultRenderGlobals;
 	setAttr -cb on ".oft";
 	setAttr -cb on ".umfn";
 	setAttr -cb on ".ufe";
-	setAttr -av -cb on ".pff";
+	setAttr -av -cb on ".pff" yes;
 	setAttr -av -cb on ".peie";
-	setAttr -av -cb on ".ifp";
+	setAttr -av -cb on ".ifp" -type "string" "<Scene>/<RenderPass>/<Scene>_<RenderPass>";
 	setAttr -k on ".rv";
 	setAttr -av -k on ".comp";
 	setAttr -av -k on ".cth";
@@ -82765,11 +83653,11 @@ select -ne :defaultResolution;
 	setAttr -av -k on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -k on ".bnm";
-	setAttr -av -k on ".w";
-	setAttr -av -k on ".h";
+	setAttr -av -k on ".w" 1920;
+	setAttr -av -k on ".h" 1080;
 	setAttr -av -k on ".pa" 1;
 	setAttr -av -k on ".al";
-	setAttr -av -k on ".dar";
+	setAttr -av -k on ".dar" 1.7769999504089355;
 	setAttr -av -k on ".ldar";
 	setAttr -av -k on ".dpi";
 	setAttr -av -k on ".off";
@@ -82778,7 +83666,7 @@ select -ne :defaultResolution;
 	setAttr -av -k on ".isu";
 	setAttr -av -k on ".pdu";
 select -ne :defaultLightSet;
-	setAttr -s 14 ".dsm";
+	setAttr -s 15 ".dsm";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -82827,7 +83715,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".shml";
 	setAttr -k on ".hwel";
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 6 ".sol";
 connectAttr "SkeletonRN.phl[346]" "ffd1.ip[0].ig";
 connectAttr "SkeletonRN.phl[347]" "ffd1.orggeom[0]";
 connectAttr "SkeletonRN.phl[348]" "ffd1.ip[2].ig";
@@ -113830,6 +114718,8 @@ connectAttr "Head_COG_Ctrl_visibility.o" "SkeletonRN.phl[129]";
 connectAttr "SkeletonRNfosterParent1.msg" "SkeletonRN.fp";
 connectAttr "sharedReferenceNode.sr" "SkeletonRN.sr";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "SkeletonRN.ur";
+connectAttr "aiAOV_Z.msg" ":defaultArnoldRenderOptions.aovs" -na;
+connectAttr "aiAOV_albedo.msg" ":defaultArnoldRenderOptions.aovs" -na;
 connectAttr "FishBowl1:aiStandardSurface1SG.msg" "FishBowl1:materialInfo1.sg";
 connectAttr "FishBowl1:glass.msg" "FishBowl1:materialInfo1.m";
 connectAttr "FishBowl1:glass.msg" "FishBowl1:materialInfo1.t" -na;
@@ -115399,6 +116289,10 @@ connectAttr "livingroomKitchenRN.phl[146]" "livingroomKitchenRN.phl[147]";
 connectAttr "livingroomKitchenRN.phl[150]" "livingroomKitchenRN.phl[151]";
 connectAttr "livingroomKitchenRN.phl[166]" "livingroomKitchenRN.phl[167]";
 connectAttr "livingroomKitchenRN.phl[168]" "livingroomKitchenRN.phl[169]";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_Z.out[0].drvr";
+connectAttr "aiAOVFilter1.msg" "aiAOV_Z.out[0].ftr";
+connectAttr ":defaultArnoldDriver.msg" "aiAOV_albedo.out[0].drvr";
+connectAttr ":defaultArnoldFilter.msg" "aiAOV_albedo.out[0].ftr";
 connectAttr "FishBowl1:aiStandardSurface1SG.pa" ":renderPartition.st" -na;
 connectAttr "FishBowl1:glass.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
