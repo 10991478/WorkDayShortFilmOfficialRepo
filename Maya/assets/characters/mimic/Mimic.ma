@@ -1,31 +1,33 @@
-//Maya ASCII 2023 scene
+//Maya ASCII 2026 scene
 //Name: Mimic.ma
-//Last modified: Tue, Sep 23, 2025 10:06:47 PM
+//Last modified: Wed, Apr 15, 2026 11:41:46 PM
 //Codeset: 1252
-requires maya "2023";
+requires maya "2026";
+requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
-		 "mtoa" "5.2.1.1";
+		 "mtoa" "5.5.4.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2023";
-fileInfo "version" "2023";
-fileInfo "cutIdentifier" "202405151550-05a853e76d";
-fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "7E27C1A5-403D-8868-9E05-05966D4A4D8A";
+fileInfo "product" "Maya 2026";
+fileInfo "version" "2026";
+fileInfo "cutIdentifier" "202510291147-60ec9eda33";
+fileInfo "osv" "Windows 11 Pro v2009 (Build: 26200)";
+fileInfo "UUID" "244EB209-40CA-F83F-FAC3-BD8087E3C554";
 createNode transform -s -n "persp";
 	rename -uid "5C7D3686-4CC8-A595-3944-C8A77204E5A9";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 21.663979238355196 143.99812885260692 395.22140031222489 ;
-	setAttr ".r" -type "double3" -8.7383527291829726 2520.9999999992883 1.9881494807099965e-16 ;
+	setAttr ".t" -type "double3" -126.43686092513295 113.8858343060808 421.81857866674693 ;
+	setAttr ".r" -type "double3" -8.7383527293168211 -362.99999999992502 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E6F2DA2A-4DA0-2BD4-907D-2F9228690F18";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 393.45442147409028;
+	setAttr ".coi" 419.24601979673935;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -28.544946014881134 16.817791804847754 20.448760983248995 ;
+	setAttr ".tp" -type "double3" -102.90904487785272 41.537897787635131 30.500631717572706 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "C4FB8845-48FA-2B67-6649-26B26BE493C6";
@@ -39067,7 +39069,23 @@ createNode transform -n "polySurface59" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape59" -p "polySurface59";
 	rename -uid "F8BE183A-4F28-E05B-7234-C9997807EFC6";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:359]";
+	setAttr -s 4 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 2 ".ciog[0].cog";
+	setAttr ".pv" -type "double2" 0.10238769519223706 0.29522053045406138 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape59Orig" -p "polySurface59";
+	rename -uid "AFD151C0-4B87-991D-ABAD-FBA1408DB574";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 2 ".uvst";
@@ -40144,6 +40162,20 @@ createNode transform -n "polySurface60" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape60" -p "polySurface60";
 	rename -uid "8553C1EF-4E34-0F8D-699E-038AEB911B37";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.10302515970574452 0.55977191849047625 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape126" -p "polySurface60";
+	rename -uid "7E1B1730-4A8A-1E82-DC99-9E9504738F79";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:167]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -40647,6 +40679,20 @@ createNode transform -n "polySurface61" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape61" -p "polySurface61";
 	rename -uid "F7A39827-42D3-6F6E-29F3-77950FA7C21A";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.86093174524200389 0.56660751190032133 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape125" -p "polySurface61";
+	rename -uid "2C2238C4-4669-B7F2-C4BF-C4BAF3BBD285";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:63]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -40850,6 +40896,20 @@ createNode transform -n "polySurface62" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape62" -p "polySurface62";
 	rename -uid "2B9FDFF8-4C2F-91C3-B5C9-AEACFC169A08";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.52560247210779798 0.36857385720525471 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape124" -p "polySurface62";
+	rename -uid "008E5E14-49FF-C178-3C2B-5AB663AE5D42";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:207]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -41450,7 +41510,21 @@ createNode transform -n "polySurface63" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape63" -p "polySurface63";
 	rename -uid "F9DA440E-4A20-9757-5FBC-B582F83AF770";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:207]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.82465393634697826 0.30802714328557573 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape63Orig" -p "polySurface63";
+	rename -uid "22424149-4BC4-3D07-CFD7-529F04146330";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 2 ".uvst";
@@ -42049,6 +42123,20 @@ createNode transform -n "polySurface64" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape64" -p "polySurface64";
 	rename -uid "B528F88F-410B-4ED9-B786-139EF5014C9A";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.039073951283296326 0.5778790224682202 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape123" -p "polySurface64";
+	rename -uid "56771B78-4FD9-95DE-CC56-1AA4AEEE5796";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42108,6 +42196,20 @@ createNode transform -n "polySurface65" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape65" -p "polySurface65";
 	rename -uid "5361513D-45CC-03BF-6483-61BBE8E6009B";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.014484543655545523 0.54301412252284842 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape122" -p "polySurface65";
+	rename -uid "40B09B62-4378-B808-8272-D3A294297E66";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42167,6 +42269,20 @@ createNode transform -n "polySurface66" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape66" -p "polySurface66";
 	rename -uid "24C0A1DF-462D-6440-6F0B-52A3DC145643";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.039508287993934993 0.54244170702967476 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape121" -p "polySurface66";
+	rename -uid "AA5A612C-45F9-E90E-B723-EC9533A21783";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42226,6 +42342,22 @@ createNode transform -n "polySurface67" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape67" -p "polySurface67";
 	rename -uid "1F5D9ED4-4472-C556-A266-6BB3AF10DD68";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.65542495879723128 0.49125488484201357 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 13 ".pt";
+	setAttr -s 13 ".pt";
+createNode mesh -n "polySurfaceShape120" -p "polySurface67";
+	rename -uid "F94E2885-4277-34FE-2F6D-1EAFDE4C8CBF";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42285,6 +42417,22 @@ createNode transform -n "polySurface68" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape68" -p "polySurface68";
 	rename -uid "9EC76962-421E-A644-8BE8-7EAFA02D7A4A";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.65588451262444314 0.52812911890262426 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 13 ".pt";
+	setAttr -s 13 ".pt";
+createNode mesh -n "polySurfaceShape119" -p "polySurface68";
+	rename -uid "5499C312-4B4A-1F56-DE4E-E5B47EFF68FD";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42344,6 +42492,20 @@ createNode transform -n "polySurface69" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape69" -p "polySurface69";
 	rename -uid "070A5A8F-412A-1349-C395-A2AE768C3F8C";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.064532508459955118 0.54290091708179355 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape118" -p "polySurface69";
+	rename -uid "3FD6770A-48F2-59A1-ACF5-F99EA8F012DA";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42403,6 +42565,20 @@ createNode transform -n "polySurface70" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape70" -p "polySurface70";
 	rename -uid "B72E07F2-411C-D2BA-1549-33B6F09ED094";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.013359198764164124 0.57957550387174206 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape117" -p "polySurface70";
+	rename -uid "95C2DA4D-4826-ECD6-930E-B79EB66D32A8";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42462,6 +42638,20 @@ createNode transform -n "polySurface71" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape71" -p "polySurface71";
 	rename -uid "F1FB30DC-4B82-2CDA-0EF7-38A0BF5730FC";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.063827884305604751 0.57878118211572815 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape116" -p "polySurface71";
+	rename -uid "900105EC-45F8-5474-1C6A-03AA0C40B131";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42521,6 +42711,22 @@ createNode transform -n "polySurface72" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape72" -p "polySurface72";
 	rename -uid "3C3E3BD3-4137-429F-787D-3D87FFCE17A2";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.65359888317124093 0.56439088624511735 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 13 ".pt";
+	setAttr -s 13 ".pt";
+createNode mesh -n "polySurfaceShape115" -p "polySurface72";
+	rename -uid "49DDCADC-442D-2325-719D-79AB646F9B1D";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42580,6 +42786,21 @@ createNode transform -n "polySurface73" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape73" -p "polySurface73";
 	rename -uid "D793D9B1-4E27-CD0D-AAA3-11BC9AEAFA0A";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.97263513300866655 0.48637944760093504 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dr" 1;
+createNode mesh -n "polySurfaceShape114" -p "polySurface73";
+	rename -uid "EBE54736-4C7D-481D-26CB-30A5109C4EC1";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42639,6 +42860,20 @@ createNode transform -n "polySurface74" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape74" -p "polySurface74";
 	rename -uid "3803F296-415C-BE13-FFB6-4A85E3455111";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.84414660157395804 0.47925238717686047 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape113" -p "polySurface74";
+	rename -uid "884B7FCF-4FB7-C9C2-E22C-C39051AD09DD";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42698,6 +42933,20 @@ createNode transform -n "polySurface75" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape75" -p "polySurface75";
 	rename -uid "977CB414-4F54-3E87-53F0-5EBE6B0F6D87";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.88131162979608335 0.45335054397583013 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape112" -p "polySurface75";
+	rename -uid "856E3C94-4513-CE12-2931-919D4F4715E8";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42757,6 +43006,20 @@ createNode transform -n "polySurface76" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape76" -p "polySurface76";
 	rename -uid "6455339E-46AF-2A53-AACD-74AE0262BF46";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.9724158260213146 0.5366028275125283 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape111" -p "polySurface76";
+	rename -uid "B1DDD31A-4F54-D6E9-79FB-5BAA05B56713";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42816,6 +43079,20 @@ createNode transform -n "polySurface77" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape77" -p "polySurface77";
 	rename -uid "6099833A-4B60-AE21-FB9E-3E9B3BF1AEAD";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.88100978585171275 0.50291790055834529 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape110" -p "polySurface77";
+	rename -uid "CBE2D57A-4D65-1284-A276-B0AE990D4647";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42875,6 +43152,20 @@ createNode transform -n "polySurface78" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape78" -p "polySurface78";
 	rename -uid "55CACDBF-40FC-314E-33FF-D08FB586514D";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.88025197749801587 0.48035483049952282 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape109" -p "polySurface78";
+	rename -uid "6E0CE09F-42F1-927D-196E-A6BEF059AE08";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42934,6 +43225,22 @@ createNode transform -n "polySurface79" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape79" -p "polySurface79";
 	rename -uid "346E5FA6-486F-475A-AEDD-82885B5B6C09";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.87984726193252083 0.52909556228267263 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".dfgi" 341;
+createNode mesh -n "polySurfaceShape108" -p "polySurface79";
+	rename -uid "561FBC14-4CF7-8BFC-78AA-30A54C008D57";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -42993,6 +43300,20 @@ createNode transform -n "polySurface80" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape80" -p "polySurface80";
 	rename -uid "8585F597-4BF2-D82E-2C24-CBA97B8AB46E";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.8439452963161117 0.45411439720264146 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape107" -p "polySurface80";
+	rename -uid "F73473DF-469F-34FC-149F-80ADF6A872B0";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -43052,6 +43373,20 @@ createNode transform -n "polySurface81" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape81" -p "polySurface81";
 	rename -uid "4A97EE4F-4030-2E1B-A5EF-ABAB0BB59ACD";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.84321946766172373 0.50433283847225596 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape106" -p "polySurface81";
+	rename -uid "696D136D-4F3B-5322-0D47-A393819317B3";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -43111,6 +43446,20 @@ createNode transform -n "polySurface82" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape82" -p "polySurface82";
 	rename -uid "BD55B6BB-4B34-9031-4949-F7AB8E04DE10";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.97328704553523826 0.51083760542317858 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape105" -p "polySurface82";
+	rename -uid "2136B072-469D-5F8D-B36D-2EAF5CA6A506";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -43170,6 +43519,20 @@ createNode transform -n "polySurface83" -p "|Mimic_Updated|Normal_Chest|Top";
 createNode mesh -n "polySurfaceShape83" -p "polySurface83";
 	rename -uid "0F9D1FCB-47A6-57EF-CAE2-0BB5E48868CB";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.84370509693889084 0.52868161650776979 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape104" -p "polySurface83";
+	rename -uid "399DFA62-414E-1787-83D9-5AB971C78019";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:11]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -43234,6 +43597,20 @@ createNode transform -n "polySurface84" -p "|Mimic_Updated|Normal_Chest|Bottom";
 createNode mesh -n "polySurfaceShape84" -p "polySurface84";
 	rename -uid "881CAE55-41B6-917C-145F-9882E38DC0FC";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.52088571477371159 0.59345525811473632 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape128" -p "polySurface84";
+	rename -uid "604E96D0-4871-456F-7B2C-D59184253545";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:37]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -43415,6 +43792,20 @@ createNode transform -n "polySurface85" -p "|Mimic_Updated|Normal_Chest|Bottom";
 createNode mesh -n "polySurfaceShape85" -p "polySurface85";
 	rename -uid "784503E5-4A0A-DAA5-5781-52A4ED9971A8";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.36426060420559164 0.34481978426338866 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape127" -p "polySurface85";
+	rename -uid "F91A03F6-43BA-F5BB-A165-C6A0A345D894";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:63]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -51209,6 +51600,20 @@ createNode transform -n "polySurface94" -p "|Mimic_Updated|Normal_Chest|Bottom";
 createNode mesh -n "polySurfaceShape94" -p "polySurface94";
 	rename -uid "2A31437C-4F31-2D90-A611-A38BD0E77F9E";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.25219596922397614 0.50338653832236391 ;
+	setAttr -s 2 ".uvst";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".uvst[1].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "polySurfaceShape129" -p "polySurface94";
+	rename -uid "9A841E4C-4211-DA3F-2B2E-66AF8D616497";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:503]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -53566,21 +53971,23 @@ createNode mesh -n "polySurfaceShape94" -p "polySurface94";
 	setAttr ".pd[1]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C266C4CE-4112-93DC-A683-5583E6C5ACAA";
-	setAttr -s 14 ".lnk";
-	setAttr -s 14 ".slnk";
+	rename -uid "BD11C0BA-44CD-F04B-833E-AAADCBE860A6";
+	setAttr -s 88 ".lnk";
+	setAttr -s 88 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "06898010-4B19-E6DC-A737-85AA70E82FFB";
+	rename -uid "015322BC-4DD4-94F0-E669-7CA247D6CC53";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "EBE3C9FB-479C-EF93-64CF-61A716205222";
+	rename -uid "230DF23B-4ECD-642C-0001-CC968FBA17D7";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C09BAB18-4EEE-2565-1D7C-6F8C51FA6762";
+	rename -uid "BA4944CC-4140-5DC1-CBEC-B48A404E02DF";
+	setAttr -s 3 ".dli[1:3]"  1 2 3;
+	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "A54D4106-49FB-B1C2-A834-21816BFA17AB";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "58D4C656-4378-7F39-680F-0F9C305D8C4C";
+	rename -uid "BE6EEAD9-4B8F-D036-ACCE-57B31EAD921C";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B872B460-409E-8D40-C262-A7890FC5EFDE";
 	setAttr ".g" yes;
@@ -53631,46 +54038,51 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n"
-		+ "            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
-		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n"
-		+ "            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
-		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
-		+ "            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n"
-		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
-		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
-		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1628\n            -height 1084\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n"
-		+ "            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
-		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n"
-		+ "            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n"
-		+ "            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n"
-		+ "                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n"
-		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n"
-		+ "                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n"
-		+ "                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n"
-		+ "                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n"
-		+ "                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n"
-		+ "                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n"
-		+ "                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n"
-		+ "                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n"
-		+ "                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n"
-		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1628\\n    -height 1084\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1628\\n    -height 1084\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2941\n            -height 1599\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
+		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
+		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
+		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2642\n            -height 1599\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
+		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
+		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
+		+ "            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n"
+		+ "            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
+		+ "            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n"
+		+ "                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n"
+		+ "                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -tangentScale 1\n                -tangentLineThickness 1\n                -keyMinScale 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -limitToSelectedCurves 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
+		+ "                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -showUfeItems 1\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n"
+		+ "                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -hierarchyBelow 0\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n"
+		+ "                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n"
+		+ "                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n"
+		+ "                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n"
+		+ "                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 1\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|:persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2642\\n    -height 1599\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2642\\n    -height 1599\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "13D4E0D9-4F51-37CF-F959-37B3C87BA6CF";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 25 -ast 0 -aet 25 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 200 -ast 0 -aet 230 ";
 	setAttr ".st" 6;
 createNode phong -n "Mimic5";
 	rename -uid "7ADCFAAC-4BC0-9EE6-99FE-D0B98D1B3395";
@@ -53934,15 +54346,18 @@ createNode materialInfo -n "materialInfo5";
 	rename -uid "38E3FD34-4495-024C-72F3-1489F68DCE91";
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
 	rename -uid "7B70B9F6-4DE1-E0A7-F39B-BCBD4DBD3F01";
+	addAttr -ci true -sn "ARV_options" -ln "ARV_options" -dt "string";
 	setAttr ".version" -type "string" "5.2.1.1";
 createNode aiAOVFilter -s -n "defaultArnoldFilter";
 	rename -uid "C81CD7FA-4676-0E96-880D-96BC83E7FED2";
+	setAttr ".ai_translator" -type "string" "gaussian";
 createNode aiAOVDriver -s -n "defaultArnoldDriver";
 	rename -uid "E18CDEB9-4945-E36D-FCAF-5486C02F8365";
+	setAttr ".ai_translator" -type "string" "exr";
 createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	rename -uid "24532AF5-4736-BE4D-4D9D-4EB15EB16706";
-	setAttr ".output_mode" 0;
 	setAttr ".ai_translator" -type "string" "maya";
+	setAttr ".output_mode" 0;
 createNode aiStandardSurface -n "MouthMat";
 	rename -uid "973A713B-4E3B-F969-54E7-F89AA937BD9E";
 	setAttr ".base_color" -type "float3" 0.5 0.5 0.5 ;
@@ -54000,114 +54415,6 @@ createNode shadingEngine -n "aiStandardSurface7SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo11";
 	rename -uid "B09A8D32-408D-9430-352D-82BEFE93C756";
-createNode groupId -n "groupId233";
-	rename -uid "D54DF058-4AE0-A938-E81F-A5A2509DBEC8";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId234";
-	rename -uid "E4F90C0E-4378-4CA6-7E7A-959AD585B6A7";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId235";
-	rename -uid "7E500058-45F6-6349-17A9-7F9895FAB4D9";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId236";
-	rename -uid "B3533CA4-4156-1243-7FB7-51997DB3791C";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId237";
-	rename -uid "3531BC77-44AB-3935-EF98-44BAA3A82A49";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId238";
-	rename -uid "3156963A-4157-C539-B521-AD9085103BA4";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId239";
-	rename -uid "C85BEFF9-455A-3F52-0386-7BA6AC2AA7E0";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId240";
-	rename -uid "BE688D67-49DF-209D-D34F-AB9D8833F210";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId241";
-	rename -uid "3C9D57FA-4680-D3E1-E171-B09024DC43D7";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId242";
-	rename -uid "EBBE02B0-4583-B468-555B-5DA892002533";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId243";
-	rename -uid "A5838131-41CC-6291-5191-D7968B644780";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId244";
-	rename -uid "7C45B1A0-4154-D190-0F5F-0B82E71F6BEB";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId245";
-	rename -uid "F13E6874-4D76-7658-4E41-6DA0080715B3";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId246";
-	rename -uid "B1BCE2C1-48B6-84A0-48D7-5E920468A9E6";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId247";
-	rename -uid "5256C705-454D-29BE-85ED-4FAB4E23F935";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId248";
-	rename -uid "185B9696-4CBA-6A90-7610-22981F24FD26";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId249";
-	rename -uid "71814D9B-4D8D-5958-B532-38B51C8446DA";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId250";
-	rename -uid "60849689-42E5-843F-492E-44BD65D729EC";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId251";
-	rename -uid "0DE9A031-4030-E7F1-1917-3D93FC4C2600";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId252";
-	rename -uid "9D3A5B43-4C71-7405-FF7B-8D9AB4809AF5";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId253";
-	rename -uid "807CBFFC-4201-CC32-D05C-CC8C5C6CFE61";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId254";
-	rename -uid "50060F57-46FF-9D26-65AA-A68306FE5A6C";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId255";
-	rename -uid "D6E3C5C7-4522-41EF-328B-56A27FEB89A1";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId256";
-	rename -uid "EE5AC721-4018-30F5-B7A2-85A34B9959F8";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId257";
-	rename -uid "F5C632C3-4D58-F0A5-289C-8EBF4592A2AB";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId258";
-	rename -uid "617D3C95-45F9-8882-AF1F-6BBD9A2FE39E";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId259";
-	rename -uid "3AA23588-4309-11EA-38C6-5581DE4FAB02";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId260";
-	rename -uid "E104151F-4CB6-0A58-312F-738BFF2D4E00";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId261";
-	rename -uid "10DC223C-4DA9-DFFE-9B0A-B48F769C5D70";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId262";
-	rename -uid "A2DDC095-4274-41BC-5B43-AA93DB260A4E";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId263";
-	rename -uid "A5CBA41B-4822-2198-7CAB-95B9EA1F285F";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId264";
-	rename -uid "CB84FF08-4843-E215-76B6-A2825DDBA39E";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId265";
-	rename -uid "75AF1778-4302-86F9-8E33-BC9356A86C19";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId266";
-	rename -uid "3E6C7C14-4D56-C19E-32D0-9C864364BAA0";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId267";
-	rename -uid "116B2DFB-443B-AA84-48BE-C3A35B5FD59E";
-	setAttr ".ihi" 0;
-createNode groupId -n "groupId268";
-	rename -uid "BB45A96D-44FF-87E6-BB17-6AAA7A2B3F97";
-	setAttr ".ihi" 0;
 createNode polyMapCut -n "polyMapCut1";
 	rename -uid "7958E8AF-4C5B-F270-6D5E-E1979630DD5A";
 	setAttr ".uopa" yes;
@@ -54319,6 +54626,3148 @@ createNode groupId -n "groupId270";
 createNode groupId -n "groupId271";
 	rename -uid "624CDAE7-43E2-E675-B209-8AA3E8EF7440";
 	setAttr ".ihi" 0;
+createNode displayLayer -n "Mimic_Rig:Geo_Lyr";
+	rename -uid "B7E441A5-4E4A-8667-75C4-4CA09D7FC455";
+	setAttr ".ufem" -type "stringArray" 0  ;
+	setAttr ".do" 3;
+createNode displayLayer -n "Mimic_Rig:Jnt_Lyr";
+	rename -uid "E0348D97-4760-5BC9-E79E-1CA05B553DFD";
+	setAttr ".dt" 2;
+	setAttr ".v" no;
+	setAttr ".ufem" -type "stringArray" 0  ;
+	setAttr ".do" 2;
+createNode displayLayer -n "Mimic_Rig:Ctrl_Lyr";
+	rename -uid "A79D85AB-45E1-7D32-9D1C-2588E7F41C1A";
+	setAttr ".ufem" -type "stringArray" 0  ;
+	setAttr ".do" 1;
+createNode aiStandardSurface -n "Mimic_Rig:WoodMat";
+	rename -uid "1A8247E7-40B9-9254-BFD7-B980F0E4C55C";
+createNode shadingEngine -n "Mimic_Rig:polySurface1SG";
+	rename -uid "1503153C-413A-10D4-C09E-AF9F08C7D650";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo1";
+	rename -uid "E0702061-4FCA-FC97-2930-4287AB6056B3";
+createNode aiStandardSurface -n "Mimic_Rig:MetalMat";
+	rename -uid "4AABF624-4B22-061F-B5B6-07B4FF9660C6";
+	setAttr ".base_color" -type "float3" 0.22023809 0.22023809 0.22023809 ;
+createNode shadingEngine -n "Mimic_Rig:polySurface1SG1";
+	rename -uid "B0E419E3-43E1-FDD7-F098-818B1AC062B7";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo2";
+	rename -uid "04CCB6F6-499B-8886-6A36-B583F811A209";
+createNode aiStandardSurface -n "Mimic_Rig:Metal02Mat";
+	rename -uid "94755CB9-4D1C-46FF-4580-3CB0FA09FF45";
+	setAttr ".base_color" -type "float3" 0.26190478 0.26190478 0.26190478 ;
+createNode shadingEngine -n "Mimic_Rig:polySurface3SG";
+	rename -uid "F5E4A0B5-428B-4FED-26B3-509AFF3E3253";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo3";
+	rename -uid "6D36281C-4E5B-7B49-30D7-AB9C08FC3A42";
+createNode shadingEngine -n "Mimic_Rig:polySurface4SG";
+	rename -uid "E4D3FB65-4280-2693-12D6-D9AF75FE8CB7";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo4";
+	rename -uid "4B74997B-4F77-7EBE-C789-6A8D0D84C51B";
+createNode shadingEngine -n "Mimic_Rig:polySurface5SG";
+	rename -uid "3F550CF3-4C8D-CDDC-9C14-EC9CE7F849DD";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo5";
+	rename -uid "CC9B0A5A-4BB6-12DF-6A41-419242FE3720";
+createNode shadingEngine -n "Mimic_Rig:polySurface6SG";
+	rename -uid "64841BD4-4E55-6B65-5501-FF9D713A6BB3";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo6";
+	rename -uid "92A0D518-417E-11DD-E18A-3195E30EDF36";
+createNode shadingEngine -n "Mimic_Rig:polySurface7SG";
+	rename -uid "8270CFEA-447F-FAAA-0978-9F9867AB53FF";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo7";
+	rename -uid "4B63382E-4C78-83B2-BF8D-C48927062D2C";
+createNode shadingEngine -n "Mimic_Rig:polySurface8SG";
+	rename -uid "E68B922B-4038-7DFC-3A54-4F8F05B8AB21";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo8";
+	rename -uid "EF741163-439E-D7AA-BB26-EAA4CE9C4ACB";
+createNode shadingEngine -n "Mimic_Rig:polySurface9SG";
+	rename -uid "6F8D68E7-46F3-2C72-8779-CDA4089F79C7";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo9";
+	rename -uid "46A5E431-4155-C7B2-E928-1186C138BD60";
+createNode shadingEngine -n "Mimic_Rig:polySurface10SG";
+	rename -uid "F13292D1-45AE-C9BF-9138-6EB1C7DC9565";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo10";
+	rename -uid "BBE88BA4-4CD3-EA63-91BE-13B31D62DD2D";
+createNode shadingEngine -n "Mimic_Rig:polySurface11SG";
+	rename -uid "711060A3-4580-22EA-8163-EBBE9ADC0DAF";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo11";
+	rename -uid "9D700F8C-4E56-83E6-2656-5487EE6CC78D";
+createNode shadingEngine -n "Mimic_Rig:polySurface12SG";
+	rename -uid "9402D62B-4AFF-3B00-3F87-75BBEADC3E0E";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo12";
+	rename -uid "10E5F981-49C5-50FA-E922-7794930C726B";
+createNode shadingEngine -n "Mimic_Rig:polySurface13SG";
+	rename -uid "ED7851D5-4573-938C-17AB-2A9EE3D008EC";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo13";
+	rename -uid "80149F27-49CF-393D-0C1E-7DA6182F3907";
+createNode shadingEngine -n "Mimic_Rig:polySurface14SG";
+	rename -uid "987D7A9C-4F40-23C5-C88C-B29836DDBF41";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo14";
+	rename -uid "8C922D33-45FB-8B19-8377-CBA419A74371";
+createNode shadingEngine -n "Mimic_Rig:polySurface15SG";
+	rename -uid "218FDB82-4691-F010-EE7C-2C9FC8E92724";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo15";
+	rename -uid "3D2FEB6D-4999-54C3-8A6C-5FB184E7E602";
+createNode shadingEngine -n "Mimic_Rig:polySurface16SG";
+	rename -uid "9B3BDA87-4C08-C890-FBB8-55BAE83CD82F";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo16";
+	rename -uid "C07795C8-4240-C037-9DE6-D5A6B49232A1";
+createNode shadingEngine -n "Mimic_Rig:polySurface17SG";
+	rename -uid "5C5B3419-486B-9B4E-02AC-92AD1DE58B72";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo17";
+	rename -uid "E258A5F0-4D1B-60BC-A401-629CAAE32CDF";
+createNode shadingEngine -n "Mimic_Rig:polySurface18SG";
+	rename -uid "25B17369-4F17-FDE4-C165-79ADE89B9106";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo18";
+	rename -uid "0B63BC3E-4219-DBAD-7912-F996162A58C6";
+createNode shadingEngine -n "Mimic_Rig:polySurface19SG";
+	rename -uid "F3459118-4FC1-F7A3-9512-2E97562A6E7C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo19";
+	rename -uid "59AE8F02-4209-C61D-39A2-67B153230189";
+createNode shadingEngine -n "Mimic_Rig:polySurface20SG";
+	rename -uid "7873C2B7-40BC-72F5-C78E-33A50380F8F5";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo20";
+	rename -uid "8B15CB33-4A5D-04F0-C077-4F93515EB506";
+createNode shadingEngine -n "Mimic_Rig:polySurface21SG";
+	rename -uid "D23A1751-4A02-E9D8-7809-90B6FAA9A9AC";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo21";
+	rename -uid "F7877FDA-4AC6-E4E8-E8A2-70BFEEE7DF5C";
+createNode shadingEngine -n "Mimic_Rig:polySurface22SG";
+	rename -uid "5B716B29-4EB8-B629-8252-45A24F1F1E20";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo22";
+	rename -uid "048EDECA-4FC3-D0C6-0046-0CAE2E53EF3C";
+createNode shadingEngine -n "Mimic_Rig:polySurface23SG";
+	rename -uid "4AF3F38E-4A51-118B-A1C7-2C8E11CD8173";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo23";
+	rename -uid "4FFEF8F5-466D-3366-3BE1-46B742FC5B2E";
+createNode shadingEngine -n "Mimic_Rig:polySurface24SG";
+	rename -uid "13033E61-4744-32D6-1111-198B13CC98AE";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo24";
+	rename -uid "70ECA52D-4961-2EF4-B7FF-A8A69BA5C377";
+createNode shadingEngine -n "Mimic_Rig:polySurface25SG";
+	rename -uid "A6473C17-40DD-A728-92BB-39B9B6CA45FD";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo25";
+	rename -uid "B02B9486-4FAD-8D2D-4389-54A9E2B70AC2";
+createNode shadingEngine -n "Mimic_Rig:polySurface26SG";
+	rename -uid "0D0EC6D5-435A-AB9F-003E-68949CA4FD6C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo26";
+	rename -uid "6845DC4A-47FC-4E31-AA74-33BAEE13077C";
+createNode shadingEngine -n "Mimic_Rig:polySurface27SG";
+	rename -uid "EF3C2819-4A3A-A1E8-52DD-779F286AF751";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo27";
+	rename -uid "F4EA69E6-4A33-6A21-C9D6-BC841AA6062B";
+createNode shadingEngine -n "Mimic_Rig:polySurface36SG";
+	rename -uid "0C5FCF41-46F5-5F1F-592C-19A415B61C9A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo28";
+	rename -uid "C9332B3C-48F1-6912-DE39-6F81625762CC";
+createNode shadingEngine -n "Mimic_Rig:polySurface95SG";
+	rename -uid "27DB7EF5-47D3-C6C6-526F-D2B565D4FBE1";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo29";
+	rename -uid "1A147196-425C-C51D-7CCF-4AA00B930BB2";
+createNode shadingEngine -n "Mimic_Rig:polySurface96SG";
+	rename -uid "9C54F31E-46F8-5615-FCB2-F8B9783AF247";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo30";
+	rename -uid "EA083F28-4072-1096-A75C-FEA59F982BBA";
+createNode shadingEngine -n "Mimic_Rig:polySurface97SG";
+	rename -uid "1837FD63-4D61-3C27-8721-52A41AD3398D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo31";
+	rename -uid "F92C348E-4083-9AE4-D3E3-9DA8E8E42AB8";
+createNode shadingEngine -n "Mimic_Rig:polySurface98SG";
+	rename -uid "946CE773-46CC-5A91-85CF-54970E33CA73";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo32";
+	rename -uid "E1BFD898-432B-A1C5-4444-56B90B72DFC9";
+createNode shadingEngine -n "Mimic_Rig:polySurface99SG";
+	rename -uid "E158BA1B-46E0-3A25-2642-2BBC5113F8C1";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo33";
+	rename -uid "74B12881-4C77-7898-A5F4-13BF993F80AE";
+createNode shadingEngine -n "Mimic_Rig:polySurface100SG";
+	rename -uid "F2D67BC3-4BB4-EAD7-E85C-A189CB85861E";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo34";
+	rename -uid "5DCBB54D-4A51-47F4-18B7-F7A59428BC1E";
+createNode shadingEngine -n "Mimic_Rig:polySurface101SG";
+	rename -uid "35CBE9A4-462F-A216-D130-6E9CDD363940";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo35";
+	rename -uid "57EE59E3-4A14-B65F-C7FC-3F96EC07F9F2";
+createNode shadingEngine -n "Mimic_Rig:polySurface102SG";
+	rename -uid "AFC5EF69-45B8-A625-4999-5892D26BD3FF";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo36";
+	rename -uid "BE90C991-468A-3D8F-C069-68969E04F2DA";
+createNode aiStandardSurface -n "Mimic_Rig:MouthMat";
+	rename -uid "84F1E56F-4F0B-6475-4719-B9A134BDB5C6";
+	setAttr ".base_color" -type "float3" 0.5 0.5 0.5 ;
+createNode shadingEngine -n "Mimic_Rig:polySurface37SG";
+	rename -uid "5B3B0D83-4DBE-A175-672B-279E38F8D02B";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo37";
+	rename -uid "A7F21233-4E73-1A9B-5758-F2A5BE6ABFCC";
+createNode aiStandardSurface -n "Mimic_Rig:TeethMat";
+	rename -uid "98CF4C22-4397-8C6C-EC99-02B70B96C420";
+	setAttr ".base_color" -type "float3" 1 1 1 ;
+createNode shadingEngine -n "Mimic_Rig:polySurface38SG";
+	rename -uid "FF7A06E7-42B9-6FAD-B8D6-55A0B44F45BC";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo38";
+	rename -uid "EF0081F1-49DE-95C7-EDFA-51B43B2429CE";
+createNode shadingEngine -n "Mimic_Rig:polySurface39SG";
+	rename -uid "B269E3F8-44B4-87A2-D6C9-BB921F1C5291";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo39";
+	rename -uid "39E45719-417A-AF2D-D322-CC86EE84DE43";
+createNode shadingEngine -n "Mimic_Rig:polySurface40SG";
+	rename -uid "2F289AA3-4C0F-97A9-5EAB-A5B585B1B036";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo40";
+	rename -uid "30B1B997-454D-48DF-CADE-20BDBBB52C91";
+createNode shadingEngine -n "Mimic_Rig:polySurface41SG";
+	rename -uid "57B1D220-4FBE-C1CD-C5F5-339D0214993F";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo41";
+	rename -uid "68EF93A9-4E13-C782-1255-289D4911D1AE";
+createNode shadingEngine -n "Mimic_Rig:polySurface42SG";
+	rename -uid "F3094C34-4D02-CF40-91A2-5786AD24DC5D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo42";
+	rename -uid "E1093227-4FC3-73E8-391C-8E8F3FAD82D3";
+createNode shadingEngine -n "Mimic_Rig:polySurface43SG";
+	rename -uid "8D108332-4FA8-E6FB-56A9-ED892B78BF1E";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo43";
+	rename -uid "217A5931-4A93-A443-13EF-73B0E2D27A36";
+createNode shadingEngine -n "Mimic_Rig:polySurface44SG";
+	rename -uid "0015B956-4BBE-2CE8-95DA-02A670CCF862";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo44";
+	rename -uid "A4A83C93-4F35-46F8-69C4-B9A5C7EEB40A";
+createNode shadingEngine -n "Mimic_Rig:polySurface45SG";
+	rename -uid "971B12DA-453F-424A-71CD-1994FAE0D62F";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo45";
+	rename -uid "C893387E-4489-DA11-5FFC-C5BD5FD49A2B";
+createNode shadingEngine -n "Mimic_Rig:polySurface46SG";
+	rename -uid "640FA07E-44FF-2908-83B6-B6B38ED48439";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo46";
+	rename -uid "BEA41DB4-4A0C-8972-99C8-9CBAC84A5934";
+createNode shadingEngine -n "Mimic_Rig:polySurface47SG";
+	rename -uid "26EDA5CE-45BA-4498-20A9-C09F9FCE820D";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo47";
+	rename -uid "0C93392A-465F-C6E6-52A5-EBA9E862C4BC";
+createNode shadingEngine -n "Mimic_Rig:polySurface48SG";
+	rename -uid "B4CF0529-4298-656E-5944-91B203E19C95";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo48";
+	rename -uid "E5C8E5D4-4FD3-75BF-0F05-6E976809EF12";
+createNode shadingEngine -n "Mimic_Rig:polySurface49SG";
+	rename -uid "7CCF58AD-4FE5-2B7D-F110-3BABBB2871B2";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo49";
+	rename -uid "B748E6E0-4CA4-A15E-3EED-06A9EFB29268";
+createNode shadingEngine -n "Mimic_Rig:polySurface50SG";
+	rename -uid "7C8B722B-4F39-836E-C4FC-DBA0822DDFCE";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo50";
+	rename -uid "56E89B3F-401E-05DA-CC6A-9DB1ADC2C883";
+createNode shadingEngine -n "Mimic_Rig:polySurface51SG";
+	rename -uid "42CC1AC8-4C10-7F8A-3C74-E3803D1EB819";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo51";
+	rename -uid "D6C31C06-46F1-2E8F-5EA2-AD9C97A7D096";
+createNode shadingEngine -n "Mimic_Rig:polySurface52SG";
+	rename -uid "DF8D3F8A-49BC-CF26-F90A-8CA0A27CC123";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo52";
+	rename -uid "0B438B46-4D0F-7B6E-23E0-DAA9EDBA1A0E";
+createNode shadingEngine -n "Mimic_Rig:polySurface53SG";
+	rename -uid "01407A2F-40FD-F303-5ECB-1281214C8BED";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo53";
+	rename -uid "E4FF3DD0-4620-91C7-8336-22840C33469D";
+createNode shadingEngine -n "Mimic_Rig:polySurface54SG";
+	rename -uid "3B95B704-46C6-B86A-AB89-9F80CFC9838E";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo54";
+	rename -uid "55242BD5-4727-84B1-02F3-3E98CD372DE4";
+createNode shadingEngine -n "Mimic_Rig:polySurface55SG";
+	rename -uid "E1E06BD0-473F-7EA1-2EC1-33A4DA9C1029";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo55";
+	rename -uid "8952DC3F-40DE-3B14-D6A3-0D9613FA5D47";
+createNode shadingEngine -n "Mimic_Rig:polySurface56SG";
+	rename -uid "4777FA65-4FDE-715F-BEC4-D68C0F7FC834";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo56";
+	rename -uid "C4FAF26F-455B-19E5-F54B-54903202A879";
+createNode shadingEngine -n "Mimic_Rig:polySurface57SG";
+	rename -uid "E82E5AE0-4409-F031-74A7-34BE92D33D5F";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo57";
+	rename -uid "03FB3055-4483-7729-EB87-249633EA4BB1";
+createNode shadingEngine -n "Mimic_Rig:polySurface58SG";
+	rename -uid "3355E6D6-49BE-C093-5063-B29CFBBE14EB";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo58";
+	rename -uid "3865AC17-4F99-F2DE-803D-36AA94A0CC21";
+createNode shadingEngine -n "Mimic_Rig:GumSG";
+	rename -uid "7B4851B1-473E-5AE1-2CE6-AA8E2679DA8C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo59";
+	rename -uid "267540CE-49D8-690B-9F85-DB8E27C9F99C";
+createNode shadingEngine -n "Mimic_Rig:TongueSG";
+	rename -uid "2162A324-4054-332F-B6DF-CF83B4DA468B";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo60";
+	rename -uid "2E3F957F-4CD8-539A-FB6E-79A61E43833F";
+createNode aiStandardSurface -n "Mimic_Rig:GoldCoinMat";
+	rename -uid "70A307BF-4C67-A91F-62C3-C091549AD192";
+createNode shadingEngine -n "Mimic_Rig:GoldSG";
+	rename -uid "101F3185-4C26-B721-E348-94A80E026150";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo61";
+	rename -uid "0B1500FC-461F-A237-BCC3-3D9C4C317A8D";
+createNode aiStandardSurface -n "Mimic_Rig:DiamondMat";
+	rename -uid "148E96D4-48BF-189B-3294-38A3F6F00DC9";
+	setAttr ".base_color" -type "float3" 0.66071427 0.66071427 0.66071427 ;
+createNode shadingEngine -n "Mimic_Rig:DiamondSG";
+	rename -uid "F6BDA8D7-4E1B-4A14-BED6-10BC3815F665";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:materialInfo62";
+	rename -uid "0603E5BD-4946-74F6-D152-9DB917D0C925";
+createNode phong -n "Mimic_Rig:Mimic:Mimic";
+	rename -uid "BAA690A2-4713-EE46-7008-B1BA3AAD88F7";
+	setAttr ".dc" 1;
+	setAttr ".c" -type "float3" 0.70376772 0.70376772 0.70376772 ;
+	setAttr ".sc" -type "float3" 0 0 0 ;
+	setAttr ".rfl" 0.4409089982509613;
+	setAttr ".rc" -type "float3" 0.70376772 0.70376772 0.70376772 ;
+	setAttr ".cp" 25;
+createNode shadingEngine -n "Mimic_Rig:Mimic:Mimic2SG";
+	rename -uid "A1EF732D-4C68-4FB0-729E-E09D5707F58C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo1";
+	rename -uid "297F4C1C-47D4-010A-18EC-EF86F2CDF875";
+createNode shadingEngine -n "Mimic_Rig:Mimic:Mimic3:Mimic";
+	rename -uid "071F8E52-4119-01A0-75E7-DBA2BC17B82A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:Mimic3:materialInfo1";
+	rename -uid "11306D63-458E-9007-963B-3C80142263DB";
+createNode phong -n "Mimic_Rig:Mimic:Mimic3:Mimic1";
+	rename -uid "8407B271-4E87-FF52-3165-0E8966140772";
+	setAttr ".rfi" 1.5;
+	setAttr ".c" -type "float3" 0.70376801 0.70376801 0.70376801 ;
+	setAttr ".ambc" -type "float3" 0.440909 0.440909 0.440909 ;
+	setAttr ".sc" -type "float3" 0 0 0 ;
+	setAttr ".cp" 252;
+createNode phong -n "Mimic_Rig:Mimic:Mimic4";
+	rename -uid "E24D366C-44B2-42FF-D984-2E9B46632284";
+	setAttr ".dc" 1;
+	setAttr ".c" -type "float3" 0.70376772 0.70376772 0.70376772 ;
+	setAttr ".sc" -type "float3" 0 0 0 ;
+	setAttr ".rfl" 0.4409089982509613;
+	setAttr ".rc" -type "float3" 0.70376772 0.70376772 0.70376772 ;
+	setAttr ".cp" 25;
+createNode shadingEngine -n "Mimic_Rig:Mimic:Mimic2SG1";
+	rename -uid "CAB9E08F-40D3-B14F-D799-A3ABC694BB2A";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo2";
+	rename -uid "7F4A67B1-4B2F-48D0-817F-29986D0B6BC5";
+createNode phong -n "Mimic_Rig:Mimic:Mimic5";
+	rename -uid "3B942863-4F8C-7730-4B6B-1EA2F7F03ECB";
+	setAttr ".dc" 1;
+	setAttr ".c" -type "float3" 0.70376772 0.70376772 0.70376772 ;
+	setAttr ".sc" -type "float3" 0 0 0 ;
+	setAttr ".rfl" 0.4409089982509613;
+	setAttr ".rc" -type "float3" 0.70376772 0.70376772 0.70376772 ;
+	setAttr ".cp" 25;
+createNode shadingEngine -n "Mimic_Rig:Mimic:Mimic2SG2";
+	rename -uid "6A7952C3-44F5-BA3D-0A70-A4B4E0588E83";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo3";
+	rename -uid "C400027E-4F69-3B39-2B3A-CAA5B12E44B3";
+createNode groupId -n "Mimic_Rig:Mimic:groupId23";
+	rename -uid "D13DAE02-4C87-4DE4-C407-EABEE4A1E745";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId24";
+	rename -uid "7DB9F1D7-4736-3E7F-BE89-25B4C69A9AF2";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId25";
+	rename -uid "D15EE1F1-4B00-C248-DB41-2189ACEE6B02";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId26";
+	rename -uid "AD5392A7-422D-A2AA-7234-C895F0A8381C";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId27";
+	rename -uid "76C4DA69-4683-1F7B-9BA1-FBA4DE50D497";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId30";
+	rename -uid "618EC8B6-4CF8-4918-5769-BF932753D613";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId31";
+	rename -uid "36F37D33-4339-B007-4EAF-5486E56EF26D";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId32";
+	rename -uid "089BCC21-459A-17A6-43B0-CAA310D1EBC5";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId33";
+	rename -uid "9B68D013-4AA5-D26D-D4E4-32A63E08F5CC";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId34";
+	rename -uid "2CF0F7DF-4584-EED1-29FF-E49E7D24917E";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId35";
+	rename -uid "52B27336-46C8-332C-4E05-A98B71C9A2F6";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId36";
+	rename -uid "7077A7C0-49CB-C116-FB0C-D4B8A6BE2BB8";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId37";
+	rename -uid "9D2017C8-4C3C-ED5C-A976-A3B6807FAA78";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId38";
+	rename -uid "AD651AC5-4EB0-D0AA-1B48-608EC1593FDE";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId39";
+	rename -uid "D0E9F6DD-48CC-F89C-1279-23B10081A7F4";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId40";
+	rename -uid "345E130C-4AA2-8A79-E638-20A603EA3B21";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId43";
+	rename -uid "52679572-4E29-1A7F-C7D1-1CB7F650863D";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId44";
+	rename -uid "345CC7EA-463B-3577-F822-1CB2B1C79D62";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId45";
+	rename -uid "A2DDB535-4F9E-F1B3-E5A4-FA897138D695";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId46";
+	rename -uid "BDB1BD3B-4B3C-DD11-3A58-E594D308ABD0";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId47";
+	rename -uid "B9151C4C-4DD2-A700-8B4F-6C99200E4535";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId48";
+	rename -uid "176D0A2F-4BEB-61CF-BE86-42A920AE13EB";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId49";
+	rename -uid "CF29C8D2-467C-B923-7686-59A4A808D6F6";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId50";
+	rename -uid "0875F260-4C2A-6BF3-37D5-D7B6486D84CC";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId51";
+	rename -uid "2C8375D3-45F8-21D3-0F35-B7A7B055892C";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId52";
+	rename -uid "E2F720D8-4AE3-769A-575C-8CAA5528E553";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId53";
+	rename -uid "F3F3709D-4BD3-F02F-3CE2-BD8DF5A73517";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId54";
+	rename -uid "6FC3DA03-4116-95C5-DD4E-37BC2DBF749F";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId55";
+	rename -uid "5542888B-4B01-8BF0-305D-DB911EB5B9C3";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId56";
+	rename -uid "072CF84F-4C4E-EC67-065F-4593A1ADD1DB";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId57";
+	rename -uid "614F4920-4DE2-438B-714B-99832B43A353";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId58";
+	rename -uid "DA09ABD3-4032-3DB2-2BC2-DF96D058FDBC";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId59";
+	rename -uid "9EFEEF9C-4881-8635-890A-E68AD60ABB52";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId60";
+	rename -uid "F17ACD60-48AC-9603-FE6D-BDAE10394C54";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId61";
+	rename -uid "792D8EFA-42F5-2F0E-8CE9-C5A8DD2E72A0";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId62";
+	rename -uid "24C3728B-4FE8-09EE-369E-FB96BA83DC90";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId63";
+	rename -uid "3562B6DA-428E-4DFF-0532-D4BBBFC3222B";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId64";
+	rename -uid "7672A4F7-4FB2-4D8F-B694-248C93335688";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId67";
+	rename -uid "CFE3B924-49EA-5DB7-1226-F0B6BDC41400";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId68";
+	rename -uid "A76C81D5-4EE3-23DB-7F8C-BEBDB1FF3DBF";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId69";
+	rename -uid "AB1E2C23-44F4-2E8D-AB15-969A914A2ECC";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId70";
+	rename -uid "30AA3F58-4E9F-9A3A-919E-87AF5F544995";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId71";
+	rename -uid "1CEBCC05-4746-2C22-F7D9-41AB5DEF2A93";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId72";
+	rename -uid "9773E7A9-4F10-314E-F46E-65976821BB31";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId73";
+	rename -uid "E9F0E5F8-4951-C8CC-DEEE-9F8CA654C97E";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId74";
+	rename -uid "40FF394E-4186-20AB-B690-C8805EAA8974";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId75";
+	rename -uid "AA779AF5-46A8-058F-485B-B688373035CE";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId76";
+	rename -uid "20EB7168-4BDB-FECB-6B10-6B80B6603220";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId77";
+	rename -uid "6E8533BD-4F06-54B6-71E4-B5AB58204334";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId78";
+	rename -uid "64B5189A-4851-E607-9958-C48050F3283F";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId79";
+	rename -uid "5AA70F4D-4AA6-FC48-F248-D596F536014E";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId80";
+	rename -uid "116B9F83-477A-8750-CA63-0F8BE28037FB";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId81";
+	rename -uid "209CE3D6-412A-5034-7F5E-24859ABADF76";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId82";
+	rename -uid "405E0C19-4A1F-168C-056F-49801CA18644";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId83";
+	rename -uid "117B4002-4BD5-519C-01BE-2FA84C2A4E8C";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId84";
+	rename -uid "89411F3B-4668-1855-71C2-45AA8BCFE613";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId85";
+	rename -uid "EE076FE4-4D02-0722-5824-D7A3C4B022C9";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId86";
+	rename -uid "B50CD647-4617-26EF-CB03-0C91B5D9E15F";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId87";
+	rename -uid "57F40956-4110-9AE4-1174-089DA2685B21";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId88";
+	rename -uid "48DECB79-4F82-ADDD-404A-3996DD8D1AD2";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId89";
+	rename -uid "A2CD85C0-4F80-E287-D82F-FFBBBE83D3BB";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId90";
+	rename -uid "CEC231B6-4A18-2719-D189-64B41B79FD28";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId91";
+	rename -uid "00E5CCB2-4BD5-31AC-5E0C-28A83AE5A33B";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId94";
+	rename -uid "A69B960C-4A24-B9F1-C510-BB90D42939B0";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId95";
+	rename -uid "5BB27174-480F-A975-35B7-8B83B5A5FF66";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId96";
+	rename -uid "24528484-47F8-3038-CD24-6BAF7D452537";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId97";
+	rename -uid "14B2E293-4204-58DE-F33E-E684BD04C3F7";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId98";
+	rename -uid "C051EC33-49BC-928E-A2B4-C5933C6A69CE";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId99";
+	rename -uid "CCB016DC-4B34-84F0-664A-4CAB07E32EBF";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId100";
+	rename -uid "BD82CED8-4247-2CC1-5417-AD9DB0695F6A";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId101";
+	rename -uid "A6523279-42BA-B49E-5292-608AEA28BB5D";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId102";
+	rename -uid "272F5219-4297-FEFE-93EE-AEB170A07346";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId103";
+	rename -uid "579E963F-4912-2663-67FD-9A9A4CEAE406";
+	setAttr ".ihi" 0;
+createNode groupId -n "Mimic_Rig:Mimic:groupId104";
+	rename -uid "26EE38E5-4858-7C7E-B9BC-AC8220260218";
+	setAttr ".ihi" 0;
+createNode phong -n "Mimic_Rig:Mimic:Mimic6";
+	rename -uid "D0A5AB0D-4C43-D914-D9BC-53B013769263";
+	setAttr ".dc" 1;
+	setAttr ".c" -type "float3" 0.70376772 0.70376772 0.70376772 ;
+	setAttr ".sc" -type "float3" 0 0 0 ;
+	setAttr ".rfl" 0.4409089982509613;
+	setAttr ".rc" -type "float3" 0.70376772 0.70376772 0.70376772 ;
+	setAttr ".cp" 25;
+createNode shadingEngine -n "Mimic_Rig:Mimic:Mimic2SG3";
+	rename -uid "F47497D8-487C-6CB8-25B1-5DAA192302B4";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo4";
+	rename -uid "81325A46-4ECC-B304-361F-B09CCF8C2F08";
+createNode aiStandardSurface -n "Mimic_Rig:Mimic:WoodMat";
+	rename -uid "9690CAF4-41DB-FE52-7384-D4B4C83B7BA2";
+	setAttr ".emission" 1;
+createNode shadingEngine -n "Mimic_Rig:Mimic:aiStandardSurface1SG";
+	rename -uid "9D754DAC-4DA4-CF15-DB82-A5A146A840FA";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo5";
+	rename -uid "94C84361-4925-3FBA-3521-3BA88D73F2CD";
+createNode aiStandardSurface -n "Mimic_Rig:Mimic:MouthMat";
+	rename -uid "7334CE21-4242-D814-1FDC-0EB780E95429";
+	setAttr ".emission" 1;
+createNode shadingEngine -n "Mimic_Rig:Mimic:aiStandardSurface2SG";
+	rename -uid "8DA8A75F-4BE5-FC73-F007-DE9B24EE9980";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo6";
+	rename -uid "E2564089-4DAD-CC57-4BB4-9A9135B3EA01";
+createNode aiStandardSurface -n "Mimic_Rig:Mimic:TeethMat";
+	rename -uid "589FC941-49F3-FF36-D4FA-7F8DF4309B60";
+	setAttr ".emission" 1;
+createNode shadingEngine -n "Mimic_Rig:Mimic:aiStandardSurface3SG";
+	rename -uid "1483D8B1-4911-4DA7-F657-EDBF037A8307";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo7";
+	rename -uid "E3C008A3-449C-46FB-B13C-5EBB1388E9D2";
+createNode aiStandardSurface -n "Mimic_Rig:Mimic:GoldCoinMat";
+	rename -uid "0FB6672E-4115-929A-1D7B-E38CFD683964";
+	setAttr ".emission" 1;
+createNode shadingEngine -n "Mimic_Rig:Mimic:aiStandardSurface4SG";
+	rename -uid "A5463B71-455F-9015-9098-4F9C386AEC10";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo8";
+	rename -uid "74B906EE-4D4A-C153-0F3E-5AB00B8363E1";
+createNode aiStandardSurface -n "Mimic_Rig:Mimic:DiamondMat";
+	rename -uid "13D38135-4402-B608-CA10-BE98E15CE2D1";
+	setAttr ".emission" 1;
+createNode shadingEngine -n "Mimic_Rig:Mimic:aiStandardSurface5SG";
+	rename -uid "AA608FC3-45DC-D726-F57B-0EA72B8B7130";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo9";
+	rename -uid "72FAED55-4B8A-168C-3C6D-48911FFA90DF";
+createNode aiStandardSurface -n "Mimic_Rig:Mimic:MetalMat";
+	rename -uid "B2CC53EA-4781-0DF7-245C-A6A7198E9ED7";
+	setAttr ".emission" 1;
+createNode shadingEngine -n "Mimic_Rig:Mimic:aiStandardSurface6SG";
+	rename -uid "C9E3204B-4CB7-09F8-6EB2-14A2C17FE895";
+	setAttr ".ihi" 0;
+	setAttr -s 13 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo10";
+	rename -uid "453536A5-4161-4C16-6E08-3DBDF87AC6C2";
+createNode aiStandardSurface -n "Mimic_Rig:Mimic:Metal02Mat";
+	rename -uid "F132AB9A-426D-8452-D2C9-0189B81FC3B7";
+	setAttr ".emission" 1;
+createNode shadingEngine -n "Mimic_Rig:Mimic:aiStandardSurface7SG";
+	rename -uid "BF4456BA-497B-008B-5DE3-4D8F77A7DC49";
+	setAttr ".ihi" 0;
+	setAttr -s 22 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "Mimic_Rig:Mimic:materialInfo11";
+	rename -uid "BF91653C-4DCA-A22A-96B4-FF9D4C0F022F";
+createNode file -n "Mimic_Rig:file1";
+	rename -uid "44CFDED0-4505-FD1D-0684-6A9CCF4317CB";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_DiamondMat_BaseColor_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture1";
+	rename -uid "238D9BAF-48C9-C5D4-CBEA-618DED49F577";
+createNode file -n "Mimic_Rig:file2";
+	rename -uid "CF10BF64-4F87-0B1F-00CB-E3A99DCF039C";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_DiamondMat_Metalness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture2";
+	rename -uid "AC54C809-451A-367E-A2BC-438A1573BFB5";
+createNode file -n "Mimic_Rig:file3";
+	rename -uid "8A8FF431-44BA-BFF7-6CD1-7CA7498B23E5";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_DiamondMat_Roughness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture3";
+	rename -uid "43DC5E91-45AB-A374-5BD0-5BBC1C032949";
+createNode file -n "Mimic_Rig:file4";
+	rename -uid "65CA5993-4C62-16EA-5227-32B372D0B11B";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_DiamondMat_Emissive_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture4";
+	rename -uid "549E6B75-4CC3-6B64-B1D5-6688F805A581";
+createNode file -n "Mimic_Rig:file5";
+	rename -uid "E6E5A44C-4BC4-EEC9-F1DC-84B1DCF3FB5B";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_DiamondMat_Normal_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture5";
+	rename -uid "0B89F5ED-4F7B-CAFA-AC43-B1ADC6C97124";
+createNode bump2d -n "Mimic_Rig:bump2d1";
+	rename -uid "75880147-48C6-CE0E-BB16-9584A45FDDEA";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Mimic_Rig:file6";
+	rename -uid "8E4878E0-48A6-1547-073D-7DB2C3744523";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_Metal02Mat_BaseColor_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture6";
+	rename -uid "EF9FAECF-482C-60D5-2ABB-66A0DB972A9A";
+createNode file -n "Mimic_Rig:file7";
+	rename -uid "964C5289-4DD0-9AF7-18F2-0EBFD5600376";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_Metal02Mat_Metalness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture7";
+	rename -uid "48E08D0A-4393-DB21-05E4-2D8BB31ADACC";
+createNode file -n "Mimic_Rig:file8";
+	rename -uid "1804A30F-4A39-A914-F047-A6B3CCEDCE6B";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_Metal02Mat_Roughness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture8";
+	rename -uid "B25696A9-4C6E-C3B4-3BF4-AEB749BB9A3B";
+createNode file -n "Mimic_Rig:file9";
+	rename -uid "B858A91F-4BB9-B1D7-F646-5186868D3307";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_Metal02Mat_Emissive_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture9";
+	rename -uid "6B03FD05-4102-C1A8-B3E9-7F9346614B6F";
+createNode file -n "Mimic_Rig:file10";
+	rename -uid "16CED7CC-47D6-B287-E4D5-E3ACF632AB38";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_Metal02Mat_Normal_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture10";
+	rename -uid "B2FC6026-4B40-08DB-A188-6C8E3B87E5BC";
+createNode bump2d -n "Mimic_Rig:bump2d2";
+	rename -uid "024C53C7-4E80-BA3E-A4E4-A39A5907E2D5";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Mimic_Rig:file11";
+	rename -uid "B43A5BC0-4FC9-6B78-8D6E-4CBC87DE7A34";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MetalMat_BaseColor_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture11";
+	rename -uid "2C7BA080-4776-6366-4BFB-C1B7BC9F8F99";
+createNode file -n "Mimic_Rig:file12";
+	rename -uid "11815465-44D8-C634-6F50-CDBB93EC7001";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MetalMat_Metalness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture12";
+	rename -uid "C773A7F0-4736-049D-CECD-37B12060AB85";
+createNode file -n "Mimic_Rig:file13";
+	rename -uid "2E447144-4F8D-64C2-38C5-6AADFF9EF8F8";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MetalMat_Roughness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture13";
+	rename -uid "33F992EB-473B-F2EE-4B37-87A7722A35FC";
+createNode file -n "Mimic_Rig:file14";
+	rename -uid "9C4CEE69-47C7-19DA-21D6-E18AA13B2D43";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MetalMat_Emissive_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture14";
+	rename -uid "8BACBBF8-40C9-B6C6-FDD4-328228DE7B02";
+createNode file -n "Mimic_Rig:file15";
+	rename -uid "5718527D-4329-09BA-91DE-238075ED10FA";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MetalMat_Normal_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture15";
+	rename -uid "D9159B12-44BB-9C99-653B-7085CBF1DC11";
+createNode bump2d -n "Mimic_Rig:bump2d3";
+	rename -uid "EDE3C0AC-42E8-6B25-0B92-9F8DD5CE3D5F";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Mimic_Rig:file16";
+	rename -uid "E0CADF34-42AE-AF1F-8037-15875AB777C8";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_TeethMat_BaseColor_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture16";
+	rename -uid "D0F35D6B-4040-9D32-41BC-8E8AE9F70486";
+createNode file -n "Mimic_Rig:file17";
+	rename -uid "C5607BA2-42D0-17EC-9CD3-59AF5826E0A0";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_TeethMat_Metalness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture17";
+	rename -uid "6C5C8453-4BE9-5B53-4186-669642BC56A3";
+createNode file -n "Mimic_Rig:file18";
+	rename -uid "1AE47846-46C3-5D8B-2C4D-269C54688555";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_TeethMat_Roughness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture18";
+	rename -uid "B09562DB-48E1-EAEB-7D26-128BF06452EE";
+createNode file -n "Mimic_Rig:file19";
+	rename -uid "6D0E6C2A-4103-2652-5AAD-59B640F39C33";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_TeethMat_Emissive_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture19";
+	rename -uid "2551DDEB-4E33-C4AD-08CD-8B984CC454E0";
+createNode file -n "Mimic_Rig:file20";
+	rename -uid "BD5CD24F-4D54-236F-16A0-43892DF8B74A";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_TeethMat_Normal_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture20";
+	rename -uid "952ECDC9-4061-5890-4ACD-C7BC013CF907";
+createNode bump2d -n "Mimic_Rig:bump2d4";
+	rename -uid "22D196A7-4F24-4B0D-F5EA-7CB4CF88E39D";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Mimic_Rig:file21";
+	rename -uid "A2BBD247-41F8-69FB-9606-05ACA5697DC5";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_WoodMat_BaseColor_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture21";
+	rename -uid "D66BC856-475C-C011-7658-B78C0F386300";
+createNode file -n "Mimic_Rig:file22";
+	rename -uid "2BB7A848-4871-8F65-6D78-15B2A466AAED";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_WoodMat_Metalness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture22";
+	rename -uid "62F2C6AE-46D4-CE2A-6DCB-9EB41382E6FC";
+createNode file -n "Mimic_Rig:file23";
+	rename -uid "6714AA94-4AA8-F34B-6C8B-F58C518CF55B";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_WoodMat_Roughness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture23";
+	rename -uid "5817BCAC-479A-7342-FBEB-68AC670A94B0";
+createNode file -n "Mimic_Rig:file24";
+	rename -uid "F12E7B52-4F5F-E20A-3854-3485E0645E9D";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_WoodMat_Emissive_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture24";
+	rename -uid "DA707478-4162-5CEB-3BFB-9A9F5227071F";
+createNode file -n "Mimic_Rig:file25";
+	rename -uid "F7EB95A8-4DAB-83A9-B805-D0A727917C04";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_WoodMat_Normal_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture25";
+	rename -uid "204B2C6C-4469-2C51-0382-40B45BB0881D";
+createNode bump2d -n "Mimic_Rig:bump2d5";
+	rename -uid "0F7CC749-48FE-1DAB-09BC-2B9E3B7490AB";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Mimic_Rig:file26";
+	rename -uid "FC524451-429B-E52C-595A-0FA9813094D8";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MouthMat_BaseColor_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture26";
+	rename -uid "13D380B7-4FB5-3389-9F01-5E950D82C012";
+createNode file -n "Mimic_Rig:file27";
+	rename -uid "04A60883-45F5-B30C-0DAD-2BA4CD950034";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MouthMat_Metalness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture27";
+	rename -uid "C148A16B-47A4-E320-E936-B68D674DCC10";
+createNode file -n "Mimic_Rig:file28";
+	rename -uid "BF4C13E9-40E5-F32B-E687-799E2A3031F5";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MouthMat_Roughness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture28";
+	rename -uid "17963127-467D-CCE9-D702-85BD6960EF40";
+createNode file -n "Mimic_Rig:file29";
+	rename -uid "9606754B-4B2D-19EC-8A1D-3E9232D980EE";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MouthMat_Emissive_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture29";
+	rename -uid "7C8907DC-4E39-42D5-BA34-129012F89BDE";
+createNode file -n "Mimic_Rig:file30";
+	rename -uid "6E106993-44A8-D13D-BDFB-3C92480DAB15";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_MouthMat_Normal_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture30";
+	rename -uid "99026D79-4185-19D7-C446-679543ED1C39";
+createNode bump2d -n "Mimic_Rig:bump2d6";
+	rename -uid "E05784EF-42DB-423D-E76A-97B239A44025";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode file -n "Mimic_Rig:file31";
+	rename -uid "0F6B7100-4F24-8AF6-6664-1C90F74918B9";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_GoldCoinMat_BaseColor_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture31";
+	rename -uid "F2169C29-4DA0-FA4B-6737-869FFC1C13A8";
+createNode file -n "Mimic_Rig:file32";
+	rename -uid "CB5E73F5-45D6-8B1E-7A29-D6BE0740C473";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_GoldCoinMat_Metalness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture32";
+	rename -uid "4E5C35C4-4501-D7CF-A31E-3CBF88A3FE23";
+createNode file -n "Mimic_Rig:file33";
+	rename -uid "D5126E9C-4F34-4DBA-4A18-64AD6E641C53";
+	setAttr ".ail" yes;
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_GoldCoinMat_Roughness_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture33";
+	rename -uid "8B4CA249-4A4C-695F-04FA-E98DE967C0C3";
+createNode file -n "Mimic_Rig:file34";
+	rename -uid "5FB6CE06-417D-2579-92AE-E3A9DE35BBEA";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_GoldCoinMat_Emissive_sRGB.png";
+	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture34";
+	rename -uid "E2A40EF5-423A-36E8-0B95-DE84F085E165";
+createNode file -n "Mimic_Rig:file35";
+	rename -uid "D5BE8561-432D-BAE2-33A4-2F81EC3D7376";
+	setAttr ".ftn" -type "string" "C:/Users/joshr/OneDrive/Desktop/MimicTextures/MimicTextures/Mimic_GoldCoinMat_Normal_Raw.png";
+	setAttr ".cs" -type "string" "Raw";
+createNode place2dTexture -n "Mimic_Rig:place2dTexture35";
+	rename -uid "2A45117C-438B-A80E-AF81-1FAFA3F5FC3D";
+createNode bump2d -n "Mimic_Rig:bump2d7";
+	rename -uid "09741150-4399-1CB8-003F-8481F856B813";
+	setAttr ".bi" 1;
+	setAttr ".vc1" -type "float3" 0 9.9999997e-06 0 ;
+	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
+createNode transferAttributes -n "transferAttributes1";
+	rename -uid "AE2B0C18-4265-3CB9-EC72-49B209F02F3C";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode polyTweakUV -n "polyTweakUV2";
+	rename -uid "F10265A0-41C3-6EF0-002F-03A0D81BB097";
+	setAttr ".uopa" yes;
+	setAttr -s 399 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.10877495 -0.023295479 -0.11352224
+		 -0.024419116 -0.12046387 0.0043964228 -0.059808277 -0.022952991 -0.063704394 -0.024066256
+		 -0.070519231 0.0047543785 -0.11182294 0.02321298 -0.10734931 0.021179751 -0.18645948
+		 -0.00047730387 -0.16649909 -0.0051835347 -0.062157594 0.02357344 -0.058576755 0.021536484
+		 -0.17243937 -0.00045057118 -0.1801755 -0.00046556175 -0.16067271 -0.0056150127 -0.15432593
+		 -0.0053531695 -0.14914271 -0.00038458605 -0.13621193 0.0011438866 -0.19137371 -0.00048478052
+		 -0.19029146 -0.00048385665 -0.17069645 -0.0036041308 -0.17198969 0.0012170178 -0.14650564
+		 -0.000298584 -0.13364367 -0.00017499377 -0.13498226 0.0005181561 -0.14773041 -0.00037633081
+		 -0.14684138 -0.00033964415 -0.13398483 -8.6562824e-05 -0.00075979112 0.00086368143
+		 -0.017200641 -0.004116552 -0.00096433936 0.00076435402 -0.00086274324 0.00081838563
+		 -0.015525542 -0.0045872498 -0.014433257 -0.0043726731 0.00036123791 0.00075708225
+		 -0.01241051 0.002086832 -0.00052320538 0.00091240823 -0.00064822612 0.00089521229
+		 -0.018956818 -0.0025102058 -0.019606151 0.0023246545 -0.089250334 -0.01123263 -0.091544874
+		 -0.011625663 -0.012296934 0.0014560063 0.00046371319 0.00076022546 0.0015575627 0.00085244875
+		 0.00099602737 0.00080595713 -0.011304934 0.0007748733 -0.011862967 0.00085869234
+		 -0.18921158 -0.00048007176 -0.18444127 -0.00047008798 -0.1694946 0.0032540997 -0.16454116
+		 0.0044883331 -0.052449636 -0.01099165 -0.053495012 -0.011376337 -0.15843304 0.0046247682
+		 -0.17753142 -0.00045557425 -0.16964468 -0.00043867633 -0.15218799 0.0041665277 -0.1383585
+		 0.0018207867 -0.15170959 -0.00039436121 -0.16211236 -0.00042180822 -0.1559625 -0.00040655036
+		 -0.14648172 0.0034406586 -0.14176065 0.0026077132 -0.16450807 -0.00043477595 -0.14815488
+		 -0.0048054028 -0.15736294 -0.00041870878 -0.14252505 -0.0041853348 -0.093700327 0.0057478091
+		 -0.00039729057 0.00090999424 -0.01822684 0.0043617031 -0.00028451858 0.00089202344
+		 -0.016127639 0.0055819592 -0.014408208 0.0056919893 -0.00017991255 0.00086195662
+		 -7.5693824e-05 0.00082687929 -0.013348509 0.0052009663 3.1192205e-05 0.00079546764
+		 -0.01282363 0.0044426462 -0.012498859 0.0027746658 0.00025482872 0.00076065853 0.00014254858
+		 0.00077287748 -0.012612347 0.0035811765 -0.00106978 0.0007089515 -0.0011836546 0.00065885379
+		 -0.013923872 -0.003874735 -0.01380733 -0.0033021728 -0.090909481 0.00047336321 -0.092177257
+		 0.0041261716 -0.091336839 0.0011141876 -0.054565035 0.006043925 -0.055153586 0.0044072373
+		 -0.054044701 0.00075904827 -0.054525234 0.0013979803 -0.054391079 0.0077480813 -0.054542594
+		 0.0096744737 -0.056510352 0.018703235 -0.05498039 0.011902465 -0.055621274 0.014360263
+		 -0.095085114 0.0074412068 -0.095229432 0.019489661 -0.096661374 0.00935842 -0.098738216
+		 0.011575981 -0.10385335 0.018354429 -0.10120625 0.014021947 -0.054370753 -0.011994109
+		 -0.054984488 -0.013165132 -0.099054761 -0.015075013 -0.093917102 -0.012255625 -0.096340761
+		 -0.013441489 -0.057430141 -0.020838426 -0.055614971 -0.014781579 -0.056114428 -0.017933326
+		 -0.045746125 -0.010280864 -0.045048468 -0.0099509824 -0.036014989 -0.0081103016 -0.036379337
+		 -0.0083763171 -0.061223939 0.0045068404 -0.036777928 0.0034159264 -0.050389007 0.0041041514
+		 -0.046310887 0.0053917607 -0.02472318 0.0033862395 -0.036223948 0.0045198603 -0.048054963
+		 -0.01510568 -0.026849572 -0.0095692435 -0.03823714 -0.012862966 -0.057193995 -0.015889691
+		 -0.051265582 -0.02113335 -0.048923835 -0.019073622 -0.028433118 -0.010779486 -0.039931163
+		 -0.014198587 -0.046982437 -0.013807283 -0.035518989 -0.0051917005 -0.030977368 -0.011345283
+		 -0.042846531 -0.014809057 -0.034399986 0.0068842908 -0.029581551 0.011877312 -0.045436352
+		 0.014664396 -0.05353795 0.022051618 -0.050006419 0.020066544 -0.041314416 0.014776095
+		 -0.027184281 0.010829224 -0.025730334 0.0092400154 -0.038674563 0.013531848 -0.047924429
+		 0.017351253 -0.047146335 0.013272478 -0.037211925 0.01166062 -0.025138371 0.0071288189
+		 -0.024874099 0.0057900092 -0.024772249 0.0045032902 -0.046161696 0.006939753 -0.03617689
+		 0.0058914265 -0.036468774 0.0094831726 -0.046517313 0.010918482 -0.046167076 0.008768185
+		 -0.036214992 0.0074399253 -0.025907807 -0.0068021584 -0.026211925 -0.0076033343 -0.047272533
+		 -0.013383375 -0.03739059 -0.01120411 -0.036755547 -0.0088850725 -0.046370737 -0.010836438
+		 -0.046780601 -0.011864201 -0.037041545 -0.0095966924 -0.02465453 0.002400561 -0.024304949
+		 0.0010284613 -0.023762561 0.00075563591 -0.045580789 0.00076728861 -0.035372481 0.00076356332
+		 -0.036300674 0.0033271154 -0.046593152 0.0040318174 -0.046075471 0.0013200621 -0.035890996
+		 0.0012011657 -0.0013129222 0.00061716035 -0.013817076 -0.0028251866 -0.025755309
+		 -0.0061305929 -0.025524668 -0.0055065313 -0.025608353 -0.0056918124 -0.001463409
+		 0.00058077171 -0.0016409117 0.00053565099 -0.013961889 -0.0024627941 -0.013861198
+		 -0.0025443034 -0.10493971 -0.02116661 -0.10170426 -0.018244909 -0.09950728 -0.010636615
+		 -0.096670181 -0.010291951 -0.1057336 -0.008575337 -0.10921969 -0.0088628102 -0.15456234
+		 0.0025647718 -0.1298307 0.0040140292 -0.14077604 0.0034534475 -0.12376016 0.0026338238
+		 -0.1019968 0.0049702367 -0.11215474 0.0039440794 -0.12565883 -0.016375558 -0.13726978
+		 -0.010336385 -0.11156295 -0.015541837 -0.12316967 -0.01344891 -0.13723633 -0.014449642
+		 -0.15304889 -0.0060324837 -0.15171614 0.0060287854 -0.14215837 -0.011577622 -0.14717793
+		 -0.012168691 -0.11877916 -0.021606909 -0.11471258 -0.019530134 -0.12737632 -0.014808252
+		 -0.13213977 -0.015437976 -0.13555518 0.014008685 -0.12185373 0.021555707 -0.11729182
+		 0.019573674 -0.14537954 0.011026277 -0.14041314 0.0099918088 -0.1303729 0.014123007
+		 -0.12586769 0.012888088 -0.1134998 0.016867382 -0.1106111 0.012801393 -0.13574928
+		 0.0084214946 -0.13172829 0.0063313683 -0.12202975 0.011030181 -0.11869074 0.0088686189
+		 -0.10775281 0.010461166 -0.12442616 -0.0067982245 -0.1034843 0.0065074107 -0.10530481
+		 0.0083241602 -0.12821895 0.0050124368 -0.12555577 0.003741066 -0.11374673 0.0053057214
+		 -0.11590668 0.0068411967 -0.11253049 -0.0093942154 -0.10229854 -0.011208908 -0.122641
+		 0.0016532679 -0.1082003 -0.013796941 -0.10510346 -0.01225643 -0.12847604 -0.0075017381
+		 -0.13281494 -0.0083369482 -0.11937057 -0.011764453 -0.11586972 -0.010130154 -0.11101074
+		 0.0027588147 -0.10073091 0.0036204709 -0.15135512 -0.00040473149 -0.099372335 0.00035036902
+		 -0.099784225 0.00090537767 -0.12154713 0.0002768765 -0.12118734 -3.2980461e-07 -0.10957923
+		 0.00018805068 -0.10996541 0.00062936347 -0.064381965 0.019716933 -0.084574714 0.0044039888
+		 -0.094013773 -0.021459626 -0.061584577 0.0068564257;
+	setAttr ".uvtk[250:398]" -0.093356788 -0.019309686 -0.091028474 -0.015881525
+		 -0.09081208 -0.019601183 -0.067781031 -0.024370627 -0.065253511 -0.02215852 -0.095530763
+		 0.0040696105 -0.091433086 -0.016232984 -0.10035541 -0.016234236 -0.10448673 0.0040085157
+		 -0.061584041 0.0085239252 -0.061979361 0.010359212 -0.0757147 0.010003819 -0.06275969
+		 0.0045693619 -0.079136394 0.0049390635 -0.071811847 -0.025470186 -0.066550203 0.022679968
+		 -0.07024733 0.024763865 -0.062276654 -0.013916836 -0.083071724 0.0012431572 -0.086658143
+		 0.0066666743 -0.087781958 0.0083263358 -0.081843756 -0.019624488 -0.079737544 -0.016166465
+		 -0.088688225 -0.016147451 -0.061452046 -0.012579964 -0.084815033 0.0097543737 -0.060345046
+		 -0.011871115 -0.058970593 -0.011416213 -0.061492912 0.00074058573 -0.061962493 0.0014146696
+		 -0.081361733 -0.0028491328 -0.072450757 -0.0027713934 -0.078828819 0.013670965 -0.077103801
+		 0.011655911 -0.063794613 -0.019108431 -0.063092656 -0.01569386 -0.084554397 -0.012028263
+		 -0.08271952 -0.011569367 -0.13753322 -0.0036664465 -0.062576704 0.012599482 -0.063120238
+		 0.016109539 -0.14599307 -0.00039525435 -0.14023012 -0.00039790676 -0.0850638 -0.021480905
+		 -0.089793496 0.017040683 -0.080737144 0.017180247 -0.074778557 0.0090564927 -0.13287792
+		 -0.0033489028 -0.12048831 -0.0063305069 -0.11626353 -0.0061163763 -0.12786925 -0.003231396
+		 -0.11179349 0.0047050854 -0.10606126 0.0040899059 -0.10440585 -0.025700556 -0.099725425
+		 -0.02277361 -0.072478689 -0.011834518 -0.070849419 -0.010472612 -0.068087034 0.013914629
+		 -0.069737487 0.013661518 -0.06642165 0.011825605 -0.068001799 0.01162733 -0.065097906
+		 0.010002597 -0.066611595 0.0098908981 -0.069132261 -0.016277956 -0.070788056 -0.016025709
+		 -0.064265676 0.008644863 -0.065725297 0.0087033352 -0.063776225 0.0074773571 -0.065171584
+		 0.0078449389 -0.074223213 -0.012418107 -0.081855647 0.0012391488 -0.072931714 0.0013388525
+		 -0.071173139 -0.019843655 -0.072876513 -0.019477563 -0.074379161 -0.021714317 -0.07611496
+		 -0.021334605 -0.089045644 0.010156139 -0.086244568 0.0098438701 -0.063697845 0.0070266714
+		 -0.064938255 0.0076256534 -0.062791221 0.0013994406 -0.064007156 0.0013768206 -0.063539565
+		 -0.0027111033 -0.062321641 -0.0018585483 -0.077681787 -0.014591233 -0.075888075 -0.013188587
+		 -0.099731609 -0.024593668 -0.095409073 -0.021861302 -0.092201896 -0.019988524 -0.096208282
+		 -0.022371875 -0.061278544 -0.010646122 -0.062614404 -0.010395156 -0.062777676 -0.011791394
+		 -0.064134985 -0.011762069 -0.078739196 -0.022625195 -0.082511656 -0.016108083 -0.084984384
+		 0.0042407056 -0.086575158 0.0041369339 -0.098379053 0.022447631 -0.094088666 0.019906089
+		 -0.098154582 0.021700516 -0.10269053 0.024528934 -0.088672958 -0.014092193 -0.086582027
+		 -0.012744741 -0.082592942 -0.0020159343 -0.083900601 0.0012454222 -0.083462007 0.00057026546
+		 -0.096741803 0.02131097 -0.092683233 0.019533649 -0.083682008 0.01967521 -0.087773927
+		 0.021428213 -0.077064164 0.021853223 -0.078805059 0.021440789 -0.072950035 0.020060286
+		 -0.074679516 0.019665018 -0.07167954 0.017173989 -0.069990844 0.017545475 -0.073689006
+		 0.0072921207 -0.074134447 0.0085184714 -0.090767525 0.012388899 -0.092681505 0.015890462
+		 -0.091211028 0.017389132 -0.08932855 0.013757034 -0.087624252 0.011667653 -0.086204074
+		 0.011491551 -0.08791887 0.013526603 -0.064218141 -0.0124086 -0.065651551 -0.012347565
+		 -0.065607317 -0.013283507 -0.067122504 -0.013106243 -0.068801396 -0.014473871 -0.067214914
+		 -0.014698074 -0.085242055 0.0084867319 -0.083825059 0.0085667213 -0.084475622 0.0073209247
+		 -0.083674841 0.006874918 -0.082443841 0.0074927052 -0.083085872 0.0077093383 -0.080419205
+		 -0.010768937 -0.079085737 -0.01050161 -0.082166612 -0.011917607 -0.080823272 -0.0118704
+		 -0.084136285 -0.012539134 -0.082795218 -0.012459979 -0.086001985 -0.013419048 -0.084653981
+		 -0.01322274 -0.087927744 -0.01483731 -0.090065487 -0.016420471 -0.086563013 -0.0145932;
+createNode transferAttributes -n "transferAttributes2";
+	rename -uid "5739776A-4FD2-7DC1-F939-0FBDCEA9AE54";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode polyTweakUV -n "polyTweakUV3";
+	rename -uid "E5504047-4E4A-AB38-C0F2-A3B18CD40E26";
+	setAttr ".uopa" yes;
+	setAttr -s 238 ".uvtk[0:237]" -type "float2" 0.079487383 0.037721545 0.075628996
+		 -0.0097071677 0.0089843273 0.056260467 0.070764363 -0.016999811 0.064466357 -0.023762107
+		 0.0037051439 0.048607066 -0.0009970665 0.040064991 0.055640578 -0.030320987 0.042282641
+		 -0.037038654 -0.006534934 -0.0081661642 0.082347095 0.019774646 0.079237521 -0.0019078553
+		 0.081644475 0.0069659054 0.055612803 0.015502021 0.014991343 0.063141853 0.021983743
+		 0.069716871 -0.03118968 0.01676105 -0.050116599 0.0067668557 -0.068244755 -0.0098057538
+		 -0.0064817667 0.0093145818 -0.0063524842 0.0095455348 -0.015924275 0.029221147 -0.037753761
+		 -0.0095780045 -0.033628762 0.0036745816 -0.077768683 -0.021287769 -0.083837688 -0.031378895
+		 0.030555248 0.058922559 -0.087174177 -0.040618718 -0.087471068 -0.04878968 -0.0015556216
+		 0.062920466 0.0056939721 0.069504902 -0.0080553889 0.055797338 0.021559715 0.054954201
+		 0.0073301196 0.036035478 -0.016710401 0.022876292 -0.020609856 0.030549139 -0.055493057
+		 -0.032369226 -0.049853206 -0.026976675 0.028635263 0.084566534 0.015849471 0.077255219
+		 0.032409728 0.089179993 0.00041222572 0.061530501 -0.026113033 0.027219415 -0.0057193637
+		 0.055536792 -0.011266351 0.049317345 -0.035419762 0.0098955333 -0.016430974 0.042713746
+		 -0.021259785 0.035622254 -0.083284914 -0.055968136 -0.071184874 -0.061186954 -0.036888182
+		 -0.010796681 -0.034373701 -0.014480129 -0.054221272 -0.0078713894 -0.047007203 -0.00018668175
+		 -0.062735856 -0.020876497 -0.059345365 -0.014711738 0.013273001 0.072257936 -0.064352036
+		 -0.026166424 -0.022992969 0.029527456 -0.024189234 0.028480574 -0.012897193 -0.061004311
+		 -0.013100803 -0.061428189 -0.0027574897 -0.039874643 -0.0032088757 -0.041289866 -0.0111745
+		 0.0093505681 -0.020264626 0.015853614 -0.02092427 0.016513512 -0.011670768 0.0099262297
+		 0.017032623 -0.017316863 0.016764879 -0.016749129 0.00091052055 -0.00057548285 -0.0048271418
+		 0.0042872578 -0.0053393841 0.0049230009 0.00043463707 5.8636069e-05 0.011529446 -0.010995477
+		 0.0062808394 -0.0056667626 0.005890131 -0.0050558895 0.011196494 -0.010412097 0.014514923
+		 -0.050860181 -0.00082606077 0.03481558 -0.0032063127 0.044817269 -0.0028432608 0.04483293
+		 -0.00045877695 0.034656733 0.00019353628 -0.023857832 2.7775764e-05 -0.023103446
+		 -0.0063349605 -0.025049224 0.0020629764 -0.03841418 0.03257829 0.077619001 0.049766421
+		 0.088193521 0.0012407303 -0.01201576 0.0017952919 -0.0040723979 0.0020602942 -0.0046396852
+		 0.0014792085 -0.012541682 0.0020269156 0.0032126009 0.0019500852 0.010344416 0.0022702813
+		 0.0098919868 0.002320528 0.0026795864 0.0015385151 0.017491817 0.0007044673 0.025444001
+		 0.001067698 0.025119275 0.0018814802 0.017104506 -0.0090494752 0.0045351982 -0.0048058033
+		 0.030023128 -0.0074978471 0.018066868 0.070563078 0.09993723 0.073193729 0.057483733
+		 0.075017452 0.06094338 -0.011211574 -0.060251027 -0.01151365 -0.060102671 -0.00090223551
+		 -0.035732716 -0.0037754178 0.0048656166 -0.0018253326 -0.040392667 0.0021368265 -0.019943088
+		 0.0072134733 -0.0050362498 -0.011196852 0.010507822 -0.0204373 0.017102897 -0.017036378
+		 0.014962971 -0.0097698569 0.0096469969 0.017249286 -0.016159371 0.013430715 -0.0115107
+		 0.00091165304 0.00064049661 -0.0048639178 0.0055045933 0.0018483996 3.7640333e-05
+		 0.01167506 -0.0098337382 0.0063675642 -0.0044762492 0.012405336 -0.010394216 -0.045988083
+		 -0.060980484 -0.029887319 -0.065505564 0.00090920925 0.035563618 -0.0014588237 0.045765594
+		 1.4901161e-06 0.042166114 0.0011872053 0.035393327 0.04133594 0.051279008 0.066574872
+		 0.059434831 -0.029283047 -0.046413377 -0.029268265 -0.029749408 -0.035014808 -0.029660016
+		 -0.037775278 -0.045627072 0.0015771389 -0.022966862 0.003290832 -0.0097207725 0.054027915
+		 0.064120248 0.071328461 0.063081786 0.004032433 0.0049445629 0.0028592348 -0.011656433
+		 0.0034428239 -0.0037498474 0.0038188696 -0.0022368133 0.0034935474 0.019181848 0.003703773
+		 0.0035737455 0.0036500692 0.010787457 0.0039327145 0.012054116 0.057665527 0.10346764
+		 0.068028569 0.10030521 0.0032555461 0.018000484 0.0024384856 0.02602005 0.0025866032
+		 0.027248591 0.00534302 -0.008594647 0.00056320429 0.0010700971 0.0056554079 -0.0084895045
+		 0.036695182 0.089263245 0.019059658 0.076858461 0.031084657 0.078538656 0.048505425
+		 0.088758528 0.023523152 -0.042863265 -0.0024388433 -0.022993982 0.00696069 -0.034315497
+		 0.015876353 0.040487468 0.021499753 0.042619944 0.040506482 0.091362581 -0.013596654
+		 0.028649658 -0.015213072 0.026840732 0.0068134069 0.067800656 0.015788913 0.075137034
+		 0.0047735572 0.065185905 -0.023633897 0.028341621 -0.0064103603 0.054697812 -0.0001038909
+		 0.061436355 -0.0018215179 0.058932602 -0.0078186989 0.052363023 -0.013362706 0.045278907
+		 -0.018482327 0.037616163 -0.065843761 -0.044609681 -0.054176629 -0.044848591 -0.054391742
+		 -0.039838865 -0.037151873 0.012179315 -0.038440108 0.012700051 -0.045634925 -0.037292302
+		 -0.040737331 -0.025097534 -0.041905284 -0.022556052 -0.046950161 -0.033352152 0.025205076
+		 0.081151694 -0.053411961 0.00017413497 -0.062492251 -0.0095504671 -0.059018672 -0.0083102435
+		 -0.050683856 0.00066648424 -0.068753779 -0.018340826 -0.072698891 -0.026439309 -0.068497956
+		 -0.023828968 -0.064814389 -0.01640974 -0.063893378 -0.03044039 -0.068582237 -0.036008745
+		 -0.063328743 -0.03992945 -0.060817182 -0.033079773 -0.074164629 -0.033660531 -0.072392404
+		 -0.039978996 -0.069946706 -0.030389294 0.034693301 0.046759844 -0.0077332258 0.02898553
+		 -0.020574689 0.027817458 0.00049674511 0.00087842345 -0.0053185225 0.0099768937 -0.001031816
+		 0.0037363172 -0.036080062 0.0049922317 -0.044969141 -0.017906293 -0.040561438 -0.006886214
+		 -0.033047199 0.0032716841 -0.028319299 0.01723586 -0.028844118 0.016761094 0.036415398
+		 0.060277238 0.04507947 0.095141247 0.054489017 0.10261618 0.048839927 0.063045949
+		 0.033114731 0.085544065 0.0083991885 0.068264902 0.019527256 0.07653749 -0.012235165
+		 0.047324121 -0.017572105 0.039359123 -0.019406855 0.03936778 -0.013558924 0.047881424
+		 -0.012681067 0.0041354895 -0.01078105 0.017040059 0.0040898919 -0.0091447085 -0.00072300434
+		 0.0003207624 -0.00051778555 0.00045035779 0.0043125749 -0.0090344995 -0.028438747
+		 -0.0012205988 -0.025430739 0.014708921 -0.029069901 0.015079439 -0.032547176 -0.00026349723;
+createNode transferAttributes -n "transferAttributes3";
+	rename -uid "779F2A98-4AE0-A2BD-D538-99AFF62E0CBC";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode polyPlanarProj -n "polyPlanarProj1";
+	rename -uid "BEB3B851-498E-3D87-82C6-089E23973259";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:207]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -136.46742248535156 53.907211303710938 -1.0422744750976562 ;
+	setAttr ".ro" -type "double3" -3.3383526899797502 -29.799999997061551 1.2546060730706742e-08 ;
+	setAttr ".ps" -type "double2" 36.740916140842344 46.105128889597324 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.687321662902832 0.045743342489004135 0.49614053964614868 0.49613061547279358
+		 1.3492293518223919e-17 1.5779484510421753 -0.058233451098203659 -0.05823228508234024
+		 0.96633827686309814 -0.079872377216815948 -0.8663102388381958 -0.86629289388656616
+		 253.98847961425781 -72.712554931640625 192.15324401855469 192.34939575195312;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyPlanarProj -n "polyPlanarProj2";
+	rename -uid "D0810267-4BD5-D3A0-9A9F-9EB93AE36C4E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:207]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -136.4674072265625 53.907211303710938 -1.0422782897949219 ;
+	setAttr ".ro" -type "double3" -3.3383526899797502 -29.799999997061551 1.2546060730706742e-08 ;
+	setAttr ".ps" -type "double2" 36.740910968557671 46.105131692276835 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.687321662902832 0.045743342489004135 0.49614053964614868 0.49613061547279358
+		 1.3492293518223919e-17 1.5779484510421753 -0.058233451098203659 -0.05823228508234024
+		 0.96633827686309814 -0.079872377216815948 -0.8663102388381958 -0.86629289388656616
+		 253.98847961425781 -72.712554931640625 192.15324401855469 192.34939575195312;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut2";
+	rename -uid "1B360B5D-4A47-2109-6B13-A2B224AF5CD6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[114]";
+createNode polyPlanarProj -n "polyPlanarProj3";
+	rename -uid "3F115050-4D27-1512-5B1A-58879E0B117C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:207]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -136.4674072265625 53.907207489013672 -1.0422744750976562 ;
+	setAttr ".ro" -type "double3" -3.3383526899797502 -29.799999997061551 1.2546060730706742e-08 ;
+	setAttr ".ps" -type "double2" 36.740900623988068 46.105134667451829 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.687321662902832 0.045743342489004135 0.49614053964614868 0.49613061547279358
+		 1.3492293518223919e-17 1.5779484510421753 -0.058233451098203659 -0.05823228508234024
+		 0.96633827686309814 -0.079872377216815948 -0.8663102388381958 -0.86629289388656616
+		 253.98847961425781 -72.712554931640625 192.15324401855469 192.34939575195312;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut3";
+	rename -uid "A01B3ED1-4B40-DC0F-D8E8-EEB8D067800B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 41 "e[3]" "e[6]" "e[10:11]" "e[15:16]" "e[20:21]" "e[26]" "e[29]" "e[31:32]" "e[36:37]" "e[47:48]" "e[52:53]" "e[60]" "e[63:64]" "e[66:67]" "e[104]" "e[142]" "e[154]" "e[162]" "e[176]" "e[179]" "e[187]" "e[190:191]" "e[201:202]" "e[215]" "e[227]" "e[230:231]" "e[234:235]" "e[238]" "e[242]" "e[245:246]" "e[250:251]" "e[254:255]" "e[257:258]" "e[261]" "e[263]" "e[306]" "e[314]" "e[324]" "e[327]" "e[354]" "e[377]";
+createNode polyTweakUV -n "polyTweakUV4";
+	rename -uid "6BEBB494-407C-6727-4B27-209B22D918A4";
+	setAttr ".uopa" yes;
+	setAttr -s 243 ".uvtk[0:242]" -type "float2" 0.27763793 0.16527812 0.12896474
+		 0.20434605 0.13138935 0.051998779 0.26884946 0.039976109 0.29791278 -0.53794527 0.34742692
+		 -0.58015954 0.41050908 -0.49559647 0.37111399 -0.45768726 -0.12713726 0.31054091
+		 0.44087866 -0.46778715 -0.13333195 0.076585397 -0.12872835 -0.11844379 -0.098493762
+		 -0.33776093 -0.075100325 -0.41498876 -0.047287866 -0.48539731 0.53129119 -0.5480727
+		 0.55167466 -0.50590837 0.56980437 -0.46122137 0.58158839 -0.50607252 0.54806668 -0.58906972
+		 0.58866817 -0.558424 0.55399024 -0.54103541 0.13566688 -0.080023393 0.1366199 -0.10467482
+		 -0.014564484 -0.54887402 0.02785543 -0.60866582 0.47736666 -0.6278224 0.50778419
+		 -0.58790493 0.73685414 -0.31494156 0.75474006 -0.19892114 0.77167881 -0.1996907 0.75465178
+		 -0.31083927 0.5797047 -0.67608535 0.61913252 -0.62927061 0.6416465 -0.61386311 0.60397726
+		 -0.65849394 0.083042212 -0.66561341 0.35207435 -0.74310333 0.27173376 -0.74055934
+		 0.33103245 -0.73094064 0.57270342 -0.73973912 0.017350862 -0.102091 0.012367846 0.10625853
+		 -0.12469366 0.097722992 -0.1201706 -0.10632434 0.77435827 -0.061492641 0.79127878
+		 0.19646625 -0.1167553 -0.24874657 0.58591545 -0.41103745 0.60224199 -0.33805776 0.63190061
+		 -0.32996815 0.72151375 -0.39304036 0.61557961 -0.4058204 0.010626944 0.35077199 -0.12064075
+		 0.33932775 0.5995422 -0.45814672 0.7064501 -0.44715482 0.68957424 -0.49539709 0.5814091
+		 -0.50486702 0.56097555 -0.54904866 0.6703319 -0.54133821 0.64818728 -0.584943 0.53731358
+		 -0.59104306 0.29307503 -0.73345673 0.23043811 -0.68735409 0.09930753 -0.67999172
+		 0.16434038 -0.72631669 0.5065667 -0.63340211 0.41382062 -0.71792787 0.53135508 -0.71843898
+		 0.4774377 -0.74689525 0.35682118 -0.7443223 0.1748893 -0.62715256 0.041872844 -0.62020135
+		 0.58512115 -0.50949699 0.53974581 -0.16364358 0.04756324 -0.33748344 0.029194932
+		 -0.24197806 -0.10794253 -0.24282132 -0.089138158 -0.33605742 0.41879633 -0.75988644
+		 0.29543495 -0.75533319 0.099185221 -0.49573445 0.071165152 -0.42032075 -0.064955875
+		 -0.41702643 -0.036153652 -0.49086758 0.13211933 -0.56352663 -0.0022211964 -0.55742848
+		 0.74065638 -0.27873486 0.75417113 -0.19514036 0.73479497 -0.20163193 0.7218715 -0.27938932
+		 0.60352635 -0.57673967 0.63787788 -0.53888869 0.62175816 -0.52359378 0.35680515 -0.75672323
+		 0.23068914 -0.75059265 0.46059281 -0.63926935 0.51307154 -0.63183779 0.50206345 -0.60900784
+		 0.45211124 -0.61535382 0.77027088 0.14983283 0.74991572 0.12787995 0.14668712 -0.25321236
+		 0.13170248 -0.17385454 0.083797552 -0.23831345 0.10106304 -0.32963422 0.66322893
+		 -0.50225741 0.66939396 -0.57141101 0.3997983 -0.60615635 0.45339033 -0.52018303 0.12185849
+		 -0.068741292 0.11716651 0.075522959 0.068116404 0.091508344 0.072712578 -0.10548884
+		 0.67029452 -0.23987864 0.65055746 -0.21716845 0.11428515 0.24142422 0.065326519 0.32208788
+		 0.18869868 -0.38951245 0.16587684 -0.3242299 0.12324529 -0.40901989 0.1495477 -0.48134437
+		 0.54073513 -0.52431172 0.49742797 -0.5297423 0.48605314 0.15387414 0.4942365 0.18076436
+		 0.5611974 -0.61015588 0.77379364 -0.04384331 0.56499124 0.051740017 0.25073999 -0.50556242
+		 0.21563092 -0.44892442 0.18045235 -0.54641974 0.22062072 -0.60753554 0.72062784 -0.30805203
+		 0.69661546 -0.3791346 0.70950359 -0.33609393 0.66805452 -0.3372604 0.72792065 -0.33923903
+		 0.73990613 -0.38604054 0.71476805 -0.38482159 0.69981331 -0.42626798 0.70916599 -0.48503292
+		 0.7254259 -0.43835425 0.68281871 -0.46540797 0.69068581 -0.52937675 0.67973512 -0.28496087
+		 0.64197683 -0.41293529 0.62627792 -0.4467811 0.60827196 -0.47843817 0.24453105 -0.47152165
+		 0.61107528 -0.7028271 0.4646256 -0.67812812 0.65357286 -0.099822283 0.67144513 0.21668519
+		 0.15710828 -0.258194 0.14471373 -0.19175903 0.1921964 -0.37302262 0.17309019 -0.31792381
+		 0.21485308 -0.42337447 0.34465972 0.25806248 0.38632527 0.034478635 0.4910323 0.23841517
+		 0.46130657 0.25899503 0.3317917 -0.71035707 0.3495737 -0.60477519 0.29662228 -0.56039572
+		 0.27280885 -0.66548872 0.66538137 -0.45504838 0.68197501 -0.41823614 0.64631259 -0.48955509
+		 0.14478084 -0.17694224 0.50653619 -0.72587758 0.55792242 -0.6987468 0.45076966 -0.73793066
+		 0.40526167 -0.63096619 0.39203221 -0.73384607 0.15863928 -0.25080696 0.17642328 -0.31707591
+		 0.19759598 -0.37804174 0.22259638 -0.43358693 0.75969213 -0.13305415 0.25520316 -0.48655868
+		 0.4147279 -0.76701754 0.70572734 0.095266193 0.70427418 -0.13017564 0.69187099 -0.21319377
+		 0.77540255 0.21332632 0.67075336 -0.083216079 0.2093443 -0.73472309 0.47331759 -0.7729485
+		 0.14554453 -0.71028686 0.64048976 -0.099603795 0.64113402 0.20382337 0.32191113 0.24041696
+		 0.74619246 -0.21007295 0.43612331 -0.66958475 0.63991201 -0.66088194 -0.012313059
+		 0.20435727 0.29643163 -0.31900069 0.31397 -0.3666985 0.33815721 -0.41263098 0.27187857
+		 -0.21108724 0.28252521 -0.26708624 0.26375112 -0.068779543 0.2650784 -0.14919277
+		 0.62068528 -0.22913396 0.38641375 -0.70655614 0.28360328 -0.51844013 0.64884639 -0.44602859
+		 0.67189616 -0.41411772 0.69010621 -0.38130301 0.70620137 -0.34594691 0.65584576 -0.37693512
+		 0.73354936 -0.26595965 0.79024249 -0.068174355 0.76829809 -0.098384038 0.13151956
+		 0.15213369 0.45807898 0.11465408 0.51585758 -0.56880319 0.47270694 -0.587093 0.74812454
+		 -0.11180467 0.42602834 -0.59260869 0.37747735 -0.58290446 0.68243104 -0.35738456
+		 0.32911825 -0.55766785 0.61834449 -0.47811204 0.68667912 -0.43556231 0.68483818 -0.48867589
+		 0.082425117 -0.38874456 0.056601375 -0.30579284 0.033140935 -0.18560082 0.52638948
+		 -0.76366568 0.2880896 -0.69982529 0.22960466 -0.64504898 0.67097735 -0.57923776 0.6588105
+		 -0.62024564 0.18305933 -0.58793879 0.14557058 -0.52771819 0.13295349 0.014032379
+		 0.67944771 -0.53541112 0.1121769 -0.4612585 0.010319016 -0.0073931441;
+createNode polyMapCut -n "polyMapCut4";
+	rename -uid "5B8C06DE-49A6-843C-A67D-5093169DC5B5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj4";
+	rename -uid "A53E8D37-4624-36DD-1A5A-1A882C216817";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -136.26535034179688 40.443042755126953 30.817985534667969 ;
+	setAttr ".ro" -type "double3" 125.66164521196164 -25.000002638062348 -179.99999456869003 ;
+	setAttr ".ps" -type "double2" 7.7605771393753002 10.56769558648287 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.7622650861740112 0.54273539781570435 0.24639031291007996 0.24638538062572479
+		 -1.9079236811529579e-17 0.92150372266769409 -0.81249022483825684 -0.81247395277023315
+		 0.8217577338218689 1.1638997793197632 0.52838575839996338 0.52837514877319336 -268.565673828125 -0.74314945936203003 71.059394836425781 71.257972717285156;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut5";
+	rename -uid "F3651BB2-41DB-2901-5E02-869F17A5BFCA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV5";
+	rename -uid "CDC0864D-4979-947A-EB1D-DF83E4092CFE";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.82749176 0.091313854 0.076367453
+		 -0.48170573 0.82685858 0.17414857 0.46364781 0.47270519 0.61013442 0.38828909 0.15054546
+		 0.49594697 0.20256053 0.5417614 0.32046613 0.52809715 0.20708476 0.38807213 0.37136057
+		 0.25533885 0.7415936 0.28329188 0.54704088 0.12082273 0.72750938 0.070728026 0.58178139
+		 0.14328735;
+createNode polyMapCut -n "polyMapCut6";
+	rename -uid "50ACF919-46E6-CA8B-8196-F991E78A0580";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj5";
+	rename -uid "63E89B91-4D6F-3B3E-B1FB-838D5D570E48";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -138.20262145996094 51.729076385498047 31.164796829223633 ;
+	setAttr ".ro" -type "double3" 127.46164738865845 -71.799999698076846 179.9999998663254 ;
+	setAttr ".ps" -type "double2" 11.215077334426809 7.05334255245279 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -0.60731792449951172 1.1918753385543823 0.57781326770782471 0.57780170440673828
+		 1.0793834814579135e-16 0.96138739585876465 -0.79377651214599609 -0.79376065731048584
+		 1.8471678495407104 0.39186865091323853 0.18997533619403839 0.18997153639793396 -140.02752685546875 102.96221160888672 171.89012145996094 172.08668518066406;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut7";
+	rename -uid "BB74AA1A-4457-B620-B173-7FABAF5BB981";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV6";
+	rename -uid "FEDBBBD0-4E9C-134D-EAAD-C6899E9F244A";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.95691103 -0.10491811 -0.019797914
+		 -0.13133582 0.93409586 -0.032289714 0.80336231 0.39641267 0.84612799 0.25750107 0.77419794
+		 0.47140473 0.75092387 0.52386922 0.76829427 0.4933008 0.82690787 0.33719927 0.89369243
+		 0.16865852 0.88945556 0.10076082 0.92308027 -0.0013734377 0.95149559 -0.093368672
+		 0.95777261 0.021695092;
+createNode polyMapCut -n "polyMapCut8";
+	rename -uid "6B4E8AA2-45B9-6985-A787-319538FE5DE0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj6";
+	rename -uid "DFB03023-497E-7A3F-7E2B-F1AB39EF22F1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -136.41688537597656 64.227294921875 26.223140716552734 ;
+	setAttr ".ro" -type "double3" 122.06164687166857 -47.799999765926067 179.99999927561467 ;
+	setAttr ".ps" -type "double2" 9.5566424028758377 10.361164523784311 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.3061233758926392 0.9923439621925354 0.3932502269744873 0.39324235916137695
+		 -1.6190752883613193e-16 0.83904844522476196 -0.84749436378479004 -0.84747743606567383
+		 1.4404534101486206 0.899802565574646 0.35657751560211182 0.35657039284706116 -219.38198852539062 65.513092041015625 154.19097900390625 154.38789367675781;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut9";
+	rename -uid "6789CFAB-4226-C9C8-1A59-6891F422778B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV7";
+	rename -uid "F6CD7F3F-4B4C-6F31-FA27-23957C802586";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.82744515 0.072893336 -0.061172396
+		 -0.50748467 0.77309263 0.086654291 0.43579605 0.37692374 0.54776198 0.26845187 0.35400537
+		 0.51731211 0.31225458 0.51559412 0.35047337 0.4657968 0.46972415 0.45695791 0.62705553
+		 0.36138093 0.66659456 0.1586476 0.7301206 0.22538894 0.8147316 0.13008794 0.76623416
+		 0.24783912;
+createNode polyMapCut -n "polyMapCut10";
+	rename -uid "1DDDBE32-46D8-CAAC-3F9C-EDA6135867C9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj7";
+	rename -uid "384454A9-4D46-2ABE-72E3-C083EF44B14E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -135.9339599609375 73.551116943359375 16.724498748779297 ;
+	setAttr ".ro" -type "double3" 122.06164687166857 -47.799999765926067 179.99999927561467 ;
+	setAttr ".ps" -type "double2" 7.6204557104203445 10.33955090495035 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.3061233758926392 0.9923439621925354 0.3932502269744873 0.39324235916137695
+		 -1.6190752883613193e-16 0.83904844522476196 -0.84749436378479004 -0.84747743606567383
+		 1.4404534101486206 0.899802565574646 0.35657751560211182 0.35657039284706116 -219.38198852539062 65.513092041015625 154.19097900390625 154.38789367675781;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut11";
+	rename -uid "812AFC23-425C-6A4B-B8B8-1B8875894567";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV8";
+	rename -uid "8595D1E6-41BD-0F16-08E6-49A2C126CB34";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.79507607 0.11349318 0.22181866
+		 -0.55749792 0.6900335 0.071836121 0.29748318 0.23354261 0.40372249 0.14602014 0.34542736
+		 0.46418175 0.25008425 0.40904227 0.23808923 0.32284343 0.50619745 0.46719083 0.680291
+		 0.42238361 0.54511619 0.086958565 0.77429467 0.30931729 0.82707548 0.20695566 0.80963683
+		 0.3328332;
+createNode polyMapCut -n "polyMapCut12";
+	rename -uid "3CFB519D-4D46-BBBF-D458-A39043503035";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj8";
+	rename -uid "67F13722-404F-FAA1-6135-8AA746810386";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -136.51632690429688 78.804458618164062 4.6582603454589844 ;
+	setAttr ".ro" -type "double3" 131.66164664752063 -45.000000515061053 -179.99999918135202 ;
+	setAttr ".ps" -type "double2" 7.0027792757082352 10.370464901316588 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.3749299049377441 0.83499610424041748 0.47004479169845581 0.4700353741645813
+		 -9.9049313082063807e-17 1.0506932735443115 -0.74709826707839966 -0.74708330631256104
+		 1.3749299049377441 0.83499610424041748 0.47004479169845581 0.4700353741645813 -170.71090698242188 43.05078125 188.39591979980469 188.5921630859375;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut13";
+	rename -uid "4E75560D-432C-0082-629C-F1BE9DD6F74F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV9";
+	rename -uid "93AAC895-4D71-22D8-EFB6-0AAC639C23C0";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.86407709 0.26929438 0.36550543
+		 -0.48257631 0.79953051 0.18929061 0.40280172 0.25544247 0.53285199 0.19568071 0.33997312
+		 0.49365857 0.28266588 0.41958925 0.31135246 0.33495182 0.47814474 0.54247963 0.64485013
+		 0.53326368 0.67660278 0.16756538 0.75600773 0.45056269 0.84666353 0.36536819 0.79107827
+		 0.47447175;
+createNode objectSet -n "textureEditorIsolateSelectSet";
+	rename -uid "17FCFCD5-4324-43B1-6194-AFA90A8246C4";
+	setAttr ".ihi" 0;
+	setAttr ".fo" yes;
+createNode groupId -n "groupId279";
+	rename -uid "44E7922A-4AEE-F62E-00CE-4DB516B72C74";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts8";
+	rename -uid "1D5FFFF6-4A3D-70CB-C15D-4387C6D90DD3";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:11]";
+createNode polyMapCut -n "polyMapCut14";
+	rename -uid "6DA49C3E-45B6-9C79-D35B-6FBE158354A6";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj9";
+	rename -uid "441FC1C3-424F-A034-88F0-28B4FDE06115";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -136.93988037109375 78.558738708496094 -7.3955841064453125 ;
+	setAttr ".ro" -type "double3" 168.26164762034787 -7.8000010407743172 -179.99999974141772 ;
+	setAttr ".ps" -type "double2" 7.1620182980115317 11.299102799892808 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.9264541864395142 0.043641760945320129 0.13287998735904694 0.13287733495235443
+		 -8.9766384536805861e-18 1.5475747585296631 -0.20344679057598114 -0.20344272255897522
+		 0.26389139890670776 0.3185926079750061 0.97004759311676025 0.97002816200256348 -223.28903198242188 -63.813888549804688 121.87247467041016 122.07003784179688;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut15";
+	rename -uid "4145B9F0-40B6-51FB-AB95-35BC46D3C35E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV10";
+	rename -uid "6789C70F-462E-0FD3-CE8D-98A73C96778B";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.8415221 0.42538539 0.53100586
+		 -0.50798953 0.88629866 0.40261245 0.60834467 0.37300521 0.74446332 0.37208071 0.28262427
+		 0.40570271 0.34472927 0.37972778 0.46565315 0.37164795 0.3054935 0.43389368 0.40656188
+		 0.47235617 0.84767956 0.37958544 0.58508849 0.46899563 0.72937524 0.45650581 0.54980505
+		 0.49218345;
+createNode polyMapCut -n "polyMapCut16";
+	rename -uid "75CB88E3-4DA7-E01B-C9E6-4CB0235F2B45";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj10";
+	rename -uid "B121E5EA-4C40-4A9E-C1C3-F49B946D43E9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -137.66493225097656 71.589302062988281 -19.771595001220703 ;
+	setAttr ".ro" -type "double3" 168.86164712518783 -18.999999910949203 179.99999987096717 ;
+	setAttr ".ps" -type "double2" 6.8406491415744597 9.6984874720166374 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.8385083675384521 0.099410384893417358 0.31944200396537781 0.31943562626838684
+		 2.6984587036447838e-17 1.5508573055267334 -0.19318264722824097 -0.19317878782749176
+		 0.63304919004440308 0.28870871663093567 0.92772692441940308 0.92770838737487793 -216.740966796875 -57.276706695556641 162.05445861816406 162.251220703125;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut17";
+	rename -uid "33B5F9E1-4FB1-A4AC-E074-D89F6F4CD884";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV11";
+	rename -uid "C731CE9B-4665-7D87-5D86-1B89F931FCDD";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.85040474 0.39568183 0.69554007
+		 -0.50766426 0.8663168 0.29074347 0.52538472 0.12411556 0.66972107 0.14475611 0.2856521
+		 0.29802746 0.30146539 0.20575371 0.3925758 0.14464954 0.35715806 0.41025472 0.49352765
+		 0.48849574 0.79581678 0.20376122 0.61663818 0.4926284 0.75732321 0.46872541 0.6518901
+		 0.51510829;
+createNode polyMapCut -n "polyMapCut18";
+	rename -uid "F2FF0567-4C79-C495-0D8C-C3B4AF4DD885";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj11";
+	rename -uid "7F0DD037-41DC-0063-CF85-B0B3FB5A9A18";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -137.83901977539062 61.069305419921875 -27.355770111083984 ;
+	setAttr ".ro" -type "double3" 15.861646747645255 198.19999856778983 3.2485076138995465e-07 ;
+	setAttr ".ps" -type "double2" 6.8672708511649461 9.7303996976682186 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.8471678495407104 -0.1349320262670517 0.30044862627983093 0.30044260621070862
+		 -5.3969174072895676e-17 1.5204473733901978 0.27332085371017456 0.27331539988517761
+		 0.60731792449951172 -0.41039809584617615 0.91381967067718506 0.91380137205123901
+		 -217.48724365234375 -76.153732299804688 140.18553161621094 140.38272094726562;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut19";
+	rename -uid "7A023B25-422A-4DCA-E5C0-A79B52B6C8A5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV12";
+	rename -uid "7D8BD13F-4CC4-8B91-B3FC-648AACA10865";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.92769074 0.47518748 0.88353604
+		 -0.47454596 0.95802605 0.39588469 0.656425 0.2008765 0.79327631 0.24054663 0.39392197
+		 0.3057543 0.42609578 0.22654575 0.52427357 0.19473958 0.44731542 0.40476549 0.5662182
+		 0.49889648 0.90634233 0.30672324 0.68099594 0.52493274 0.82289511 0.52702111 0.71589118
+		 0.54849064;
+createNode polyMapCut -n "polyMapCut20";
+	rename -uid "6A744F8A-4B5F-F2AB-12AC-DFAB9EF617A0";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj12";
+	rename -uid "33B24DD2-44FD-BABE-BB1D-56B36E9CAABD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -138.08383178710938 47.505020141601562 -30.902099609375 ;
+	setAttr ".ro" -type "double3" 15.861646747645255 198.19999856778983 3.2485076138995465e-07 ;
+	setAttr ".ps" -type "double2" 6.8671138902760305 7.3651722360812286 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.8471678495407104 -0.1349320262670517 0.30044862627983093 0.30044260621070862
+		 -5.3969174072895676e-17 1.5204473733901978 0.27332085371017456 0.27331539988517761
+		 0.60731792449951172 -0.41039809584617615 0.91381967067718506 0.91380137205123901
+		 -217.48724365234375 -76.153732299804688 140.18553161621094 140.38272094726562;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut21";
+	rename -uid "646B6683-4B90-E0ED-6941-E78D14B99BF1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV13";
+	rename -uid "A78245FF-4FC0-F313-A3CC-FE851EEFD783";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.81259698 0.32587838 0.78770018
+		 -0.55681461 0.86688459 0.16137387 0.51323247 -0.20189479 0.68404734 -0.13907155 0.15208688
+		 0.066208512 0.20626837 -0.098140404 0.34115019 -0.18949202 0.2048738 0.25364324 0.34609768
+		 0.39839032 0.81676537 -0.011342452 0.49507543 0.44254023 0.67457378 0.42711422 0.5295555
+		 0.46535882;
+createNode polyMapCut -n "polyMapCut22";
+	rename -uid "A6A55482-4EFC-B594-5DA9-F9B08A4BC1D3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyPlanarProj -n "polyPlanarProj13";
+	rename -uid "08B03143-45D6-BE55-F010-79827A780A93";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -138.13970947265625 35.154495239257812 -31.744028091430664 ;
+	setAttr ".ro" -type "double3" 15.861646747645255 198.19999856778983 3.2485076138995465e-07 ;
+	setAttr ".ps" -type "double2" 6.8671027203093047 7.224342529310789 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.8471678495407104 -0.1349320262670517 0.30044862627983093 0.30044260621070862
+		 -5.3969174072895676e-17 1.5204473733901978 0.27332085371017456 0.27331539988517761
+		 0.60731792449951172 -0.41039809584617615 0.91381967067718506 0.91380137205123901
+		 -217.48724365234375 -76.153732299804688 140.18553161621094 140.38272094726562;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut23";
+	rename -uid "3F783B4F-4914-645C-FB31-248F9995E1A4";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[18]";
+createNode polyTweakUV -n "polyTweakUV14";
+	rename -uid "94C405DC-4DE8-255C-DC74-DA9DFEB345CD";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.76157123 0.29393458 0.72682548
+		 -0.5324595 0.82901871 0.076154709 0.40676391 -0.39982438 0.61414772 -0.32341552 -0.044885162
+		 -0.0065058353 0.025105324 -0.23033746 0.19454467 -0.36957213 0.017104741 0.23419763
+		 0.18737245 0.41412801 0.77144325 -0.15246955 0.37370294 0.46655872 0.59259188 0.43468386
+		 0.40982538 0.49050051;
+createNode polyMapCut -n "polyMapCut24";
+	rename -uid "3D49F245-45B2-F148-A9BD-87AF566B66DD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj14";
+	rename -uid "FFC2D5B0-40A3-F94C-2EC0-CC92C6D10AEE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -72.615631103515625 40.422866821289062 31.393402099609375 ;
+	setAttr ".ro" -type "double3" 127.46164800810371 5.7999917197946935 -179.9999889541767 ;
+	setAttr ".ps" -type "double2" 7.1917263233931976 10.897474685656078 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.9344903230667114 -0.12678952515125275 -0.061466723680496216 -0.061465494334697723
+		 -5.7031898799198804e-18 0.96138739585876465 -0.79377651214599609 -0.79376065731048584
+		 -0.19649834930896759 1.2482196092605591 0.60512864589691162 0.60511654615402222 -133.28190612792969 -88.599906921386719 84.531387329101562 84.729690551757812;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut25";
+	rename -uid "8A59234C-4A8F-9181-20A2-1792EDDB0896";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV15";
+	rename -uid "4A7E6659-442A-5F39-77D6-16A1F6B834B3";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.32625365 0.18232313 0.28037405
+		 0.28194377 0.72982192 -0.52457619 0.46070433 0.46113634 0.61994696 0.49577105 0.90554923
+		 0.42622685 0.95828933 0.32787678 0.77915442 0.48472109 0.91077793 0.21633738 0.77720839
+		 0.12985508 0.3340314 0.38500777 0.60129732 0.086543493 0.45835751 0.12098264 0.63590908
+		 0.10898346;
+createNode polyMapCut -n "polyMapCut26";
+	rename -uid "6B59A83E-4E07-4346-E48C-EF955C82038B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj15";
+	rename -uid "488DB2D2-47B2-78FE-D0F6-8FB3A1269BFD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -71.387557983398438 52.174217224121094 30.678281784057617 ;
+	setAttr ".ro" -type "double3" 115.4616467681691 59.80000004996716 179.999999826166 ;
+	setAttr ".ps" -type "double2" 10.880714003796733 8.5902558235640356 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -0.97809433937072754 -1.2334145307540894 -0.3715650737285614 -0.37155762314796448
+		 -2.3238913458689797e-18 0.67952394485473633 -0.90289133787155151 -0.90287327766418457
+		 -1.6805343627929688 0.71786439418792725 0.2162560373544693 0.21625171601772308 -14.957735061645508 -139.83009338378906 86.719413757324219 86.917678833007812;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut27";
+	rename -uid "2E6BD260-4743-2B3F-81B0-408557E87B8D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV16";
+	rename -uid "A164A18D-447A-7949-1DBC-13AE171DFD6C";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.34335199 0.010819128 -0.32983413
+		 0.046390235 0.66603935 -0.22220731 -0.20388669 0.28764755 -0.12838081 0.41928262
+		 -0.016618725 0.56230509 -0.025897799 0.53462702 -0.060638249 0.5186497 -0.082929298
+		 0.42778683 -0.1703769 0.27718735 -0.27365395 0.14872 -0.26343152 0.13152587 -0.3098419
+		 0.055945322 -0.2428596 0.16885442;
+createNode polyMapCut -n "polyMapCut28";
+	rename -uid "820BB126-4FBB-3C07-3127-3FB2393A9F92";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj16";
+	rename -uid "D8427385-4D24-AB33-C133-52A8A4E1603E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -72.348388671875 63.446704864501953 26.297794342041016 ;
+	setAttr ".ro" -type "double3" 115.4616467681691 59.80000004996716 179.999999826166 ;
+	setAttr ".ps" -type "double2" 10.290448835084923 9.3112217154413202 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -0.97809433937072754 -1.2334145307540894 -0.3715650737285614 -0.37155762314796448
+		 -2.3238913458689797e-18 0.67952394485473633 -0.90289133787155151 -0.90287327766418457
+		 -1.6805343627929688 0.71786439418792725 0.2162560373544693 0.21625171601772308 -14.957735061645508 -139.83009338378906 86.719413757324219 86.917678833007812;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut29";
+	rename -uid "650DCF60-4787-5B2A-A63C-A897FF90C107";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV17";
+	rename -uid "01E689CA-420F-1D67-75E7-ABB2E0FD6D2A";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.90360796 0.0783903 -0.8217721
+		 0.083785832 0.075154483 -0.3538509 -0.59668791 0.28123862 -0.50849104 0.40586871
+		 -0.45446253 0.5721156 -0.52699363 0.57327831 -0.45622885 0.51076889 -0.6535365 0.49932468
+		 -0.79700005 0.37928629 -0.70555848 0.15967491 -0.90196973 0.2400164 -0.92898148 0.15362361
+		 -0.88084865 0.27398759;
+createNode polyMapCut -n "polyMapCut30";
+	rename -uid "59FC5F1E-459C-CBE6-7714-59A0FDB92469";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj17";
+	rename -uid "4349729D-4AB5-51E3-1AC5-E7B0D4385C5F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -73.506790161132812 73.560752868652344 16.908590316772461 ;
+	setAttr ".ro" -type "double3" 125.06164941230934 44.5999981012231 -179.99999536219588 ;
+	setAttr ".ps" -type "double2" 7.4559834197756416 10.616773595381403 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.3844951391220093 -0.90844607353210449 -0.40336513519287109 -0.40335705876350403
+		 2.5829560336426563e-16 0.90800511837005615 -0.81855082511901855 -0.81853443384170532
+		 -1.3652975559234619 0.92121976613998413 0.40903687477111816 0.40902867913246155 -54.779624938964844 -132.13133239746094 82.249290466308594 82.447639465332031;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut31";
+	rename -uid "69F39EF5-4E11-1AD5-2555-2786B2745E04";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV18";
+	rename -uid "645C7055-4849-4D78-1D8A-41936A87F982";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.55325115 0.30568117 -0.45874798
+		 0.27420622 0.024737405 -0.42787492 -0.17636034 0.34328479 -0.06566938 0.41637456
+		 -0.0039345142 0.54416925 -0.089701675 0.57382292 0.00017659541 0.48411077 -0.24003536
+		 0.56093758 -0.40590301 0.51537591 -0.31867504 0.29122001 -0.53187162 0.43711132 -0.57282585
+		 0.38464206 -0.5095942 0.4718529;
+createNode polyMapCut -n "polyMapCut32";
+	rename -uid "B467549B-4EE6-B8B0-65C8-C6B2083C1662";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj18";
+	rename -uid "4CCC4EDC-4182-7FAD-6407-38A57132A385";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -73.0977783203125 79.093963623046875 5.7902116775512695 ;
+	setAttr ".ro" -type "double3" 148.46164689132002 28.200000763944434 179.99999993981658 ;
+	setAttr ".ps" -type "double2" 7.2090096664912835 11.378183201274723 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.7136455774307251 -0.39069515466690063 -0.40275844931602478 -0.4027504026889801
+		 0 1.3471560478210449 -0.52307963371276855 -0.52306920289993286 -0.91884869337081909 0.72864335775375366 0.75114130973815918 0.75112628936767578
+		 -103.83425140380859 -119.27830505371094 78.861137390136719 79.059562683105469;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut33";
+	rename -uid "272FD1D7-45D8-314B-8BF1-4EAA31A547BF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV19";
+	rename -uid "C193D6FD-4344-5E40-C05B-B89946E07E96";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.54490179 0.43696132 -0.48740131
+		 0.38008592 -0.19648753 -0.44987515 -0.21858656 0.36618665 -0.082554758 0.38565913
+		 0.060180698 0.44510183 0.019930528 0.4788928 0.018318446 0.41386828 -0.099108674
+		 0.51662403 -0.2541557 0.52605206 -0.36547169 0.36009577 -0.3963199 0.50683415 -0.51848328
+		 0.49548244 -0.41898301 0.54077566;
+createNode polyMapCut -n "polyMapCut34";
+	rename -uid "E78AC606-4414-A507-32BC-5B8D11643433";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj19";
+	rename -uid "504D3318-4F71-0319-1B6A-66A0D34497FA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -72.152740478515625 78.105537414550781 -7.9691143035888672 ;
+	setAttr ".ro" -type "double3" 156.2616473408271 10.599998860129787 -179.99999973838646 ;
+	setAttr ".ps" -type "double2" 7.1056124395182536 10.66708163028359 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.9112632274627686 -0.11704818159341812 -0.16839121282100677 -0.16838784515857697
+		 2.9960233632486896e-17 1.4468988180160522 -0.40256866812705994 -0.40256062150001526
+		 -0.35768318176269531 0.62544143199920654 0.89979046583175659 0.89977246522903442
+		 -139.40541076660156 -98.478752136230469 104.66856384277344 104.86647033691406;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut35";
+	rename -uid "6E88956B-40B9-C633-8FBE-BB9128472CAE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV20";
+	rename -uid "D27DE178-4481-4000-1D95-04AE7E1570C4";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.074682131 0.42615297 0.062695101
+		 0.336346 0.31406271 -0.47809485 0.25948399 0.20790197 0.40204102 0.19919755 0.62389129
+		 0.26758006 0.64259613 0.35076043 0.53287053 0.21634392 0.57468951 0.43163019 0.44345492
+		 0.49597028 0.13381222 0.25317875 0.29057306 0.51122636 0.16808438 0.50840718 0.31124991
+		 0.5459699;
+createNode polyMapCut -n "polyMapCut36";
+	rename -uid "A42DFDD5-41DA-E85D-715A-8B89D3BFC316";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj20";
+	rename -uid "4B5B64D7-487F-2D95-B4D7-D39428B075F9";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -71.910148620605469 72.626716613769531 -19.155105590820312 ;
+	setAttr ".ro" -type "double3" 11.061647652575724 166.59999908635208 1.4801047076764838e-07 ;
+	setAttr ".ps" -type "double2" 7.0321523123808589 11.253872491087336 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.8915086984634399 0.070281676948070526 -0.22744688391685486 -0.22744233906269073
+		 1.3492293518223919e-17 1.5512646436691284 0.19186890125274658 0.19186507165431976
+		 -0.45062091946601868 -0.29501160979270935 0.95472204685211182 0.95470297336578369
+		 -145.51844787597656 -112.43560028076172 72.790496826171875 72.989036560058594;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut37";
+	rename -uid "985DD657-4002-64E6-7308-3CB591E74F5D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV21";
+	rename -uid "C2B4F58C-404F-6974-7725-83BE8C53CBC3";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" 0.07294254 0.42550853 0.057918098
+		 0.33258098 0.22522718 -0.51531321 0.25586137 0.20286676 0.39899418 0.1779303 0.62266946
+		 0.22436273 0.64208543 0.29105076 0.53075355 0.18495795 0.57638264 0.38238358 0.44521752
+		 0.44908807 0.1297535 0.25717694 0.29110584 0.4743008 0.16763327 0.48912153 0.3123596
+		 0.50897896;
+createNode polyPlanarProj -n "polyPlanarProj21";
+	rename -uid "C89C0E1F-4998-B2C6-8B36-9598CF343A49";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -71.7437744140625 61.794570922851562 -27.397924423217773 ;
+	setAttr ".ro" -type "double3" -151.53835307150092 10.599999510258636 179.99999972819163 ;
+	setAttr ".ps" -type "double2" 7.1054783851782872 10.811760440024941 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.9112632274627686 0.13856720924377441 -0.16172154247760773 -0.16171830892562866
+		 -5.0707716722884846e-17 1.3895899057388306 0.4765799343585968 0.47657039761543274
+		 -0.35768318176269531 -0.74042731523513794 0.86415141820907593 0.86413413286209106
+		 -145.12553405761719 -104.58058166503906 55.258663177490234 55.457557678222656;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut38";
+	rename -uid "E8252A1A-4556-BDE3-51FB-3090653858D2";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV22";
+	rename -uid "0B022AC0-419F-DBD3-41F6-8DBC1F336758";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.56470799 0.44852737 -0.59288073
+		 0.33169332 -0.44781551 -0.46419129 -0.40630519 0.13686343 -0.25803462 0.099939562
+		 -0.0097411424 0.16331886 0.026318606 0.26780847 -0.11594324 0.10833166 -0.029136533
+		 0.38627496 -0.15620138 0.48553631 -0.53135324 0.21512477 -0.31586736 0.52564859 -0.4522078
+		 0.53619623 -0.29448146 0.55976743;
+createNode polyMapCut -n "polyMapCut39";
+	rename -uid "80C3FA12-4636-0E00-B53B-3686840C618E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj22";
+	rename -uid "A444820B-4AED-2724-92C7-3086C28505EB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -71.816871643066406 49.035305023193359 -30.68760871887207 ;
+	setAttr ".ro" -type "double3" 43.461648589422758 172.19999770277772 2.4383113580051833e-06 ;
+	setAttr ".ps" -type "double2" 7.161860677291827 10.563942536601587 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.9264541864395142 0.14755901694297791 -0.098509080708026886 -0.098507106304168701
+		 1.0244997913890302e-18 1.1472771167755127 0.68788260221481323 0.68786889314651489
+		 -0.26389139890670776 -1.077207088470459 0.71913379430770874 0.71911942958831787 -144.38609313964844 -93.074226379394531 51.910381317138672 52.109340667724609;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut40";
+	rename -uid "68A73FDE-44F5-DC52-DF74-DF9B3455164F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV23";
+	rename -uid "78FF4E12-4ED1-C774-4719-B686A25FD773";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.62668049 0.43013656 -0.66461128
+		 0.28245848 -0.46787152 -0.45021361 -0.47796956 0.038207959 -0.3197937 -0.0069979145
+		 -0.039020538 0.080753639 0.014197839 0.21186133 -0.16300538 0.0068073701 -0.028332429
+		 0.36180893 -0.15245385 0.4766604 -0.60639912 0.13790597 -0.3163487 0.5262928 -0.50529355
+		 0.53034389 -0.33919969 0.55901247;
+createNode polyMapCut -n "polyMapCut41";
+	rename -uid "48A80E70-4DAA-61D7-68E9-AC98C57E6FEE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyPlanarProj -n "polyPlanarProj23";
+	rename -uid "92D4B8E6-47D0-FFFD-6055-FB830699E545";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:11]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -71.809951782226562 36.463283538818359 -31.409988403320312 ;
+	setAttr ".ro" -type "double3" 43.461648589422758 172.19999770277772 2.4383113580051833e-06 ;
+	setAttr ".ps" -type "double2" 7.1618546103312468 10.236984132898172 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.9264541864395142 0.14755901694297791 -0.098509080708026886 -0.098507106304168701
+		 1.0244997913890302e-18 1.1472771167755127 0.68788260221481323 0.68786889314651489
+		 -0.26389139890670776 -1.077207088470459 0.71913379430770874 0.71911942958831787 -144.38609313964844 -93.074226379394531 51.910381317138672 52.109340667724609;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut42";
+	rename -uid "663CFAA4-417C-45C0-1681-D2A2966A9DA5";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[19]";
+createNode polyTweakUV -n "polyTweakUV24";
+	rename -uid "BED81B72-4AF0-5A46-BF55-B0B1AB075360";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.65843707 0.42511353 -0.70441341
+		 0.23471797 -0.50848669 -0.4287205 -0.50804549 -0.089926742 -0.33716834 -0.1465099
+		 -0.031016551 -0.0089410841 0.025665402 0.16831982 -0.16653714 -0.11967161 -0.024923351
+		 0.36070833 -0.16677991 0.50446618 -0.64474195 0.045039475 -0.35306817 0.56085932
+		 -0.51959568 0.55633909 -0.33109686 0.59506774;
+createNode animCurveTL -n "polySurfaceShape72_pnts_0__pntx";
+	rename -uid "AFED61F2-4E61-A975-4374-6F97F50ADEED";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_0__pnty";
+	rename -uid "55AE6565-4718-2B37-ECD4-46994365AC25";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_0__pntz";
+	rename -uid "81235079-4446-6B1D-1CCC-E49FF165FA17";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_1__pntx";
+	rename -uid "235865E0-43CD-9FFF-0544-4B907F3A6D93";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_1__pnty";
+	rename -uid "D94A87F9-4C40-8C04-B76A-53A30219BD01";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_1__pntz";
+	rename -uid "E90FF9EA-4299-63AE-DA81-0CA5A76B36C9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_2__pntx";
+	rename -uid "E9FFF1E2-496B-119D-7842-419E3B015419";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_2__pnty";
+	rename -uid "849DAC7D-46F7-9E7B-38B5-22BC003DD25A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_2__pntz";
+	rename -uid "1808C739-428D-6FFF-DC1F-A785DBC806BF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_3__pntx";
+	rename -uid "41606891-4434-648A-6A4D-A2B46D54EA6A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_3__pnty";
+	rename -uid "B21F2160-4BBB-E799-C48C-6DBDC0B2AC35";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_3__pntz";
+	rename -uid "89104AE5-41FB-4D5F-4AB4-90AD5D9DDF07";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_4__pntx";
+	rename -uid "37614B6D-4B50-C030-EB68-4C912332994B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_4__pnty";
+	rename -uid "3610284A-4C8C-381B-4BB3-7197FC57B2EB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_4__pntz";
+	rename -uid "A72BDE08-4E9D-0817-B807-1D8C469EAF18";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_5__pntx";
+	rename -uid "E87623D4-4F23-3D36-A1F6-1C8AAB2699B2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_5__pnty";
+	rename -uid "50FC3967-424F-4E51-41A2-B4B71E026C3A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_5__pntz";
+	rename -uid "DB7E38CF-4D22-8A50-384A-5B874B9AB0F8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_6__pntx";
+	rename -uid "E312422F-4236-41FC-4E63-C39B5D8F1EA5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_6__pnty";
+	rename -uid "31369401-4244-E94C-F528-30BCCD1E3091";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_6__pntz";
+	rename -uid "AE4801B8-469F-8616-0CD2-3CBFE5550E03";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_7__pntx";
+	rename -uid "20948C30-4E36-DA15-B235-F581EFBCE6C0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_7__pnty";
+	rename -uid "299A69C8-4A62-179A-1197-1FB1A03F93AC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_7__pntz";
+	rename -uid "E242F7A9-4783-744F-5A43-28BC7951F2F9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_8__pntx";
+	rename -uid "9D1CDCEF-4339-7292-8FA4-D0A84D9D1E91";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_8__pnty";
+	rename -uid "2D9F615F-48F5-832C-1344-73A3EE0FD01A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_8__pntz";
+	rename -uid "0A511FD7-4236-D771-0DFA-EB818922CF0C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_9__pntx";
+	rename -uid "ABF821A4-4A94-9A64-835F-F5BD581ED298";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_9__pnty";
+	rename -uid "C49A9187-4933-6C7A-0234-FAAD297344CE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_9__pntz";
+	rename -uid "2CC71004-4064-F5A0-A676-5095F7C76C9A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_10__pntx";
+	rename -uid "141C75F5-4413-63F0-A5E1-AE90F3B3FB70";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_10__pnty";
+	rename -uid "25F6F41B-40C2-E481-3FD5-D89CA8B24DA9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_10__pntz";
+	rename -uid "8971A419-45E7-1C71-22B2-519E4861B013";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_11__pntx";
+	rename -uid "F2F51B4D-441E-9922-3FF7-ADA873A6123C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_11__pnty";
+	rename -uid "68FBC6A1-46C4-B822-CD4A-5DBD20224EE8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_11__pntz";
+	rename -uid "0B96956F-48AC-0F7C-64AC-4CBF9C286A65";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_12__pntx";
+	rename -uid "34725294-40FA-889C-93B6-3293C677788D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_12__pnty";
+	rename -uid "8557F98F-4060-2BF4-EC41-569259844E2D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape72_pnts_12__pntz";
+	rename -uid "7BEAA1AA-4CD6-68A0-F74B-79B269322C4E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_0__pntx";
+	rename -uid "5ECAB24B-49A1-C50E-4AB4-D3B7652C2D8A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_0__pnty";
+	rename -uid "6DCC8D05-4EA8-73A6-169A-1AA8807A1624";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_0__pntz";
+	rename -uid "BD65DF36-406A-66AB-209B-0C83B891C9B0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_1__pntx";
+	rename -uid "EFFC8A1D-4E00-9714-240A-1DADEAB253FF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_1__pnty";
+	rename -uid "7CADC851-4901-580E-68C2-E28ABF0936B5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_1__pntz";
+	rename -uid "20C25339-499E-49F0-9404-C2B4811F9C86";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_2__pntx";
+	rename -uid "942F79A5-4F62-C66B-3C2F-3484FD7F096F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_2__pnty";
+	rename -uid "3D234362-4ECF-E3C6-B9DB-D0B780B69228";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_2__pntz";
+	rename -uid "6735BB64-4630-3909-B607-309E742DB6D3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_3__pntx";
+	rename -uid "5B6517BF-4C42-D616-E225-06B84A0CF453";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_3__pnty";
+	rename -uid "107E9D57-412B-75E1-795A-00AD26D1B1F8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_3__pntz";
+	rename -uid "B7338887-4233-9BBD-CBD1-D0BD9D79512F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_4__pntx";
+	rename -uid "F6600F76-47AB-3C5D-C6D1-FB8FDEA21B9E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_4__pnty";
+	rename -uid "4E507F1C-43D0-BCF7-46A8-A292FB2C1D39";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_4__pntz";
+	rename -uid "AAFA9AF5-4C3B-2A82-DC63-8B8A1B721828";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_5__pntx";
+	rename -uid "CFA740EA-469B-EEB5-D3FA-5BB7C3F1E0E0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_5__pnty";
+	rename -uid "AC79B123-44EB-427B-F3E0-C4B22B052564";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_5__pntz";
+	rename -uid "F4353180-4D65-E2EE-FCC4-B280F3175DCE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_6__pntx";
+	rename -uid "EB2DC0DF-4F15-1A2C-1786-008CF1D9D0B9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_6__pnty";
+	rename -uid "E6C18AFF-4047-326D-F7AE-BBA7ADB0EE2D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_6__pntz";
+	rename -uid "F4E0A18C-4F31-5DE5-CE18-66810E3D4D62";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_7__pntx";
+	rename -uid "3B929065-4EF0-2051-4B9C-4883498FEEFA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_7__pnty";
+	rename -uid "4F109C5C-4DF2-465B-E4C3-7FB680197C56";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_7__pntz";
+	rename -uid "AA59381E-44DE-100D-C63E-AA96F3378466";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_8__pntx";
+	rename -uid "01B09FE3-4737-651C-D1FA-8B8141BA2405";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_8__pnty";
+	rename -uid "34313918-4713-7089-3E86-85BDE2CBC148";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_8__pntz";
+	rename -uid "B29D9319-460A-DCA4-3EC5-0F89EA5A0DB4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_9__pntx";
+	rename -uid "2B5139FE-4398-A49B-03F1-FBAC8FAB2C42";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_9__pnty";
+	rename -uid "A4A8BBDD-429F-C91A-C4D2-ACAECD3A258F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_9__pntz";
+	rename -uid "C4A1801A-40D9-2B44-A29C-ADBB27134B34";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_10__pntx";
+	rename -uid "C3269DF0-41AA-CCB9-81CD-82B46B5FFC14";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_10__pnty";
+	rename -uid "78C2A6B0-461D-9C90-958D-B19B56DDBA6D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_10__pntz";
+	rename -uid "C5540A4A-4D03-5F0E-D01E-2996E746DE23";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_11__pntx";
+	rename -uid "94A0420B-473D-2197-4420-ADA8AE2407C6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_11__pnty";
+	rename -uid "25948F44-4E21-1E1A-B2AB-FEB47496B44F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_11__pntz";
+	rename -uid "99D2090D-4C8A-59A3-771D-E8A7AC71F9DA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_12__pntx";
+	rename -uid "8F437B9E-4055-1102-4477-62A07AE6FB0C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_12__pnty";
+	rename -uid "FFC358BD-4B67-8720-7F13-BA913097A334";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape67_pnts_12__pntz";
+	rename -uid "5EBE4EA1-4AEC-B076-D801-5DA31B2071C6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_0__pntx";
+	rename -uid "F5ECBD5A-48AD-5257-EFF1-B5ADF5332700";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_0__pnty";
+	rename -uid "1542BA31-4C9F-3049-1045-49962DCAEC1C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_0__pntz";
+	rename -uid "6561661B-43E6-3080-814F-25A24342070F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_1__pntx";
+	rename -uid "A2226FEE-42FD-BBE1-561B-7F87B9CE9355";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_1__pnty";
+	rename -uid "5B8C4C09-4F83-E8F3-F459-B3B5BEE2088D";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_1__pntz";
+	rename -uid "760DA35B-4B55-D9D0-632D-E4B63B706C78";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_2__pntx";
+	rename -uid "32900BCB-4F2E-2FCC-690F-84A3D641E956";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_2__pnty";
+	rename -uid "D465988B-4100-A0A5-A9BD-25A648B2A579";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_2__pntz";
+	rename -uid "8BA99CE0-45E0-2D0F-2994-EBAD7A23DCB5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_3__pntx";
+	rename -uid "7C472C59-4BB9-6FD3-0ABD-938EB8858230";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_3__pnty";
+	rename -uid "EE24FFA6-4E07-EFAF-1DB2-CDA402C11D47";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_3__pntz";
+	rename -uid "4F72C9F7-4C30-6D58-6A48-519F222E3329";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_4__pntx";
+	rename -uid "EED201A8-4E43-BA27-1606-DFB198B19E63";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_4__pnty";
+	rename -uid "33198E29-4AC8-3946-A8F2-5B87E20861B4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_4__pntz";
+	rename -uid "0081558D-43E1-DFB6-010E-90B4629DD021";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_5__pntx";
+	rename -uid "1A17662D-48B1-AF6B-5D68-7F8141A95499";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_5__pnty";
+	rename -uid "24DAF4B1-452D-B152-D20F-BDA5F5E1A0BA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_5__pntz";
+	rename -uid "39776AA3-41B0-D67E-68DB-FDA851383F66";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_6__pntx";
+	rename -uid "DC511DB8-4DF3-A3AD-DF8F-59A11817259C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_6__pnty";
+	rename -uid "A578AAD5-4FFC-7E2E-D39F-5FB5B9D7ED9F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_6__pntz";
+	rename -uid "2D4EF57E-4CBC-A775-0B51-3195FCD52301";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_7__pntx";
+	rename -uid "7E2E7F95-4A01-9E7F-6B2F-4BB048362A8F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_7__pnty";
+	rename -uid "F0D1A350-4E56-F588-3155-71BE6FF2B523";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_7__pntz";
+	rename -uid "4E53D279-4317-B669-37B9-E890CED026CE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_8__pntx";
+	rename -uid "031BC301-4A11-25C2-AE73-B58C88CABC0B";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_8__pnty";
+	rename -uid "4F71BCF8-4DCF-185C-AEE0-5998A60647F3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_8__pntz";
+	rename -uid "F63B41EF-4DF9-8750-73AD-61ADC697DCC8";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_9__pntx";
+	rename -uid "CD99AD8F-410B-8313-A0BD-9BA4B2629D16";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_9__pnty";
+	rename -uid "4232F332-4D97-D904-AED3-4C98BD216119";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_9__pntz";
+	rename -uid "C81C1AE8-4D42-35C2-E24F-19A4A7C90D27";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_10__pntx";
+	rename -uid "EA97E7DF-4B94-2CD0-C5E7-B689D7578EEC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_10__pnty";
+	rename -uid "01E5C6CA-4BD2-B4A6-674E-288A9DC317F9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_10__pntz";
+	rename -uid "F258FD49-4F9F-72C9-7F4B-A58E439A297C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_11__pntx";
+	rename -uid "8C5A7833-467B-A1B3-A39E-98A9D5A42611";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_11__pnty";
+	rename -uid "C0137382-4BCA-4D38-061F-53ACCE7852E3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_11__pntz";
+	rename -uid "29043A2C-430B-B9E4-2AF6-3297CB23EB76";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_12__pntx";
+	rename -uid "45C20F38-4E05-DEA9-8FA6-239B576228E9";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_12__pnty";
+	rename -uid "E8903B85-405E-31B2-135D-A19BB859697C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode animCurveTL -n "polySurfaceShape68_pnts_12__pntz";
+	rename -uid "27DA3FA5-452F-116D-DDBE-2F832DDB6417";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  0 0;
+createNode polyMapCut -n "polyMapCut43";
+	rename -uid "94848367-4339-D75E-81EC-BBBFEBA5333A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[136]";
+createNode polyPlanarProj -n "polyPlanarProj24";
+	rename -uid "F2A9C9A5-458E-2C2E-94BF-7A9DB5C834C1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:207]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -71.224655151367188 53.874553680419922 0.80771636962890625 ;
+	setAttr ".ro" -type "double3" 4.4616471672639584 49.800001019163616 -8.2588488122395898e-08 ;
+	setAttr ".ps" -type "double2" 49.619288183670605 46.246773220575491 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.255056619644165 0.0939163938164711 -0.76149666309356689 -0.76148146390914917
+		 -4.8873595915781216e-17 1.5758408308029175 0.077793315052986145 0.077791757881641388
+		 -1.4851589202880859 0.079365506768226624 -0.64351457357406616 -0.64350169897079468
+		 127.17242431640625 -87.836761474609375 108.09523773193359 108.29306793212891;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut44";
+	rename -uid "E52A1F7C-40FC-38BE-FC3D-7B8BAC809010";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 46 "e[0]" "e[5]" "e[8]" "e[12:13]" "e[17:18]" "e[22:23]" "e[27]" "e[30]" "e[33:34]" "e[37]" "e[46]" "e[49:50]" "e[54]" "e[60]" "e[62]" "e[64:65]" "e[68]" "e[74]" "e[102]" "e[142]" "e[152]" "e[165]" "e[176]" "e[178]" "e[187]" "e[190:191]" "e[198]" "e[202]" "e[216]" "e[225]" "e[229]" "e[232:233]" "e[235]" "e[239]" "e[244]" "e[246:248]" "e[251:252]" "e[255:256]" "e[258:260]" "e[265:266]" "e[305]" "e[313]" "e[324]" "e[328]" "e[354]" "e[377]";
+createNode polyTweakUV -n "polyTweakUV25";
+	rename -uid "CF7C339F-43D7-4B00-B3C8-79849A657F16";
+	setAttr ".uopa" yes;
+	setAttr -s 246 ".uvtk[0:245]" -type "float2" 0.63552737 0.18258895 0.64226824
+		 0.0531107 0.25983733 0.1679232 0.25176048 0.31175727 0.12358794 -0.37470475 0.13649829
+		 -0.35725233 0.4602243 -0.4858909 0.074300595 -0.41262752 0.98074263 0.21704686 0.47578183
+		 0.21759962 0.45935792 -0.43680081 0.48207623 0.039926127 0.4658733 -0.1570798 0.44792348
+		 -0.22593744 0.42536807 -0.28887028 -0.1287988 -0.29366219 -0.14635025 -0.2443786
+		 -0.16065036 -0.19212471 -0.10158309 -0.38696733 0.18613841 -0.4600668 -0.17982863
+		 -0.36770982 -0.1364385 -0.40473199 0.64529693 -0.057991724 0.26340103 0.044506386
+		 0.39769655 -0.34579784 0.3603301 -0.39954007 0.20165181 -0.64089251 -0.1072202 -0.33997962
+		 -0.33310086 -0.051961463 -0.35075361 -0.05574302 -0.35303479 0.07598716 -0.33526653
+		 0.085829526 -0.18334155 -0.47550014 -0.20597278 -0.46374196 -0.24774061 -0.41218314
+		 -0.22672836 -0.42162183 0.31012452 -0.45106936 0.2516208 -0.49175036 0.42714876 -0.76289731
+		 0.069427408 -0.50459218 0.013550964 -0.47660771 0.37516031 0.027151894 0.48006609
+		 0.044330463 0.47361109 0.23059122 0.36861277 0.21991374 -0.55250329 0.2365972 -0.54416466
+		 0.25236934 0.47820279 -0.077570021 -0.17123054 -0.1332816 -0.17733239 -0.047897946
+		 -0.21284793 -0.043614384 -0.20641856 -0.1326554 -0.32616681 -0.14427777 0.44342956
+		 0.44205856 0.35396975 0.45255131 -0.19542854 -0.19419275 -0.18061386 -0.24892658
+		 -0.29955381 -0.26531947 -0.31468225 -0.2082523 -0.1624644 -0.30067414 -0.14005858
+		 -0.34947321 -0.25802183 -0.3702457 -0.28084588 -0.31923336 0.1255969 -0.54698837
+		 0.23687904 -0.5136975 0.29859591 -0.47112811 0.18853016 -0.50396359 -0.10941341 -0.39858666
+		 -0.014197202 -0.49508283 0.044544071 -0.52485901 -0.07029476 -0.55531979 -0.1298563
+		 -0.5232299 0.35148668 -0.41671401 0.24259429 -0.44841558 0.14415212 -0.42236522 0.30459628
+		 -0.12200022 0.35688746 -0.18626119 0.46268922 -0.16206239 0.47578853 -0.078755207
+		 0.37053451 -0.10011429 0.10718842 -0.53829724 -0.0065282313 -0.57027924 0.31286466
+		 -0.32888591 0.42001247 -0.30031377 0.44376159 -0.23427372 0.33731675 -0.26083979
+		 0.39085954 -0.36010194 0.28293759 -0.39034247 -0.32444769 -0.029119886 -0.30092508
+		 -0.035430606 -0.30338418 0.056084417 -0.32687724 0.06978637 -0.19765578 -0.38470742
+		 -0.21475033 -0.32586071 -0.23448966 -0.33943871 0.17202245 -0.5355677 0.059495606
+		 -0.56854594 -0.042948812 -0.46326965 -0.033976234 -0.44051754 -0.087115906 -0.42991918
+		 -0.099448524 -0.45167941 -0.30396473 0.16257797 -0.51283896 0.18925248 0.26290295
+		 -0.11538279 0.31033641 -0.18376206 0.32322881 -0.10101277 0.27356821 -0.042604279
+		 -0.26095408 -0.29558438 -0.27786648 -0.36275864 0.40557277 -0.51102048 0.020737616
+		 -0.4349311 0.27750152 0.054483011 0.32751393 0.020315839 0.32110766 0.20301221 0.27364939
+		 0.18921228 -0.21425383 0.089548051 0.12422261 -0.1386545 0.30890805 0.42449665 0.26512188
+		 0.3471877 0.22771947 -0.23971768 0.26857561 -0.32100987 0.29178619 -0.25553966 0.24737835
+		 -0.18022905 0.3483986 -0.52049637 0.29114321 -0.51375687 -0.16258164 0.26564199 -0.14958797
+		 0.23785372 -0.15175419 -0.42471823 -0.25469372 0.13040687 0.27841774 0.11923743 0.17044513
+		 -0.34544051 0.20177697 -0.43597907 0.24013953 -0.38012832 0.20342283 -0.29383445
+		 -0.23874156 -0.15839727 0.028212722 -0.20799781 -0.2950905 -0.10232685 -0.28589773
+		 -0.15355192 -0.34387231 -0.14442827 -0.31846511 -0.10085107 -0.30895615 -0.15536363
+		 -0.3327387 -0.20628612 -0.3180576 -0.2614859 -0.29620373 -0.20495339 -0.29996586
+		 -0.31358463 -0.28038746 -0.25165999 0.011917769 -0.14124711 -0.22757123 -0.20093031
+		 -0.21372394 -0.24090715 -0.19672476 -0.27837223 0.17390199 -0.31480607 -0.066611558
+		 -0.44973439 0.24413544 -0.68855214 -0.21293055 0.24987218 0.13678297 0.03274519 0.25018293
+		 -0.12002776 0.2586745 -0.05885686 0.22147359 -0.22512089 0.23759152 -0.17477031 0.20138212
+		 -0.27103731 0.5133723 0.12157767 -0.052979201 0.34039167 -0.14606266 0.34817138 -0.16906218
+		 0.32680371 0.090335093 -0.53101724 0.15033616 -0.48936963 0.12588729 -0.39537197
+		 0.072853692 -0.43553081 -0.27364057 -0.20017026 -0.25848806 -0.24399045 -0.23993187
+		 -0.28507456 0.25985837 -0.045200776 -0.15458952 -0.50950181 -0.097328745 -0.54044259
+		 -0.036105249 -0.55476391 0.027143694 -0.55250204 0.015462783 -0.45827666 0.23585741
+		 -0.17369069 0.25011489 -0.11307156 0.19533201 -0.27991036 0.21774961 -0.22931318
+		 -0.0047007226 -0.049081344 0.16485779 -0.32809073 0.49900287 -0.75485104 -0.25434563
+		 0.033036474 -0.41973576 0.13829103 -0.021657769 0.058455396 -0.45104575 0.2465056
+		 -0.3345806 0.25144401 0.1288252 -0.51699531 0.19024123 -0.51345003 0.57316428 -0.72828901
+		 -0.036036998 0.31837979 -0.42114985 0.23007043 -0.17739801 0.23429464 -0.252289 -0.050567847
+		 0.35572311 0.45406112 -0.077706836 -0.38628656 -0.036596157 -0.43420205 0.46373042
+		 0.43304908 0.43978071 0.4133001 0.46101558 0.45658681 0.58002222 -0.3561053 0.60163963
+		 -0.30854678 0.55032468 -0.40202704 0.61896342 -0.25685266 0.63252765 -0.20106632
+		 0.64179164 -0.13916826 0.26154119 0.021897446 -0.17865287 0.080079287 0.29781139
+		 -0.72925711 0.5095914 -0.44737294 0.11229613 -0.38462222 -0.1735975 -0.3154389 0.087200724
+		 -0.34570262 0.065129451 -0.30361196 0.045503426 -0.25834382 -0.2470818 -0.11164988
+		 -0.32728118 0.1851881 -0.3526172 0.23405968 -0.11275467 0.19930126 0.25130293 0.26259783
+		 -0.056176573 -0.41025484 0.23622631 -0.49260309 -0.48205602 0.16802289 0.042784899
+		 -0.41385946 -0.0073187687 -0.4199183 0.11640016 -0.28062028 0.091659628 -0.39232087
+		 -0.14149733 -0.35330978 0.11686072 -0.37445557 0.1241262 -0.43810701 0.90061796 -0.29382116
+		 0.8724646 -0.37469196 0.92690569 -0.17563944 0.35948175 -0.75442523 0.64658892 -0.68273926
+		 0.71205586 -0.62684178 0.17215782 -0.59380472 0.15165758 -0.54572666 0.76325107 -0.56977266
+		 0.80407268 -0.510378 0.25804424 0.13292046 0.1359016 -0.49385601 0.84025413 -0.44534576
+		 0.95358151 0.0021282881;
+createNode polyMapCut -n "polyMapCut45";
+	rename -uid "7E65D0E6-4CC0-00E2-E95F-DE9B37F86954";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[70]";
+createNode polyPlanarProj -n "polyPlanarProj25";
+	rename -uid "21DE8C5B-4A00-2395-79A2-AAAE6715F11C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:63]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -105.43043518066406 33.442375183105469 -24.378925323486328 ;
+	setAttr ".ro" -type "double3" 176.06164712371336 -22.599998906186791 -179.99999999984175 ;
+	setAttr ".ps" -type "double2" 21.294706631806122 11.786651992455905 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" -1.7951309680938721 0.041720110923051834 0.3833954930305481 0.38338783383369446
+		 -6.7461467591119595e-18 1.5768980979919434 -0.068684481084346771 -0.068683110177516937
+		 0.74724090099334717 0.10022612661123276 0.92104852199554443 0.92103010416030884 -226.19180297851562 -41.288738250732422 263.08157348632812 263.27630615234375;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut46";
+	rename -uid "A35EF3C8-4358-77F0-2C68-848E2A0E68D7";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 19 "e[3:4]" "e[7]" "e[11]" "e[19]" "e[22]" "e[25]" "e[27:28]" "e[38]" "e[41]" "e[43]" "e[45]" "e[51]" "e[60]" "e[63]" "e[74]" "e[77:78]" "e[86]" "e[94]" "e[96]";
+createNode polyTweakUV -n "polyTweakUV26";
+	rename -uid "97009C06-4BCA-64CD-5594-DFA26C1D1054";
+	setAttr ".uopa" yes;
+	setAttr -s 81 ".uvtk[0:80]" -type "float2" 0.8017872 -0.2816759 0.44254732
+		 0.126203 0.40192592 0.26614809 0.62061077 0.24895915 0.86351109 0.056477934 0.4909724
+		 0.47924477 0.62675267 0.4308854 0.84859598 0.41161445 0.96674144 -0.28418571 0.61379415
+		 0.13668805 0.52771384 0.071193099 0.74928266 0.056111485 0.19375868 0.096042797 0.11235283
+		 0.15192761 0.13444071 0.10024184 0.23936857 0.025827054 0.87499684 -0.14216916 0.87715101
+		 0.26953688 0.64310968 0.39249071 0.42324543 0.41134951 0.65346009 0.28708595 0.52133161
+		 0.30472192 0.64553988 0.29516929 0.60794991 0.48570815 0.48489165 0.49645266 -0.072780989
+		 0.5337621 0.1506843 0.049641363 0.28993398 0.46190327 0.22242929 0.51395726 0.088278234
+		 -0.10527675 -0.11773567 0.16817553 -0.03942829 0.11167842 -0.001366762 -0.11925019
+		 0.07353723 0.29420862 0.15770715 -0.24023522 0.27628726 0.1626396 0.35970908 0.50723678
+		 0.39545655 0.31430921 0.085924417 0.28636369 -0.13486674 0.46192357 0.093703166 0.44229275
+		 0.18213704 -0.090853795 0.31475145 0.31556198 0.11444195 0.47970289 0.34663883 0.1124537
+		 0.26867151 0.57435864 0.37627542 0.083755597 0.32602346 0.26773357 0.35564321 0.45862874
+		 0.44456565 0.54939622 0.48483253 0.010175833 0.39255607 0.5624615 0.23518914 0.46913499
+		 0.47182274 0.10408908 0.59555119 0.095747441 0.36274818 0.017992625 0.20639367 0.27702862
+		 0.25591692 0.091986656 0.51323622 0.55058932 0.32254601 0.56139064 0.19999707 0.57345104
+		 0.55545592 0.48067951 -0.15477005 0.31206891 0.021144202 0.025175365 0.15793283 0.51341975
+		 0.077381 0.33378413 0.040187862 0.17905635 0.053416137 0.48190725 -0.011444651 0.53424644
+		 0.083449662 0.096209645 0.093110979 -0.30742419 0.027795425 -0.25590211 0.78575557
+		 -0.0043400191 0.77468204 0.46112978 0.71336001 0.45973957 0.95026362 0.0013154335
+		 0.99377787 -0.14084788 0.7607677 -0.1430887 0.8864907 -0.34142625 0.66203541 0.11054036
+		 0.83724201 0.12086341;
+createNode polyMapCut -n "polyMapCut47";
+	rename -uid "11CA68C5-4E59-D7E3-9431-24BE4FA35ABE";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[98]";
+createNode polyPlanarProj -n "polyPlanarProj26";
+	rename -uid "BB228C52-464D-7F98-909A-8184DEC08195";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:167]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -104.60074615478516 36.194328308105469 28.995485305786133 ;
+	setAttr ".ro" -type "double3" -5.1383529114506379 -2.5999999577244171 -5.5905718247894933e-10 ;
+	setAttr ".ps" -type "double2" 15.487754865945689 18.891956437235518 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.942442774772644 0.0064217154867947102 0.045181594789028168 0.045180689543485641
+		 0 1.574278712272644 -0.089562796056270599 -0.089561007916927338 0.088205806910991669 -0.14141714572906494 -0.99497592449188232 -0.99495601654052734
+		 331.6605224609375 -39.213783264160156 218.54164123535156 218.73725891113281;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut48";
+	rename -uid "E281215B-4013-E694-441E-AF81187E79E1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 34 "e[2]" "e[10]" "e[17:18]" "e[26]" "e[28:31]" "e[38:39]" "e[61]" "e[69]" "e[76:77]" "e[80]" "e[83]" "e[89]" "e[91]" "e[95]" "e[114:115]" "e[118]" "e[121]" "e[123:124]" "e[126:128]" "e[147]" "e[152]" "e[157]" "e[161:163]" "e[165]" "e[188]" "e[192]" "e[220]" "e[230:231]" "e[233]" "e[239]" "e[247]" "e[280]" "e[284]" "e[335]";
+createNode polyTweakUV -n "polyTweakUV27";
+	rename -uid "111C117A-4B8E-5EF6-951D-02BED7958E6A";
+	setAttr ".uopa" yes;
+	setAttr -s 218 ".uvtk[0:217]" -type "float2" -0.14608821 0.5084548 -0.12930627
+		 0.53162467 -0.29887593 0.53389382 -0.31607908 0.55683964 -0.56563252 -0.40455273
+		 -0.5512259 -0.2148357 -0.75296426 -0.20716405 -0.61531138 -0.40282723 -0.45687297
+		 -0.18103817 -0.36315408 -0.18535137 0.54325414 -0.53811127 0.45371503 -0.5381605
+		 -0.51024759 0.36709347 -0.49891743 0.55940366 -0.54965889 0.56005919 -0.71322894
+		 0.37290803 -0.13339403 0.38621023 -0.64335799 0.36812326 -0.48020789 0.55219197 -0.42903253
+		 0.5519768 -0.20956856 -0.41775176 -0.19716084 -0.44682077 -0.13497849 -0.44613209
+		 -0.15984088 -0.41949233 -0.57937962 -0.42632988 -0.72805637 -0.21498844 -0.68579036
+		 -0.20475993 -0.23927489 -0.36180499 -0.25166517 -0.18991444 -0.23301853 -0.18199694
+		 -0.23080936 -0.1621024 -0.27867138 -0.0073640058 0.5494706 -0.36069623 0.00069988333
+		 -0.23756903 -0.19578671 -0.2299549 0.21469992 0.40230367 -0.081965163 0.48637196
+		 -0.036193937 0.48617437 0.094143525 0.30416211 -0.0014936239 -0.16661885 0.014887673
+		 0.052520718 0.18962741 0.060301501 0.17359567 -0.1590376 -0.38784164 -0.41113427
+		 -0.55220324 -0.43321779 -0.37506533 -0.43999287 -0.48092642 0.58623821 0.036436386
+		 0.32269087 0.077133611 0.32777661 -0.070137873 0.52831858 -0.098233782 0.5078218
+		 -0.73757845 0.01981256 -0.74962032 0.020091644 -0.76395112 -0.21610159 0.093710162
+		 0.093724124 0.07869719 0.089959167 0.10735451 0.31830925 -0.44876635 0.0099148843
+		 -0.50740814 0.57916337 -0.44430435 0.58170909 -0.50362861 -0.40210435 -0.17628923
+		 -0.17420003 0.04031501 -0.2491802 -0.32918939 -0.41040489 -0.15334386 -0.41863331
+		 -0.66989601 0.020036748 -0.15955809 0.044774245 -0.15678287 0.3284646 -0.32762179
+		 0.36360338 -0.32911855 0.33684203 -0.21560249 0.3044202 0.040508669 0.39425632 -0.24812396
+		 0.5499438 -0.21716116 0.26557404 -0.21661216 0.28527144 -0.20044959 0.28421596 0.66644675
+		 -0.091998085 -0.37298816 -0.22239673 -0.54417145 0.58395344 0.018456511 0.043091707
+		 0.014491311 -0.018659959 0.056120127 -0.021862039 0.060075581 0.039660193 -0.26384792
+		 -0.0085447039 -0.32338795 0.2953361 -0.41994083 0.32566926 -0.40346867 0.32121453
+		 0.55983084 -0.065089181 0.55364937 -0.24144569 0.55156082 -0.3010346 0.59288633 -0.30096138
+		 -0.26945743 0.11387915 0.070019528 -0.031187635 0.055571251 -0.24469125 -0.10339938
+		 -0.42139593 -0.38440701 0.0049654543 -0.45592475 -0.15288877 -0.45597169 -0.17346251
+		 0.024172774 0.1765084 -0.15007821 0.16862565 -0.26930493 -0.18966579 -0.37111187
+		 -0.19622535 -0.48973891 -0.19055533 -0.25262362 -0.20147568 -0.23940852 -0.19623661
+		 -0.43981358 0.13806105 -0.72872472 0.1477623 0.19871172 0.18435885 -0.34496528 0.15976208
+		 -0.72274756 0.38141063 -0.74071646 0.14761388 -0.38718894 0.071442194 -0.36973619
+		 0.068312593 0.50296783 -0.24158745 -0.39281178 0.13544521 -0.50205344 -0.18379131
+		 0.64903182 -0.064821199 -0.23339365 0.29362246 -0.42228311 0.31291243 -0.42454994
+		 0.29269513 0.074328311 0.029351229 0.19417089 0.12236632 -0.29543918 -0.0074010501
+		 -0.24778548 -0.16267613 -0.40681699 0.072857775 -0.43421072 0.073740877 -0.42112452
+		 0.0091895554 -0.25514203 0.11420629 -0.26923606 0.053150304 0.022464275 0.10483485
+		 -0.20380527 0.29837477 -0.41231829 0.13702202 -0.46729121 0.31864914 -0.23728079
+		 -0.18250525 -0.25041541 -0.18228889 -0.28676754 0.11472172 -0.70429003 0.14670306
+		 -0.34981057 0.097980551 -0.7088815 0.083327912 0.064079039 0.10116448 -0.71347785
+		 0.019815614 0.019531889 0.11455048 -0.1548169 0.10673555 -0.28171486 0.11497734 -0.20394307
+		 0.28471744 -0.2903378 -0.0075513623 -0.29558599 0.05403284 -0.74518889 0.083913885
+		 -0.73317134 0.083856903 -0.44216436 0.29674801 -0.50190449 -0.1691896 -0.40163875
+		 0.0079435799 -0.47381124 -0.15056363 -0.47427064 -0.17158309 -0.43934566 0.31733832
+		 -0.30078745 0.05398459 -0.46510088 0.33306727 -0.45144054 0.33891192 -0.095734447
+		 0.52011049 -0.26297757 0.57970941 -0.03754729 0.51705194 0.089536153 0.032773398
+		 0.085390054 -0.028184781 -0.68564582 0.37847564 -0.16709441 -0.44703367 -0.10498562
+		 -0.44663355 -0.6134398 -0.42821822 0.069231585 -0.25260416 -0.5190658 -0.43169239
+		 -0.34368545 -0.43938211 -0.26313865 0.52210921 -0.29855478 0.58397818 0.054275092
+		 0.57738477 -0.24831095 0.48843202 -0.32312563 0.32396027 -0.32938153 0.30691382 -0.28370881
+		 0.053572662 0.60023934 -0.3605853 0.22817442 0.58558333 0.51025319 -0.30110818 0.49873129
+		 -0.36073449 0.39460647 0.19312288 0.39018074 0.13112344 0.66603982 -0.072744057 -0.2176761
+		 0.29252729 -0.3546575 0.036127578 -0.66518897 0.083455168 -0.66041225 0.14666885
+		 -0.20045593 0.26430944 0.60435539 -0.24137577 0.38575241 0.069052063 0.45142692 -0.092613682
+		 -0.37503552 0.13214651 0.45318073 -0.073374584 0.47071171 -0.065357193 -0.30747747
+		 0.31989601 -0.30774373 0.29384866 -0.3278904 0.37719592 0.4366813 -0.53012884 -0.43847656
+		 -0.18230972 0.43631908 -0.51072252 0.20906562 -0.34280583 0.16004071 -0.34487924
+		 0.37011057 -0.15054341 -0.32788765 0.33196944 -0.31637186 0.5110274 -0.11933573 0.56918764
+		 -0.015344805 -0.35230556 -0.19043657 -0.35973158 -0.37178287 -0.18269335 -0.55148917
+		 -0.39931431 0.41020811 0.41132095 0.27678415 0.5878728 0.65223491 -0.51057345 0.65050936
+		 -0.53000301 0.63287657 -0.53806239 -0.34497565 -0.18610841 -0.16776142 0.56689882;
+createNode polyMapCut -n "polyMapCut49";
+	rename -uid "D0C202AC-4A8E-BC2C-5033-6EB998CC19C1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[15]";
+createNode polyPlanarProj -n "polyPlanarProj27";
+	rename -uid "B817E10C-4E9D-2C30-FACF-C1AB027620EB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:63]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -104.59958648681641 22.61589241027832 0.33390370011329651 ;
+	setAttr ".ro" -type "double3" -2.1383526399952064 0.19999999137830293 3.8919303038021003e-10 ;
+	setAttr ".ps" -type "double2" 73.304435008152552 22.389745974137856 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.9444326162338257 -0.00020586987375281751 -0.0034882903564721346 -0.0034882207401096821
+		 -5.2704271555562184e-20 1.5795300006866455 -0.037313379347324371 -0.03731263056397438
+		 -0.0067873778752982616 -0.058977134525775909 -0.99931752681732178 -0.99929755926132202
+		 278.01806640625 -62.178592681884766 190.20783996582031 190.40403747558594;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut50";
+	rename -uid "900E2FC6-4E0B-1FAD-6B3B-D3857FC610FC";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 14 "e[8]" "e[10]" "e[42:43]" "e[53:54]" "e[59]" "e[63]" "e[67]" "e[97]" "e[112]" "e[116]" "e[123]" "e[128]" "e[130]" "e[132]";
+createNode polyTweakUV -n "polyTweakUV28";
+	rename -uid "2165E917-4965-4155-3D90-DFA700677D92";
+	setAttr ".uopa" yes;
+	setAttr -s 87 ".uvtk[0:86]" -type "float2" 0.30071831 0.2530255 0.27235273
+		 0.26358873 -0.17605373 0.20451482 -0.17682564 0.19274716 -0.6339885 0.14643864 -0.17437685
+		 0.20197926 -0.59478486 0.14601366 -0.0041848687 0.4740468 0.0092371572 0.16173479
+		 -0.072368711 0.40770581 -0.36068863 0.35659721 -0.66541791 0.1336353 -0.66048473
+		 0.099332064 -0.17109364 0.15805556 -0.43015614 0.014138707 -0.6498906 0.14099647
+		 -0.61161846 0.13628371 -0.4182592 0.017401941 -0.040771827 -0.059032071 -0.41738912
+		 -0.00083585735 -0.40734881 0.0091274725 -0.047990836 -0.048138965 0.21252871 0.20441513
+		 0.23659047 0.20762642 0.32904252 0.21795891 0.30609721 0.21798284 -0.35154426 -0.017657239
+		 -0.50845391 0.090606838 -0.67593515 0.096363276 -0.43380588 -0.023819819 -0.03521096
+		 -0.083673313 -0.41224664 -0.025968224 0.30868268 -0.12000409 0.33286583 -0.13439953
+		 -0.39381224 0.0079059368 -0.056467082 -0.047248501 0.2004742 0.22596736 0.23638199
+		 0.4597882 0.39425138 0.47295949 0.24385759 -0.10830189 -0.49349797 0.096274525 -0.13637653
+		 0.14976449 -0.031536482 -0.05329119 -0.033208504 -0.076029912 0.25950617 -0.13558733
+		 0.22476596 -0.10508513 0.25815946 0.11315645 0.35032254 0.4733772 -0.43899018 0.0017526529
+		 -0.6807614 0.13049404 0.33826745 -0.15917376 0.32590914 0.30291131 0.2937063 -0.11770882
+		 0.26113954 0.26562315 0.29576096 0.26570138 0.28017211 0.25269577 0.35740787 -0.16255899
+		 -0.31268197 0.0049362849 -0.4375056 0.11022153 0.27823567 -0.11416247 -0.422216 0.11812314
+		 -0.12038921 0.16917945 0.32384425 0.25272498 -0.290281 -0.0026359484 -0.32944232
+		 -0.023103222 0.23756027 0.25873256 0.35052049 -0.13795522 -0.37673467 0.34865835
+		 0.17645228 0.22100271 -0.022464953 0.47369048 -0.26344478 0.21778984 -0.13406445
+		 0.47373903 -0.24100304 0.21097232 0.21347013 0.45818698 0.36911115 0.4728983 0.27972317
+		 -0.13850768 0.24554522 0.26581636 0.32472983 -0.12367996 0.35076815 0.29362056 -0.12188132
+		 0.4741649 0.35659549 0.26667234 0.29478553 0.30140284 0.27779448 0.46229312 0.27654076
+		 0.11099114 0.38081136 0.47336969 0.18840289 0.47370824 0.11434573 0.47377095;
+createNode polyMapCut -n "polyMapCut51";
+	rename -uid "BA964655-46A6-2F58-2580-8DB5AE770399";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[3]";
+createNode polyPlanarProj -n "polyPlanarProj28";
+	rename -uid "4294B401-4EAE-5CC6-AFE6-8D99BE89A4AB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:37]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -104.60072326660156 2.4819519519805908 -0.001546025276184082 ;
+	setAttr ".ro" -type "double3" -2.7383528563991186 -0.99999994657298463 -2.8187079567790514e-09 ;
+	setAttr ".ps" -type "double2" 60.007423455138138 5.6484303462686212 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.9441483020782471 0.0013179142260923982 0.017432825639843941 0.017432477325201035
+		 5.2048918328221441e-19 1.578825831413269 -0.047776032239198685 -0.047775078564882278
+		 0.033935233950614929 -0.075503252446651459 -0.99872595071792603 -0.99870598316192627
+		 276.28750610351562 -23.122329711914062 184.05621337890625 184.25253295898438;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut52";
+	rename -uid "36D0666A-418A-4AEE-A6C7-99949D443CAA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 15 "e[1]" "e[6]" "e[10]" "e[13]" "e[16]" "e[21]" "e[23]" "e[30]" "e[34:38]" "e[46:49]" "e[54]" "e[58:59]" "e[64]" "e[67]" "e[75]";
+createNode polyTweakUV -n "polyTweakUV29";
+	rename -uid "67083C85-4851-D4D6-C934-6CBA6ED50C74";
+	setAttr ".uopa" yes;
+	setAttr -s 64 ".uvtk[0:63]" -type "float2" -0.070918456 0.55306125 -0.064424083
+		 0.53687304 0.87659603 0.29895115 0.31171012 0.55438113 -0.12445952 0.48081592 0.27846509
+		 0.48272565 0.5220145 0.28999031 0.20358904 0.34304672 -0.17892517 0.50163269 -0.47947121
+		 0.57029074 -0.43305171 0.57780266 0.03361062 0.36555868 0.68385375 0.48424652 0.64768773
+		 0.47670618 0.31176555 0.57822394 0.28272215 0.58678478 0.32955262 0.35463166 -0.070639715
+		 0.57674837 0.27872521 0.50064969 -0.12408002 0.49875447 -0.098605737 0.50978261 0.46244052
+		 0.36717671 0.92486233 0.28821304 0.35892326 0.55012214 0.35893339 0.57365322 0.68394703
+		 0.50233978 0.31040657 0.50529557 0.31037125 0.48710892 0.69491732 0.48210719 0.082149535
+		 0.40447927 -0.43086851 0.53256243 -0.15862407 0.47719279 -0.47996324 0.54698396 -0.17924787
+		 0.48348019 0.65043432 0.51318198 0.32445696 0.58107692 0.28445414 0.51512998 -0.45052963
+		 0.57519591 -0.12176057 0.3541238 -0.45102045 0.55151623 -0.40731478 0.53556335 0.47833434
+		 0.35171312 0.88145447 0.36594874 0.69778556 0.51433992 0.73002315 0.5053826 0.83658904
+		 0.36733782 0.27499145 0.51162219 -0.16334069 0.35384586 -0.40919897 0.58393615 0.08964435
+		 0.36701828 -0.15933432 0.51157957 -0.064288035 0.58543986 0.88486463 0.2329874 0.28239405
+		 0.48077098 0.72983062 0.48753402 0.84255284 0.3549369 0.78296715 0.3551448 0.15886731
+		 0.35239223 -0.09776555 0.47358832 0.042335521 0.40703559 0.32207465 0.53532642 0.84177917
+		 0.23693612 0.28053531 0.53806895 0.27405065 0.47528353;
+createNode polyMapCut -n "polyMapCut53";
+	rename -uid "F5AB1757-4887-D9E9-DFB1-7BA2285B40B8";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[441]";
+createNode polyPlanarProj -n "polyPlanarProj29";
+	rename -uid "AF8A60F5-4931-B5D3-BE8E-93805556C0E3";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:503]";
+	setAttr ".ix" -type "matrix" 100 0 0 0 0 -1.6292067961387602e-05 -99.999999999998678 0
+		 0 99.999999999998678 -1.6292067961387602e-05 0 -104.60074986633234 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pc" -type "double3" -104.92949676513672 18.015029907226562 1.5736122131347656 ;
+	setAttr ".ro" -type "double3" -18.338354045761125 -11.800000369683927 2.5537831668767358e-07 ;
+	setAttr ".ps" -type "double2" 73.45844722440151 41.141712965622034 ;
+	setAttr ".per" yes;
+	setAttr ".cam" -type "matrix" 1.903353214263916 0.10169804096221924 0.19411462545394897 0.19411073625087738
+		 -1.3492293518223919e-17 1.5003584623336792 -0.31463420391082764 -0.31462791562080383
+		 0.3976311981678009 -0.48680108785629272 -0.92917424440383911 -0.92915570735931396
+		 325.59246826171875 31.476848602294922 275.7879638671875 275.98245239257812;
+	setAttr ".prgt" 1412;
+	setAttr ".ptop" 1737;
+createNode polyMapCut -n "polyMapCut54";
+	rename -uid "224A24BE-447D-3E5F-4DD7-5B951A5E2786";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 12 "e[842]" "e[846]" "e[878]" "e[881]" "e[934]" "e[936]" "e[964]" "e[966]" "e[993]" "e[995]" "e[1047]" "e[1049]";
+createNode polyTweakUV -n "polyTweakUV30";
+	rename -uid "96E8BEF6-405D-5585-AF0D-D49022DBF852";
+	setAttr ".uopa" yes;
+	setAttr -s 602 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" 0.11380504 0.21469218 0.086336218 0.24570671
+		 0.070177801 0.1928342 0.097650222 0.16316524 0.13463227 0.26660591 0.10687591 0.29932293
+		 0.14049087 0.1845234 0.12413383 0.13422468 0.16179366 0.23487756 -0.20128348 0.042210009
+		 -0.21294674 -0.0051227612 -0.27013898 -0.020401023 -0.25993839 0.026717175 -0.22487834
+		 -0.053301845 -0.28158963 -0.06845092 -0.33736572 -0.083548166 -0.32595038 -0.035289131
+		 -0.31694198 0.011936951 -0.11397415 -0.11437228 -0.12016954 -0.16790432 -0.1894457
+		 -0.18500248 -0.17849793 -0.13074344 -0.12541173 -0.22283529 -0.20045295 -0.24075851
+		 -0.275096 -0.25865877 -0.25829944 -0.20215349 -0.24252765 -0.1471771 -0.51338381
+		 0.24181062 -0.43680561 0.23096091 -0.41380778 0.28035384 -0.48639971 0.29058096 -0.35953104
+		 0.22021586 -0.34043488 0.27023914 -0.32523191 0.32089859 -0.39726239 0.3305676 -0.46840549
+		 0.34032521 -0.41982231 0.4492448 -0.42686927 0.40592527 -0.46915209 0.40947992 -0.46316674
+		 0.45426434 -0.43708634 0.36214179 -0.47893566 0.36445719 -0.52226967 0.36733758 -0.51273036
+		 0.41360331 -0.50766093 0.45987105 -0.091933794 0.23004985 -0.080941014 0.28215611
+		 -0.15287329 0.29140112 -0.1650387 0.23970574 -0.018159268 0.2203989 -0.0078789108
+		 0.27278921 -0.098765634 0.17815819 -0.17574608 0.18837225 -0.02166013 0.1680657 -0.033532042
+		 -0.042882387 -0.023924287 0.0064046392 0.038062099 0.022440095 0.029377043 -0.026805982
+		 -0.095861927 -0.058868159 -0.085218713 -0.0095008537 -0.038699973 -0.093545459 0.027096607
+		 -0.077129416 -0.10400623 -0.10995515 -0.67119122 0.26996601 -0.59824872 0.25917435
+		 -0.56741261 0.30740425 -0.63560927 0.31774366 -0.52539665 0.24860832 -0.49857652
+		 0.29741016 -0.48075223 0.34709266 -0.54806948 0.35656312 -0.61421371 0.3662492 -0.16739738
+		 -0.07926517 -0.10579929 -0.063328527 -0.22839376 -0.09522783 -0.21556666 -0.045673285
+		 -0.15569776 -0.02983693 -0.095113263 -0.013980221 -0.10196059 0.12499604 -0.18552476
+		 0.13585275 -0.19488901 0.08182057 -0.10302261 0.070469797 -0.018763255 0.11442321
+		 -0.011743159 0.059551887 -0.065939285 0.3358196 -0.13898663 0.34473509 -0.048675999
+		 0.39060903 -0.12401069 0.39910123 0.0087940833 0.32689098 0.028750248 0.38228559
+		 -0.72116798 0.22134444 -0.64098752 0.21033031 -0.77957809 0.17120051 -0.69102925
+		 0.16003287 -0.6037401 0.14857334 -0.56164467 0.19920895 -0.60108507 0.46745199 -0.60447025
+		 0.41642964 -0.53818262 0.40778795 -0.5332312 0.4599553 -0.47019756 0.3988151 -0.46334118
+		 0.45157528 -0.45067698 0.44507974 -0.45766142 0.39216152 -0.38580856 0.38278708 -0.37692258
+		 0.43607804 -0.31294194 0.37340131 -0.30205697 0.42694789 -0.22690594 0.36065987 -0.30074626
+		 0.37000239 -0.31299031 0.31741336 -0.24003178 0.30779767 -0.21397001 0.41454703 -0.28989515
+		 0.42364711 -0.15201491 0.35134363 -0.16617161 0.29815623 -0.13686965 0.40555736 -0.25142854
+		 -0.15457243 -0.26700097 -0.20940411 -0.33285156 -0.22594376 -0.31240436 -0.17040196
+		 -0.28362769 -0.26578069 -0.35537788 -0.28288203 -0.42814776 -0.30043578 -0.39938051
+		 -0.24286956 -0.3734923 -0.1864675 0.11022787 -0.10546486 0.17820995 -0.090201505
+		 0.19665387 -0.14415261 0.1229874 -0.15906683 0.10169451 -0.053403307 0.16540878 -0.037751298
+		 0.041489828 -0.1216196 0.048242699 -0.17531149 0.03776155 -0.069250435 -0.477516
+		 0.27327532 -0.50947917 0.2266804 -0.55815226 0.22591838 -0.52251142 0.27349132 -0.54603404
+		 0.17898944 -0.59919971 0.17721236 -0.65570945 0.176456 -0.6094352 0.22598904 -0.56955481
+		 0.27438408 -0.29542235 -0.11809602 -0.23751602 -0.10277127 -0.35287225 -0.13347492
+		 -0.49617648 0.31940955 -0.45345309 0.31818372 -0.54055822 0.32121295 -0.38763487
+		 0.28089052 -0.4273423 0.2797572 -0.40541384 0.32369965 -0.36707556 0.32370138 -0.46910033
+		 0.27932096 -0.44516954 0.32425654 -0.42893675 0.36815333 -0.3898733 0.3665446 -0.35176355
+		 0.36543405 -0.57781541 0.26821309 -0.62593544 0.26982361 -0.59402502 0.31745744 -0.54888332
+		 0.31509447 -0.67687237 0.27233899 -0.64115536 0.32024786 -0.61969465 0.3684873 -0.57448
+		 0.36479384 -0.53062445 0.36138564 -0.5160923 0.45458686 -0.52111757 0.40799075 -0.56515205
+		 0.41277298 -0.56110442 0.46109837 -0.60993218 0.41811743 -0.60654819 0.46854624 -0.61767054
+		 0.21979117 -0.6704663 0.22086337 -0.66392171 0.17015448 -0.72240752 0.17076734 -0.78537709
+		 0.17331696 -0.72695374 0.22346163 -0.33174235 0.44665211 -0.34058991 0.40644383 -0.37942752
+		 0.40896535 -0.37161249 0.45073134 -0.4189207 0.41174114 -0.41203985 0.45488578 0.10163021
+		 0.0087713897 0.070441701 0.038485598 0.083065897 -0.015093856 0.11644253 -0.045310143
+		 0.091570526 0.061410587 0.062277906 0.090597667 0.13088943 -0.020202287 0.1473183
+		 -0.074732423 0.11938691 0.032915153 0.10083482 -0.0033363616 0.10845626 0.045768309
+		 0.16969113 0.061728019 0.16232549 0.012540698 0.039735515 -0.018937372 0.048152793
+		 0.030219454 0.089979641 0.11245362 0.06196107 0.14154619 0.11685559 0.084048606 0.14615786
+		 0.046543311 0.15315214 0.096141197 0.12844451 0.12356462 0.12127027 0.073538996 0.17005062
+		 0.019842338 0.17746614 0.069133401 0.14945133 -0.0043580248 0.12388265 0.022695303
+		 0.17318858 -0.030966323 0.02907664 0.18133831 0.03789768 0.23340395 0.0090687014
+		 0.26403898 -0.00090010674 0.21122554 0.0577025 0.15225884 0.065829635 0.20371419
+		 0.02805566 0.13024454 -0.0040297778 0.16017067 0.058158938 0.1010505 0.053975161
+		 0.28767693 0.025544267 0.31966117 0.074071907 0.34307569 0.045449268 0.37676486 0.081909321
+		 0.25659853 0.10239783 0.31025663 0.034172069 0.078459688 -0.00081683439 0.1089407
+		 0.0063548801 0.056175452 0.044469569 0.025214959 0.066462174 0.048680078 0.079255641
+		 -0.0050748251 0.16957495 0.1454556 0.14461491 0.17387983 0.19108325 0.19456108 0.16572376
+		 0.22424358 0.19461738 0.11798526 0.21673435 0.16634816 -0.067173801 0.082778208 -0.081873618
+		 0.034687366 -0.14308357 0.018555246 -0.12989485 0.06621208 -0.20347065 0.0025476841
+		 -0.19172764 0.049880113 -0.01006796 0.055340271 0.052743513 0.071611643 0.0061610867
+		 0.1038487 0.070692129 0.12047625;
+	setAttr ".uvtk[250:499]" -0.072030954 0.039157372 -0.057387765 0.087228112
+		 -0.077271484 0.039144706 -0.062626734 0.087408639 -0.090408012 -0.0097044334 -0.37043208
+		 0.1657216 -0.34711534 0.21664295 -0.34664756 0.21593928 -0.36974949 0.16492686 -0.39653322
+		 0.11344246 -0.39565545 0.1125922 -0.40923417 0.1170683 -0.40157425 0.11377031 -0.37559763
+		 0.16609955 -0.38298103 0.16931993 0.030562431 -0.12945171 -0.040048342 -0.14642698
+		 0.037085209 -0.18305697 -0.0394377 -0.20062602 -0.35243398 0.2171022 -0.11018719
+		 -0.16353986 -0.1152639 -0.16428155 -0.10908443 -0.11054184 -0.1154256 -0.21852434
+		 -0.12056463 -0.21942134 -0.28976488 0.42309371 -0.30064583 0.36950329 -0.31283426
+		 0.31691331 -0.067312337 0.085811295 -0.081984244 0.037541818 0.062572055 0.079253435
+		 0.12382181 0.094935678 0.080333099 0.12797208 0.14342648 0.14377946 -0.0951465 -0.011305373
+		 0.1027439 0.080164261 0.096793301 0.07810197 0.10366348 0.12858292 0.10973555 0.13055372
+		 0.10530995 0.028861262 0.099358886 0.026730992 -0.31853968 0.31803423 -0.30632895
+		 0.37059063 -0.17865966 0.24656755 -0.25378689 0.25663656 -0.32812154 0.266698 -0.29543141
+		 0.4241395 0.10477303 0.076434739 0.11173927 0.12676609 0.10734991 0.025239557 0.044359606
+		 0.1471957 0.038835492 0.14451876 0.046642471 0.19626793 0.052272875 0.19886196 0.044767115
+		 0.095764555 0.039226096 0.093004979 -0.11385605 -0.1121146 -0.12004279 -0.1658279
+		 -0.12534769 -0.22093615 0.046420198 0.1433695 0.054344613 0.19496837 0.046797682
+		 0.092040636 -0.4380514 0.32082164 -0.46148977 0.27532709 -0.4221583 0.36533558 -0.41469866
+		 0.36653966 -0.43037522 0.32180583 -0.453531 0.27607656 -0.43452701 0.32245523 -0.45792195
+		 0.27698958 -0.41867888 0.36690819 -0.5306505 0.31713051 -0.55886036 0.2697534 -0.51287001
+		 0.36387187 -0.50405645 0.36478668 -0.52160323 0.31786549 -0.54946828 0.27028459 -0.52701211
+		 0.31874031 -0.55521107 0.27140999 -0.50924915 0.36539435 -0.49277332 0.2282773 -0.52870661
+		 0.18029389 -0.4844932 0.22884867 -0.5201242 0.18075046 -0.48915428 0.22997633 -0.52500719
+		 0.18204507 -0.50093365 0.23272189 -0.5372957 0.18510398 -0.597821 0.22092769 -0.64319587
+		 0.17101011 -0.58799666 0.22129741 -0.63295293 0.1712763 -0.59414732 0.22262672 -0.6395092
+		 0.17277291 -0.41224197 0.40949208 -0.4052217 0.45307869 -0.39789841 0.45455718 -0.40490761
+		 0.41086006 -0.40881512 0.4109931 -0.40184733 0.45450956 -0.503546 0.41074497 -0.49840158
+		 0.45748156 -0.48962098 0.45856285 -0.49481952 0.41177499 -0.49992371 0.41215646 -0.49476632
+		 0.45877212 -0.5918597 0.14192823 -0.54972428 0.19247666 -0.54195297 0.19079584 -0.58310151
+		 0.14009365 -0.50655359 0.24037501 -0.50535274 0.23977023 -0.54035556 0.19009092 -0.58107328
+		 0.13931343 -0.54828554 0.19299176 -0.58944321 0.14226368 -0.5128752 0.24257913 -0.48029506
+		 0.28944215 -0.46273762 0.33939862 -0.46199548 0.33898827 -0.47938663 0.288955 -0.48662174
+		 0.29163936 -0.46907598 0.34155515 -0.45214745 0.39125907 -0.44503391 0.44409367 -0.44426817
+		 0.44364667 -0.45144856 0.39085811 -0.45851135 0.39337441 -0.45142433 0.44615039 -0.23980854
+		 -0.098186307 -0.25358549 -0.15038516 -0.22726777 -0.048306603 -0.22678116 -0.04581039
+		 -0.23925446 -0.09587311 -0.25294977 -0.14825431 -0.23472956 -0.095552824 -0.24854593
+		 -0.14779149 -0.22216269 -0.045657728 -0.26901847 -0.20555031 -0.28556591 -0.26227021
+		 -0.26830634 -0.20357376 -0.28481978 -0.26045412 -0.26402414 -0.20300183 -0.28062713
+		 -0.25977504 -0.21535161 0.00025670591 -0.203594 0.047960367 -0.20310837 0.050808307
+		 -0.2148945 0.0029304954 -0.21023113 0.0029244903 -0.19846845 0.050633471 -0.46668932
+		 0.18088186 -0.50091034 0.12955046 0.11646536 -0.024360761 0.1103486 -0.026526708
+		 0.1322245 -0.0790084 0.12580372 -0.081202626 0.1185011 -0.027863704 0.13541737 -0.030099478
+		 0.1342749 -0.082396656 0.15190844 -0.084357128 0.052653808 0.04322372 0.046930794
+		 0.040405016 0.064684324 -0.010680947 0.058614079 -0.013548903 0.054645237 0.039601255
+		 0.066613369 -0.014221214 0.12567483 0.18108886 0.11941984 0.17919189 0.14026713 0.22980431
+		 0.14666815 0.23163664 0.12762494 0.17726275 0.1485488 0.22778022 0.068034671 0.25190365
+		 0.062251166 0.24934955 0.082401045 0.30311584 0.088293836 0.30565441 0.070114993
+		 0.24795854 0.090380386 0.30165884 -0.19104689 0.13648173 -0.18513557 0.13359036 -0.17528327
+		 0.18634039 -0.18108882 0.18914303 -0.20073432 0.082340442 -0.19476967 0.079386972
+		 -0.19993526 0.14280534 -0.1897631 0.19528723 -0.20967469 0.088809319 -0.18394503
+		 0.13424054 -0.1741221 0.18692166 -0.19347765 0.080084287 -0.17030466 0.24065515 -0.16463694
+		 0.23796758 -0.15263179 0.28986371 -0.15815637 0.29244655 -0.16345625 0.23845953 -0.15139613
+		 0.29029834 -0.14430991 0.34573659 -0.13891731 0.34319687 -0.12402285 0.39739466 -0.12933519
+		 0.39993471 -0.13762465 0.34363383 -0.12270636 0.39788747 0.031582646 -0.01955219
+		 0.026210055 -0.020046055 0.034584668 0.029777292 0.039978016 0.030067433 0.029484771
+		 -0.07030499 0.024066158 -0.07098718 0.026069187 -0.022277296 0.03452855 0.027362913
+		 0.023896791 -0.07302025 0.032920893 -0.1230351 0.027377151 -0.12387168 0.039211635
+		 -0.177046 0.033453751 -0.1780237 0.027264096 -0.12572296 0.033473562 -0.17969233
+		 0.05430964 0.079517543 0.04887398 0.079406381 0.066550694 0.12872571 0.072007328
+		 0.12865333 0.048936907 0.076836169 0.066704161 0.12601016 -0.28554913 0.15420294
+		 -0.30352578 0.10099617 -0.26879871 0.20594761 -0.10098642 -0.059269611 -0.32783687
+		 0.26611227 -0.011744848 0.21254104 -0.019149926 0.21635565 -0.022179108 0.16423309
+		 -0.014542868 0.16136321 -0.0021252609 0.26536924 -0.0095491912 0.26652992 -0.020441275
+		 0.21782729 -0.023615137 0.1656484 -0.010500715 0.2701031 0.16074765 0.017518383 0.15539923
+		 0.015821528 0.16239467 0.064984754 0.16787893 0.066728339 0.16409342 -0.033033382
+		 0.15883468 -0.034584951 0.15676774 0.014530994 0.16385864 0.063691534 0.16010891
+		 -0.035835546 -0.011181613 0.11000747 -0.018985223 0.11072796 -0.011807353 0.055899579
+		 -0.0040264186 0.057186168;
+	setAttr ".uvtk[500:601]" -0.020528208 0.11210816 -0.013423339 0.057265449 0.18071008
+		 0.11265761 0.17918471 0.11394612 0.20268694 0.1612314 0.20115572 0.16252273 0.18671809
+		 0.11076713 0.20871517 0.15937495 -0.33357593 0.26725981 -0.10574415 -0.060862217
+		 -0.63078707 0.31858689 -0.60973352 0.36697549 -0.66599798 0.2706731 -0.66019362 0.26990327
+		 -0.62521482 0.31784046 -0.60435373 0.36633688 -0.62781632 0.31798413 -0.60680866
+		 0.36651486 -0.66297245 0.27006042 -0.35681534 0.32571238 -0.37714678 0.2825982 -0.34186009
+		 0.36769462 -0.33515504 0.36885911 -0.3516188 -0.13332221 -0.37205037 -0.18611524
+		 -0.35060182 -0.13340548 -0.37107962 -0.18622842 -0.33535817 -0.083594806 -0.7156229
+		 0.22187167 -0.77367616 0.17173207 -0.76748472 0.17098892 -0.70960546 0.22113046 -0.71256506
+		 0.22130656 -0.77062094 0.1711469 -0.32419759 -0.035326846 -0.31531808 0.011969332
+		 -0.32454816 0.41003823 -0.31604552 0.45031261 -0.33105877 0.40881914 -0.32243541
+		 0.44907182 -0.5973047 0.41659224 -0.59396172 0.46744937 -0.59159571 0.46709281 -0.59493083
+		 0.41633981 -0.6001994 0.41683507 -0.59684563 0.46745014 -0.39700794 -0.24255767 -0.42591622
+		 -0.3001712 -0.4269608 -0.30010739 -0.3960886 0.2387332 -0.40314519 0.23791 -0.43231598
+		 0.19217721 -0.44265637 0.19074243 -0.41363484 0.2364057 -0.45589364 0.23413667 -0.48824611
+		 0.18745843 -0.11862197 -0.16479406 -0.12394843 -0.21998303 -0.11244115 -0.11100205
+		 -0.10435688 -0.059662666 -0.30218264 0.36940381 -0.29128608 0.42296344 -0.31435597
+		 0.31682003 -0.32931873 0.2659933 -0.066020854 0.087237991 -0.080673479 0.038898658
+		 -0.093797848 -0.010022037 -0.39695537 0.11237539 -0.37110671 0.1647332 -0.34807163
+		 0.21577886 0.20680794 0.16416678 0.18478544 0.1156613 0.0059572174 0.32413298 0.025869779
+		 0.37941414 0.0065806736 0.32199275 0.026436485 0.37892896 0.014114982 0.32086751
+		 0.033984579 0.37783954 0.17301911 -0.088392653 0.19143204 -0.14239284 0.17179707
+		 -0.087201454 0.19021288 -0.14124784 0.17704959 -0.085833527 0.19550553 -0.14001337
+		 0.18611604 -0.084065117 0.20464568 -0.13842115 0.16209882 -0.057469849 0.17989273
+		 -0.11189664 -0.0093493005 0.26857531 0.0070202937 0.32254672 0.026906542 0.37775078
+		 -0.39799529 -0.24244975 -0.37011275 0.28351051 -0.42531678 0.19297504 -0.3253783
+		 -0.035248198 -0.31653431 0.012082428 -0.33646083 -0.083530538 -0.3499144 0.32676268
+		 -0.02164451 0.16243425 -0.018222198 0.11100803 -0.011094065 0.05814625 -0.019000776
+		 0.21368122;
+createNode groupId -n "groupId302";
+	rename -uid "CF7F3DBA-42DF-8DCA-3088-1BA643DD0B49";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId303";
+	rename -uid "10215AF3-41E8-CA98-A67A-048B8AD96F2C";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts9";
+	rename -uid "2DD13F9B-498D-F38B-7261-479A84352928";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 8 "f[0:15]" "f[17]" "f[20:23]" "f[28:239]" "f[259:262]" "f[306]" "f[310]" "f[315]";
+	setAttr ".irc" -type "componentList" 8 "f[16]" "f[18:19]" "f[24:27]" "f[240:258]" "f[263:305]" "f[307:309]" "f[311:314]" "f[316:359]";
+createNode groupId -n "groupId304";
+	rename -uid "6EAB85C6-4338-180D-5093-1EB64D0EE28B";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId305";
+	rename -uid "0B83C87E-4870-FB48-689A-CA8722FA9FBA";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts10";
+	rename -uid "66525A56-44AD-AB28-E9D7-908A89E6A986";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 8 "f[16]" "f[18:19]" "f[24:27]" "f[240:258]" "f[263:305]" "f[307:309]" "f[311:314]" "f[316:359]";
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -54326,27 +57775,32 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+	setAttr ".dli" 1;
 	setAttr ".fprt" yes;
+	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 14 ".st";
+	setAttr -s 88 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 17 ".s";
+	setAttr -s 37 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
+select -ne :defaultRenderUtilityList1;
+	setAttr -s 42 ".u";
 select -ne :defaultRenderingList1;
+select -ne :defaultTextureList1;
+	setAttr -s 35 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 36 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 110 ".gn";
+	setAttr -s 148 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
+	setAttr ".ren" -type "string" "arnold";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
@@ -54363,7 +57817,7 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 5 ".sol";
 connectAttr "groupId269.id" "polySurfaceShape1.iog.og[0].gid";
 connectAttr "aiStandardSurface1SG.mwc" "polySurfaceShape1.iog.og[0].gco";
 connectAttr "groupId271.id" "polySurfaceShape1.iog.og[1].gid";
@@ -54371,78 +57825,189 @@ connectAttr "aiStandardSurface6SG.mwc" "polySurfaceShape1.iog.og[1].gco";
 connectAttr "groupId270.id" "polySurfaceShape1.ciog.cog[0].cgid";
 connectAttr "polyTweakUV1.out" "polySurfaceShape36.i";
 connectAttr "polyTweakUV1.uvtk[0]" "polySurfaceShape36.uvst[0].uvtw";
-connectAttr "groupId233.id" "polySurfaceShape59.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape59.iog.og[0].gco";
-connectAttr "groupId234.id" "polySurfaceShape60.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape60.iog.og[0].gco";
-connectAttr "groupId235.id" "polySurfaceShape61.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape61.iog.og[0].gco";
-connectAttr "groupId236.id" "polySurfaceShape62.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape62.iog.og[0].gco";
-connectAttr "groupId237.id" "polySurfaceShape63.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape63.iog.og[0].gco";
-connectAttr "groupId238.id" "polySurfaceShape64.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape64.iog.og[0].gco";
-connectAttr "groupId239.id" "polySurfaceShape65.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape65.iog.og[0].gco";
-connectAttr "groupId240.id" "polySurfaceShape66.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape66.iog.og[0].gco";
-connectAttr "groupId241.id" "polySurfaceShape67.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape67.iog.og[0].gco";
-connectAttr "groupId242.id" "polySurfaceShape68.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape68.iog.og[0].gco";
-connectAttr "groupId243.id" "polySurfaceShape69.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape69.iog.og[0].gco";
-connectAttr "groupId244.id" "polySurfaceShape70.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape70.iog.og[0].gco";
-connectAttr "groupId245.id" "polySurfaceShape71.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape71.iog.og[0].gco";
-connectAttr "groupId246.id" "polySurfaceShape72.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape72.iog.og[0].gco";
-connectAttr "groupId247.id" "polySurfaceShape73.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape73.iog.og[0].gco";
-connectAttr "groupId248.id" "polySurfaceShape74.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape74.iog.og[0].gco";
-connectAttr "groupId249.id" "polySurfaceShape75.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape75.iog.og[0].gco";
-connectAttr "groupId250.id" "polySurfaceShape76.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape76.iog.og[0].gco";
-connectAttr "groupId251.id" "polySurfaceShape77.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape77.iog.og[0].gco";
-connectAttr "groupId252.id" "polySurfaceShape78.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape78.iog.og[0].gco";
-connectAttr "groupId253.id" "polySurfaceShape79.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape79.iog.og[0].gco";
-connectAttr "groupId254.id" "polySurfaceShape80.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape80.iog.og[0].gco";
-connectAttr "groupId255.id" "polySurfaceShape81.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape81.iog.og[0].gco";
-connectAttr "groupId256.id" "polySurfaceShape82.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape82.iog.og[0].gco";
-connectAttr "groupId257.id" "polySurfaceShape83.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape83.iog.og[0].gco";
-connectAttr "groupId258.id" "polySurfaceShape84.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape84.iog.og[0].gco";
-connectAttr "groupId259.id" "polySurfaceShape85.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape85.iog.og[0].gco";
-connectAttr "groupId260.id" "polySurfaceShape86.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape86.iog.og[0].gco";
-connectAttr "groupId261.id" "polySurfaceShape87.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape87.iog.og[0].gco";
-connectAttr "groupId262.id" "polySurfaceShape88.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape88.iog.og[0].gco";
-connectAttr "groupId263.id" "polySurfaceShape89.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape89.iog.og[0].gco";
-connectAttr "groupId264.id" "polySurfaceShape90.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape90.iog.og[0].gco";
-connectAttr "groupId265.id" "polySurfaceShape91.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape91.iog.og[0].gco";
-connectAttr "groupId266.id" "polySurfaceShape92.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape92.iog.og[0].gco";
-connectAttr "groupId267.id" "polySurfaceShape93.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape93.iog.og[0].gco";
-connectAttr "groupId268.id" "polySurfaceShape94.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "polySurfaceShape94.iog.og[0].gco";
+connectAttr "groupId303.id" "polySurfaceShape59.iog.og[3].gid";
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface1SG.mwc" "polySurfaceShape59.iog.og[3].gco"
+		;
+connectAttr "groupId305.id" "polySurfaceShape59.iog.og[4].gid";
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface6SG.mwc" "polySurfaceShape59.iog.og[4].gco"
+		;
+connectAttr "groupParts10.og" "polySurfaceShape59.i";
+connectAttr "polyTweakUV2.uvtk[0]" "polySurfaceShape59.uvst[0].uvtw";
+connectAttr "groupId304.id" "polySurfaceShape59.ciog.cog[1].cgid";
+connectAttr "polyTweakUV27.out" "polySurfaceShape60.i";
+connectAttr "polyTweakUV27.uvtk[0]" "polySurfaceShape60.uvst[0].uvtw";
+connectAttr "polyTweakUV26.out" "polySurfaceShape61.i";
+connectAttr "polyTweakUV26.uvtk[0]" "polySurfaceShape61.uvst[0].uvtw";
+connectAttr "polyTweakUV25.out" "polySurfaceShape62.i";
+connectAttr "polyTweakUV25.uvtk[0]" "polySurfaceShape62.uvst[0].uvtw";
+connectAttr "polyTweakUV4.out" "polySurfaceShape63.i";
+connectAttr "polyTweakUV4.uvtk[0]" "polySurfaceShape63.uvst[0].uvtw";
+connectAttr "polyTweakUV24.out" "polySurfaceShape64.i";
+connectAttr "polyTweakUV24.uvtk[0]" "polySurfaceShape64.uvst[0].uvtw";
+connectAttr "polyTweakUV23.out" "polySurfaceShape65.i";
+connectAttr "polyTweakUV23.uvtk[0]" "polySurfaceShape65.uvst[0].uvtw";
+connectAttr "polyTweakUV22.out" "polySurfaceShape66.i";
+connectAttr "polyTweakUV22.uvtk[0]" "polySurfaceShape66.uvst[0].uvtw";
+connectAttr "polyTweakUV21.out" "polySurfaceShape67.i";
+connectAttr "polyTweakUV21.uvtk[0]" "polySurfaceShape67.uvst[0].uvtw";
+connectAttr "polySurfaceShape67_pnts_0__pntx.o" "polySurfaceShape67.pt[0].px";
+connectAttr "polySurfaceShape67_pnts_0__pnty.o" "polySurfaceShape67.pt[0].py";
+connectAttr "polySurfaceShape67_pnts_0__pntz.o" "polySurfaceShape67.pt[0].pz";
+connectAttr "polySurfaceShape67_pnts_1__pntx.o" "polySurfaceShape67.pt[1].px";
+connectAttr "polySurfaceShape67_pnts_1__pnty.o" "polySurfaceShape67.pt[1].py";
+connectAttr "polySurfaceShape67_pnts_1__pntz.o" "polySurfaceShape67.pt[1].pz";
+connectAttr "polySurfaceShape67_pnts_2__pntx.o" "polySurfaceShape67.pt[2].px";
+connectAttr "polySurfaceShape67_pnts_2__pnty.o" "polySurfaceShape67.pt[2].py";
+connectAttr "polySurfaceShape67_pnts_2__pntz.o" "polySurfaceShape67.pt[2].pz";
+connectAttr "polySurfaceShape67_pnts_3__pntx.o" "polySurfaceShape67.pt[3].px";
+connectAttr "polySurfaceShape67_pnts_3__pnty.o" "polySurfaceShape67.pt[3].py";
+connectAttr "polySurfaceShape67_pnts_3__pntz.o" "polySurfaceShape67.pt[3].pz";
+connectAttr "polySurfaceShape67_pnts_4__pntx.o" "polySurfaceShape67.pt[4].px";
+connectAttr "polySurfaceShape67_pnts_4__pnty.o" "polySurfaceShape67.pt[4].py";
+connectAttr "polySurfaceShape67_pnts_4__pntz.o" "polySurfaceShape67.pt[4].pz";
+connectAttr "polySurfaceShape67_pnts_5__pntx.o" "polySurfaceShape67.pt[5].px";
+connectAttr "polySurfaceShape67_pnts_5__pnty.o" "polySurfaceShape67.pt[5].py";
+connectAttr "polySurfaceShape67_pnts_5__pntz.o" "polySurfaceShape67.pt[5].pz";
+connectAttr "polySurfaceShape67_pnts_6__pntx.o" "polySurfaceShape67.pt[6].px";
+connectAttr "polySurfaceShape67_pnts_6__pnty.o" "polySurfaceShape67.pt[6].py";
+connectAttr "polySurfaceShape67_pnts_6__pntz.o" "polySurfaceShape67.pt[6].pz";
+connectAttr "polySurfaceShape67_pnts_7__pntx.o" "polySurfaceShape67.pt[7].px";
+connectAttr "polySurfaceShape67_pnts_7__pnty.o" "polySurfaceShape67.pt[7].py";
+connectAttr "polySurfaceShape67_pnts_7__pntz.o" "polySurfaceShape67.pt[7].pz";
+connectAttr "polySurfaceShape67_pnts_8__pntx.o" "polySurfaceShape67.pt[8].px";
+connectAttr "polySurfaceShape67_pnts_8__pnty.o" "polySurfaceShape67.pt[8].py";
+connectAttr "polySurfaceShape67_pnts_8__pntz.o" "polySurfaceShape67.pt[8].pz";
+connectAttr "polySurfaceShape67_pnts_9__pntx.o" "polySurfaceShape67.pt[9].px";
+connectAttr "polySurfaceShape67_pnts_9__pnty.o" "polySurfaceShape67.pt[9].py";
+connectAttr "polySurfaceShape67_pnts_9__pntz.o" "polySurfaceShape67.pt[9].pz";
+connectAttr "polySurfaceShape67_pnts_10__pntx.o" "polySurfaceShape67.pt[10].px";
+connectAttr "polySurfaceShape67_pnts_10__pnty.o" "polySurfaceShape67.pt[10].py";
+connectAttr "polySurfaceShape67_pnts_10__pntz.o" "polySurfaceShape67.pt[10].pz";
+connectAttr "polySurfaceShape67_pnts_11__pntx.o" "polySurfaceShape67.pt[11].px";
+connectAttr "polySurfaceShape67_pnts_11__pnty.o" "polySurfaceShape67.pt[11].py";
+connectAttr "polySurfaceShape67_pnts_11__pntz.o" "polySurfaceShape67.pt[11].pz";
+connectAttr "polySurfaceShape67_pnts_12__pntx.o" "polySurfaceShape67.pt[12].px";
+connectAttr "polySurfaceShape67_pnts_12__pnty.o" "polySurfaceShape67.pt[12].py";
+connectAttr "polySurfaceShape67_pnts_12__pntz.o" "polySurfaceShape67.pt[12].pz";
+connectAttr "polyTweakUV20.out" "polySurfaceShape68.i";
+connectAttr "polyTweakUV20.uvtk[0]" "polySurfaceShape68.uvst[0].uvtw";
+connectAttr "polySurfaceShape68_pnts_0__pntx.o" "polySurfaceShape68.pt[0].px";
+connectAttr "polySurfaceShape68_pnts_0__pnty.o" "polySurfaceShape68.pt[0].py";
+connectAttr "polySurfaceShape68_pnts_0__pntz.o" "polySurfaceShape68.pt[0].pz";
+connectAttr "polySurfaceShape68_pnts_1__pntx.o" "polySurfaceShape68.pt[1].px";
+connectAttr "polySurfaceShape68_pnts_1__pnty.o" "polySurfaceShape68.pt[1].py";
+connectAttr "polySurfaceShape68_pnts_1__pntz.o" "polySurfaceShape68.pt[1].pz";
+connectAttr "polySurfaceShape68_pnts_2__pntx.o" "polySurfaceShape68.pt[2].px";
+connectAttr "polySurfaceShape68_pnts_2__pnty.o" "polySurfaceShape68.pt[2].py";
+connectAttr "polySurfaceShape68_pnts_2__pntz.o" "polySurfaceShape68.pt[2].pz";
+connectAttr "polySurfaceShape68_pnts_3__pntx.o" "polySurfaceShape68.pt[3].px";
+connectAttr "polySurfaceShape68_pnts_3__pnty.o" "polySurfaceShape68.pt[3].py";
+connectAttr "polySurfaceShape68_pnts_3__pntz.o" "polySurfaceShape68.pt[3].pz";
+connectAttr "polySurfaceShape68_pnts_4__pntx.o" "polySurfaceShape68.pt[4].px";
+connectAttr "polySurfaceShape68_pnts_4__pnty.o" "polySurfaceShape68.pt[4].py";
+connectAttr "polySurfaceShape68_pnts_4__pntz.o" "polySurfaceShape68.pt[4].pz";
+connectAttr "polySurfaceShape68_pnts_5__pntx.o" "polySurfaceShape68.pt[5].px";
+connectAttr "polySurfaceShape68_pnts_5__pnty.o" "polySurfaceShape68.pt[5].py";
+connectAttr "polySurfaceShape68_pnts_5__pntz.o" "polySurfaceShape68.pt[5].pz";
+connectAttr "polySurfaceShape68_pnts_6__pntx.o" "polySurfaceShape68.pt[6].px";
+connectAttr "polySurfaceShape68_pnts_6__pnty.o" "polySurfaceShape68.pt[6].py";
+connectAttr "polySurfaceShape68_pnts_6__pntz.o" "polySurfaceShape68.pt[6].pz";
+connectAttr "polySurfaceShape68_pnts_7__pntx.o" "polySurfaceShape68.pt[7].px";
+connectAttr "polySurfaceShape68_pnts_7__pnty.o" "polySurfaceShape68.pt[7].py";
+connectAttr "polySurfaceShape68_pnts_7__pntz.o" "polySurfaceShape68.pt[7].pz";
+connectAttr "polySurfaceShape68_pnts_8__pntx.o" "polySurfaceShape68.pt[8].px";
+connectAttr "polySurfaceShape68_pnts_8__pnty.o" "polySurfaceShape68.pt[8].py";
+connectAttr "polySurfaceShape68_pnts_8__pntz.o" "polySurfaceShape68.pt[8].pz";
+connectAttr "polySurfaceShape68_pnts_9__pntx.o" "polySurfaceShape68.pt[9].px";
+connectAttr "polySurfaceShape68_pnts_9__pnty.o" "polySurfaceShape68.pt[9].py";
+connectAttr "polySurfaceShape68_pnts_9__pntz.o" "polySurfaceShape68.pt[9].pz";
+connectAttr "polySurfaceShape68_pnts_10__pntx.o" "polySurfaceShape68.pt[10].px";
+connectAttr "polySurfaceShape68_pnts_10__pnty.o" "polySurfaceShape68.pt[10].py";
+connectAttr "polySurfaceShape68_pnts_10__pntz.o" "polySurfaceShape68.pt[10].pz";
+connectAttr "polySurfaceShape68_pnts_11__pntx.o" "polySurfaceShape68.pt[11].px";
+connectAttr "polySurfaceShape68_pnts_11__pnty.o" "polySurfaceShape68.pt[11].py";
+connectAttr "polySurfaceShape68_pnts_11__pntz.o" "polySurfaceShape68.pt[11].pz";
+connectAttr "polySurfaceShape68_pnts_12__pntx.o" "polySurfaceShape68.pt[12].px";
+connectAttr "polySurfaceShape68_pnts_12__pnty.o" "polySurfaceShape68.pt[12].py";
+connectAttr "polySurfaceShape68_pnts_12__pntz.o" "polySurfaceShape68.pt[12].pz";
+connectAttr "polyTweakUV19.out" "polySurfaceShape69.i";
+connectAttr "polyTweakUV19.uvtk[0]" "polySurfaceShape69.uvst[0].uvtw";
+connectAttr "polyTweakUV18.out" "polySurfaceShape70.i";
+connectAttr "polyTweakUV18.uvtk[0]" "polySurfaceShape70.uvst[0].uvtw";
+connectAttr "polyTweakUV17.out" "polySurfaceShape71.i";
+connectAttr "polyTweakUV17.uvtk[0]" "polySurfaceShape71.uvst[0].uvtw";
+connectAttr "polyTweakUV16.out" "polySurfaceShape72.i";
+connectAttr "polyTweakUV16.uvtk[0]" "polySurfaceShape72.uvst[0].uvtw";
+connectAttr "polySurfaceShape72_pnts_0__pntx.o" "polySurfaceShape72.pt[0].px";
+connectAttr "polySurfaceShape72_pnts_0__pnty.o" "polySurfaceShape72.pt[0].py";
+connectAttr "polySurfaceShape72_pnts_0__pntz.o" "polySurfaceShape72.pt[0].pz";
+connectAttr "polySurfaceShape72_pnts_1__pntx.o" "polySurfaceShape72.pt[1].px";
+connectAttr "polySurfaceShape72_pnts_1__pnty.o" "polySurfaceShape72.pt[1].py";
+connectAttr "polySurfaceShape72_pnts_1__pntz.o" "polySurfaceShape72.pt[1].pz";
+connectAttr "polySurfaceShape72_pnts_2__pntx.o" "polySurfaceShape72.pt[2].px";
+connectAttr "polySurfaceShape72_pnts_2__pnty.o" "polySurfaceShape72.pt[2].py";
+connectAttr "polySurfaceShape72_pnts_2__pntz.o" "polySurfaceShape72.pt[2].pz";
+connectAttr "polySurfaceShape72_pnts_3__pntx.o" "polySurfaceShape72.pt[3].px";
+connectAttr "polySurfaceShape72_pnts_3__pnty.o" "polySurfaceShape72.pt[3].py";
+connectAttr "polySurfaceShape72_pnts_3__pntz.o" "polySurfaceShape72.pt[3].pz";
+connectAttr "polySurfaceShape72_pnts_4__pntx.o" "polySurfaceShape72.pt[4].px";
+connectAttr "polySurfaceShape72_pnts_4__pnty.o" "polySurfaceShape72.pt[4].py";
+connectAttr "polySurfaceShape72_pnts_4__pntz.o" "polySurfaceShape72.pt[4].pz";
+connectAttr "polySurfaceShape72_pnts_5__pntx.o" "polySurfaceShape72.pt[5].px";
+connectAttr "polySurfaceShape72_pnts_5__pnty.o" "polySurfaceShape72.pt[5].py";
+connectAttr "polySurfaceShape72_pnts_5__pntz.o" "polySurfaceShape72.pt[5].pz";
+connectAttr "polySurfaceShape72_pnts_6__pntx.o" "polySurfaceShape72.pt[6].px";
+connectAttr "polySurfaceShape72_pnts_6__pnty.o" "polySurfaceShape72.pt[6].py";
+connectAttr "polySurfaceShape72_pnts_6__pntz.o" "polySurfaceShape72.pt[6].pz";
+connectAttr "polySurfaceShape72_pnts_7__pntx.o" "polySurfaceShape72.pt[7].px";
+connectAttr "polySurfaceShape72_pnts_7__pnty.o" "polySurfaceShape72.pt[7].py";
+connectAttr "polySurfaceShape72_pnts_7__pntz.o" "polySurfaceShape72.pt[7].pz";
+connectAttr "polySurfaceShape72_pnts_8__pntx.o" "polySurfaceShape72.pt[8].px";
+connectAttr "polySurfaceShape72_pnts_8__pnty.o" "polySurfaceShape72.pt[8].py";
+connectAttr "polySurfaceShape72_pnts_8__pntz.o" "polySurfaceShape72.pt[8].pz";
+connectAttr "polySurfaceShape72_pnts_9__pntx.o" "polySurfaceShape72.pt[9].px";
+connectAttr "polySurfaceShape72_pnts_9__pnty.o" "polySurfaceShape72.pt[9].py";
+connectAttr "polySurfaceShape72_pnts_9__pntz.o" "polySurfaceShape72.pt[9].pz";
+connectAttr "polySurfaceShape72_pnts_10__pntx.o" "polySurfaceShape72.pt[10].px";
+connectAttr "polySurfaceShape72_pnts_10__pnty.o" "polySurfaceShape72.pt[10].py";
+connectAttr "polySurfaceShape72_pnts_10__pntz.o" "polySurfaceShape72.pt[10].pz";
+connectAttr "polySurfaceShape72_pnts_11__pntx.o" "polySurfaceShape72.pt[11].px";
+connectAttr "polySurfaceShape72_pnts_11__pnty.o" "polySurfaceShape72.pt[11].py";
+connectAttr "polySurfaceShape72_pnts_11__pntz.o" "polySurfaceShape72.pt[11].pz";
+connectAttr "polySurfaceShape72_pnts_12__pntx.o" "polySurfaceShape72.pt[12].px";
+connectAttr "polySurfaceShape72_pnts_12__pnty.o" "polySurfaceShape72.pt[12].py";
+connectAttr "polySurfaceShape72_pnts_12__pntz.o" "polySurfaceShape72.pt[12].pz";
+connectAttr "polyTweakUV15.out" "polySurfaceShape73.i";
+connectAttr "polyTweakUV15.uvtk[0]" "polySurfaceShape73.uvst[0].uvtw";
+connectAttr "polyTweakUV14.out" "polySurfaceShape74.i";
+connectAttr "polyTweakUV14.uvtk[0]" "polySurfaceShape74.uvst[0].uvtw";
+connectAttr "polyTweakUV13.out" "polySurfaceShape75.i";
+connectAttr "polyTweakUV13.uvtk[0]" "polySurfaceShape75.uvst[0].uvtw";
+connectAttr "polyTweakUV12.out" "polySurfaceShape76.i";
+connectAttr "polyTweakUV12.uvtk[0]" "polySurfaceShape76.uvst[0].uvtw";
+connectAttr "polyTweakUV11.out" "polySurfaceShape77.i";
+connectAttr "polyTweakUV11.uvtk[0]" "polySurfaceShape77.uvst[0].uvtw";
+connectAttr "polyTweakUV10.out" "polySurfaceShape78.i";
+connectAttr "polyTweakUV10.uvtk[0]" "polySurfaceShape78.uvst[0].uvtw";
+connectAttr "groupId279.id" "polySurfaceShape79.iog.og[1].gid";
+connectAttr "textureEditorIsolateSelectSet.mwc" "polySurfaceShape79.iog.og[1].gco"
+		;
+connectAttr "groupParts8.og" "polySurfaceShape79.i";
+connectAttr "polyTweakUV9.uvtk[0]" "polySurfaceShape79.uvst[0].uvtw";
+connectAttr "polyTweakUV8.out" "polySurfaceShape80.i";
+connectAttr "polyTweakUV8.uvtk[0]" "polySurfaceShape80.uvst[0].uvtw";
+connectAttr "polyTweakUV7.out" "polySurfaceShape81.i";
+connectAttr "polyTweakUV7.uvtk[0]" "polySurfaceShape81.uvst[0].uvtw";
+connectAttr "polyTweakUV6.out" "polySurfaceShape82.i";
+connectAttr "polyTweakUV6.uvtk[0]" "polySurfaceShape82.uvst[0].uvtw";
+connectAttr "polyTweakUV5.out" "polySurfaceShape83.i";
+connectAttr "polyTweakUV5.uvtk[0]" "polySurfaceShape83.uvst[0].uvtw";
+connectAttr "polyTweakUV29.out" "polySurfaceShape84.i";
+connectAttr "polyTweakUV29.uvtk[0]" "polySurfaceShape84.uvst[0].uvtw";
+connectAttr "polyTweakUV28.out" "polySurfaceShape85.i";
+connectAttr "polyTweakUV28.uvtk[0]" "polySurfaceShape85.uvst[0].uvtw";
+connectAttr "polyTweakUV30.out" "polySurfaceShape94.i";
+connectAttr "polyTweakUV30.uvtk[0]" "polySurfaceShape94.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Mimic2SG.message" ":defaultLightSet.message";
@@ -54457,6 +58022,80 @@ relationship "link" ":lightLinker1" "aiStandardSurface4SG.message" ":defaultLigh
 relationship "link" ":lightLinker1" "aiStandardSurface5SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "aiStandardSurface6SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "aiStandardSurface7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface1SG1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface8SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface9SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface10SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface11SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface12SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface13SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface14SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface15SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface16SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface17SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface18SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface19SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface20SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface21SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface22SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface23SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface24SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface25SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface26SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface27SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface36SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface95SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface96SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface97SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface98SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface99SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface100SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface101SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface102SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface37SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface38SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface39SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface40SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface41SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface42SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface43SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface44SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface45SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface46SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface47SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface48SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface49SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface50SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface51SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface52SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface53SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface54SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface55SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface56SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface57SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:polySurface58SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:GumSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:TongueSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:GoldSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:DiamondSG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:Mimic2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:Mimic3:Mimic.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:Mimic2SG1.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:Mimic2SG2.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:Mimic2SG3.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface7SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Mimic2SG.message" ":defaultLightSet.message";
@@ -54471,6 +58110,80 @@ relationship "shadowLink" ":lightLinker1" "aiStandardSurface4SG.message" ":defau
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface5SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface6SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "aiStandardSurface7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface1SG1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface8SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface9SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface10SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface11SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface12SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface13SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface14SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface15SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface16SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface17SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface18SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface19SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface20SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface21SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface22SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface23SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface24SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface25SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface26SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface27SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface36SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface95SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface96SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface97SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface98SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface99SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface100SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface101SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface102SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface37SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface38SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface39SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface40SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface41SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface42SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface43SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface44SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface45SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface46SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface47SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface48SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface49SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface50SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface51SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface52SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface53SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface54SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface55SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface56SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface57SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:polySurface58SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:GumSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:TongueSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:GoldSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:DiamondSG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:Mimic2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:Mimic3:Mimic.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:Mimic2SG1.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:Mimic2SG2.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:Mimic2SG3.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Mimic_Rig:Mimic:aiStandardSurface7SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "Mimic.oc" "Mimic2SG.ss";
@@ -54589,6 +58302,1368 @@ connectAttr "Metal02Mat.msg" "materialInfo11.m";
 connectAttr "Metal02Mat.msg" "materialInfo11.t" -na;
 connectAttr "polySurfaceShape103.o" "polyMapCut1.ip";
 connectAttr "polyMapCut1.out" "polyTweakUV1.ip";
+connectAttr "layerManager.dli[1]" "Mimic_Rig:Geo_Lyr.id";
+connectAttr "layerManager.dli[2]" "Mimic_Rig:Jnt_Lyr.id";
+connectAttr "layerManager.dli[3]" "Mimic_Rig:Ctrl_Lyr.id";
+connectAttr "Mimic_Rig:WoodMat.out" "Mimic_Rig:polySurface1SG.ss";
+connectAttr "Mimic_Rig:polySurface1SG.msg" "Mimic_Rig:materialInfo1.sg";
+connectAttr "Mimic_Rig:WoodMat.msg" "Mimic_Rig:materialInfo1.m";
+connectAttr "Mimic_Rig:WoodMat.msg" "Mimic_Rig:materialInfo1.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface1SG1.ss";
+connectAttr "Mimic_Rig:polySurface1SG1.msg" "Mimic_Rig:materialInfo2.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo2.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo2.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface3SG.ss";
+connectAttr "Mimic_Rig:polySurface3SG.msg" "Mimic_Rig:materialInfo3.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo3.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo3.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface4SG.ss";
+connectAttr "Mimic_Rig:polySurface4SG.msg" "Mimic_Rig:materialInfo4.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo4.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo4.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface5SG.ss";
+connectAttr "Mimic_Rig:polySurface5SG.msg" "Mimic_Rig:materialInfo5.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo5.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo5.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface6SG.ss";
+connectAttr "Mimic_Rig:polySurface6SG.msg" "Mimic_Rig:materialInfo6.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo6.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo6.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface7SG.ss";
+connectAttr "Mimic_Rig:polySurface7SG.msg" "Mimic_Rig:materialInfo7.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo7.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo7.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface8SG.ss";
+connectAttr "Mimic_Rig:polySurface8SG.msg" "Mimic_Rig:materialInfo8.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo8.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo8.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface9SG.ss";
+connectAttr "Mimic_Rig:polySurface9SG.msg" "Mimic_Rig:materialInfo9.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo9.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo9.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface10SG.ss";
+connectAttr "Mimic_Rig:polySurface10SG.msg" "Mimic_Rig:materialInfo10.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo10.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo10.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface11SG.ss";
+connectAttr "Mimic_Rig:polySurface11SG.msg" "Mimic_Rig:materialInfo11.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo11.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo11.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface12SG.ss";
+connectAttr "Mimic_Rig:polySurface12SG.msg" "Mimic_Rig:materialInfo12.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo12.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo12.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface13SG.ss";
+connectAttr "Mimic_Rig:polySurface13SG.msg" "Mimic_Rig:materialInfo13.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo13.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo13.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface14SG.ss";
+connectAttr "Mimic_Rig:polySurface14SG.msg" "Mimic_Rig:materialInfo14.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo14.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo14.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface15SG.ss";
+connectAttr "Mimic_Rig:polySurface15SG.msg" "Mimic_Rig:materialInfo15.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo15.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo15.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface16SG.ss";
+connectAttr "Mimic_Rig:polySurface16SG.msg" "Mimic_Rig:materialInfo16.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo16.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo16.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface17SG.ss";
+connectAttr "Mimic_Rig:polySurface17SG.msg" "Mimic_Rig:materialInfo17.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo17.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo17.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface18SG.ss";
+connectAttr "Mimic_Rig:polySurface18SG.msg" "Mimic_Rig:materialInfo18.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo18.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo18.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface19SG.ss";
+connectAttr "Mimic_Rig:polySurface19SG.msg" "Mimic_Rig:materialInfo19.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo19.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo19.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface20SG.ss";
+connectAttr "Mimic_Rig:polySurface20SG.msg" "Mimic_Rig:materialInfo20.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo20.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo20.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface21SG.ss";
+connectAttr "Mimic_Rig:polySurface21SG.msg" "Mimic_Rig:materialInfo21.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo21.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo21.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface22SG.ss";
+connectAttr "Mimic_Rig:polySurface22SG.msg" "Mimic_Rig:materialInfo22.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo22.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo22.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface23SG.ss";
+connectAttr "Mimic_Rig:polySurface23SG.msg" "Mimic_Rig:materialInfo23.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo23.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo23.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface24SG.ss";
+connectAttr "Mimic_Rig:polySurface24SG.msg" "Mimic_Rig:materialInfo24.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo24.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo24.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface25SG.ss";
+connectAttr "Mimic_Rig:polySurface25SG.msg" "Mimic_Rig:materialInfo25.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo25.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo25.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface26SG.ss";
+connectAttr "Mimic_Rig:polySurface26SG.msg" "Mimic_Rig:materialInfo26.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo26.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo26.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface27SG.ss";
+connectAttr "Mimic_Rig:polySurface27SG.msg" "Mimic_Rig:materialInfo27.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo27.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo27.t" -na;
+connectAttr "Mimic_Rig:WoodMat.out" "Mimic_Rig:polySurface36SG.ss";
+connectAttr "Mimic_Rig:polySurface36SG.msg" "Mimic_Rig:materialInfo28.sg";
+connectAttr "Mimic_Rig:WoodMat.msg" "Mimic_Rig:materialInfo28.m";
+connectAttr "Mimic_Rig:WoodMat.msg" "Mimic_Rig:materialInfo28.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface95SG.ss";
+connectAttr "Mimic_Rig:polySurface95SG.msg" "Mimic_Rig:materialInfo29.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo29.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo29.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface96SG.ss";
+connectAttr "Mimic_Rig:polySurface96SG.msg" "Mimic_Rig:materialInfo30.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo30.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo30.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface97SG.ss";
+connectAttr "Mimic_Rig:polySurface97SG.msg" "Mimic_Rig:materialInfo31.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo31.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo31.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface98SG.ss";
+connectAttr "Mimic_Rig:polySurface98SG.msg" "Mimic_Rig:materialInfo32.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo32.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo32.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface99SG.ss";
+connectAttr "Mimic_Rig:polySurface99SG.msg" "Mimic_Rig:materialInfo33.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo33.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo33.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface100SG.ss";
+connectAttr "Mimic_Rig:polySurface100SG.msg" "Mimic_Rig:materialInfo34.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo34.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo34.t" -na;
+connectAttr "Mimic_Rig:MetalMat.out" "Mimic_Rig:polySurface101SG.ss";
+connectAttr "Mimic_Rig:polySurface101SG.msg" "Mimic_Rig:materialInfo35.sg";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo35.m";
+connectAttr "Mimic_Rig:MetalMat.msg" "Mimic_Rig:materialInfo35.t" -na;
+connectAttr "Mimic_Rig:Metal02Mat.out" "Mimic_Rig:polySurface102SG.ss";
+connectAttr "Mimic_Rig:polySurface102SG.msg" "Mimic_Rig:materialInfo36.sg";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo36.m";
+connectAttr "Mimic_Rig:Metal02Mat.msg" "Mimic_Rig:materialInfo36.t" -na;
+connectAttr "Mimic_Rig:MouthMat.out" "Mimic_Rig:polySurface37SG.ss";
+connectAttr "Mimic_Rig:polySurface37SG.msg" "Mimic_Rig:materialInfo37.sg";
+connectAttr "Mimic_Rig:MouthMat.msg" "Mimic_Rig:materialInfo37.m";
+connectAttr "Mimic_Rig:MouthMat.msg" "Mimic_Rig:materialInfo37.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface38SG.ss";
+connectAttr "Mimic_Rig:polySurface38SG.msg" "Mimic_Rig:materialInfo38.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo38.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo38.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface39SG.ss";
+connectAttr "Mimic_Rig:polySurface39SG.msg" "Mimic_Rig:materialInfo39.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo39.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo39.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface40SG.ss";
+connectAttr "Mimic_Rig:polySurface40SG.msg" "Mimic_Rig:materialInfo40.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo40.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo40.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface41SG.ss";
+connectAttr "Mimic_Rig:polySurface41SG.msg" "Mimic_Rig:materialInfo41.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo41.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo41.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface42SG.ss";
+connectAttr "Mimic_Rig:polySurface42SG.msg" "Mimic_Rig:materialInfo42.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo42.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo42.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface43SG.ss";
+connectAttr "Mimic_Rig:polySurface43SG.msg" "Mimic_Rig:materialInfo43.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo43.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo43.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface44SG.ss";
+connectAttr "Mimic_Rig:polySurface44SG.msg" "Mimic_Rig:materialInfo44.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo44.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo44.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface45SG.ss";
+connectAttr "Mimic_Rig:polySurface45SG.msg" "Mimic_Rig:materialInfo45.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo45.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo45.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface46SG.ss";
+connectAttr "Mimic_Rig:polySurface46SG.msg" "Mimic_Rig:materialInfo46.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo46.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo46.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface47SG.ss";
+connectAttr "Mimic_Rig:polySurface47SG.msg" "Mimic_Rig:materialInfo47.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo47.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo47.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface48SG.ss";
+connectAttr "Mimic_Rig:polySurface48SG.msg" "Mimic_Rig:materialInfo48.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo48.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo48.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface49SG.ss";
+connectAttr "Mimic_Rig:polySurface49SG.msg" "Mimic_Rig:materialInfo49.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo49.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo49.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface50SG.ss";
+connectAttr "Mimic_Rig:polySurface50SG.msg" "Mimic_Rig:materialInfo50.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo50.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo50.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface51SG.ss";
+connectAttr "Mimic_Rig:polySurface51SG.msg" "Mimic_Rig:materialInfo51.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo51.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo51.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface52SG.ss";
+connectAttr "Mimic_Rig:polySurface52SG.msg" "Mimic_Rig:materialInfo52.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo52.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo52.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface53SG.ss";
+connectAttr "Mimic_Rig:polySurface53SG.msg" "Mimic_Rig:materialInfo53.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo53.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo53.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface54SG.ss";
+connectAttr "Mimic_Rig:polySurface54SG.msg" "Mimic_Rig:materialInfo54.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo54.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo54.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface55SG.ss";
+connectAttr "Mimic_Rig:polySurface55SG.msg" "Mimic_Rig:materialInfo55.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo55.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo55.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface56SG.ss";
+connectAttr "Mimic_Rig:polySurface56SG.msg" "Mimic_Rig:materialInfo56.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo56.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo56.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface57SG.ss";
+connectAttr "Mimic_Rig:polySurface57SG.msg" "Mimic_Rig:materialInfo57.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo57.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo57.t" -na;
+connectAttr "Mimic_Rig:TeethMat.out" "Mimic_Rig:polySurface58SG.ss";
+connectAttr "Mimic_Rig:polySurface58SG.msg" "Mimic_Rig:materialInfo58.sg";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo58.m";
+connectAttr "Mimic_Rig:TeethMat.msg" "Mimic_Rig:materialInfo58.t" -na;
+connectAttr "Mimic_Rig:MouthMat.out" "Mimic_Rig:GumSG.ss";
+connectAttr "Mimic_Rig:GumSG.msg" "Mimic_Rig:materialInfo59.sg";
+connectAttr "Mimic_Rig:MouthMat.msg" "Mimic_Rig:materialInfo59.m";
+connectAttr "Mimic_Rig:MouthMat.msg" "Mimic_Rig:materialInfo59.t" -na;
+connectAttr "Mimic_Rig:MouthMat.out" "Mimic_Rig:TongueSG.ss";
+connectAttr "Mimic_Rig:TongueSG.msg" "Mimic_Rig:materialInfo60.sg";
+connectAttr "Mimic_Rig:MouthMat.msg" "Mimic_Rig:materialInfo60.m";
+connectAttr "Mimic_Rig:MouthMat.msg" "Mimic_Rig:materialInfo60.t" -na;
+connectAttr "Mimic_Rig:GoldCoinMat.out" "Mimic_Rig:GoldSG.ss";
+connectAttr "Mimic_Rig:GoldSG.msg" "Mimic_Rig:materialInfo61.sg";
+connectAttr "Mimic_Rig:GoldCoinMat.msg" "Mimic_Rig:materialInfo61.m";
+connectAttr "Mimic_Rig:GoldCoinMat.msg" "Mimic_Rig:materialInfo61.t" -na;
+connectAttr "Mimic_Rig:DiamondMat.out" "Mimic_Rig:DiamondSG.ss";
+connectAttr "Mimic_Rig:DiamondSG.msg" "Mimic_Rig:materialInfo62.sg";
+connectAttr "Mimic_Rig:DiamondMat.msg" "Mimic_Rig:materialInfo62.m";
+connectAttr "Mimic_Rig:DiamondMat.msg" "Mimic_Rig:materialInfo62.t" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic.oc" "Mimic_Rig:Mimic:Mimic2SG.ss";
+connectAttr "Mimic_Rig:Mimic:Mimic2SG.msg" "Mimic_Rig:Mimic:materialInfo1.sg";
+connectAttr "Mimic_Rig:Mimic:Mimic.msg" "Mimic_Rig:Mimic:materialInfo1.m";
+connectAttr "Mimic_Rig:Mimic:Mimic3:Mimic1.oc" "Mimic_Rig:Mimic:Mimic3:Mimic.ss"
+		;
+connectAttr "Mimic_Rig:Mimic:Mimic3:Mimic.msg" "Mimic_Rig:Mimic:Mimic3:materialInfo1.sg"
+		;
+connectAttr "Mimic_Rig:Mimic:Mimic3:Mimic1.msg" "Mimic_Rig:Mimic:Mimic3:materialInfo1.m"
+		;
+connectAttr "Mimic_Rig:Mimic:Mimic4.oc" "Mimic_Rig:Mimic:Mimic2SG1.ss";
+connectAttr "Mimic_Rig:Mimic:Mimic2SG1.msg" "Mimic_Rig:Mimic:materialInfo2.sg";
+connectAttr "Mimic_Rig:Mimic:Mimic4.msg" "Mimic_Rig:Mimic:materialInfo2.m";
+connectAttr "Mimic_Rig:Mimic:Mimic5.oc" "Mimic_Rig:Mimic:Mimic2SG2.ss";
+connectAttr "Mimic_Rig:Mimic:Mimic2SG2.msg" "Mimic_Rig:Mimic:materialInfo3.sg";
+connectAttr "Mimic_Rig:Mimic:Mimic5.msg" "Mimic_Rig:Mimic:materialInfo3.m";
+connectAttr "Mimic_Rig:Mimic:Mimic6.oc" "Mimic_Rig:Mimic:Mimic2SG3.ss";
+connectAttr "Mimic_Rig:Mimic:Mimic2SG3.msg" "Mimic_Rig:Mimic:materialInfo4.sg";
+connectAttr "Mimic_Rig:Mimic:Mimic6.msg" "Mimic_Rig:Mimic:materialInfo4.m";
+connectAttr "Mimic_Rig:file21.oc" "Mimic_Rig:Mimic:WoodMat.base_color";
+connectAttr "Mimic_Rig:file22.oa" "Mimic_Rig:Mimic:WoodMat.metalness";
+connectAttr "Mimic_Rig:file23.oa" "Mimic_Rig:Mimic:WoodMat.specular_roughness";
+connectAttr "Mimic_Rig:file24.oc" "Mimic_Rig:Mimic:WoodMat.emission_color";
+connectAttr "Mimic_Rig:bump2d5.o" "Mimic_Rig:Mimic:WoodMat.n";
+connectAttr "Mimic_Rig:Mimic:WoodMat.out" "Mimic_Rig:Mimic:aiStandardSurface1SG.ss"
+		;
+connectAttr "polySurfaceShape94.iog" "Mimic_Rig:Mimic:aiStandardSurface1SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape59.iog.og[3]" "Mimic_Rig:Mimic:aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "polySurfaceShape59.ciog.cog[1]" "Mimic_Rig:Mimic:aiStandardSurface1SG.dsm"
+		 -na;
+connectAttr "groupId303.msg" "Mimic_Rig:Mimic:aiStandardSurface1SG.gn" -na;
+connectAttr "groupId304.msg" "Mimic_Rig:Mimic:aiStandardSurface1SG.gn" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface1SG.msg" "Mimic_Rig:Mimic:materialInfo5.sg"
+		;
+connectAttr "Mimic_Rig:Mimic:WoodMat.msg" "Mimic_Rig:Mimic:materialInfo5.m";
+connectAttr "Mimic_Rig:file21.msg" "Mimic_Rig:Mimic:materialInfo5.t" -na;
+connectAttr "Mimic_Rig:file26.oc" "Mimic_Rig:Mimic:MouthMat.base_color";
+connectAttr "Mimic_Rig:file27.oa" "Mimic_Rig:Mimic:MouthMat.metalness";
+connectAttr "Mimic_Rig:file28.oa" "Mimic_Rig:Mimic:MouthMat.specular_roughness";
+connectAttr "Mimic_Rig:file29.oc" "Mimic_Rig:Mimic:MouthMat.emission_color";
+connectAttr "Mimic_Rig:bump2d6.o" "Mimic_Rig:Mimic:MouthMat.n";
+connectAttr "Mimic_Rig:Mimic:MouthMat.out" "Mimic_Rig:Mimic:aiStandardSurface2SG.ss"
+		;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface2SG.msg" "Mimic_Rig:Mimic:materialInfo6.sg"
+		;
+connectAttr "Mimic_Rig:Mimic:MouthMat.msg" "Mimic_Rig:Mimic:materialInfo6.m";
+connectAttr "Mimic_Rig:file26.msg" "Mimic_Rig:Mimic:materialInfo6.t" -na;
+connectAttr "Mimic_Rig:file16.oc" "Mimic_Rig:Mimic:TeethMat.base_color";
+connectAttr "Mimic_Rig:file17.oa" "Mimic_Rig:Mimic:TeethMat.metalness";
+connectAttr "Mimic_Rig:file18.oa" "Mimic_Rig:Mimic:TeethMat.specular_roughness";
+connectAttr "Mimic_Rig:file19.oc" "Mimic_Rig:Mimic:TeethMat.emission_color";
+connectAttr "Mimic_Rig:bump2d4.o" "Mimic_Rig:Mimic:TeethMat.n";
+connectAttr "Mimic_Rig:Mimic:TeethMat.out" "Mimic_Rig:Mimic:aiStandardSurface3SG.ss"
+		;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface3SG.msg" "Mimic_Rig:Mimic:materialInfo7.sg"
+		;
+connectAttr "Mimic_Rig:Mimic:TeethMat.msg" "Mimic_Rig:Mimic:materialInfo7.m";
+connectAttr "Mimic_Rig:Mimic:TeethMat.msg" "Mimic_Rig:Mimic:materialInfo7.t" -na
+		;
+connectAttr "Mimic_Rig:file31.oc" "Mimic_Rig:Mimic:GoldCoinMat.base_color";
+connectAttr "Mimic_Rig:file32.oa" "Mimic_Rig:Mimic:GoldCoinMat.metalness";
+connectAttr "Mimic_Rig:file33.oa" "Mimic_Rig:Mimic:GoldCoinMat.specular_roughness"
+		;
+connectAttr "Mimic_Rig:file34.oc" "Mimic_Rig:Mimic:GoldCoinMat.emission_color";
+connectAttr "Mimic_Rig:bump2d7.o" "Mimic_Rig:Mimic:GoldCoinMat.n";
+connectAttr "Mimic_Rig:Mimic:GoldCoinMat.out" "Mimic_Rig:Mimic:aiStandardSurface4SG.ss"
+		;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface4SG.msg" "Mimic_Rig:Mimic:materialInfo8.sg"
+		;
+connectAttr "Mimic_Rig:Mimic:GoldCoinMat.msg" "Mimic_Rig:Mimic:materialInfo8.m";
+connectAttr "Mimic_Rig:Mimic:GoldCoinMat.msg" "Mimic_Rig:Mimic:materialInfo8.t" 
+		-na;
+connectAttr "Mimic_Rig:file1.oc" "Mimic_Rig:Mimic:DiamondMat.base_color";
+connectAttr "Mimic_Rig:file2.oa" "Mimic_Rig:Mimic:DiamondMat.metalness";
+connectAttr "Mimic_Rig:file3.oa" "Mimic_Rig:Mimic:DiamondMat.specular_roughness"
+		;
+connectAttr "Mimic_Rig:file4.oc" "Mimic_Rig:Mimic:DiamondMat.emission_color";
+connectAttr "Mimic_Rig:bump2d1.o" "Mimic_Rig:Mimic:DiamondMat.n";
+connectAttr "Mimic_Rig:Mimic:DiamondMat.out" "Mimic_Rig:Mimic:aiStandardSurface5SG.ss"
+		;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface5SG.msg" "Mimic_Rig:Mimic:materialInfo9.sg"
+		;
+connectAttr "Mimic_Rig:Mimic:DiamondMat.msg" "Mimic_Rig:Mimic:materialInfo9.m";
+connectAttr "Mimic_Rig:file1.msg" "Mimic_Rig:Mimic:materialInfo9.t" -na;
+connectAttr "Mimic_Rig:file11.oc" "Mimic_Rig:Mimic:MetalMat.base_color";
+connectAttr "Mimic_Rig:file12.oa" "Mimic_Rig:Mimic:MetalMat.metalness";
+connectAttr "Mimic_Rig:file13.oa" "Mimic_Rig:Mimic:MetalMat.specular_roughness";
+connectAttr "Mimic_Rig:file14.oc" "Mimic_Rig:Mimic:MetalMat.emission_color";
+connectAttr "Mimic_Rig:bump2d3.o" "Mimic_Rig:Mimic:MetalMat.n";
+connectAttr "Mimic_Rig:Mimic:MetalMat.out" "Mimic_Rig:Mimic:aiStandardSurface6SG.ss"
+		;
+connectAttr "polySurfaceShape88.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape90.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape86.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape92.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape93.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape89.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape87.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape91.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape84.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape85.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape62.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape63.iog" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape59.iog.og[4]" "Mimic_Rig:Mimic:aiStandardSurface6SG.dsm"
+		 -na;
+connectAttr "groupId305.msg" "Mimic_Rig:Mimic:aiStandardSurface6SG.gn" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface6SG.msg" "Mimic_Rig:Mimic:materialInfo10.sg"
+		;
+connectAttr "Mimic_Rig:Mimic:MetalMat.msg" "Mimic_Rig:Mimic:materialInfo10.m";
+connectAttr "Mimic_Rig:file11.msg" "Mimic_Rig:Mimic:materialInfo10.t" -na;
+connectAttr "Mimic_Rig:file6.oc" "Mimic_Rig:Mimic:Metal02Mat.base_color";
+connectAttr "Mimic_Rig:file7.oa" "Mimic_Rig:Mimic:Metal02Mat.metalness";
+connectAttr "Mimic_Rig:file8.oa" "Mimic_Rig:Mimic:Metal02Mat.specular_roughness"
+		;
+connectAttr "Mimic_Rig:file9.oc" "Mimic_Rig:Mimic:Metal02Mat.emission_color";
+connectAttr "Mimic_Rig:bump2d2.o" "Mimic_Rig:Mimic:Metal02Mat.n";
+connectAttr "Mimic_Rig:Mimic:Metal02Mat.out" "Mimic_Rig:Mimic:aiStandardSurface7SG.ss"
+		;
+connectAttr "polySurfaceShape71.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape72.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape73.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape83.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape82.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape81.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape64.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape65.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape66.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape67.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape68.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape70.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape69.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape80.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape79.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape78.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape77.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape76.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape75.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape74.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape61.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "polySurfaceShape60.iog" "Mimic_Rig:Mimic:aiStandardSurface7SG.dsm" 
+		-na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface7SG.msg" "Mimic_Rig:Mimic:materialInfo11.sg"
+		;
+connectAttr "Mimic_Rig:Mimic:Metal02Mat.msg" "Mimic_Rig:Mimic:materialInfo11.m";
+connectAttr "Mimic_Rig:file6.msg" "Mimic_Rig:Mimic:materialInfo11.t" -na;
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file1.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file1.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file1.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file1.ws";
+connectAttr "Mimic_Rig:place2dTexture1.c" "Mimic_Rig:file1.c";
+connectAttr "Mimic_Rig:place2dTexture1.tf" "Mimic_Rig:file1.tf";
+connectAttr "Mimic_Rig:place2dTexture1.rf" "Mimic_Rig:file1.rf";
+connectAttr "Mimic_Rig:place2dTexture1.mu" "Mimic_Rig:file1.mu";
+connectAttr "Mimic_Rig:place2dTexture1.mv" "Mimic_Rig:file1.mv";
+connectAttr "Mimic_Rig:place2dTexture1.s" "Mimic_Rig:file1.s";
+connectAttr "Mimic_Rig:place2dTexture1.wu" "Mimic_Rig:file1.wu";
+connectAttr "Mimic_Rig:place2dTexture1.wv" "Mimic_Rig:file1.wv";
+connectAttr "Mimic_Rig:place2dTexture1.re" "Mimic_Rig:file1.re";
+connectAttr "Mimic_Rig:place2dTexture1.of" "Mimic_Rig:file1.of";
+connectAttr "Mimic_Rig:place2dTexture1.r" "Mimic_Rig:file1.ro";
+connectAttr "Mimic_Rig:place2dTexture1.n" "Mimic_Rig:file1.n";
+connectAttr "Mimic_Rig:place2dTexture1.vt1" "Mimic_Rig:file1.vt1";
+connectAttr "Mimic_Rig:place2dTexture1.vt2" "Mimic_Rig:file1.vt2";
+connectAttr "Mimic_Rig:place2dTexture1.vt3" "Mimic_Rig:file1.vt3";
+connectAttr "Mimic_Rig:place2dTexture1.vc1" "Mimic_Rig:file1.vc1";
+connectAttr "Mimic_Rig:place2dTexture1.o" "Mimic_Rig:file1.uv";
+connectAttr "Mimic_Rig:place2dTexture1.ofs" "Mimic_Rig:file1.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file2.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file2.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file2.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file2.ws";
+connectAttr "Mimic_Rig:place2dTexture2.c" "Mimic_Rig:file2.c";
+connectAttr "Mimic_Rig:place2dTexture2.tf" "Mimic_Rig:file2.tf";
+connectAttr "Mimic_Rig:place2dTexture2.rf" "Mimic_Rig:file2.rf";
+connectAttr "Mimic_Rig:place2dTexture2.mu" "Mimic_Rig:file2.mu";
+connectAttr "Mimic_Rig:place2dTexture2.mv" "Mimic_Rig:file2.mv";
+connectAttr "Mimic_Rig:place2dTexture2.s" "Mimic_Rig:file2.s";
+connectAttr "Mimic_Rig:place2dTexture2.wu" "Mimic_Rig:file2.wu";
+connectAttr "Mimic_Rig:place2dTexture2.wv" "Mimic_Rig:file2.wv";
+connectAttr "Mimic_Rig:place2dTexture2.re" "Mimic_Rig:file2.re";
+connectAttr "Mimic_Rig:place2dTexture2.of" "Mimic_Rig:file2.of";
+connectAttr "Mimic_Rig:place2dTexture2.r" "Mimic_Rig:file2.ro";
+connectAttr "Mimic_Rig:place2dTexture2.n" "Mimic_Rig:file2.n";
+connectAttr "Mimic_Rig:place2dTexture2.vt1" "Mimic_Rig:file2.vt1";
+connectAttr "Mimic_Rig:place2dTexture2.vt2" "Mimic_Rig:file2.vt2";
+connectAttr "Mimic_Rig:place2dTexture2.vt3" "Mimic_Rig:file2.vt3";
+connectAttr "Mimic_Rig:place2dTexture2.vc1" "Mimic_Rig:file2.vc1";
+connectAttr "Mimic_Rig:place2dTexture2.o" "Mimic_Rig:file2.uv";
+connectAttr "Mimic_Rig:place2dTexture2.ofs" "Mimic_Rig:file2.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file3.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file3.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file3.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file3.ws";
+connectAttr "Mimic_Rig:place2dTexture3.c" "Mimic_Rig:file3.c";
+connectAttr "Mimic_Rig:place2dTexture3.tf" "Mimic_Rig:file3.tf";
+connectAttr "Mimic_Rig:place2dTexture3.rf" "Mimic_Rig:file3.rf";
+connectAttr "Mimic_Rig:place2dTexture3.mu" "Mimic_Rig:file3.mu";
+connectAttr "Mimic_Rig:place2dTexture3.mv" "Mimic_Rig:file3.mv";
+connectAttr "Mimic_Rig:place2dTexture3.s" "Mimic_Rig:file3.s";
+connectAttr "Mimic_Rig:place2dTexture3.wu" "Mimic_Rig:file3.wu";
+connectAttr "Mimic_Rig:place2dTexture3.wv" "Mimic_Rig:file3.wv";
+connectAttr "Mimic_Rig:place2dTexture3.re" "Mimic_Rig:file3.re";
+connectAttr "Mimic_Rig:place2dTexture3.of" "Mimic_Rig:file3.of";
+connectAttr "Mimic_Rig:place2dTexture3.r" "Mimic_Rig:file3.ro";
+connectAttr "Mimic_Rig:place2dTexture3.n" "Mimic_Rig:file3.n";
+connectAttr "Mimic_Rig:place2dTexture3.vt1" "Mimic_Rig:file3.vt1";
+connectAttr "Mimic_Rig:place2dTexture3.vt2" "Mimic_Rig:file3.vt2";
+connectAttr "Mimic_Rig:place2dTexture3.vt3" "Mimic_Rig:file3.vt3";
+connectAttr "Mimic_Rig:place2dTexture3.vc1" "Mimic_Rig:file3.vc1";
+connectAttr "Mimic_Rig:place2dTexture3.o" "Mimic_Rig:file3.uv";
+connectAttr "Mimic_Rig:place2dTexture3.ofs" "Mimic_Rig:file3.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file4.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file4.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file4.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file4.ws";
+connectAttr "Mimic_Rig:place2dTexture4.c" "Mimic_Rig:file4.c";
+connectAttr "Mimic_Rig:place2dTexture4.tf" "Mimic_Rig:file4.tf";
+connectAttr "Mimic_Rig:place2dTexture4.rf" "Mimic_Rig:file4.rf";
+connectAttr "Mimic_Rig:place2dTexture4.mu" "Mimic_Rig:file4.mu";
+connectAttr "Mimic_Rig:place2dTexture4.mv" "Mimic_Rig:file4.mv";
+connectAttr "Mimic_Rig:place2dTexture4.s" "Mimic_Rig:file4.s";
+connectAttr "Mimic_Rig:place2dTexture4.wu" "Mimic_Rig:file4.wu";
+connectAttr "Mimic_Rig:place2dTexture4.wv" "Mimic_Rig:file4.wv";
+connectAttr "Mimic_Rig:place2dTexture4.re" "Mimic_Rig:file4.re";
+connectAttr "Mimic_Rig:place2dTexture4.of" "Mimic_Rig:file4.of";
+connectAttr "Mimic_Rig:place2dTexture4.r" "Mimic_Rig:file4.ro";
+connectAttr "Mimic_Rig:place2dTexture4.n" "Mimic_Rig:file4.n";
+connectAttr "Mimic_Rig:place2dTexture4.vt1" "Mimic_Rig:file4.vt1";
+connectAttr "Mimic_Rig:place2dTexture4.vt2" "Mimic_Rig:file4.vt2";
+connectAttr "Mimic_Rig:place2dTexture4.vt3" "Mimic_Rig:file4.vt3";
+connectAttr "Mimic_Rig:place2dTexture4.vc1" "Mimic_Rig:file4.vc1";
+connectAttr "Mimic_Rig:place2dTexture4.o" "Mimic_Rig:file4.uv";
+connectAttr "Mimic_Rig:place2dTexture4.ofs" "Mimic_Rig:file4.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file5.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file5.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file5.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file5.ws";
+connectAttr "Mimic_Rig:place2dTexture5.c" "Mimic_Rig:file5.c";
+connectAttr "Mimic_Rig:place2dTexture5.tf" "Mimic_Rig:file5.tf";
+connectAttr "Mimic_Rig:place2dTexture5.rf" "Mimic_Rig:file5.rf";
+connectAttr "Mimic_Rig:place2dTexture5.mu" "Mimic_Rig:file5.mu";
+connectAttr "Mimic_Rig:place2dTexture5.mv" "Mimic_Rig:file5.mv";
+connectAttr "Mimic_Rig:place2dTexture5.s" "Mimic_Rig:file5.s";
+connectAttr "Mimic_Rig:place2dTexture5.wu" "Mimic_Rig:file5.wu";
+connectAttr "Mimic_Rig:place2dTexture5.wv" "Mimic_Rig:file5.wv";
+connectAttr "Mimic_Rig:place2dTexture5.re" "Mimic_Rig:file5.re";
+connectAttr "Mimic_Rig:place2dTexture5.of" "Mimic_Rig:file5.of";
+connectAttr "Mimic_Rig:place2dTexture5.r" "Mimic_Rig:file5.ro";
+connectAttr "Mimic_Rig:place2dTexture5.n" "Mimic_Rig:file5.n";
+connectAttr "Mimic_Rig:place2dTexture5.vt1" "Mimic_Rig:file5.vt1";
+connectAttr "Mimic_Rig:place2dTexture5.vt2" "Mimic_Rig:file5.vt2";
+connectAttr "Mimic_Rig:place2dTexture5.vt3" "Mimic_Rig:file5.vt3";
+connectAttr "Mimic_Rig:place2dTexture5.vc1" "Mimic_Rig:file5.vc1";
+connectAttr "Mimic_Rig:place2dTexture5.o" "Mimic_Rig:file5.uv";
+connectAttr "Mimic_Rig:place2dTexture5.ofs" "Mimic_Rig:file5.fs";
+connectAttr "Mimic_Rig:file5.oa" "Mimic_Rig:bump2d1.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file6.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file6.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file6.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file6.ws";
+connectAttr "Mimic_Rig:place2dTexture6.c" "Mimic_Rig:file6.c";
+connectAttr "Mimic_Rig:place2dTexture6.tf" "Mimic_Rig:file6.tf";
+connectAttr "Mimic_Rig:place2dTexture6.rf" "Mimic_Rig:file6.rf";
+connectAttr "Mimic_Rig:place2dTexture6.mu" "Mimic_Rig:file6.mu";
+connectAttr "Mimic_Rig:place2dTexture6.mv" "Mimic_Rig:file6.mv";
+connectAttr "Mimic_Rig:place2dTexture6.s" "Mimic_Rig:file6.s";
+connectAttr "Mimic_Rig:place2dTexture6.wu" "Mimic_Rig:file6.wu";
+connectAttr "Mimic_Rig:place2dTexture6.wv" "Mimic_Rig:file6.wv";
+connectAttr "Mimic_Rig:place2dTexture6.re" "Mimic_Rig:file6.re";
+connectAttr "Mimic_Rig:place2dTexture6.of" "Mimic_Rig:file6.of";
+connectAttr "Mimic_Rig:place2dTexture6.r" "Mimic_Rig:file6.ro";
+connectAttr "Mimic_Rig:place2dTexture6.n" "Mimic_Rig:file6.n";
+connectAttr "Mimic_Rig:place2dTexture6.vt1" "Mimic_Rig:file6.vt1";
+connectAttr "Mimic_Rig:place2dTexture6.vt2" "Mimic_Rig:file6.vt2";
+connectAttr "Mimic_Rig:place2dTexture6.vt3" "Mimic_Rig:file6.vt3";
+connectAttr "Mimic_Rig:place2dTexture6.vc1" "Mimic_Rig:file6.vc1";
+connectAttr "Mimic_Rig:place2dTexture6.o" "Mimic_Rig:file6.uv";
+connectAttr "Mimic_Rig:place2dTexture6.ofs" "Mimic_Rig:file6.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file7.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file7.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file7.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file7.ws";
+connectAttr "Mimic_Rig:place2dTexture7.c" "Mimic_Rig:file7.c";
+connectAttr "Mimic_Rig:place2dTexture7.tf" "Mimic_Rig:file7.tf";
+connectAttr "Mimic_Rig:place2dTexture7.rf" "Mimic_Rig:file7.rf";
+connectAttr "Mimic_Rig:place2dTexture7.mu" "Mimic_Rig:file7.mu";
+connectAttr "Mimic_Rig:place2dTexture7.mv" "Mimic_Rig:file7.mv";
+connectAttr "Mimic_Rig:place2dTexture7.s" "Mimic_Rig:file7.s";
+connectAttr "Mimic_Rig:place2dTexture7.wu" "Mimic_Rig:file7.wu";
+connectAttr "Mimic_Rig:place2dTexture7.wv" "Mimic_Rig:file7.wv";
+connectAttr "Mimic_Rig:place2dTexture7.re" "Mimic_Rig:file7.re";
+connectAttr "Mimic_Rig:place2dTexture7.of" "Mimic_Rig:file7.of";
+connectAttr "Mimic_Rig:place2dTexture7.r" "Mimic_Rig:file7.ro";
+connectAttr "Mimic_Rig:place2dTexture7.n" "Mimic_Rig:file7.n";
+connectAttr "Mimic_Rig:place2dTexture7.vt1" "Mimic_Rig:file7.vt1";
+connectAttr "Mimic_Rig:place2dTexture7.vt2" "Mimic_Rig:file7.vt2";
+connectAttr "Mimic_Rig:place2dTexture7.vt3" "Mimic_Rig:file7.vt3";
+connectAttr "Mimic_Rig:place2dTexture7.vc1" "Mimic_Rig:file7.vc1";
+connectAttr "Mimic_Rig:place2dTexture7.o" "Mimic_Rig:file7.uv";
+connectAttr "Mimic_Rig:place2dTexture7.ofs" "Mimic_Rig:file7.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file8.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file8.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file8.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file8.ws";
+connectAttr "Mimic_Rig:place2dTexture8.c" "Mimic_Rig:file8.c";
+connectAttr "Mimic_Rig:place2dTexture8.tf" "Mimic_Rig:file8.tf";
+connectAttr "Mimic_Rig:place2dTexture8.rf" "Mimic_Rig:file8.rf";
+connectAttr "Mimic_Rig:place2dTexture8.mu" "Mimic_Rig:file8.mu";
+connectAttr "Mimic_Rig:place2dTexture8.mv" "Mimic_Rig:file8.mv";
+connectAttr "Mimic_Rig:place2dTexture8.s" "Mimic_Rig:file8.s";
+connectAttr "Mimic_Rig:place2dTexture8.wu" "Mimic_Rig:file8.wu";
+connectAttr "Mimic_Rig:place2dTexture8.wv" "Mimic_Rig:file8.wv";
+connectAttr "Mimic_Rig:place2dTexture8.re" "Mimic_Rig:file8.re";
+connectAttr "Mimic_Rig:place2dTexture8.of" "Mimic_Rig:file8.of";
+connectAttr "Mimic_Rig:place2dTexture8.r" "Mimic_Rig:file8.ro";
+connectAttr "Mimic_Rig:place2dTexture8.n" "Mimic_Rig:file8.n";
+connectAttr "Mimic_Rig:place2dTexture8.vt1" "Mimic_Rig:file8.vt1";
+connectAttr "Mimic_Rig:place2dTexture8.vt2" "Mimic_Rig:file8.vt2";
+connectAttr "Mimic_Rig:place2dTexture8.vt3" "Mimic_Rig:file8.vt3";
+connectAttr "Mimic_Rig:place2dTexture8.vc1" "Mimic_Rig:file8.vc1";
+connectAttr "Mimic_Rig:place2dTexture8.o" "Mimic_Rig:file8.uv";
+connectAttr "Mimic_Rig:place2dTexture8.ofs" "Mimic_Rig:file8.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file9.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file9.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file9.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file9.ws";
+connectAttr "Mimic_Rig:place2dTexture9.c" "Mimic_Rig:file9.c";
+connectAttr "Mimic_Rig:place2dTexture9.tf" "Mimic_Rig:file9.tf";
+connectAttr "Mimic_Rig:place2dTexture9.rf" "Mimic_Rig:file9.rf";
+connectAttr "Mimic_Rig:place2dTexture9.mu" "Mimic_Rig:file9.mu";
+connectAttr "Mimic_Rig:place2dTexture9.mv" "Mimic_Rig:file9.mv";
+connectAttr "Mimic_Rig:place2dTexture9.s" "Mimic_Rig:file9.s";
+connectAttr "Mimic_Rig:place2dTexture9.wu" "Mimic_Rig:file9.wu";
+connectAttr "Mimic_Rig:place2dTexture9.wv" "Mimic_Rig:file9.wv";
+connectAttr "Mimic_Rig:place2dTexture9.re" "Mimic_Rig:file9.re";
+connectAttr "Mimic_Rig:place2dTexture9.of" "Mimic_Rig:file9.of";
+connectAttr "Mimic_Rig:place2dTexture9.r" "Mimic_Rig:file9.ro";
+connectAttr "Mimic_Rig:place2dTexture9.n" "Mimic_Rig:file9.n";
+connectAttr "Mimic_Rig:place2dTexture9.vt1" "Mimic_Rig:file9.vt1";
+connectAttr "Mimic_Rig:place2dTexture9.vt2" "Mimic_Rig:file9.vt2";
+connectAttr "Mimic_Rig:place2dTexture9.vt3" "Mimic_Rig:file9.vt3";
+connectAttr "Mimic_Rig:place2dTexture9.vc1" "Mimic_Rig:file9.vc1";
+connectAttr "Mimic_Rig:place2dTexture9.o" "Mimic_Rig:file9.uv";
+connectAttr "Mimic_Rig:place2dTexture9.ofs" "Mimic_Rig:file9.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file10.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file10.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file10.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file10.ws";
+connectAttr "Mimic_Rig:place2dTexture10.c" "Mimic_Rig:file10.c";
+connectAttr "Mimic_Rig:place2dTexture10.tf" "Mimic_Rig:file10.tf";
+connectAttr "Mimic_Rig:place2dTexture10.rf" "Mimic_Rig:file10.rf";
+connectAttr "Mimic_Rig:place2dTexture10.mu" "Mimic_Rig:file10.mu";
+connectAttr "Mimic_Rig:place2dTexture10.mv" "Mimic_Rig:file10.mv";
+connectAttr "Mimic_Rig:place2dTexture10.s" "Mimic_Rig:file10.s";
+connectAttr "Mimic_Rig:place2dTexture10.wu" "Mimic_Rig:file10.wu";
+connectAttr "Mimic_Rig:place2dTexture10.wv" "Mimic_Rig:file10.wv";
+connectAttr "Mimic_Rig:place2dTexture10.re" "Mimic_Rig:file10.re";
+connectAttr "Mimic_Rig:place2dTexture10.of" "Mimic_Rig:file10.of";
+connectAttr "Mimic_Rig:place2dTexture10.r" "Mimic_Rig:file10.ro";
+connectAttr "Mimic_Rig:place2dTexture10.n" "Mimic_Rig:file10.n";
+connectAttr "Mimic_Rig:place2dTexture10.vt1" "Mimic_Rig:file10.vt1";
+connectAttr "Mimic_Rig:place2dTexture10.vt2" "Mimic_Rig:file10.vt2";
+connectAttr "Mimic_Rig:place2dTexture10.vt3" "Mimic_Rig:file10.vt3";
+connectAttr "Mimic_Rig:place2dTexture10.vc1" "Mimic_Rig:file10.vc1";
+connectAttr "Mimic_Rig:place2dTexture10.o" "Mimic_Rig:file10.uv";
+connectAttr "Mimic_Rig:place2dTexture10.ofs" "Mimic_Rig:file10.fs";
+connectAttr "Mimic_Rig:file10.oa" "Mimic_Rig:bump2d2.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file11.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file11.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file11.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file11.ws";
+connectAttr "Mimic_Rig:place2dTexture11.c" "Mimic_Rig:file11.c";
+connectAttr "Mimic_Rig:place2dTexture11.tf" "Mimic_Rig:file11.tf";
+connectAttr "Mimic_Rig:place2dTexture11.rf" "Mimic_Rig:file11.rf";
+connectAttr "Mimic_Rig:place2dTexture11.mu" "Mimic_Rig:file11.mu";
+connectAttr "Mimic_Rig:place2dTexture11.mv" "Mimic_Rig:file11.mv";
+connectAttr "Mimic_Rig:place2dTexture11.s" "Mimic_Rig:file11.s";
+connectAttr "Mimic_Rig:place2dTexture11.wu" "Mimic_Rig:file11.wu";
+connectAttr "Mimic_Rig:place2dTexture11.wv" "Mimic_Rig:file11.wv";
+connectAttr "Mimic_Rig:place2dTexture11.re" "Mimic_Rig:file11.re";
+connectAttr "Mimic_Rig:place2dTexture11.of" "Mimic_Rig:file11.of";
+connectAttr "Mimic_Rig:place2dTexture11.r" "Mimic_Rig:file11.ro";
+connectAttr "Mimic_Rig:place2dTexture11.n" "Mimic_Rig:file11.n";
+connectAttr "Mimic_Rig:place2dTexture11.vt1" "Mimic_Rig:file11.vt1";
+connectAttr "Mimic_Rig:place2dTexture11.vt2" "Mimic_Rig:file11.vt2";
+connectAttr "Mimic_Rig:place2dTexture11.vt3" "Mimic_Rig:file11.vt3";
+connectAttr "Mimic_Rig:place2dTexture11.vc1" "Mimic_Rig:file11.vc1";
+connectAttr "Mimic_Rig:place2dTexture11.o" "Mimic_Rig:file11.uv";
+connectAttr "Mimic_Rig:place2dTexture11.ofs" "Mimic_Rig:file11.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file12.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file12.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file12.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file12.ws";
+connectAttr "Mimic_Rig:place2dTexture12.c" "Mimic_Rig:file12.c";
+connectAttr "Mimic_Rig:place2dTexture12.tf" "Mimic_Rig:file12.tf";
+connectAttr "Mimic_Rig:place2dTexture12.rf" "Mimic_Rig:file12.rf";
+connectAttr "Mimic_Rig:place2dTexture12.mu" "Mimic_Rig:file12.mu";
+connectAttr "Mimic_Rig:place2dTexture12.mv" "Mimic_Rig:file12.mv";
+connectAttr "Mimic_Rig:place2dTexture12.s" "Mimic_Rig:file12.s";
+connectAttr "Mimic_Rig:place2dTexture12.wu" "Mimic_Rig:file12.wu";
+connectAttr "Mimic_Rig:place2dTexture12.wv" "Mimic_Rig:file12.wv";
+connectAttr "Mimic_Rig:place2dTexture12.re" "Mimic_Rig:file12.re";
+connectAttr "Mimic_Rig:place2dTexture12.of" "Mimic_Rig:file12.of";
+connectAttr "Mimic_Rig:place2dTexture12.r" "Mimic_Rig:file12.ro";
+connectAttr "Mimic_Rig:place2dTexture12.n" "Mimic_Rig:file12.n";
+connectAttr "Mimic_Rig:place2dTexture12.vt1" "Mimic_Rig:file12.vt1";
+connectAttr "Mimic_Rig:place2dTexture12.vt2" "Mimic_Rig:file12.vt2";
+connectAttr "Mimic_Rig:place2dTexture12.vt3" "Mimic_Rig:file12.vt3";
+connectAttr "Mimic_Rig:place2dTexture12.vc1" "Mimic_Rig:file12.vc1";
+connectAttr "Mimic_Rig:place2dTexture12.o" "Mimic_Rig:file12.uv";
+connectAttr "Mimic_Rig:place2dTexture12.ofs" "Mimic_Rig:file12.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file13.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file13.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file13.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file13.ws";
+connectAttr "Mimic_Rig:place2dTexture13.c" "Mimic_Rig:file13.c";
+connectAttr "Mimic_Rig:place2dTexture13.tf" "Mimic_Rig:file13.tf";
+connectAttr "Mimic_Rig:place2dTexture13.rf" "Mimic_Rig:file13.rf";
+connectAttr "Mimic_Rig:place2dTexture13.mu" "Mimic_Rig:file13.mu";
+connectAttr "Mimic_Rig:place2dTexture13.mv" "Mimic_Rig:file13.mv";
+connectAttr "Mimic_Rig:place2dTexture13.s" "Mimic_Rig:file13.s";
+connectAttr "Mimic_Rig:place2dTexture13.wu" "Mimic_Rig:file13.wu";
+connectAttr "Mimic_Rig:place2dTexture13.wv" "Mimic_Rig:file13.wv";
+connectAttr "Mimic_Rig:place2dTexture13.re" "Mimic_Rig:file13.re";
+connectAttr "Mimic_Rig:place2dTexture13.of" "Mimic_Rig:file13.of";
+connectAttr "Mimic_Rig:place2dTexture13.r" "Mimic_Rig:file13.ro";
+connectAttr "Mimic_Rig:place2dTexture13.n" "Mimic_Rig:file13.n";
+connectAttr "Mimic_Rig:place2dTexture13.vt1" "Mimic_Rig:file13.vt1";
+connectAttr "Mimic_Rig:place2dTexture13.vt2" "Mimic_Rig:file13.vt2";
+connectAttr "Mimic_Rig:place2dTexture13.vt3" "Mimic_Rig:file13.vt3";
+connectAttr "Mimic_Rig:place2dTexture13.vc1" "Mimic_Rig:file13.vc1";
+connectAttr "Mimic_Rig:place2dTexture13.o" "Mimic_Rig:file13.uv";
+connectAttr "Mimic_Rig:place2dTexture13.ofs" "Mimic_Rig:file13.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file14.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file14.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file14.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file14.ws";
+connectAttr "Mimic_Rig:place2dTexture14.c" "Mimic_Rig:file14.c";
+connectAttr "Mimic_Rig:place2dTexture14.tf" "Mimic_Rig:file14.tf";
+connectAttr "Mimic_Rig:place2dTexture14.rf" "Mimic_Rig:file14.rf";
+connectAttr "Mimic_Rig:place2dTexture14.mu" "Mimic_Rig:file14.mu";
+connectAttr "Mimic_Rig:place2dTexture14.mv" "Mimic_Rig:file14.mv";
+connectAttr "Mimic_Rig:place2dTexture14.s" "Mimic_Rig:file14.s";
+connectAttr "Mimic_Rig:place2dTexture14.wu" "Mimic_Rig:file14.wu";
+connectAttr "Mimic_Rig:place2dTexture14.wv" "Mimic_Rig:file14.wv";
+connectAttr "Mimic_Rig:place2dTexture14.re" "Mimic_Rig:file14.re";
+connectAttr "Mimic_Rig:place2dTexture14.of" "Mimic_Rig:file14.of";
+connectAttr "Mimic_Rig:place2dTexture14.r" "Mimic_Rig:file14.ro";
+connectAttr "Mimic_Rig:place2dTexture14.n" "Mimic_Rig:file14.n";
+connectAttr "Mimic_Rig:place2dTexture14.vt1" "Mimic_Rig:file14.vt1";
+connectAttr "Mimic_Rig:place2dTexture14.vt2" "Mimic_Rig:file14.vt2";
+connectAttr "Mimic_Rig:place2dTexture14.vt3" "Mimic_Rig:file14.vt3";
+connectAttr "Mimic_Rig:place2dTexture14.vc1" "Mimic_Rig:file14.vc1";
+connectAttr "Mimic_Rig:place2dTexture14.o" "Mimic_Rig:file14.uv";
+connectAttr "Mimic_Rig:place2dTexture14.ofs" "Mimic_Rig:file14.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file15.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file15.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file15.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file15.ws";
+connectAttr "Mimic_Rig:place2dTexture15.c" "Mimic_Rig:file15.c";
+connectAttr "Mimic_Rig:place2dTexture15.tf" "Mimic_Rig:file15.tf";
+connectAttr "Mimic_Rig:place2dTexture15.rf" "Mimic_Rig:file15.rf";
+connectAttr "Mimic_Rig:place2dTexture15.mu" "Mimic_Rig:file15.mu";
+connectAttr "Mimic_Rig:place2dTexture15.mv" "Mimic_Rig:file15.mv";
+connectAttr "Mimic_Rig:place2dTexture15.s" "Mimic_Rig:file15.s";
+connectAttr "Mimic_Rig:place2dTexture15.wu" "Mimic_Rig:file15.wu";
+connectAttr "Mimic_Rig:place2dTexture15.wv" "Mimic_Rig:file15.wv";
+connectAttr "Mimic_Rig:place2dTexture15.re" "Mimic_Rig:file15.re";
+connectAttr "Mimic_Rig:place2dTexture15.of" "Mimic_Rig:file15.of";
+connectAttr "Mimic_Rig:place2dTexture15.r" "Mimic_Rig:file15.ro";
+connectAttr "Mimic_Rig:place2dTexture15.n" "Mimic_Rig:file15.n";
+connectAttr "Mimic_Rig:place2dTexture15.vt1" "Mimic_Rig:file15.vt1";
+connectAttr "Mimic_Rig:place2dTexture15.vt2" "Mimic_Rig:file15.vt2";
+connectAttr "Mimic_Rig:place2dTexture15.vt3" "Mimic_Rig:file15.vt3";
+connectAttr "Mimic_Rig:place2dTexture15.vc1" "Mimic_Rig:file15.vc1";
+connectAttr "Mimic_Rig:place2dTexture15.o" "Mimic_Rig:file15.uv";
+connectAttr "Mimic_Rig:place2dTexture15.ofs" "Mimic_Rig:file15.fs";
+connectAttr "Mimic_Rig:file15.oa" "Mimic_Rig:bump2d3.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file16.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file16.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file16.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file16.ws";
+connectAttr "Mimic_Rig:place2dTexture16.c" "Mimic_Rig:file16.c";
+connectAttr "Mimic_Rig:place2dTexture16.tf" "Mimic_Rig:file16.tf";
+connectAttr "Mimic_Rig:place2dTexture16.rf" "Mimic_Rig:file16.rf";
+connectAttr "Mimic_Rig:place2dTexture16.mu" "Mimic_Rig:file16.mu";
+connectAttr "Mimic_Rig:place2dTexture16.mv" "Mimic_Rig:file16.mv";
+connectAttr "Mimic_Rig:place2dTexture16.s" "Mimic_Rig:file16.s";
+connectAttr "Mimic_Rig:place2dTexture16.wu" "Mimic_Rig:file16.wu";
+connectAttr "Mimic_Rig:place2dTexture16.wv" "Mimic_Rig:file16.wv";
+connectAttr "Mimic_Rig:place2dTexture16.re" "Mimic_Rig:file16.re";
+connectAttr "Mimic_Rig:place2dTexture16.of" "Mimic_Rig:file16.of";
+connectAttr "Mimic_Rig:place2dTexture16.r" "Mimic_Rig:file16.ro";
+connectAttr "Mimic_Rig:place2dTexture16.n" "Mimic_Rig:file16.n";
+connectAttr "Mimic_Rig:place2dTexture16.vt1" "Mimic_Rig:file16.vt1";
+connectAttr "Mimic_Rig:place2dTexture16.vt2" "Mimic_Rig:file16.vt2";
+connectAttr "Mimic_Rig:place2dTexture16.vt3" "Mimic_Rig:file16.vt3";
+connectAttr "Mimic_Rig:place2dTexture16.vc1" "Mimic_Rig:file16.vc1";
+connectAttr "Mimic_Rig:place2dTexture16.o" "Mimic_Rig:file16.uv";
+connectAttr "Mimic_Rig:place2dTexture16.ofs" "Mimic_Rig:file16.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file17.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file17.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file17.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file17.ws";
+connectAttr "Mimic_Rig:place2dTexture17.c" "Mimic_Rig:file17.c";
+connectAttr "Mimic_Rig:place2dTexture17.tf" "Mimic_Rig:file17.tf";
+connectAttr "Mimic_Rig:place2dTexture17.rf" "Mimic_Rig:file17.rf";
+connectAttr "Mimic_Rig:place2dTexture17.mu" "Mimic_Rig:file17.mu";
+connectAttr "Mimic_Rig:place2dTexture17.mv" "Mimic_Rig:file17.mv";
+connectAttr "Mimic_Rig:place2dTexture17.s" "Mimic_Rig:file17.s";
+connectAttr "Mimic_Rig:place2dTexture17.wu" "Mimic_Rig:file17.wu";
+connectAttr "Mimic_Rig:place2dTexture17.wv" "Mimic_Rig:file17.wv";
+connectAttr "Mimic_Rig:place2dTexture17.re" "Mimic_Rig:file17.re";
+connectAttr "Mimic_Rig:place2dTexture17.of" "Mimic_Rig:file17.of";
+connectAttr "Mimic_Rig:place2dTexture17.r" "Mimic_Rig:file17.ro";
+connectAttr "Mimic_Rig:place2dTexture17.n" "Mimic_Rig:file17.n";
+connectAttr "Mimic_Rig:place2dTexture17.vt1" "Mimic_Rig:file17.vt1";
+connectAttr "Mimic_Rig:place2dTexture17.vt2" "Mimic_Rig:file17.vt2";
+connectAttr "Mimic_Rig:place2dTexture17.vt3" "Mimic_Rig:file17.vt3";
+connectAttr "Mimic_Rig:place2dTexture17.vc1" "Mimic_Rig:file17.vc1";
+connectAttr "Mimic_Rig:place2dTexture17.o" "Mimic_Rig:file17.uv";
+connectAttr "Mimic_Rig:place2dTexture17.ofs" "Mimic_Rig:file17.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file18.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file18.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file18.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file18.ws";
+connectAttr "Mimic_Rig:place2dTexture18.c" "Mimic_Rig:file18.c";
+connectAttr "Mimic_Rig:place2dTexture18.tf" "Mimic_Rig:file18.tf";
+connectAttr "Mimic_Rig:place2dTexture18.rf" "Mimic_Rig:file18.rf";
+connectAttr "Mimic_Rig:place2dTexture18.mu" "Mimic_Rig:file18.mu";
+connectAttr "Mimic_Rig:place2dTexture18.mv" "Mimic_Rig:file18.mv";
+connectAttr "Mimic_Rig:place2dTexture18.s" "Mimic_Rig:file18.s";
+connectAttr "Mimic_Rig:place2dTexture18.wu" "Mimic_Rig:file18.wu";
+connectAttr "Mimic_Rig:place2dTexture18.wv" "Mimic_Rig:file18.wv";
+connectAttr "Mimic_Rig:place2dTexture18.re" "Mimic_Rig:file18.re";
+connectAttr "Mimic_Rig:place2dTexture18.of" "Mimic_Rig:file18.of";
+connectAttr "Mimic_Rig:place2dTexture18.r" "Mimic_Rig:file18.ro";
+connectAttr "Mimic_Rig:place2dTexture18.n" "Mimic_Rig:file18.n";
+connectAttr "Mimic_Rig:place2dTexture18.vt1" "Mimic_Rig:file18.vt1";
+connectAttr "Mimic_Rig:place2dTexture18.vt2" "Mimic_Rig:file18.vt2";
+connectAttr "Mimic_Rig:place2dTexture18.vt3" "Mimic_Rig:file18.vt3";
+connectAttr "Mimic_Rig:place2dTexture18.vc1" "Mimic_Rig:file18.vc1";
+connectAttr "Mimic_Rig:place2dTexture18.o" "Mimic_Rig:file18.uv";
+connectAttr "Mimic_Rig:place2dTexture18.ofs" "Mimic_Rig:file18.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file19.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file19.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file19.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file19.ws";
+connectAttr "Mimic_Rig:place2dTexture19.c" "Mimic_Rig:file19.c";
+connectAttr "Mimic_Rig:place2dTexture19.tf" "Mimic_Rig:file19.tf";
+connectAttr "Mimic_Rig:place2dTexture19.rf" "Mimic_Rig:file19.rf";
+connectAttr "Mimic_Rig:place2dTexture19.mu" "Mimic_Rig:file19.mu";
+connectAttr "Mimic_Rig:place2dTexture19.mv" "Mimic_Rig:file19.mv";
+connectAttr "Mimic_Rig:place2dTexture19.s" "Mimic_Rig:file19.s";
+connectAttr "Mimic_Rig:place2dTexture19.wu" "Mimic_Rig:file19.wu";
+connectAttr "Mimic_Rig:place2dTexture19.wv" "Mimic_Rig:file19.wv";
+connectAttr "Mimic_Rig:place2dTexture19.re" "Mimic_Rig:file19.re";
+connectAttr "Mimic_Rig:place2dTexture19.of" "Mimic_Rig:file19.of";
+connectAttr "Mimic_Rig:place2dTexture19.r" "Mimic_Rig:file19.ro";
+connectAttr "Mimic_Rig:place2dTexture19.n" "Mimic_Rig:file19.n";
+connectAttr "Mimic_Rig:place2dTexture19.vt1" "Mimic_Rig:file19.vt1";
+connectAttr "Mimic_Rig:place2dTexture19.vt2" "Mimic_Rig:file19.vt2";
+connectAttr "Mimic_Rig:place2dTexture19.vt3" "Mimic_Rig:file19.vt3";
+connectAttr "Mimic_Rig:place2dTexture19.vc1" "Mimic_Rig:file19.vc1";
+connectAttr "Mimic_Rig:place2dTexture19.o" "Mimic_Rig:file19.uv";
+connectAttr "Mimic_Rig:place2dTexture19.ofs" "Mimic_Rig:file19.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file20.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file20.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file20.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file20.ws";
+connectAttr "Mimic_Rig:place2dTexture20.c" "Mimic_Rig:file20.c";
+connectAttr "Mimic_Rig:place2dTexture20.tf" "Mimic_Rig:file20.tf";
+connectAttr "Mimic_Rig:place2dTexture20.rf" "Mimic_Rig:file20.rf";
+connectAttr "Mimic_Rig:place2dTexture20.mu" "Mimic_Rig:file20.mu";
+connectAttr "Mimic_Rig:place2dTexture20.mv" "Mimic_Rig:file20.mv";
+connectAttr "Mimic_Rig:place2dTexture20.s" "Mimic_Rig:file20.s";
+connectAttr "Mimic_Rig:place2dTexture20.wu" "Mimic_Rig:file20.wu";
+connectAttr "Mimic_Rig:place2dTexture20.wv" "Mimic_Rig:file20.wv";
+connectAttr "Mimic_Rig:place2dTexture20.re" "Mimic_Rig:file20.re";
+connectAttr "Mimic_Rig:place2dTexture20.of" "Mimic_Rig:file20.of";
+connectAttr "Mimic_Rig:place2dTexture20.r" "Mimic_Rig:file20.ro";
+connectAttr "Mimic_Rig:place2dTexture20.n" "Mimic_Rig:file20.n";
+connectAttr "Mimic_Rig:place2dTexture20.vt1" "Mimic_Rig:file20.vt1";
+connectAttr "Mimic_Rig:place2dTexture20.vt2" "Mimic_Rig:file20.vt2";
+connectAttr "Mimic_Rig:place2dTexture20.vt3" "Mimic_Rig:file20.vt3";
+connectAttr "Mimic_Rig:place2dTexture20.vc1" "Mimic_Rig:file20.vc1";
+connectAttr "Mimic_Rig:place2dTexture20.o" "Mimic_Rig:file20.uv";
+connectAttr "Mimic_Rig:place2dTexture20.ofs" "Mimic_Rig:file20.fs";
+connectAttr "Mimic_Rig:file20.oa" "Mimic_Rig:bump2d4.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file21.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file21.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file21.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file21.ws";
+connectAttr "Mimic_Rig:place2dTexture21.c" "Mimic_Rig:file21.c";
+connectAttr "Mimic_Rig:place2dTexture21.tf" "Mimic_Rig:file21.tf";
+connectAttr "Mimic_Rig:place2dTexture21.rf" "Mimic_Rig:file21.rf";
+connectAttr "Mimic_Rig:place2dTexture21.mu" "Mimic_Rig:file21.mu";
+connectAttr "Mimic_Rig:place2dTexture21.mv" "Mimic_Rig:file21.mv";
+connectAttr "Mimic_Rig:place2dTexture21.s" "Mimic_Rig:file21.s";
+connectAttr "Mimic_Rig:place2dTexture21.wu" "Mimic_Rig:file21.wu";
+connectAttr "Mimic_Rig:place2dTexture21.wv" "Mimic_Rig:file21.wv";
+connectAttr "Mimic_Rig:place2dTexture21.re" "Mimic_Rig:file21.re";
+connectAttr "Mimic_Rig:place2dTexture21.of" "Mimic_Rig:file21.of";
+connectAttr "Mimic_Rig:place2dTexture21.r" "Mimic_Rig:file21.ro";
+connectAttr "Mimic_Rig:place2dTexture21.n" "Mimic_Rig:file21.n";
+connectAttr "Mimic_Rig:place2dTexture21.vt1" "Mimic_Rig:file21.vt1";
+connectAttr "Mimic_Rig:place2dTexture21.vt2" "Mimic_Rig:file21.vt2";
+connectAttr "Mimic_Rig:place2dTexture21.vt3" "Mimic_Rig:file21.vt3";
+connectAttr "Mimic_Rig:place2dTexture21.vc1" "Mimic_Rig:file21.vc1";
+connectAttr "Mimic_Rig:place2dTexture21.o" "Mimic_Rig:file21.uv";
+connectAttr "Mimic_Rig:place2dTexture21.ofs" "Mimic_Rig:file21.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file22.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file22.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file22.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file22.ws";
+connectAttr "Mimic_Rig:place2dTexture22.c" "Mimic_Rig:file22.c";
+connectAttr "Mimic_Rig:place2dTexture22.tf" "Mimic_Rig:file22.tf";
+connectAttr "Mimic_Rig:place2dTexture22.rf" "Mimic_Rig:file22.rf";
+connectAttr "Mimic_Rig:place2dTexture22.mu" "Mimic_Rig:file22.mu";
+connectAttr "Mimic_Rig:place2dTexture22.mv" "Mimic_Rig:file22.mv";
+connectAttr "Mimic_Rig:place2dTexture22.s" "Mimic_Rig:file22.s";
+connectAttr "Mimic_Rig:place2dTexture22.wu" "Mimic_Rig:file22.wu";
+connectAttr "Mimic_Rig:place2dTexture22.wv" "Mimic_Rig:file22.wv";
+connectAttr "Mimic_Rig:place2dTexture22.re" "Mimic_Rig:file22.re";
+connectAttr "Mimic_Rig:place2dTexture22.of" "Mimic_Rig:file22.of";
+connectAttr "Mimic_Rig:place2dTexture22.r" "Mimic_Rig:file22.ro";
+connectAttr "Mimic_Rig:place2dTexture22.n" "Mimic_Rig:file22.n";
+connectAttr "Mimic_Rig:place2dTexture22.vt1" "Mimic_Rig:file22.vt1";
+connectAttr "Mimic_Rig:place2dTexture22.vt2" "Mimic_Rig:file22.vt2";
+connectAttr "Mimic_Rig:place2dTexture22.vt3" "Mimic_Rig:file22.vt3";
+connectAttr "Mimic_Rig:place2dTexture22.vc1" "Mimic_Rig:file22.vc1";
+connectAttr "Mimic_Rig:place2dTexture22.o" "Mimic_Rig:file22.uv";
+connectAttr "Mimic_Rig:place2dTexture22.ofs" "Mimic_Rig:file22.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file23.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file23.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file23.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file23.ws";
+connectAttr "Mimic_Rig:place2dTexture23.c" "Mimic_Rig:file23.c";
+connectAttr "Mimic_Rig:place2dTexture23.tf" "Mimic_Rig:file23.tf";
+connectAttr "Mimic_Rig:place2dTexture23.rf" "Mimic_Rig:file23.rf";
+connectAttr "Mimic_Rig:place2dTexture23.mu" "Mimic_Rig:file23.mu";
+connectAttr "Mimic_Rig:place2dTexture23.mv" "Mimic_Rig:file23.mv";
+connectAttr "Mimic_Rig:place2dTexture23.s" "Mimic_Rig:file23.s";
+connectAttr "Mimic_Rig:place2dTexture23.wu" "Mimic_Rig:file23.wu";
+connectAttr "Mimic_Rig:place2dTexture23.wv" "Mimic_Rig:file23.wv";
+connectAttr "Mimic_Rig:place2dTexture23.re" "Mimic_Rig:file23.re";
+connectAttr "Mimic_Rig:place2dTexture23.of" "Mimic_Rig:file23.of";
+connectAttr "Mimic_Rig:place2dTexture23.r" "Mimic_Rig:file23.ro";
+connectAttr "Mimic_Rig:place2dTexture23.n" "Mimic_Rig:file23.n";
+connectAttr "Mimic_Rig:place2dTexture23.vt1" "Mimic_Rig:file23.vt1";
+connectAttr "Mimic_Rig:place2dTexture23.vt2" "Mimic_Rig:file23.vt2";
+connectAttr "Mimic_Rig:place2dTexture23.vt3" "Mimic_Rig:file23.vt3";
+connectAttr "Mimic_Rig:place2dTexture23.vc1" "Mimic_Rig:file23.vc1";
+connectAttr "Mimic_Rig:place2dTexture23.o" "Mimic_Rig:file23.uv";
+connectAttr "Mimic_Rig:place2dTexture23.ofs" "Mimic_Rig:file23.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file24.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file24.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file24.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file24.ws";
+connectAttr "Mimic_Rig:place2dTexture24.c" "Mimic_Rig:file24.c";
+connectAttr "Mimic_Rig:place2dTexture24.tf" "Mimic_Rig:file24.tf";
+connectAttr "Mimic_Rig:place2dTexture24.rf" "Mimic_Rig:file24.rf";
+connectAttr "Mimic_Rig:place2dTexture24.mu" "Mimic_Rig:file24.mu";
+connectAttr "Mimic_Rig:place2dTexture24.mv" "Mimic_Rig:file24.mv";
+connectAttr "Mimic_Rig:place2dTexture24.s" "Mimic_Rig:file24.s";
+connectAttr "Mimic_Rig:place2dTexture24.wu" "Mimic_Rig:file24.wu";
+connectAttr "Mimic_Rig:place2dTexture24.wv" "Mimic_Rig:file24.wv";
+connectAttr "Mimic_Rig:place2dTexture24.re" "Mimic_Rig:file24.re";
+connectAttr "Mimic_Rig:place2dTexture24.of" "Mimic_Rig:file24.of";
+connectAttr "Mimic_Rig:place2dTexture24.r" "Mimic_Rig:file24.ro";
+connectAttr "Mimic_Rig:place2dTexture24.n" "Mimic_Rig:file24.n";
+connectAttr "Mimic_Rig:place2dTexture24.vt1" "Mimic_Rig:file24.vt1";
+connectAttr "Mimic_Rig:place2dTexture24.vt2" "Mimic_Rig:file24.vt2";
+connectAttr "Mimic_Rig:place2dTexture24.vt3" "Mimic_Rig:file24.vt3";
+connectAttr "Mimic_Rig:place2dTexture24.vc1" "Mimic_Rig:file24.vc1";
+connectAttr "Mimic_Rig:place2dTexture24.o" "Mimic_Rig:file24.uv";
+connectAttr "Mimic_Rig:place2dTexture24.ofs" "Mimic_Rig:file24.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file25.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file25.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file25.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file25.ws";
+connectAttr "Mimic_Rig:place2dTexture25.c" "Mimic_Rig:file25.c";
+connectAttr "Mimic_Rig:place2dTexture25.tf" "Mimic_Rig:file25.tf";
+connectAttr "Mimic_Rig:place2dTexture25.rf" "Mimic_Rig:file25.rf";
+connectAttr "Mimic_Rig:place2dTexture25.mu" "Mimic_Rig:file25.mu";
+connectAttr "Mimic_Rig:place2dTexture25.mv" "Mimic_Rig:file25.mv";
+connectAttr "Mimic_Rig:place2dTexture25.s" "Mimic_Rig:file25.s";
+connectAttr "Mimic_Rig:place2dTexture25.wu" "Mimic_Rig:file25.wu";
+connectAttr "Mimic_Rig:place2dTexture25.wv" "Mimic_Rig:file25.wv";
+connectAttr "Mimic_Rig:place2dTexture25.re" "Mimic_Rig:file25.re";
+connectAttr "Mimic_Rig:place2dTexture25.of" "Mimic_Rig:file25.of";
+connectAttr "Mimic_Rig:place2dTexture25.r" "Mimic_Rig:file25.ro";
+connectAttr "Mimic_Rig:place2dTexture25.n" "Mimic_Rig:file25.n";
+connectAttr "Mimic_Rig:place2dTexture25.vt1" "Mimic_Rig:file25.vt1";
+connectAttr "Mimic_Rig:place2dTexture25.vt2" "Mimic_Rig:file25.vt2";
+connectAttr "Mimic_Rig:place2dTexture25.vt3" "Mimic_Rig:file25.vt3";
+connectAttr "Mimic_Rig:place2dTexture25.vc1" "Mimic_Rig:file25.vc1";
+connectAttr "Mimic_Rig:place2dTexture25.o" "Mimic_Rig:file25.uv";
+connectAttr "Mimic_Rig:place2dTexture25.ofs" "Mimic_Rig:file25.fs";
+connectAttr "Mimic_Rig:file25.oa" "Mimic_Rig:bump2d5.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file26.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file26.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file26.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file26.ws";
+connectAttr "Mimic_Rig:place2dTexture26.c" "Mimic_Rig:file26.c";
+connectAttr "Mimic_Rig:place2dTexture26.tf" "Mimic_Rig:file26.tf";
+connectAttr "Mimic_Rig:place2dTexture26.rf" "Mimic_Rig:file26.rf";
+connectAttr "Mimic_Rig:place2dTexture26.mu" "Mimic_Rig:file26.mu";
+connectAttr "Mimic_Rig:place2dTexture26.mv" "Mimic_Rig:file26.mv";
+connectAttr "Mimic_Rig:place2dTexture26.s" "Mimic_Rig:file26.s";
+connectAttr "Mimic_Rig:place2dTexture26.wu" "Mimic_Rig:file26.wu";
+connectAttr "Mimic_Rig:place2dTexture26.wv" "Mimic_Rig:file26.wv";
+connectAttr "Mimic_Rig:place2dTexture26.re" "Mimic_Rig:file26.re";
+connectAttr "Mimic_Rig:place2dTexture26.of" "Mimic_Rig:file26.of";
+connectAttr "Mimic_Rig:place2dTexture26.r" "Mimic_Rig:file26.ro";
+connectAttr "Mimic_Rig:place2dTexture26.n" "Mimic_Rig:file26.n";
+connectAttr "Mimic_Rig:place2dTexture26.vt1" "Mimic_Rig:file26.vt1";
+connectAttr "Mimic_Rig:place2dTexture26.vt2" "Mimic_Rig:file26.vt2";
+connectAttr "Mimic_Rig:place2dTexture26.vt3" "Mimic_Rig:file26.vt3";
+connectAttr "Mimic_Rig:place2dTexture26.vc1" "Mimic_Rig:file26.vc1";
+connectAttr "Mimic_Rig:place2dTexture26.o" "Mimic_Rig:file26.uv";
+connectAttr "Mimic_Rig:place2dTexture26.ofs" "Mimic_Rig:file26.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file27.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file27.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file27.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file27.ws";
+connectAttr "Mimic_Rig:place2dTexture27.c" "Mimic_Rig:file27.c";
+connectAttr "Mimic_Rig:place2dTexture27.tf" "Mimic_Rig:file27.tf";
+connectAttr "Mimic_Rig:place2dTexture27.rf" "Mimic_Rig:file27.rf";
+connectAttr "Mimic_Rig:place2dTexture27.mu" "Mimic_Rig:file27.mu";
+connectAttr "Mimic_Rig:place2dTexture27.mv" "Mimic_Rig:file27.mv";
+connectAttr "Mimic_Rig:place2dTexture27.s" "Mimic_Rig:file27.s";
+connectAttr "Mimic_Rig:place2dTexture27.wu" "Mimic_Rig:file27.wu";
+connectAttr "Mimic_Rig:place2dTexture27.wv" "Mimic_Rig:file27.wv";
+connectAttr "Mimic_Rig:place2dTexture27.re" "Mimic_Rig:file27.re";
+connectAttr "Mimic_Rig:place2dTexture27.of" "Mimic_Rig:file27.of";
+connectAttr "Mimic_Rig:place2dTexture27.r" "Mimic_Rig:file27.ro";
+connectAttr "Mimic_Rig:place2dTexture27.n" "Mimic_Rig:file27.n";
+connectAttr "Mimic_Rig:place2dTexture27.vt1" "Mimic_Rig:file27.vt1";
+connectAttr "Mimic_Rig:place2dTexture27.vt2" "Mimic_Rig:file27.vt2";
+connectAttr "Mimic_Rig:place2dTexture27.vt3" "Mimic_Rig:file27.vt3";
+connectAttr "Mimic_Rig:place2dTexture27.vc1" "Mimic_Rig:file27.vc1";
+connectAttr "Mimic_Rig:place2dTexture27.o" "Mimic_Rig:file27.uv";
+connectAttr "Mimic_Rig:place2dTexture27.ofs" "Mimic_Rig:file27.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file28.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file28.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file28.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file28.ws";
+connectAttr "Mimic_Rig:place2dTexture28.c" "Mimic_Rig:file28.c";
+connectAttr "Mimic_Rig:place2dTexture28.tf" "Mimic_Rig:file28.tf";
+connectAttr "Mimic_Rig:place2dTexture28.rf" "Mimic_Rig:file28.rf";
+connectAttr "Mimic_Rig:place2dTexture28.mu" "Mimic_Rig:file28.mu";
+connectAttr "Mimic_Rig:place2dTexture28.mv" "Mimic_Rig:file28.mv";
+connectAttr "Mimic_Rig:place2dTexture28.s" "Mimic_Rig:file28.s";
+connectAttr "Mimic_Rig:place2dTexture28.wu" "Mimic_Rig:file28.wu";
+connectAttr "Mimic_Rig:place2dTexture28.wv" "Mimic_Rig:file28.wv";
+connectAttr "Mimic_Rig:place2dTexture28.re" "Mimic_Rig:file28.re";
+connectAttr "Mimic_Rig:place2dTexture28.of" "Mimic_Rig:file28.of";
+connectAttr "Mimic_Rig:place2dTexture28.r" "Mimic_Rig:file28.ro";
+connectAttr "Mimic_Rig:place2dTexture28.n" "Mimic_Rig:file28.n";
+connectAttr "Mimic_Rig:place2dTexture28.vt1" "Mimic_Rig:file28.vt1";
+connectAttr "Mimic_Rig:place2dTexture28.vt2" "Mimic_Rig:file28.vt2";
+connectAttr "Mimic_Rig:place2dTexture28.vt3" "Mimic_Rig:file28.vt3";
+connectAttr "Mimic_Rig:place2dTexture28.vc1" "Mimic_Rig:file28.vc1";
+connectAttr "Mimic_Rig:place2dTexture28.o" "Mimic_Rig:file28.uv";
+connectAttr "Mimic_Rig:place2dTexture28.ofs" "Mimic_Rig:file28.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file29.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file29.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file29.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file29.ws";
+connectAttr "Mimic_Rig:place2dTexture29.c" "Mimic_Rig:file29.c";
+connectAttr "Mimic_Rig:place2dTexture29.tf" "Mimic_Rig:file29.tf";
+connectAttr "Mimic_Rig:place2dTexture29.rf" "Mimic_Rig:file29.rf";
+connectAttr "Mimic_Rig:place2dTexture29.mu" "Mimic_Rig:file29.mu";
+connectAttr "Mimic_Rig:place2dTexture29.mv" "Mimic_Rig:file29.mv";
+connectAttr "Mimic_Rig:place2dTexture29.s" "Mimic_Rig:file29.s";
+connectAttr "Mimic_Rig:place2dTexture29.wu" "Mimic_Rig:file29.wu";
+connectAttr "Mimic_Rig:place2dTexture29.wv" "Mimic_Rig:file29.wv";
+connectAttr "Mimic_Rig:place2dTexture29.re" "Mimic_Rig:file29.re";
+connectAttr "Mimic_Rig:place2dTexture29.of" "Mimic_Rig:file29.of";
+connectAttr "Mimic_Rig:place2dTexture29.r" "Mimic_Rig:file29.ro";
+connectAttr "Mimic_Rig:place2dTexture29.n" "Mimic_Rig:file29.n";
+connectAttr "Mimic_Rig:place2dTexture29.vt1" "Mimic_Rig:file29.vt1";
+connectAttr "Mimic_Rig:place2dTexture29.vt2" "Mimic_Rig:file29.vt2";
+connectAttr "Mimic_Rig:place2dTexture29.vt3" "Mimic_Rig:file29.vt3";
+connectAttr "Mimic_Rig:place2dTexture29.vc1" "Mimic_Rig:file29.vc1";
+connectAttr "Mimic_Rig:place2dTexture29.o" "Mimic_Rig:file29.uv";
+connectAttr "Mimic_Rig:place2dTexture29.ofs" "Mimic_Rig:file29.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file30.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file30.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file30.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file30.ws";
+connectAttr "Mimic_Rig:place2dTexture30.c" "Mimic_Rig:file30.c";
+connectAttr "Mimic_Rig:place2dTexture30.tf" "Mimic_Rig:file30.tf";
+connectAttr "Mimic_Rig:place2dTexture30.rf" "Mimic_Rig:file30.rf";
+connectAttr "Mimic_Rig:place2dTexture30.mu" "Mimic_Rig:file30.mu";
+connectAttr "Mimic_Rig:place2dTexture30.mv" "Mimic_Rig:file30.mv";
+connectAttr "Mimic_Rig:place2dTexture30.s" "Mimic_Rig:file30.s";
+connectAttr "Mimic_Rig:place2dTexture30.wu" "Mimic_Rig:file30.wu";
+connectAttr "Mimic_Rig:place2dTexture30.wv" "Mimic_Rig:file30.wv";
+connectAttr "Mimic_Rig:place2dTexture30.re" "Mimic_Rig:file30.re";
+connectAttr "Mimic_Rig:place2dTexture30.of" "Mimic_Rig:file30.of";
+connectAttr "Mimic_Rig:place2dTexture30.r" "Mimic_Rig:file30.ro";
+connectAttr "Mimic_Rig:place2dTexture30.n" "Mimic_Rig:file30.n";
+connectAttr "Mimic_Rig:place2dTexture30.vt1" "Mimic_Rig:file30.vt1";
+connectAttr "Mimic_Rig:place2dTexture30.vt2" "Mimic_Rig:file30.vt2";
+connectAttr "Mimic_Rig:place2dTexture30.vt3" "Mimic_Rig:file30.vt3";
+connectAttr "Mimic_Rig:place2dTexture30.vc1" "Mimic_Rig:file30.vc1";
+connectAttr "Mimic_Rig:place2dTexture30.o" "Mimic_Rig:file30.uv";
+connectAttr "Mimic_Rig:place2dTexture30.ofs" "Mimic_Rig:file30.fs";
+connectAttr "Mimic_Rig:file30.oa" "Mimic_Rig:bump2d6.bv";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file31.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file31.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file31.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file31.ws";
+connectAttr "Mimic_Rig:place2dTexture31.c" "Mimic_Rig:file31.c";
+connectAttr "Mimic_Rig:place2dTexture31.tf" "Mimic_Rig:file31.tf";
+connectAttr "Mimic_Rig:place2dTexture31.rf" "Mimic_Rig:file31.rf";
+connectAttr "Mimic_Rig:place2dTexture31.mu" "Mimic_Rig:file31.mu";
+connectAttr "Mimic_Rig:place2dTexture31.mv" "Mimic_Rig:file31.mv";
+connectAttr "Mimic_Rig:place2dTexture31.s" "Mimic_Rig:file31.s";
+connectAttr "Mimic_Rig:place2dTexture31.wu" "Mimic_Rig:file31.wu";
+connectAttr "Mimic_Rig:place2dTexture31.wv" "Mimic_Rig:file31.wv";
+connectAttr "Mimic_Rig:place2dTexture31.re" "Mimic_Rig:file31.re";
+connectAttr "Mimic_Rig:place2dTexture31.of" "Mimic_Rig:file31.of";
+connectAttr "Mimic_Rig:place2dTexture31.r" "Mimic_Rig:file31.ro";
+connectAttr "Mimic_Rig:place2dTexture31.n" "Mimic_Rig:file31.n";
+connectAttr "Mimic_Rig:place2dTexture31.vt1" "Mimic_Rig:file31.vt1";
+connectAttr "Mimic_Rig:place2dTexture31.vt2" "Mimic_Rig:file31.vt2";
+connectAttr "Mimic_Rig:place2dTexture31.vt3" "Mimic_Rig:file31.vt3";
+connectAttr "Mimic_Rig:place2dTexture31.vc1" "Mimic_Rig:file31.vc1";
+connectAttr "Mimic_Rig:place2dTexture31.o" "Mimic_Rig:file31.uv";
+connectAttr "Mimic_Rig:place2dTexture31.ofs" "Mimic_Rig:file31.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file32.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file32.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file32.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file32.ws";
+connectAttr "Mimic_Rig:place2dTexture32.c" "Mimic_Rig:file32.c";
+connectAttr "Mimic_Rig:place2dTexture32.tf" "Mimic_Rig:file32.tf";
+connectAttr "Mimic_Rig:place2dTexture32.rf" "Mimic_Rig:file32.rf";
+connectAttr "Mimic_Rig:place2dTexture32.mu" "Mimic_Rig:file32.mu";
+connectAttr "Mimic_Rig:place2dTexture32.mv" "Mimic_Rig:file32.mv";
+connectAttr "Mimic_Rig:place2dTexture32.s" "Mimic_Rig:file32.s";
+connectAttr "Mimic_Rig:place2dTexture32.wu" "Mimic_Rig:file32.wu";
+connectAttr "Mimic_Rig:place2dTexture32.wv" "Mimic_Rig:file32.wv";
+connectAttr "Mimic_Rig:place2dTexture32.re" "Mimic_Rig:file32.re";
+connectAttr "Mimic_Rig:place2dTexture32.of" "Mimic_Rig:file32.of";
+connectAttr "Mimic_Rig:place2dTexture32.r" "Mimic_Rig:file32.ro";
+connectAttr "Mimic_Rig:place2dTexture32.n" "Mimic_Rig:file32.n";
+connectAttr "Mimic_Rig:place2dTexture32.vt1" "Mimic_Rig:file32.vt1";
+connectAttr "Mimic_Rig:place2dTexture32.vt2" "Mimic_Rig:file32.vt2";
+connectAttr "Mimic_Rig:place2dTexture32.vt3" "Mimic_Rig:file32.vt3";
+connectAttr "Mimic_Rig:place2dTexture32.vc1" "Mimic_Rig:file32.vc1";
+connectAttr "Mimic_Rig:place2dTexture32.o" "Mimic_Rig:file32.uv";
+connectAttr "Mimic_Rig:place2dTexture32.ofs" "Mimic_Rig:file32.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file33.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file33.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file33.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file33.ws";
+connectAttr "Mimic_Rig:place2dTexture33.c" "Mimic_Rig:file33.c";
+connectAttr "Mimic_Rig:place2dTexture33.tf" "Mimic_Rig:file33.tf";
+connectAttr "Mimic_Rig:place2dTexture33.rf" "Mimic_Rig:file33.rf";
+connectAttr "Mimic_Rig:place2dTexture33.mu" "Mimic_Rig:file33.mu";
+connectAttr "Mimic_Rig:place2dTexture33.mv" "Mimic_Rig:file33.mv";
+connectAttr "Mimic_Rig:place2dTexture33.s" "Mimic_Rig:file33.s";
+connectAttr "Mimic_Rig:place2dTexture33.wu" "Mimic_Rig:file33.wu";
+connectAttr "Mimic_Rig:place2dTexture33.wv" "Mimic_Rig:file33.wv";
+connectAttr "Mimic_Rig:place2dTexture33.re" "Mimic_Rig:file33.re";
+connectAttr "Mimic_Rig:place2dTexture33.of" "Mimic_Rig:file33.of";
+connectAttr "Mimic_Rig:place2dTexture33.r" "Mimic_Rig:file33.ro";
+connectAttr "Mimic_Rig:place2dTexture33.n" "Mimic_Rig:file33.n";
+connectAttr "Mimic_Rig:place2dTexture33.vt1" "Mimic_Rig:file33.vt1";
+connectAttr "Mimic_Rig:place2dTexture33.vt2" "Mimic_Rig:file33.vt2";
+connectAttr "Mimic_Rig:place2dTexture33.vt3" "Mimic_Rig:file33.vt3";
+connectAttr "Mimic_Rig:place2dTexture33.vc1" "Mimic_Rig:file33.vc1";
+connectAttr "Mimic_Rig:place2dTexture33.o" "Mimic_Rig:file33.uv";
+connectAttr "Mimic_Rig:place2dTexture33.ofs" "Mimic_Rig:file33.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file34.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file34.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file34.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file34.ws";
+connectAttr "Mimic_Rig:place2dTexture34.c" "Mimic_Rig:file34.c";
+connectAttr "Mimic_Rig:place2dTexture34.tf" "Mimic_Rig:file34.tf";
+connectAttr "Mimic_Rig:place2dTexture34.rf" "Mimic_Rig:file34.rf";
+connectAttr "Mimic_Rig:place2dTexture34.mu" "Mimic_Rig:file34.mu";
+connectAttr "Mimic_Rig:place2dTexture34.mv" "Mimic_Rig:file34.mv";
+connectAttr "Mimic_Rig:place2dTexture34.s" "Mimic_Rig:file34.s";
+connectAttr "Mimic_Rig:place2dTexture34.wu" "Mimic_Rig:file34.wu";
+connectAttr "Mimic_Rig:place2dTexture34.wv" "Mimic_Rig:file34.wv";
+connectAttr "Mimic_Rig:place2dTexture34.re" "Mimic_Rig:file34.re";
+connectAttr "Mimic_Rig:place2dTexture34.of" "Mimic_Rig:file34.of";
+connectAttr "Mimic_Rig:place2dTexture34.r" "Mimic_Rig:file34.ro";
+connectAttr "Mimic_Rig:place2dTexture34.n" "Mimic_Rig:file34.n";
+connectAttr "Mimic_Rig:place2dTexture34.vt1" "Mimic_Rig:file34.vt1";
+connectAttr "Mimic_Rig:place2dTexture34.vt2" "Mimic_Rig:file34.vt2";
+connectAttr "Mimic_Rig:place2dTexture34.vt3" "Mimic_Rig:file34.vt3";
+connectAttr "Mimic_Rig:place2dTexture34.vc1" "Mimic_Rig:file34.vc1";
+connectAttr "Mimic_Rig:place2dTexture34.o" "Mimic_Rig:file34.uv";
+connectAttr "Mimic_Rig:place2dTexture34.ofs" "Mimic_Rig:file34.fs";
+connectAttr ":defaultColorMgtGlobals.cme" "Mimic_Rig:file35.cme";
+connectAttr ":defaultColorMgtGlobals.cfe" "Mimic_Rig:file35.cmcf";
+connectAttr ":defaultColorMgtGlobals.cfp" "Mimic_Rig:file35.cmcp";
+connectAttr ":defaultColorMgtGlobals.wsn" "Mimic_Rig:file35.ws";
+connectAttr "Mimic_Rig:place2dTexture35.c" "Mimic_Rig:file35.c";
+connectAttr "Mimic_Rig:place2dTexture35.tf" "Mimic_Rig:file35.tf";
+connectAttr "Mimic_Rig:place2dTexture35.rf" "Mimic_Rig:file35.rf";
+connectAttr "Mimic_Rig:place2dTexture35.mu" "Mimic_Rig:file35.mu";
+connectAttr "Mimic_Rig:place2dTexture35.mv" "Mimic_Rig:file35.mv";
+connectAttr "Mimic_Rig:place2dTexture35.s" "Mimic_Rig:file35.s";
+connectAttr "Mimic_Rig:place2dTexture35.wu" "Mimic_Rig:file35.wu";
+connectAttr "Mimic_Rig:place2dTexture35.wv" "Mimic_Rig:file35.wv";
+connectAttr "Mimic_Rig:place2dTexture35.re" "Mimic_Rig:file35.re";
+connectAttr "Mimic_Rig:place2dTexture35.of" "Mimic_Rig:file35.of";
+connectAttr "Mimic_Rig:place2dTexture35.r" "Mimic_Rig:file35.ro";
+connectAttr "Mimic_Rig:place2dTexture35.n" "Mimic_Rig:file35.n";
+connectAttr "Mimic_Rig:place2dTexture35.vt1" "Mimic_Rig:file35.vt1";
+connectAttr "Mimic_Rig:place2dTexture35.vt2" "Mimic_Rig:file35.vt2";
+connectAttr "Mimic_Rig:place2dTexture35.vt3" "Mimic_Rig:file35.vt3";
+connectAttr "Mimic_Rig:place2dTexture35.vc1" "Mimic_Rig:file35.vc1";
+connectAttr "Mimic_Rig:place2dTexture35.o" "Mimic_Rig:file35.uv";
+connectAttr "Mimic_Rig:place2dTexture35.ofs" "Mimic_Rig:file35.fs";
+connectAttr "Mimic_Rig:file35.oa" "Mimic_Rig:bump2d7.bv";
+connectAttr "polySurfaceShape59Orig.w" "transferAttributes1.ip[0].ig";
+connectAttr "polySurfaceShape59Orig.o" "transferAttributes1.orggeom[0]";
+connectAttr "transferAttributes1.og[0]" "polyTweakUV2.ip";
+connectAttr "polySurfaceShape63Orig.w" "transferAttributes2.ip[0].ig";
+connectAttr "polySurfaceShape63Orig.o" "transferAttributes2.orggeom[0]";
+connectAttr "transferAttributes2.og[0]" "polyTweakUV3.ip";
+connectAttr "polyPlanarProj2.out" "transferAttributes3.ip[0].ig";
+connectAttr "polySurfaceShape63Orig.o" "transferAttributes3.orggeom[0]";
+connectAttr "polyTweakUV3.out" "polyPlanarProj1.ip";
+connectAttr "polySurfaceShape63.wm" "polyPlanarProj1.mp";
+connectAttr "polyPlanarProj1.out" "polyPlanarProj2.ip";
+connectAttr "polySurfaceShape63.wm" "polyPlanarProj2.mp";
+connectAttr "transferAttributes3.og[0]" "polyMapCut2.ip";
+connectAttr "polyMapCut2.out" "polyPlanarProj3.ip";
+connectAttr "polySurfaceShape63.wm" "polyPlanarProj3.mp";
+connectAttr "polyPlanarProj3.out" "polyMapCut3.ip";
+connectAttr "polyMapCut3.out" "polyTweakUV4.ip";
+connectAttr "polySurfaceShape104.o" "polyMapCut4.ip";
+connectAttr "polyMapCut4.out" "polyPlanarProj4.ip";
+connectAttr "polySurfaceShape83.wm" "polyPlanarProj4.mp";
+connectAttr "polyPlanarProj4.out" "polyMapCut5.ip";
+connectAttr "polyMapCut5.out" "polyTweakUV5.ip";
+connectAttr "polySurfaceShape105.o" "polyMapCut6.ip";
+connectAttr "polyMapCut6.out" "polyPlanarProj5.ip";
+connectAttr "polySurfaceShape82.wm" "polyPlanarProj5.mp";
+connectAttr "polyPlanarProj5.out" "polyMapCut7.ip";
+connectAttr "polyMapCut7.out" "polyTweakUV6.ip";
+connectAttr "polySurfaceShape106.o" "polyMapCut8.ip";
+connectAttr "polyMapCut8.out" "polyPlanarProj6.ip";
+connectAttr "polySurfaceShape81.wm" "polyPlanarProj6.mp";
+connectAttr "polyPlanarProj6.out" "polyMapCut9.ip";
+connectAttr "polyMapCut9.out" "polyTweakUV7.ip";
+connectAttr "polySurfaceShape107.o" "polyMapCut10.ip";
+connectAttr "polyMapCut10.out" "polyPlanarProj7.ip";
+connectAttr "polySurfaceShape80.wm" "polyPlanarProj7.mp";
+connectAttr "polyPlanarProj7.out" "polyMapCut11.ip";
+connectAttr "polyMapCut11.out" "polyTweakUV8.ip";
+connectAttr "polySurfaceShape108.o" "polyMapCut12.ip";
+connectAttr "polyMapCut12.out" "polyPlanarProj8.ip";
+connectAttr "polySurfaceShape79.wm" "polyPlanarProj8.mp";
+connectAttr "polyPlanarProj8.out" "polyMapCut13.ip";
+connectAttr "polyMapCut13.out" "polyTweakUV9.ip";
+connectAttr "groupId279.msg" "textureEditorIsolateSelectSet.gn" -na;
+connectAttr "polySurfaceShape79.iog.og[1]" "textureEditorIsolateSelectSet.dsm" -na
+		;
+connectAttr "polyTweakUV9.out" "groupParts8.ig";
+connectAttr "groupId279.id" "groupParts8.gi";
+connectAttr "polySurfaceShape109.o" "polyMapCut14.ip";
+connectAttr "polyMapCut14.out" "polyPlanarProj9.ip";
+connectAttr "polySurfaceShape78.wm" "polyPlanarProj9.mp";
+connectAttr "polyPlanarProj9.out" "polyMapCut15.ip";
+connectAttr "polyMapCut15.out" "polyTweakUV10.ip";
+connectAttr "polySurfaceShape110.o" "polyMapCut16.ip";
+connectAttr "polyMapCut16.out" "polyPlanarProj10.ip";
+connectAttr "polySurfaceShape77.wm" "polyPlanarProj10.mp";
+connectAttr "polyPlanarProj10.out" "polyMapCut17.ip";
+connectAttr "polyMapCut17.out" "polyTweakUV11.ip";
+connectAttr "polySurfaceShape111.o" "polyMapCut18.ip";
+connectAttr "polyMapCut18.out" "polyPlanarProj11.ip";
+connectAttr "polySurfaceShape76.wm" "polyPlanarProj11.mp";
+connectAttr "polyPlanarProj11.out" "polyMapCut19.ip";
+connectAttr "polyMapCut19.out" "polyTweakUV12.ip";
+connectAttr "polySurfaceShape112.o" "polyMapCut20.ip";
+connectAttr "polyMapCut20.out" "polyPlanarProj12.ip";
+connectAttr "polySurfaceShape75.wm" "polyPlanarProj12.mp";
+connectAttr "polyPlanarProj12.out" "polyMapCut21.ip";
+connectAttr "polyMapCut21.out" "polyTweakUV13.ip";
+connectAttr "polySurfaceShape113.o" "polyMapCut22.ip";
+connectAttr "polyMapCut22.out" "polyPlanarProj13.ip";
+connectAttr "polySurfaceShape74.wm" "polyPlanarProj13.mp";
+connectAttr "polyPlanarProj13.out" "polyMapCut23.ip";
+connectAttr "polyMapCut23.out" "polyTweakUV14.ip";
+connectAttr "polySurfaceShape114.o" "polyMapCut24.ip";
+connectAttr "polyMapCut24.out" "polyPlanarProj14.ip";
+connectAttr "polySurfaceShape73.wm" "polyPlanarProj14.mp";
+connectAttr "polyPlanarProj14.out" "polyMapCut25.ip";
+connectAttr "polyMapCut25.out" "polyTweakUV15.ip";
+connectAttr "polySurfaceShape115.o" "polyMapCut26.ip";
+connectAttr "polyMapCut26.out" "polyPlanarProj15.ip";
+connectAttr "polySurfaceShape72.wm" "polyPlanarProj15.mp";
+connectAttr "polyPlanarProj15.out" "polyMapCut27.ip";
+connectAttr "polyMapCut27.out" "polyTweakUV16.ip";
+connectAttr "polySurfaceShape116.o" "polyMapCut28.ip";
+connectAttr "polyMapCut28.out" "polyPlanarProj16.ip";
+connectAttr "polySurfaceShape71.wm" "polyPlanarProj16.mp";
+connectAttr "polyPlanarProj16.out" "polyMapCut29.ip";
+connectAttr "polyMapCut29.out" "polyTweakUV17.ip";
+connectAttr "polySurfaceShape117.o" "polyMapCut30.ip";
+connectAttr "polyMapCut30.out" "polyPlanarProj17.ip";
+connectAttr "polySurfaceShape70.wm" "polyPlanarProj17.mp";
+connectAttr "polyPlanarProj17.out" "polyMapCut31.ip";
+connectAttr "polyMapCut31.out" "polyTweakUV18.ip";
+connectAttr "polySurfaceShape118.o" "polyMapCut32.ip";
+connectAttr "polyMapCut32.out" "polyPlanarProj18.ip";
+connectAttr "polySurfaceShape69.wm" "polyPlanarProj18.mp";
+connectAttr "polyPlanarProj18.out" "polyMapCut33.ip";
+connectAttr "polyMapCut33.out" "polyTweakUV19.ip";
+connectAttr "polySurfaceShape119.o" "polyMapCut34.ip";
+connectAttr "polyMapCut34.out" "polyPlanarProj19.ip";
+connectAttr "polySurfaceShape68.wm" "polyPlanarProj19.mp";
+connectAttr "polyPlanarProj19.out" "polyMapCut35.ip";
+connectAttr "polyMapCut35.out" "polyTweakUV20.ip";
+connectAttr "polySurfaceShape120.o" "polyMapCut36.ip";
+connectAttr "polyMapCut36.out" "polyPlanarProj20.ip";
+connectAttr "polySurfaceShape67.wm" "polyPlanarProj20.mp";
+connectAttr "polyPlanarProj20.out" "polyMapCut37.ip";
+connectAttr "polyMapCut37.out" "polyTweakUV21.ip";
+connectAttr "polySurfaceShape121.o" "polyPlanarProj21.ip";
+connectAttr "polySurfaceShape66.wm" "polyPlanarProj21.mp";
+connectAttr "polyPlanarProj21.out" "polyMapCut38.ip";
+connectAttr "polyMapCut38.out" "polyTweakUV22.ip";
+connectAttr "polySurfaceShape122.o" "polyMapCut39.ip";
+connectAttr "polyMapCut39.out" "polyPlanarProj22.ip";
+connectAttr "polySurfaceShape65.wm" "polyPlanarProj22.mp";
+connectAttr "polyPlanarProj22.out" "polyMapCut40.ip";
+connectAttr "polyMapCut40.out" "polyTweakUV23.ip";
+connectAttr "polySurfaceShape123.o" "polyMapCut41.ip";
+connectAttr "polyMapCut41.out" "polyPlanarProj23.ip";
+connectAttr "polySurfaceShape64.wm" "polyPlanarProj23.mp";
+connectAttr "polyPlanarProj23.out" "polyMapCut42.ip";
+connectAttr "polyMapCut42.out" "polyTweakUV24.ip";
+connectAttr "polySurfaceShape124.o" "polyMapCut43.ip";
+connectAttr "polyMapCut43.out" "polyPlanarProj24.ip";
+connectAttr "polySurfaceShape62.wm" "polyPlanarProj24.mp";
+connectAttr "polyPlanarProj24.out" "polyMapCut44.ip";
+connectAttr "polyMapCut44.out" "polyTweakUV25.ip";
+connectAttr "polySurfaceShape125.o" "polyMapCut45.ip";
+connectAttr "polyMapCut45.out" "polyPlanarProj25.ip";
+connectAttr "polySurfaceShape61.wm" "polyPlanarProj25.mp";
+connectAttr "polyPlanarProj25.out" "polyMapCut46.ip";
+connectAttr "polyMapCut46.out" "polyTweakUV26.ip";
+connectAttr "polySurfaceShape126.o" "polyMapCut47.ip";
+connectAttr "polyMapCut47.out" "polyPlanarProj26.ip";
+connectAttr "polySurfaceShape60.wm" "polyPlanarProj26.mp";
+connectAttr "polyPlanarProj26.out" "polyMapCut48.ip";
+connectAttr "polyMapCut48.out" "polyTweakUV27.ip";
+connectAttr "polySurfaceShape127.o" "polyMapCut49.ip";
+connectAttr "polyMapCut49.out" "polyPlanarProj27.ip";
+connectAttr "polySurfaceShape85.wm" "polyPlanarProj27.mp";
+connectAttr "polyPlanarProj27.out" "polyMapCut50.ip";
+connectAttr "polyMapCut50.out" "polyTweakUV28.ip";
+connectAttr "polySurfaceShape128.o" "polyMapCut51.ip";
+connectAttr "polyMapCut51.out" "polyPlanarProj28.ip";
+connectAttr "polySurfaceShape84.wm" "polyPlanarProj28.mp";
+connectAttr "polyPlanarProj28.out" "polyMapCut52.ip";
+connectAttr "polyMapCut52.out" "polyTweakUV29.ip";
+connectAttr "polySurfaceShape129.o" "polyMapCut53.ip";
+connectAttr "polyMapCut53.out" "polyPlanarProj29.ip";
+connectAttr "polySurfaceShape94.wm" "polyPlanarProj29.mp";
+connectAttr "polyPlanarProj29.out" "polyMapCut54.ip";
+connectAttr "polyMapCut54.out" "polyTweakUV30.ip";
+connectAttr "polyTweakUV2.out" "groupParts9.ig";
+connectAttr "groupId303.id" "groupParts9.gi";
+connectAttr "groupParts9.og" "groupParts10.ig";
+connectAttr "groupId305.id" "groupParts10.gi";
 connectAttr "Mimic2SG.pa" ":renderPartition.st" -na;
 connectAttr "Mimic3:Mimic.pa" ":renderPartition.st" -na;
 connectAttr "Mimic2SG1.pa" ":renderPartition.st" -na;
@@ -54601,6 +59676,80 @@ connectAttr "aiStandardSurface4SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface5SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface6SG.pa" ":renderPartition.st" -na;
 connectAttr "aiStandardSurface7SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface1SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface1SG1.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface3SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface4SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface5SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface6SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface7SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface8SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface9SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface10SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface11SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface12SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface13SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface14SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface15SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface16SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface17SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface18SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface19SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface20SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface21SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface22SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface23SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface24SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface25SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface26SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface27SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface36SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface95SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface96SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface97SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface98SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface99SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface100SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface101SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface102SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface37SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface38SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface39SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface40SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface41SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface42SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface43SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface44SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface45SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface46SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface47SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface48SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface49SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface50SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface51SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface52SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface53SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface54SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface55SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface56SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface57SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:polySurface58SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:GumSG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:TongueSG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:GoldSG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:DiamondSG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic2SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic3:Mimic.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic2SG1.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic2SG2.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic2SG3.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface1SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface2SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface3SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface4SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface5SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface6SG.pa" ":renderPartition.st" -na;
+connectAttr "Mimic_Rig:Mimic:aiStandardSurface7SG.pa" ":renderPartition.st" -na;
 connectAttr "Mimic.msg" ":defaultShaderList1.s" -na;
 connectAttr "Mimic3:Mimic1.msg" ":defaultShaderList1.s" -na;
 connectAttr "Mimic4.msg" ":defaultShaderList1.s" -na;
@@ -54613,43 +59762,103 @@ connectAttr "GoldCoinMat.msg" ":defaultShaderList1.s" -na;
 connectAttr "DiamondMat.msg" ":defaultShaderList1.s" -na;
 connectAttr "MetalMat.msg" ":defaultShaderList1.s" -na;
 connectAttr "Metal02Mat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:WoodMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:MetalMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Metal02Mat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:MouthMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:TeethMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:GoldCoinMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:DiamondMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic3:Mimic1.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic4.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic5.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:Mimic6.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:WoodMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:MouthMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:TeethMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:GoldCoinMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:DiamondMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:MetalMat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:Mimic:Metal02Mat.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mimic_Rig:place2dTexture1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture3.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture4.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture5.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:bump2d1.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture6.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture8.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture9.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture10.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:bump2d2.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture11.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture12.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture13.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture14.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture15.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:bump2d3.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture16.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture17.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture18.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture19.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture20.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:bump2d4.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture21.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture22.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture23.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture24.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture25.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:bump2d5.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture26.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture27.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture28.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture29.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture30.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:bump2d6.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture31.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture32.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture33.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture34.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:place2dTexture35.msg" ":defaultRenderUtilityList1.u" -na;
+connectAttr "Mimic_Rig:bump2d7.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "polySurfaceShape59.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape60.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape61.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape62.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape63.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape64.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape65.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape66.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape67.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape68.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape69.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape70.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape71.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape72.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape73.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape74.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape75.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape76.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape77.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape78.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape79.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape80.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape81.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape82.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape83.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape84.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape85.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape86.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape87.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape88.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape89.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape90.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape91.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape92.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape93.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape94.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "Mimic_Rig:file1.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file2.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file3.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file4.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file5.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file6.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file7.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file8.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file9.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file10.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file11.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file12.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file13.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file14.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file15.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file16.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file17.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file18.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file19.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file20.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file21.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file22.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file23.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file24.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file25.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file26.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file27.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file28.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file29.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file30.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file31.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file32.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file33.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file34.msg" ":defaultTextureList1.tx" -na;
+connectAttr "Mimic_Rig:file35.msg" ":defaultTextureList1.tx" -na;
 connectAttr "groupId23.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId24.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId25.msg" ":initialShadingGroup.gn" -na;
@@ -54724,40 +59933,78 @@ connectAttr "groupId101.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId102.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId103.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId104.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId233.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId234.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId235.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId236.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId237.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId238.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId239.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId240.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId241.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId242.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId243.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId244.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId245.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId246.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId247.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId248.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId249.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId250.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId251.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId252.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId253.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId254.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId255.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId256.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId257.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId258.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId259.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId260.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId261.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId262.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId263.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId264.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId265.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId266.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId267.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId268.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId23.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId24.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId25.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId26.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId27.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId30.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId31.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId32.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId33.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId34.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId35.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId36.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId37.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId38.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId39.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId40.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId43.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId44.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId45.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId46.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId47.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId48.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId49.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId50.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId51.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId52.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId53.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId54.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId55.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId56.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId57.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId58.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId59.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId60.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId61.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId62.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId63.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId64.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId67.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId68.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId69.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId70.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId71.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId72.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId73.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId74.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId75.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId76.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId77.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId78.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId79.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId80.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId81.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId82.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId83.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId84.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId85.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId86.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId87.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId88.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId89.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId90.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId91.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId94.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId95.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId96.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId97.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId98.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId99.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId100.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId101.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId102.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId103.msg" ":initialShadingGroup.gn" -na;
+connectAttr "Mimic_Rig:Mimic:groupId104.msg" ":initialShadingGroup.gn" -na;
 // End of Mimic.ma
